@@ -1,0 +1,556 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Daily AI & Blockchain Briefing - May 31, 2026</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f6f4ef;
+        --paper: #fffdf8;
+        --ink: #17202a;
+        --muted: #667085;
+        --line: #ded8cc;
+        --blue: #164a7c;
+        --green: #24765d;
+        --soft-blue: #eaf3fb;
+        --soft-green: #edf7f2;
+        --soft-gold: #fff7e3;
+        --shadow: 0 16px 45px rgba(38, 52, 65, 0.08);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        background:
+          linear-gradient(180deg, rgba(255, 253, 248, 0.9), rgba(246, 244, 239, 0.92)),
+          var(--bg);
+        color: var(--ink);
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
+          "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+        font-size: 17px;
+        line-height: 1.62;
+      }
+
+      a {
+        color: var(--blue);
+        text-decoration-thickness: 1px;
+        text-underline-offset: 3px;
+      }
+
+      .page {
+        width: min(100%, 860px);
+        margin: 0 auto;
+        padding: 18px 16px 44px;
+      }
+
+      .masthead {
+        padding: 28px 0 18px;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .kicker {
+        margin: 0 0 12px;
+        color: var(--muted);
+        font-size: 0.82rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        margin: 0 0 8px;
+        color: var(--blue);
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: clamp(2.05rem, 9vw, 4.5rem);
+        line-height: 0.98;
+        letter-spacing: 0;
+      }
+
+      .headline {
+        margin: 14px 0 0;
+        font-size: clamp(1.24rem, 4.8vw, 2.1rem);
+        line-height: 1.15;
+        font-weight: 800;
+        color: #151d27;
+      }
+
+      .meta-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 18px;
+      }
+
+      .pill {
+        display: inline-flex;
+        align-items: center;
+        min-height: 34px;
+        padding: 6px 11px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.72);
+        color: #3f4a57;
+        font-size: 0.86rem;
+        font-weight: 700;
+        text-decoration: none;
+      }
+
+      .overview {
+        margin: 22px 0 18px;
+        padding: 17px 17px 15px;
+        border: 1px solid #cfe0ed;
+        border-radius: 14px;
+        background: var(--soft-blue);
+        box-shadow: var(--shadow);
+      }
+
+      .overview p,
+      .takeaway p {
+        margin: 0 0 12px;
+      }
+
+      .overview p:last-child,
+      .takeaway p:last-child {
+        margin-bottom: 0;
+      }
+
+      .toc {
+        margin: 22px 0 22px;
+        padding: 0;
+        list-style: none;
+        border-top: 1px solid var(--line);
+      }
+
+      .toc li {
+        border-bottom: 1px solid var(--line);
+      }
+
+      .toc a {
+        display: block;
+        padding: 12px 0;
+        color: var(--ink);
+        font-size: 1rem;
+        font-weight: 750;
+        text-decoration: none;
+      }
+
+      article {
+        margin: 28px 0 0;
+        padding: 0 0 26px;
+        border-bottom: 1px solid var(--line);
+      }
+
+      h2 {
+        margin: 0 0 14px;
+        color: var(--blue);
+        font-size: clamp(1.55rem, 6vw, 2.4rem);
+        line-height: 1.12;
+        letter-spacing: 0;
+      }
+
+      h3 {
+        margin: 23px 0 7px;
+        color: var(--green);
+        font-size: 0.94rem;
+        line-height: 1.28;
+        letter-spacing: 0;
+        text-transform: none;
+      }
+
+      p {
+        margin: 0 0 13px;
+      }
+
+      .reference {
+        margin: 0 0 18px;
+        padding: 13px 14px;
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        background: rgba(255, 255, 255, 0.76);
+        font-size: 0.94rem;
+        line-height: 1.46;
+      }
+
+      .reference div + div {
+        margin-top: 4px;
+      }
+
+      .label {
+        font-weight: 800;
+      }
+
+      .spoken,
+      .discussion,
+      .takeaway {
+        border-radius: 14px;
+        padding: 15px 16px;
+      }
+
+      .spoken {
+        background: var(--soft-gold);
+        border: 1px solid #ead9ad;
+        font-style: italic;
+      }
+
+      .discussion {
+        background: var(--soft-blue);
+        border: 1px solid #cfe0ed;
+        font-weight: 780;
+        font-style: italic;
+      }
+
+      .vocab {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 8px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .vocab li {
+        padding: 9px 10px;
+        border: 1px solid rgba(222, 216, 204, 0.85);
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.62);
+        font-size: 0.96rem;
+        line-height: 1.35;
+      }
+
+      .term {
+        font-weight: 800;
+      }
+
+      .takeaway {
+        margin: 32px 0 0;
+        background: var(--soft-green);
+        border: 1px solid #c8e2d6;
+      }
+
+      .footer {
+        margin-top: 28px;
+        color: var(--muted);
+        font-size: 0.88rem;
+        text-align: center;
+      }
+
+      @media (min-width: 720px) {
+        body {
+          font-size: 18px;
+        }
+
+        .page {
+          padding: 30px 32px 58px;
+        }
+
+        .masthead {
+          padding-top: 42px;
+        }
+
+        .overview,
+        .reference,
+        .spoken,
+        .discussion,
+        .takeaway {
+          border-radius: 16px;
+        }
+
+        .vocab {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      @media print {
+        body {
+          background: #fff;
+          font-size: 11pt;
+        }
+
+        .page {
+          width: 100%;
+          padding: 0;
+        }
+
+        .overview,
+        .reference,
+        .spoken,
+        .discussion,
+        .takeaway,
+        .vocab li {
+          box-shadow: none;
+          break-inside: avoid;
+        }
+
+        article {
+          break-inside: avoid;
+        }
+
+        a {
+          color: #000;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <header class="masthead">
+        <p class="kicker">Daily Briefing · May 31, 2026</p>
+        <h1>Daily AI & Blockchain Briefing</h1>
+        <p class="headline">AI Moves Toward Governance; Crypto Moves Toward Regulated Market Structure</p>
+        <div class="meta-row">
+          <span class="pill">Read time: 10-15 min</span>
+          <span class="pill">AI · Crypto · Policy · Business</span>
+          <a class="pill" href="pdf/daily_ai_blockchain_briefing_2026-05-31.pdf">PDF archive</a>
+        </div>
+      </header>
+
+      <section class="overview" aria-label="Executive overview">
+        <p>Today’s most important trend is institutionalisation. Frontier AI is becoming more expensive, audited, and policy-sensitive, while crypto is moving from offshore speculation toward regulated financial infrastructure.</p>
+        <p>For business readers, the key question is who can scale infrastructure and win enterprise trust. For policy readers, the key question is how governments control systemic risk without killing innovation.</p>
+      </section>
+
+      <nav aria-label="Briefing table of contents">
+        <ol class="toc">
+          <li><a href="#openai-evaluations">1. OpenAI pushes for more trustworthy AI evaluations</a></li>
+          <li><a href="#anthropic-funding">2. Anthropic raises $65B and launches Claude Opus 4.8</a></li>
+          <li><a href="#dell-ai-servers">3. Dell surges on Nvidia-powered AI server demand</a></li>
+          <li><a href="#cftc-bitcoin-perps">4. CFTC approves a regulated U.S. bitcoin perpetual contract</a></li>
+          <li><a href="#ecb-stablecoins">5. ECB resists euro stablecoin expansion</a></li>
+        </ol>
+      </nav>
+
+      <article id="openai-evaluations">
+        <h2>1. OpenAI pushes for more trustworthy AI evaluations</h2>
+        <section class="reference">
+          <div><span class="label">Publication:</span> OpenAI</div>
+          <div><span class="label">Article title:</span> <em>A shared playbook for trustworthy third party evaluations</em></div>
+          <div><span class="label">Date:</span> May 29, 2026</div>
+          <div><span class="label">Source:</span> <a href="https://openai.com/index/trustworthy-third-party-evaluations-foundations/">openai.com</a></div>
+        </section>
+
+        <h3>What the article says</h3>
+        <p>OpenAI argues that frontier AI systems can no longer be evaluated like simple chatbots. Modern models use tools, maintain context, retry tasks, and operate over long workflows.</p>
+        <p>The article says evaluation reports should explain the full testing setup: tools, token budget, safeguards, scoring rules, and validity checks. This matters because a model’s performance depends not only on the model itself, but also on the environment around it.</p>
+
+        <h3>Political / Policy Analysis</h3>
+        <p>This is directly relevant to AI regulation. Governments need credible evidence before deciding whether a frontier model is safe enough for public release or high-risk use.</p>
+        <p>The issue involves cyber risk, harmful manipulation, transparency, and accountability. Regulators in the EU, California, the UK, and the U.S. may increasingly expect AI labs to provide audit-style evidence.</p>
+
+        <h3>Business Analysis</h3>
+        <p>Companies that can prove safety and reliability will gain an advantage with enterprise customers and regulators. OpenAI is positioning itself not only as a model provider, but also as a standard-setter for AI governance.</p>
+        <p>Smaller AI labs may face higher compliance costs if detailed evaluations become normal.</p>
+
+        <h3>Possible Consequences</h3>
+        <p>In the short term, more AI companies may publish detailed evaluation frameworks. In the long term, model launches may depend on third-party testing and documented risk controls.</p>
+        <p>Winners may include large AI labs, auditors, safety researchers, and enterprise AI platforms. Losers may include companies relying only on vague benchmark claims.</p>
+
+        <h3>Spoken Retelling Version</h3>
+        <p class="spoken">This article is mainly about how OpenAI wants frontier AI evaluations to become more trustworthy. The background is that AI models are no longer just answering prompts; they are using tools and working across long tasks. The tension is that old benchmarks may not show what a model can really do. The turning point is OpenAI’s argument that evaluation reports should explain the full testing setup. From a business perspective, this helps enterprise buyers compare AI systems more carefully. From a policy perspective, it gives regulators a clearer way to judge safety claims. My takeaway is that AI competition is moving from model performance to provable governance.</p>
+
+        <h3>Useful Vocabulary & Phrases</h3>
+        <ul class="vocab">
+          <li><span class="term">third-party evaluations</span> - 第三方评估</li>
+          <li><span class="term">frontier models</span> - 前沿模型</li>
+          <li><span class="term">evaluation harness</span> - 评估测试框架</li>
+          <li><span class="term">safeguard robustness</span> - 安全防护稳健性</li>
+          <li><span class="term">regulatory obligations</span> - 监管义务</li>
+          <li><span class="term">auditability</span> - 可审计性</li>
+          <li><span class="term">risk mitigation</span> - 风险缓解</li>
+        </ul>
+
+        <h3>One High-quality Discussion Sentence</h3>
+        <p class="discussion">The real AI governance question is no longer just which model scores highest, but whether the evaluation process is credible enough for regulators, customers, and the public to trust.</p>
+      </article>
+
+      <article id="anthropic-funding">
+        <h2>2. Anthropic raises $65B and launches Claude Opus 4.8</h2>
+        <section class="reference">
+          <div><span class="label">Publication:</span> Anthropic</div>
+          <div><span class="label">Article title:</span> <em>Anthropic raises $65B in Series H funding at $965B post-money valuation</em></div>
+          <div><span class="label">Date:</span> May 28, 2026</div>
+          <div><span class="label">Source:</span> <a href="https://www.anthropic.com/news/series-h">anthropic.com</a></div>
+        </section>
+
+        <h3>What the article says</h3>
+        <p>Anthropic says it raised $65 billion at a $965 billion post-money valuation. The company says Claude adoption is growing across enterprise customers and that run-rate revenue recently crossed $47 billion.</p>
+        <p>On the same day, Anthropic launched Claude Opus 4.8, highlighting stronger coding, agentic workflows, professional use cases, and better reliability.</p>
+
+        <h3>Political / Policy Analysis</h3>
+        <p>Governments will care because frontier AI is becoming concentrated among a small number of extremely well-funded companies. This raises questions about antitrust, national security, cloud dependency, energy use, and data protection.</p>
+        <p>AI labs are increasingly becoming critical infrastructure providers, not just software companies.</p>
+
+        <h3>Business Analysis</h3>
+        <p>Anthropic benefits from more capital, stronger enterprise credibility, and greater ability to buy compute. Cloud providers, chipmakers, and enterprise software partners may also benefit.</p>
+        <p>OpenAI, Google, Meta, and xAI face more pressure to prove both technical strength and commercial traction.</p>
+
+        <h3>Possible Consequences</h3>
+        <p>Short term, Anthropic can expand compute and enterprise sales. Long term, the frontier AI race may become more like semiconductors: expensive, strategic, and highly regulated.</p>
+        <p>The opportunity is enterprise automation. The risk is valuation pressure, safety incidents, and rising infrastructure costs.</p>
+
+        <h3>Spoken Retelling Version</h3>
+        <p class="spoken">This article is mainly about Anthropic becoming one of the most valuable private AI companies in the world. The background is that demand for Claude has been growing quickly, especially in enterprise and coding workflows. The tension is that frontier AI now requires enormous capital because better models need more compute. The turning point is Anthropic’s new funding round and the launch of Claude Opus 4.8. From a business perspective, this makes Anthropic a stronger competitor to OpenAI and Google. From a policy perspective, it raises questions about concentration and infrastructure power. My takeaway is that frontier AI is becoming an infrastructure race, not just a software race.</p>
+
+        <h3>Useful Vocabulary & Phrases</h3>
+        <ul class="vocab">
+          <li><span class="term">post-money valuation</span> - 投后估值</li>
+          <li><span class="term">run-rate revenue</span> - 年化收入</li>
+          <li><span class="term">enterprise adoption</span> - 企业采用</li>
+          <li><span class="term">compute capacity</span> - 算力容量</li>
+          <li><span class="term">agentic workflows</span> - 智能体工作流</li>
+          <li><span class="term">private funding round</span> - 私募融资轮</li>
+          <li><span class="term">competitive pressure</span> - 竞争压力</li>
+        </ul>
+
+        <h3>One High-quality Discussion Sentence</h3>
+        <p class="discussion">Anthropic’s funding round shows that frontier AI is becoming less like a software startup race and more like a capital-intensive infrastructure race.</p>
+      </article>
+
+      <article id="dell-ai-servers">
+        <h2>3. Dell surges on Nvidia-powered AI server demand</h2>
+        <section class="reference">
+          <div><span class="label">Publication:</span> Reuters via MarketScreener</div>
+          <div><span class="label">Article title:</span> <em>Dell rallies about 40% on strong Nvidia-powered AI server demand</em></div>
+          <div><span class="label">Date:</span> May 29, 2026</div>
+          <div><span class="label">Source:</span> <a href="https://www.marketscreener.com/news/dell-rallies-about-40-on-strong-nvidia-powered-ai-server-demand-ce7f5ddbdb8ffe2c">marketscreener.com</a></div>
+        </section>
+
+        <h3>What the article says</h3>
+        <p>Reuters reports that Dell shares rallied after the company raised its revenue and profit forecasts. The main driver was strong demand for Nvidia-powered AI servers.</p>
+        <p>The broader story is that the AI boom is now showing up in physical infrastructure: servers, GPUs, networking, storage, power, and cooling.</p>
+
+        <h3>Political / Policy Analysis</h3>
+        <p>AI infrastructure is becoming a national competitiveness issue. Governments care about chip supply chains, energy demand, export controls, and data-center permitting.</p>
+        <p>This also affects environmental policy because large AI data centers require significant electricity and water resources.</p>
+
+        <h3>Business Analysis</h3>
+        <p>Dell, Nvidia, Super Micro, and other infrastructure suppliers may benefit. Cloud companies like Amazon and Alphabet drive demand, but they also face rising capital expenditure.</p>
+        <p>Software-only AI companies may be hurt if compute becomes more expensive or scarce.</p>
+
+        <h3>Possible Consequences</h3>
+        <p>Short term, AI hardware stocks may continue to attract investors. Long term, the bottleneck may shift from model design to infrastructure scale.</p>
+        <p>Winners include server makers, chip companies, networking suppliers, and energy providers. Risks include overcapacity, margin pressure, and supply-chain delays.</p>
+
+        <h3>Spoken Retelling Version</h3>
+        <p class="spoken">This article is mainly about Dell benefiting from the AI infrastructure boom. The background is that companies are racing to build data centers capable of running large AI models. The tension is that demand for AI servers is growing so quickly that hardware supply, power, and cooling are becoming bottlenecks. The turning point is Dell raising its revenue outlook because demand for Nvidia-powered servers is stronger than expected. From a business perspective, this shows that the AI boom is not only about apps and models. From a policy perspective, governments will pay more attention to energy, chips, and national infrastructure. My takeaway is that AI scale depends on hardware reality.</p>
+
+        <h3>Useful Vocabulary & Phrases</h3>
+        <ul class="vocab">
+          <li><span class="term">AI server demand</span> - AI 服务器需求</li>
+          <li><span class="term">annual revenue forecast</span> - 年度收入预测</li>
+          <li><span class="term">supply chain management</span> - 供应链管理</li>
+          <li><span class="term">data-center investment</span> - 数据中心投资</li>
+          <li><span class="term">infrastructure buildout</span> - 基础设施建设</li>
+          <li><span class="term">capital expenditure</span> - 资本开支</li>
+          <li><span class="term">hardware cycle</span> - 硬件周期</li>
+        </ul>
+
+        <h3>One High-quality Discussion Sentence</h3>
+        <p class="discussion">The AI boom is now showing up not only in model demos, but in hard infrastructure spending, where servers, chips, and supply chains decide who can scale.</p>
+      </article>
+
+      <article id="cftc-bitcoin-perps">
+        <h2>4. CFTC approves a regulated U.S. bitcoin perpetual contract</h2>
+        <section class="reference">
+          <div><span class="label">Publication:</span> CFTC</div>
+          <div><span class="label">Article title:</span> <em>CFTC Approves BTCPERP Contract Submitted by KalshiEX, LLC</em></div>
+          <div><span class="label">Date:</span> May 29, 2026</div>
+          <div><span class="label">Source:</span> <a href="https://www.cftc.gov/PressRoom/PressReleases/9240-26">cftc.gov</a></div>
+        </section>
+
+        <h3>What the article says</h3>
+        <p>The CFTC approved KalshiEX’s BTCPERP contract, a bitcoin perpetual contract listed as a futures contract on a regulated U.S. exchange.</p>
+        <p>Perpetual contracts are widely used in crypto markets because they allow traders to maintain leveraged exposure without a fixed expiry date. Historically, much of this activity happened offshore.</p>
+
+        <h3>Political / Policy Analysis</h3>
+        <p>Regulators care because perpetuals involve leverage, liquidity risk, market manipulation, and consumer protection.</p>
+        <p>The CFTC is signaling that some crypto derivatives can be brought into regulated U.S. markets instead of remaining offshore.</p>
+
+        <h3>Business Analysis</h3>
+        <p>Kalshi and Coinbase may benefit from a clearer U.S. regulatory path. Institutional traders may also gain more regulated ways to access crypto derivatives.</p>
+        <p>Offshore exchanges could face more competition if U.S. venues become credible alternatives.</p>
+
+        <h3>Possible Consequences</h3>
+        <p>Short term, more exchanges may seek approval for crypto perpetuals. Long term, U.S. crypto derivatives markets could become deeper and more institutional.</p>
+        <p>The opportunity is regulated leverage and better price discovery. The risk is excessive speculation and forced liquidations.</p>
+
+        <h3>Spoken Retelling Version</h3>
+        <p class="spoken">This article is mainly about the CFTC approving a regulated bitcoin perpetual contract in the United States. The background is that perpetuals are one of the most popular products in global crypto trading, but much of that activity has been offshore. The tension is that regulators want innovation, but they also worry about leverage and investor harm. The turning point is the CFTC giving Kalshi a path to list a bitcoin perpetual as a regulated futures product. From a business perspective, this could help U.S. exchanges compete with offshore platforms. From a policy perspective, it shows the U.S. trying to regulate crypto risk onshore. My takeaway is that crypto is becoming more institutional, but not necessarily less risky.</p>
+
+        <h3>Useful Vocabulary & Phrases</h3>
+        <ul class="vocab">
+          <li><span class="term">perpetual contract</span> - 永续合约</li>
+          <li><span class="term">designated contract market</span> - 指定合约市场</li>
+          <li><span class="term">no-action letter</span> - 不采取执法行动函</li>
+          <li><span class="term">margin</span> - 保证金</li>
+          <li><span class="term">market integrity</span> - 市场完整性</li>
+          <li><span class="term">leverage</span> - 杠杆</li>
+          <li><span class="term">price discovery</span> - 价格发现</li>
+        </ul>
+
+        <h3>One High-quality Discussion Sentence</h3>
+        <p class="discussion">The CFTC’s move suggests that the U.S. is trying to bring crypto risk onshore and regulate it, instead of simply pushing activity to offshore exchanges.</p>
+      </article>
+
+      <article id="ecb-stablecoins">
+        <h2>5. ECB resists euro stablecoin expansion</h2>
+        <section class="reference">
+          <div><span class="label">Publication:</span> Reuters via Investing.com</div>
+          <div><span class="label">Article title:</span> <em>ECB rebuffs proposals to boost euro stablecoins as too risky</em></div>
+          <div><span class="label">Date:</span> May 22, 2026</div>
+          <div><span class="label">Source:</span> <a href="https://www.investing.com/news/economy-news/ecb-rebuffs-proposals-to-boost-euro-stablecoins-as-too-risky-4707333">investing.com</a></div>
+        </section>
+
+        <h3>What the article says</h3>
+        <p>Reuters reports that the European Central Bank warned EU finance ministers that expanding euro stablecoins could weaken bank lending and complicate monetary policy.</p>
+        <p>The background is Europe’s concern that dollar stablecoins dominate digital finance. The debate is whether Europe should support euro stablecoins, tokenized bank deposits, or the digital euro.</p>
+
+        <h3>Political / Policy Analysis</h3>
+        <p>This is about monetary sovereignty and financial stability. The ECB worries that stablecoins could pull deposits away from banks and make interest-rate control harder.</p>
+        <p>The issue affects the ECB, European Commission, EU finance ministries, banks, stablecoin issuers, and global payment companies.</p>
+
+        <h3>Business Analysis</h3>
+        <p>European banks may benefit if regulators prefer tokenized deposits over private stablecoins. Dollar stablecoin issuers may also benefit if Europe remains cautious.</p>
+        <p>Euro stablecoin issuers and crypto payment companies may face slower adoption in Europe.</p>
+
+        <h3>Possible Consequences</h3>
+        <p>Short term, Europe may keep a cautious approach to stablecoins. Long term, the digital euro and tokenized bank deposits may become the preferred European path.</p>
+        <p>The opportunity is bank-led digital money. The risk is that Europe moves too slowly and becomes more dependent on dollar-based digital payment rails.</p>
+
+        <h3>Spoken Retelling Version</h3>
+        <p class="spoken">This article is mainly about the ECB pushing back against proposals to expand euro stablecoins. The background is that stablecoins are becoming important in crypto trading and cross-border payments, but most of the market is still dollar-based. The tension is that Europe wants more payment autonomy, but central bankers worry that stablecoins could pull money away from bank deposits. The turning point is the ECB warning EU finance ministers that euro stablecoins may create financial-stability risks. From a business perspective, this could favor banks and digital-euro projects. From a policy perspective, the issue is monetary sovereignty. My takeaway is that Europe wants digital money, but it wants that money inside the banking and central-bank framework.</p>
+
+        <h3>Useful Vocabulary & Phrases</h3>
+        <ul class="vocab">
+          <li><span class="term">stablecoin issuer</span> - 稳定币发行方</li>
+          <li><span class="term">digital dollarisation</span> - 数字美元化</li>
+          <li><span class="term">bank disintermediation</span> - 银行脱媒</li>
+          <li><span class="term">lender of last resort</span> - 最后贷款人</li>
+          <li><span class="term">tokenised deposits</span> - 代币化存款</li>
+          <li><span class="term">reserve requirements</span> - 储备金要求</li>
+          <li><span class="term">monetary sovereignty</span> - 货币主权</li>
+        </ul>
+
+        <h3>One High-quality Discussion Sentence</h3>
+        <p class="discussion">Europe’s stablecoin debate is really about monetary sovereignty: whether digital money infrastructure will be built around the euro or around the dollar.</p>
+      </article>
+
+      <section class="takeaway">
+        <h2>Today’s Big Takeaway</h2>
+        <p>AI and crypto are both moving from experimental technology into regulated infrastructure. AI is becoming a race for compute, evaluation, and enterprise trust, while crypto is becoming a race for compliant market structure and monetary influence.</p>
+        <p>The winners will be companies that can scale quickly while satisfying regulators, institutional customers, and public trust.</p>
+      </section>
+
+      <p class="footer">Daily AI & Blockchain News Study Briefing · HTML newsletter version</p>
+    </main>
+  </body>
+</html>
