@@ -53,6 +53,28 @@
         padding: 18px 16px 44px;
       }
 
+      .site-nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 6px 0 14px;
+        color: var(--muted);
+        font-size: 0.88rem;
+        font-weight: 750;
+      }
+
+      .site-nav a {
+        color: var(--muted);
+        text-decoration: none;
+      }
+
+      .site-nav-links {
+        display: flex;
+        gap: 12px;
+        white-space: nowrap;
+      }
+
       .masthead {
         padding: 28px 0 18px;
         border-bottom: 1px solid var(--line);
@@ -244,6 +266,10 @@
         text-align: center;
       }
 
+      .footer a {
+        color: var(--muted);
+      }
+
       @media (min-width: 720px) {
         body {
           font-size: 18px;
@@ -303,6 +329,15 @@
   </head>
   <body>
     <main class="page">
+      <nav class="site-nav" aria-label="Site navigation">
+        <a href="./">AI & Blockchain Briefing</a>
+        <div class="site-nav-links">
+          <a href="./">Latest</a>
+          <a href="archive.html">Archive</a>
+          <a href="pdf/daily_ai_blockchain_briefing_2026-05-31.pdf">PDF</a>
+        </div>
+      </nav>
+
       <header class="masthead">
         <p class="kicker">Daily Briefing · May 31, 2026</p>
         <h1>Daily AI & Blockchain Briefing</h1>
@@ -310,7 +345,8 @@
         <div class="meta-row">
           <span class="pill">Read time: 10-15 min</span>
           <span class="pill">AI · Crypto · Policy · Business</span>
-          <a class="pill" href="pdf/daily_ai_blockchain_briefing_2026-05-31.pdf">PDF archive</a>
+          <a class="pill" href="archive.html">Archive</a>
+          <a class="pill" href="pdf/daily_ai_blockchain_briefing_2026-05-31.pdf">PDF</a>
         </div>
       </header>
 
@@ -550,7 +586,7 @@
         <p>The winners will be companies that can scale quickly while satisfying regulators, institutional customers, and public trust.</p>
       </section>
 
-      <p class="footer">Daily AI & Blockchain News Study Briefing · HTML newsletter version</p>
+      <p class="footer">Daily AI & Blockchain News Study Briefing · <a href="archive.html">Archive</a> · <a href="pdf/daily_ai_blockchain_briefing_2026-05-31.pdf">PDF</a></p>
     </main>
   </body>
 </html>
