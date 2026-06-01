@@ -5,162 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Archive - Daily AI & Blockchain Briefing</title>
     <style>
-      :root {
-        color-scheme: light;
-        --bg: #f6f4ef;
-        --ink: #17202a;
-        --muted: #667085;
-        --line: #ded8cc;
-        --blue: #164a7c;
-        --green: #24765d;
-        --soft-blue: #eaf3fb;
-      }
 
-      * {
-        box-sizing: border-box;
-      }
+      :root { color-scheme: light; --bg: #f6f4ef; --ink: #17202a; --muted: #667085; --line: #ded8cc; --blue: #164a7c; --green: #24765d; --soft-blue: #eaf3fb; }
+      * { box-sizing: border-box; }
+      body { margin: 0; background: var(--bg); color: var(--ink); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; font-size: 17px; line-height: 1.6; }
+      a { color: var(--blue); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+      .page { width: min(100%, 860px); margin: 0 auto; padding: 24px 16px 48px; }
+      .site-nav { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 0 0 18px; color: var(--muted); font-size: 0.88rem; font-weight: 750; }
+      .site-nav a { color: var(--muted); text-decoration: none; }
+      .site-nav-links { display: flex; gap: 12px; white-space: nowrap; }
+      header { padding: 18px 0 22px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+      .kicker { margin: 0 0 10px; color: var(--muted); font-size: 0.82rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; }
+      h1 { margin: 0; color: var(--blue); font-family: Georgia, "Times New Roman", serif; font-size: clamp(2.2rem, 10vw, 4.4rem); line-height: 1; letter-spacing: 0; }
+      .intro { margin: 18px 0 0; max-width: 42rem; color: #2d3844; }
+      .archive-list { margin: 26px 0 0; padding: 0; list-style: none; border-top: 1px solid var(--line); }
+      .archive-item { padding: 18px 0; border-bottom: 1px solid var(--line); }
+      .archive-date { margin: 0 0 8px; color: var(--green); font-size: 0.92rem; font-weight: 800; }
+      .archive-title { margin: 0 0 8px; color: var(--ink); font-size: 1.25rem; line-height: 1.2; font-weight: 850; }
+      .archive-links { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 12px; }
+      .pill { display: inline-flex; align-items: center; min-height: 34px; padding: 6px 11px; border: 1px solid var(--line); border-radius: 999px; background: rgba(255,255,255,0.74); color: #3f4a57; font-size: 0.88rem; font-weight: 750; text-decoration: none; }
+      .note { margin: 26px 0 0; padding: 15px 16px; border: 1px solid #cfe0ed; border-radius: 14px; background: var(--soft-blue); color: #263442; }
+      @media (min-width: 720px) { body { font-size: 18px; } .page { padding: 34px 32px 64px; } }
 
-      body {
-        margin: 0;
-        background: var(--bg);
-        color: var(--ink);
-        font-family:
-          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
-          "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
-        font-size: 17px;
-        line-height: 1.6;
-      }
-
-      a {
-        color: var(--blue);
-        text-decoration-thickness: 1px;
-        text-underline-offset: 3px;
-      }
-
-      .page {
-        width: min(100%, 860px);
-        margin: 0 auto;
-        padding: 24px 16px 48px;
-      }
-
-      .site-nav {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 12px;
-        padding: 0 0 18px;
-        color: var(--muted);
-        font-size: 0.88rem;
-        font-weight: 750;
-      }
-
-      .site-nav a {
-        color: var(--muted);
-        text-decoration: none;
-      }
-
-      .site-nav-links {
-        display: flex;
-        gap: 12px;
-        white-space: nowrap;
-      }
-
-      header {
-        padding: 18px 0 22px;
-        border-top: 1px solid var(--line);
-        border-bottom: 1px solid var(--line);
-      }
-
-      .kicker {
-        margin: 0 0 10px;
-        color: var(--muted);
-        font-size: 0.82rem;
-        font-weight: 800;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-      }
-
-      h1 {
-        margin: 0;
-        color: var(--blue);
-        font-family: Georgia, "Times New Roman", serif;
-        font-size: clamp(2.2rem, 10vw, 4.4rem);
-        line-height: 1;
-        letter-spacing: 0;
-      }
-
-      .intro {
-        margin: 18px 0 0;
-        max-width: 42rem;
-        color: #2d3844;
-      }
-
-      .archive-list {
-        margin: 26px 0 0;
-        padding: 0;
-        list-style: none;
-        border-top: 1px solid var(--line);
-      }
-
-      .archive-item {
-        padding: 18px 0;
-        border-bottom: 1px solid var(--line);
-      }
-
-      .archive-date {
-        margin: 0 0 8px;
-        color: var(--green);
-        font-size: 0.92rem;
-        font-weight: 800;
-      }
-
-      .archive-title {
-        margin: 0 0 8px;
-        color: var(--ink);
-        font-size: 1.25rem;
-        line-height: 1.2;
-        font-weight: 850;
-      }
-
-      .archive-links {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 9px;
-        margin-top: 12px;
-      }
-
-      .pill {
-        display: inline-flex;
-        align-items: center;
-        min-height: 34px;
-        padding: 6px 11px;
-        border: 1px solid var(--line);
-        border-radius: 999px;
-        background: rgba(255, 255, 255, 0.74);
-        color: #3f4a57;
-        font-size: 0.88rem;
-        font-weight: 750;
-        text-decoration: none;
-      }
-
-      .note {
-        margin: 26px 0 0;
-        padding: 15px 16px;
-        border: 1px solid #cfe0ed;
-        border-radius: 14px;
-        background: var(--soft-blue);
-        color: #263442;
-      }
-
-      @media (min-width: 720px) {
-        body {
-          font-size: 18px;
-        }
-
-        .page {
-          padding: 34px 32px 64px;
-        }
-      }
     </style>
   </head>
   <body>
@@ -176,10 +42,19 @@
       <header>
         <p class="kicker">Archive</p>
         <h1>Past Briefings</h1>
-        <p class="intro">A simple reading archive for the daily AI, crypto, business, and policy briefing. The latest issue always lives on the home page.</p>
+        <p class="intro">A simple reading archive for the daily AI, crypto, business and policy briefing. The latest issue always lives on the home page.</p>
       </header>
 
       <ol class="archive-list">
+        <li class="archive-item">
+          <p class="archive-date">June 1, 2026</p>
+          <h2 class="archive-title">AI Moves Onto the Device; Crypto Moves Deeper Into Market Infrastructure</h2>
+          <p>AI shifts toward local devices and tighter chip controls, while crypto policy and tokenization move deeper into regulated market infrastructure.</p>
+          <div class="archive-links">
+            <a class="pill" href="daily_ai_blockchain_briefing_2026-06-01.html">Read HTML</a>
+            <a class="pill" href="pdf/daily_ai_blockchain_briefing_2026-06-01.pdf">Open PDF</a>
+          </div>
+        </li>
         <li class="archive-item">
           <p class="archive-date">May 31, 2026</p>
           <h2 class="archive-title">AI Moves Toward Governance; Crypto Moves Toward Regulated Market Structure</h2>
