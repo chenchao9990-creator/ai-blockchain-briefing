@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Daily AI & Blockchain Briefing - June 2, 2026</title>
+    <style>
+
+      :root {
+        color-scheme: light;
+        --bg: #f6f4ef;
+        --ink: #17202a;
+        --muted: #667085;
+        --line: #ded8cc;
+        --blue: #164a7c;
+        --green: #24765d;
+        --soft-blue: #eaf3fb;
+        --soft-green: #edf7f2;
+        --soft-gold: #fff7e3;
+        --shadow: 0 16px 45px rgba(38, 52, 65, 0.08);
+      }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0;
+        background: linear-gradient(180deg, rgba(255, 253, 248, 0.9), rgba(246, 244, 239, 0.92)), var(--bg);
+        color: var(--ink);
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+        font-size: 17px;
+        line-height: 1.62;
+      }
+      a { color: var(--blue); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+      .page { width: min(100%, 860px); margin: 0 auto; padding: 18px 16px 44px; }
+      .site-nav {
+        display: flex; align-items: center; justify-content: space-between; gap: 12px;
+        padding: 6px 0 14px; color: var(--muted); font-size: 0.88rem; font-weight: 750;
+      }
+      .site-nav a { color: var(--muted); text-decoration: none; }
+      .site-nav-links { display: flex; gap: 12px; white-space: nowrap; }
+      .masthead { padding: 28px 0 18px; border-bottom: 1px solid var(--line); }
+      .kicker { margin: 0 0 12px; color: var(--muted); font-size: 0.82rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+      h1 { margin: 0 0 8px; color: var(--blue); font-family: Georgia, "Times New Roman", serif; font-size: clamp(2.05rem, 9vw, 4.5rem); line-height: 0.98; letter-spacing: 0; }
+      .headline { margin: 14px 0 0; font-size: clamp(1.24rem, 4.8vw, 2.1rem); line-height: 1.15; font-weight: 800; color: #151d27; }
+      .meta-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+      .pill { display: inline-flex; align-items: center; min-height: 34px; padding: 6px 11px; border: 1px solid var(--line); border-radius: 999px; background: rgba(255,255,255,0.72); color: #3f4a57; font-size: 0.86rem; font-weight: 700; text-decoration: none; }
+      .overview { margin: 22px 0 18px; padding: 17px 17px 15px; border: 1px solid #cfe0ed; border-radius: 14px; background: var(--soft-blue); box-shadow: var(--shadow); }
+      .overview p, .takeaway p { margin: 0 0 12px; }
+      .overview p:last-child, .takeaway p:last-child { margin-bottom: 0; }
+      .toc { margin: 22px 0 22px; padding: 0; list-style: none; border-top: 1px solid var(--line); }
+      .toc li { border-bottom: 1px solid var(--line); }
+      .toc a { display: block; padding: 12px 0; color: var(--ink); font-size: 1rem; font-weight: 750; text-decoration: none; }
+      article { margin: 28px 0 0; padding: 0 0 26px; border-bottom: 1px solid var(--line); }
+      h2 { margin: 0 0 14px; color: var(--blue); font-size: clamp(1.55rem, 6vw, 2.4rem); line-height: 1.12; letter-spacing: 0; }
+      h3 { margin: 23px 0 7px; color: var(--green); font-size: 0.94rem; line-height: 1.28; letter-spacing: 0; text-transform: none; }
+      p { margin: 0 0 13px; }
+      .reference { margin: 0 0 18px; padding: 13px 14px; border: 1px solid var(--line); border-radius: 12px; background: rgba(255,255,255,0.76); font-size: 0.94rem; line-height: 1.46; overflow-wrap: anywhere; }
+      .reference div + div { margin-top: 4px; }
+      .label { font-weight: 800; }
+      .spoken, .discussion, .takeaway { border-radius: 14px; padding: 15px 16px; }
+      .spoken { background: var(--soft-gold); border: 1px solid #ead9ad; font-style: italic; }
+      .discussion { background: var(--soft-blue); border: 1px solid #cfe0ed; font-weight: 780; font-style: italic; }
+      .vocab { display: grid; grid-template-columns: 1fr; gap: 8px; margin: 0; padding: 0; list-style: none; }
+      .vocab li { padding: 9px 10px; border: 1px solid rgba(222,216,204,0.85); border-radius: 10px; background: rgba(255,255,255,0.62); font-size: 0.96rem; line-height: 1.35; }
+      .term { font-weight: 800; }
+      .takeaway { margin: 32px 0 0; background: var(--soft-green); border: 1px solid #c8e2d6; }
+      .footer { margin-top: 28px; color: var(--muted); font-size: 0.88rem; text-align: center; }
+      .footer a { color: var(--muted); }
+      @media (min-width: 720px) {
+        body { font-size: 18px; }
+        .page { padding: 30px 32px 58px; }
+        .masthead { padding-top: 42px; }
+        .overview, .reference, .spoken, .discussion, .takeaway { border-radius: 16px; }
+        .vocab { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      }
+      @media print {
+        body { background: #fff; font-size: 11pt; }
+        .page { width: 100%; padding: 0; }
+        .overview, .reference, .spoken, .discussion, .takeaway, .vocab li { box-shadow: none; break-inside: avoid; }
+        article { break-inside: avoid; }
+        a { color: #000; }
+      }
+
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <nav class="site-nav" aria-label="Site navigation">
+        <a href="./">AI & Blockchain Briefing</a>
+        <div class="site-nav-links">
+          <a href="./">Latest</a>
+          <a href="archive.html">Archive</a>
+          <a href="pdf/daily_ai_blockchain_briefing_2026-06-02.pdf">PDF</a>
+        </div>
+      </nav>
+
+      <header class="masthead">
+        <p class="kicker">Daily Briefing · June 2, 2026</p>
+        <h1>Daily AI & Blockchain Briefing</h1>
+        <p class="headline">AI Safety Becomes Government Infrastructure; Crypto Rules Move Into Implementation</p>
+        <div class="meta-row">
+          <span class="pill">Read time: 10-15 min</span>
+          <span class="pill">AI · Crypto · Policy · Business</span>
+          <a class="pill" href="archive.html">Archive</a>
+          <a class="pill" href="pdf/daily_ai_blockchain_briefing_2026-06-02.pdf">PDF</a>
+        </div>
+      </header>
+
+      <section class="overview" aria-label="Executive overview">
+        <p>Today is about AI moving from product launches into security governance. The U.S. administration is asking frontier AI companies to submit models for security testing, while Anthropic is expanding safety work with governments and critical sectors.</p>
+        <p>In crypto, the policy story is still stablecoins and the market story is risk discipline. Investors are being reminded that institutional crypto products can bring legitimacy, but not immunity from outflows, leverage and regulatory pressure.</p>
+      </section>
+
+      <nav aria-label="Briefing table of contents">
+        <ol class="toc">
+          <li><a href="#ai-executive-order">1. White House asks AI companies to submit models for security testing</a></li>
+          <li><a href="#anthropic-glasswing">2. Anthropic expands Project Glasswing for AI safety and cyber resilience</a></li>
+          <li><a href="#meta-ai-support">3. Meta&#x27;s AI support incident highlights the risk of autonomous customer systems</a></li>
+          <li><a href="#genius-act-implementation">4. U.S. stablecoin policy moves into rulemaking and compliance</a></li>
+          <li><a href="#crypto-etp-outflows">5. Crypto fund outflows show that institutional adoption can reverse</a></li>
+        </ol>
+      </nav>
+
+      <article id="ai-executive-order">
+        <h2>1. White House asks AI companies to submit models for security testing</h2>
+        <section class="reference">
+          <div><span class="label">Publication:</span> Reuters via Investing.com</div>
+          <div><span class="label">Article title:</span> <em>Trump signed order to promote advanced AI innovation and security, White House says</em></div>
+          <div><span class="label">Date:</span> June 2, 2026</div>
+          <div><span class="label">Source quality:</span> High</div>
+          <div><span class="label">Source type:</span> Wire service report; policy announcement</div>
+          <div><span class="label">Source:</span> <a href="https://www.investing.com/news/world-news/trump-signed-order-to-promoteadvanced-ai-innovation-and-security-white-house-says-4722541">https://www.investing.com/news/world-news/trump-signed-order-to-promoteadvanced-ai-innovation-and-security-white-house-says-4722541</a></div>
+<div><span class="label">Supporting:</span> White House fact sheet and executive order on advanced artificial intelligence innovation and security, June 2, 2026</div>
+        </section>
+        <h3>What the article says</h3>
+        <p>Reuters reported that the White House signed an executive order aimed at promoting advanced AI innovation while strengthening national security oversight. A key part of the order asks AI companies to voluntarily submit models for testing by the Center for AI Standards and Innovation.</p>
+        <p>The background is that frontier AI policy has shifted from general principles toward concrete testing, standards and institutional capacity. Governments increasingly want to understand how powerful models behave before they are widely deployed in sensitive use cases.</p>
+        <p>The situation is still at the policy launch stage. The order does not create a full licensing regime, but it signals that model evaluation, cybersecurity and government access to technical information are becoming central to AI governance.</p>
+        <h3>Political / Policy Analysis</h3>
+        <p>Governments care because advanced AI systems may affect cybersecurity, biological security, fraud, critical infrastructure and military competitiveness. A voluntary testing framework can become a bridge toward more formal safety standards.</p>
+        <p>The affected institutions include the White House, NIST-related standards bodies, national-security agencies, AI developers and enterprise customers that rely on frontier models. The main policy issues are national security, data security, liability and public accountability.</p>
+        <p>The regulatory direction is likely to be more structured model testing, clearer reporting expectations and closer coordination between private AI labs and government agencies.</p>
+        <h3>Business Analysis</h3>
+        <p>Large AI companies may benefit because they have the engineering teams, legal departments and security infrastructure to cooperate with government testing. Smaller labs may face higher compliance costs if voluntary expectations become market requirements.</p>
+        <p>Enterprise customers may also benefit because third-party testing can increase trust in AI tools used for finance, healthcare, defense, software and public-sector work. The competitive landscape may shift toward firms that can prove safety, not only performance.</p>
+        <p>The larger business trend is that frontier AI is becoming a regulated trust product. Trust, documentation and auditability are becoming part of the commercial value proposition.</p>
+        <h3>Possible Consequences</h3>
+        <p>Short term, AI labs may prepare model cards, security documentation and test-access procedures for government review. Investors will watch whether testing remains voluntary or becomes a de facto requirement for enterprise adoption.</p>
+        <p>Long term, the U.S. may build a national AI evaluation infrastructure similar to how aviation, finance and medicine use standards and certification. That could improve safety, but it could also raise barriers to entry.</p>
+        <p>Winners may include large AI labs, cloud providers and security-testing firms. Losers may include under-resourced model developers that cannot meet emerging trust and documentation expectations.</p>
+        <h3>Spoken Retelling Version</h3>
+        <p class="spoken">This article is mainly about the U.S. government trying to make advanced AI safer without slowing innovation too much. The background is that frontier models are becoming powerful enough to affect cybersecurity, critical infrastructure and national security. The tension is that governments want visibility into these systems, while companies want speed and flexibility. The turning point is a White House executive order asking AI companies to submit models for security testing. From a business perspective, this favors companies that can prove reliability and safety. From a policy perspective, it shows that AI governance is moving from theory to operational testing. My takeaway is that safety evaluation is becoming part of the AI business model.</p>
+        <h3>Useful Vocabulary & Phrases</h3>
+        <ul class="vocab">
+          <li><span class="term">model evaluation</span> - 模型评估</li>
+          <li><span class="term">security testing</span> - 安全测试</li>
+          <li><span class="term">voluntary framework</span> - 自愿性框架</li>
+          <li><span class="term">frontier model</span> - 前沿模型</li>
+          <li><span class="term">national-security oversight</span> - 国家安全监督</li>
+          <li><span class="term">auditability</span> - 可审计性</li>
+          <li><span class="term">compliance cost</span> - 合规成本</li>
+          <li><span class="term">de facto requirement</span> - 事实上的要求</li>
+        </ul>
+        <h3>One High-quality Discussion Sentence</h3>
+        <p class="discussion">The important shift is that AI safety is becoming an operational standard, not just a public-relations promise.</p>
+      </article>
+
+      <article id="anthropic-glasswing">
+        <h2>2. Anthropic expands Project Glasswing for AI safety and cyber resilience</h2>
+        <section class="reference">
+          <div><span class="label">Publication:</span> Reuters; Anthropic official blog</div>
+          <div><span class="label">Article title:</span> <em>Anthropic Mythos access to quadruple to about 200 Glasswing partners</em></div>
+          <div><span class="label">Date:</span> June 2, 2026</div>
+          <div><span class="label">Source quality:</span> High</div>
+          <div><span class="label">Source type:</span> Wire service report plus official company source</div>
+          <div><span class="label">Source:</span> <a href="https://www.reuters.com/technology/anthropic-mythos-access-grow-four-fold-about-200-glasswing-partners-2026-06-02/">https://www.reuters.com/technology/anthropic-mythos-access-grow-four-fold-about-200-glasswing-partners-2026-06-02/</a></div>
+<div><span class="label">Supporting:</span> Anthropic, Expanding Project Glasswing, June 2, 2026</div>
+        </section>
+        <h3>What the article says</h3>
+        <p>Reuters reported that Anthropic is expanding access to Mythos through Project Glasswing, a program designed to support AI safety, cybersecurity and public-interest work. Anthropic says the program will grow to around 200 partners across governments, nonprofits and critical sectors.</p>
+        <p>The background is that leading AI labs are competing not only on model performance, but also on how trusted they are by governments, enterprises and civil-society groups. Safety partnerships are becoming a way to shape how AI is used in sensitive domains.</p>
+        <p>The current stage is ecosystem expansion. Anthropic is positioning itself as a high-trust AI provider for organizations that need stronger safety controls, governance processes and technical support.</p>
+        <h3>Political / Policy Analysis</h3>
+        <p>Governments care because AI tools used in cybersecurity, public services and critical infrastructure can create systemic risk if deployed without controls. Project Glasswing connects AI safety directly with public-sector capability building.</p>
+        <p>The affected institutions include government agencies, research groups, civil-society organizations and companies responsible for critical digital infrastructure. The policy themes are cyber resilience, public-private partnership, data security and responsible deployment.</p>
+        <p>This may encourage more governments to treat access to frontier models as a strategic capability, similar to cloud infrastructure or advanced cybersecurity tools.</p>
+        <h3>Business Analysis</h3>
+        <p>Anthropic may benefit by strengthening its reputation as the more safety-focused AI lab. That matters for customers in finance, healthcare, government and enterprise software where trust is part of procurement.</p>
+        <p>OpenAI, Google and Microsoft may face pressure to show comparable safety partnerships. The competitive landscape is shifting from raw benchmark competition toward trust, reliability, policy alignment and customer risk management.</p>
+        <p>The larger business trend is that AI companies are building institutional relationships before regulation fully hardens. Those relationships can become a competitive moat.</p>
+        <h3>Possible Consequences</h3>
+        <p>Short term, more organizations may receive controlled access to Anthropic models and safety resources. This could create case studies for AI in cyber defense, public services and high-risk workflows.</p>
+        <p>Long term, safety partnerships may influence procurement standards. Buyers may start asking not only which model is strongest, but which vendor has the best governance and incident-response process.</p>
+        <p>Winners may include Anthropic, partner organizations and AI governance vendors. Losers may include AI providers that are perceived as less transparent or less aligned with public-sector needs.</p>
+        <h3>Spoken Retelling Version</h3>
+        <p class="spoken">This article is mainly about Anthropic expanding Project Glasswing, its program for AI safety and cyber resilience. The background is that governments and critical organizations increasingly need AI tools, but they also worry about misuse, data risk and operational failure. The tension is that powerful AI can help defend systems, but it can also create new security problems. The turning point is Anthropic expanding access to about 200 partners. From a business perspective, this strengthens Anthropic&#x27;s position as a trusted enterprise and government AI provider. From a policy perspective, it shows that AI safety is becoming a public-private infrastructure issue. My takeaway is that trust is becoming a competitive asset in AI.</p>
+        <h3>Useful Vocabulary & Phrases</h3>
+        <ul class="vocab">
+          <li><span class="term">cyber resilience</span> - 网络韧性</li>
+          <li><span class="term">public-private partnership</span> - 公私合作</li>
+          <li><span class="term">critical infrastructure</span> - 关键基础设施</li>
+          <li><span class="term">responsible deployment</span> - 负责任部署</li>
+          <li><span class="term">procurement standard</span> - 采购标准</li>
+          <li><span class="term">incident response</span> - 事件响应</li>
+          <li><span class="term">policy alignment</span> - 政策一致性</li>
+          <li><span class="term">competitive moat</span> - 竞争护城河</li>
+        </ul>
+        <h3>One High-quality Discussion Sentence</h3>
+        <p class="discussion">For frontier AI companies, credibility with governments may become as important as model performance.</p>
+      </article>
+
+      <article id="meta-ai-support">
+        <h2>3. Meta&#x27;s AI support incident highlights the risk of autonomous customer systems</h2>
+        <section class="reference">
+          <div><span class="label">Publication:</span> TechCrunch</div>
+          <div><span class="label">Article title:</span> <em>Hackers hijacked Instagram accounts by tricking Meta&#x27;s AI support chatbot into granting access</em></div>
+          <div><span class="label">Date:</span> June 1, 2026</div>
+          <div><span class="label">Source quality:</span> Medium-High</div>
+          <div><span class="label">Source type:</span> Technology specialist media; security incident reporting</div>
+          <div><span class="label">Source:</span> <a href="https://techcrunch.com/2026/06/01/hackers-hijacked-instagram-accounts-by-tricking-meta-ai-support-chatbot-into-granting-access/">https://techcrunch.com/2026/06/01/hackers-hijacked-instagram-accounts-by-tricking-meta-ai-support-chatbot-into-granting-access/</a></div>
+<div><span class="label">Supporting:</span> Ars Technica follow-up coverage of the same Meta AI support incident</div>
+        </section>
+        <h3>What the article says</h3>
+        <p>TechCrunch reported that hackers were able to hijack Instagram accounts by manipulating Meta&#x27;s AI-powered support system into granting access. The issue matters because support workflows often involve identity verification, account recovery and sensitive user data.</p>
+        <p>The background is that large platforms are rapidly adding AI agents to customer support in order to reduce cost and handle more cases. But support automation becomes dangerous when the system can make permission or recovery decisions without enough human review.</p>
+        <p>The current stage is incident response and reputational pressure. The story is not only about one platform bug; it is about whether AI agents are ready for high-trust operational tasks.</p>
+        <h3>Political / Policy Analysis</h3>
+        <p>Regulators care because account recovery touches identity, privacy, fraud, consumer protection and platform accountability. If an AI system incorrectly gives access to an account, the harm is immediate and personal.</p>
+        <p>Affected regulators may include consumer-protection authorities, privacy regulators and potentially competition regulators if platform users have no practical alternative to the dominant service.</p>
+        <p>This could push governments to require stronger human oversight, audit logs and security testing for AI systems used in account access, payments or identity verification.</p>
+        <h3>Business Analysis</h3>
+        <p>Meta may face higher support and security costs if it has to add stronger review layers. Other platforms may slow down full automation in customer support and focus on human-in-the-loop designs.</p>
+        <p>Security vendors and identity-verification providers may benefit because companies will need better controls around AI-driven workflows. The incident also pressures AI vendors to design agents that refuse risky permission changes.</p>
+        <p>The larger trend is that AI agents are entering operational workflows where mistakes create real financial and reputational damage.</p>
+        <h3>Possible Consequences</h3>
+        <p>Short term, platforms may audit AI support systems and restrict what automated agents can do without human approval. Users may also become more skeptical of AI support in high-stakes situations.</p>
+        <p>Long term, customer-service AI could split into low-risk automation and high-risk assisted workflows. Companies may save money on simple queries but keep human approval for identity, payment and security changes.</p>
+        <p>Winners may include cybersecurity vendors, identity platforms and AI governance tools. Losers may include platforms that over-automate sensitive workflows too quickly.</p>
+        <h3>Spoken Retelling Version</h3>
+        <p class="spoken">This article is mainly about hackers using Meta&#x27;s AI support system to take over Instagram accounts. The background is that tech companies are adding AI agents to customer support to reduce cost and move faster. The tension is that support systems often control identity and access, so a mistake is not just inconvenient, it can be a security failure. The turning point is that attackers reportedly tricked the AI system into granting account access. From a business perspective, this shows that automation can reduce cost but also create new operational risk. From a policy perspective, it raises consumer protection and privacy concerns. My takeaway is that AI agents need stronger guardrails before they handle high-trust decisions.</p>
+        <h3>Useful Vocabulary & Phrases</h3>
+        <ul class="vocab">
+          <li><span class="term">account recovery</span> - 账户找回</li>
+          <li><span class="term">identity verification</span> - 身份验证</li>
+          <li><span class="term">human-in-the-loop</span> - 人在回路中的人工审核</li>
+          <li><span class="term">operational risk</span> - 运营风险</li>
+          <li><span class="term">permission control</span> - 权限控制</li>
+          <li><span class="term">audit logs</span> - 审计日志</li>
+          <li><span class="term">consumer protection</span> - 消费者保护</li>
+          <li><span class="term">guardrails</span> - 安全护栏</li>
+        </ul>
+        <h3>One High-quality Discussion Sentence</h3>
+        <p class="discussion">The real question is not whether AI can answer support tickets, but whether it should control identity and access decisions.</p>
+      </article>
+
+      <article id="genius-act-implementation">
+        <h2>4. U.S. stablecoin policy moves into rulemaking and compliance</h2>
+        <section class="reference">
+          <div><span class="label">Publication:</span> CoinDesk</div>
+          <div><span class="label">Article title:</span> <em>U.S. Congress returns as GENIUS comments periods close, jobs report: Crypto Week Ahead</em></div>
+          <div><span class="label">Date:</span> June 1, 2026</div>
+          <div><span class="label">Source quality:</span> Medium-High</div>
+          <div><span class="label">Source type:</span> Specialist crypto media; policy calendar analysis</div>
+          <div><span class="label">Source:</span> <a href="https://www.coindesk.com/markets/2026/06/01/u-s-congress-returns-as-genius-comments-periods-close-jobs-report-crypto-week-ahead">https://www.coindesk.com/markets/2026/06/01/u-s-congress-returns-as-genius-comments-periods-close-jobs-report-crypto-week-ahead</a></div>
+<div><span class="label">Supporting:</span> Baker McKenzie, FDIC advances BSA/AML rulemaking under the GENIUS Act, June 2, 2026</div>
+        </section>
+        <h3>What the article says</h3>
+        <p>CoinDesk reported that the first week of June is important for U.S. crypto regulation because GENIUS Act comment periods are closing while Congress returns to broader digital-asset market structure work.</p>
+        <p>The background is that stablecoin policy has moved from debate into implementation. Regulators now have to translate legislation into practical rules for reserves, redemption, anti-money-laundering controls and issuer supervision.</p>
+        <p>The current stage is rulemaking. Agencies, banks, stablecoin issuers and crypto firms are preparing comments and compliance plans while watching how strict the final operating framework will be.</p>
+        <h3>Political / Policy Analysis</h3>
+        <p>Regulators care because stablecoins connect crypto markets with the banking system, payment rails and the U.S. dollar. Poor reserve quality or weak redemption rules could create consumer harm or financial-stability risk.</p>
+        <p>The affected institutions include Treasury, FDIC, FinCEN, OFAC, the Federal Reserve, banks, non-bank issuers and Congress. The policy themes are financial stability, AML controls, consumer protection and monetary sovereignty.</p>
+        <p>The key regulatory question is how much stablecoin issuers should look like banks, and whether yield, foreign issuers and DeFi integrations can fit inside the new perimeter.</p>
+        <h3>Business Analysis</h3>
+        <p>Compliant large issuers may benefit because clear rules can increase institutional trust. Banks may also benefit if the rules protect deposits or allow them to issue regulated digital dollars.</p>
+        <p>Smaller issuers and high-yield products may be hurt if reserve, reporting and AML requirements become expensive. Compliance vendors, auditors and custody providers may see more demand.</p>
+        <p>The larger trend is that stablecoins are becoming payment infrastructure. That moves them closer to banking regulation and farther from purely crypto-native experimentation.</p>
+        <h3>Possible Consequences</h3>
+        <p>Short term, companies will file comments, lobby regulators and adjust compliance programs. The market will watch for language around reserves, yield, foreign issuers and redemption rights.</p>
+        <p>Long term, the U.S. could create the dominant regulatory model for dollar stablecoins. That may strengthen digital-dollar adoption, but it could also increase bank-crypto tension.</p>
+        <p>Winners may include regulated issuers, banks with digital-asset strategies and compliance infrastructure providers. Losers may include lightly regulated issuers and products that rely on aggressive yield.</p>
+        <h3>Spoken Retelling Version</h3>
+        <p class="spoken">This article is mainly about U.S. stablecoin regulation moving from lawmaking into implementation. The background is that stablecoins now matter to payments, banking and crypto markets, so regulators want clear rules. The tension is that crypto firms want flexibility, while banks worry about deposits and financial stability. The turning point is that GENIUS Act comment periods are closing and agencies are writing practical rules. From a business perspective, this could help large compliant issuers and banks. From a policy perspective, the key issues are reserves, redemption rights and AML controls. My takeaway is that stablecoins are becoming regulated financial infrastructure.</p>
+        <h3>Useful Vocabulary & Phrases</h3>
+        <ul class="vocab">
+          <li><span class="term">rulemaking</span> - 规则制定</li>
+          <li><span class="term">issuer supervision</span> - 发行方监管</li>
+          <li><span class="term">redemption rights</span> - 赎回权</li>
+          <li><span class="term">reserve quality</span> - 储备资产质量</li>
+          <li><span class="term">AML controls</span> - 反洗钱控制</li>
+          <li><span class="term">monetary sovereignty</span> - 货币主权</li>
+          <li><span class="term">regulatory perimeter</span> - 监管边界</li>
+          <li><span class="term">digital-dollar adoption</span> - 数字美元采用</li>
+        </ul>
+        <h3>One High-quality Discussion Sentence</h3>
+        <p class="discussion">The stablecoin debate is shifting from whether rules should exist to who gets to issue digital dollars under the new rules.</p>
+      </article>
+
+      <article id="crypto-etp-outflows">
+        <h2>5. Crypto fund outflows show that institutional adoption can reverse</h2>
+        <section class="reference">
+          <div><span class="label">Publication:</span> Cointelegraph</div>
+          <div><span class="label">Article title:</span> <em>Crypto correction vaporized $176B in investor funds - Are bears back in control?</em></div>
+          <div><span class="label">Date:</span> June 2, 2026</div>
+          <div><span class="label">Source quality:</span> Medium</div>
+          <div><span class="label">Source type:</span> Specialist crypto media; market analysis</div>
+          <div><span class="label">Source:</span> <a href="https://cointelegraph.com/markets/crypto-correction-vaporized-176b-in-investor-funds-are-bears-back-in-control">https://cointelegraph.com/markets/crypto-correction-vaporized-176b-in-investor-funds-are-bears-back-in-control</a></div>
+<div><span class="label">Supporting:</span> Related CoinDesk reporting on Bitcoin ETF outflows and AI equity momentum</div>
+        </section>
+        <h3>What the article says</h3>
+        <p>Cointelegraph reported that the recent crypto correction erased roughly $176 billion in investor value and came alongside outflows from crypto investment products. The article frames the move as a test of whether bearish momentum is returning.</p>
+        <p>The background is that crypto&#x27;s institutional story has been heavily tied to ETFs and exchange-traded products. Inflows can support prices, but outflows can amplify downside when macro sentiment weakens.</p>
+        <p>The current stage is a risk reset. Crypto is no longer judged only by crypto-native narratives; it competes with AI equities, cash yields, Treasuries and other institutional allocation choices.</p>
+        <h3>Political / Policy Analysis</h3>
+        <p>Regulators care because ETF and ETP flows bring retail and institutional investors into volatile digital assets through regulated wrappers. Heavy outflows raise questions about liquidity, disclosure and investor understanding.</p>
+        <p>The affected institutions include ETF issuers, exchanges, market makers, the SEC and institutional allocators. The policy themes are investor protection, market stability, leverage and transparency.</p>
+        <p>This does not mean ETFs failed, but it does show why regulators monitor how crypto products behave during stress rather than only during inflow cycles.</p>
+        <h3>Business Analysis</h3>
+        <p>ETF issuers and trading venues may face pressure if assets under management fall. Market makers may see volume, but lower asset prices can hurt fee revenue and risk appetite.</p>
+        <p>AI-linked equities may benefit from a competing capital story as investors rotate toward companies with clearer earnings and infrastructure demand. Crypto projects without specific catalysts may struggle in that environment.</p>
+        <p>The larger trend is that institutional crypto adoption is cyclical. It can bring capital in, but it can also make crypto more sensitive to broader risk markets.</p>
+        <h3>Possible Consequences</h3>
+        <p>Short term, crypto may remain sensitive to fund-flow data, macro rates and risk sentiment. Leveraged traders may face more volatility if redemptions continue.</p>
+        <p>Long term, the market will learn whether ETF demand is structural or mainly momentum-driven. Stronger, more liquid products may survive while weaker speculative assets lose attention.</p>
+        <p>Winners may include high-quality issuers and assets with clear use cases. Losers may include broad crypto beta, over-leveraged traders and products dependent on constant inflows.</p>
+        <h3>Spoken Retelling Version</h3>
+        <p class="spoken">This article is mainly about crypto fund outflows and a broad market correction. The background is that ETFs and exchange-traded products helped bring institutional capital into crypto. The tension is that the same institutional channels can also send money out quickly when sentiment changes. The turning point is a correction that erased about 176 billion dollars in investor value. From a business perspective, this pressures ETF issuers and crypto platforms while AI equities still attract capital. From a policy perspective, it shows why regulators care about liquidity and investor protection. My takeaway is that institutional adoption makes crypto more legitimate, but also more exposed to traditional market cycles.</p>
+        <h3>Useful Vocabulary & Phrases</h3>
+        <ul class="vocab">
+          <li><span class="term">fund outflows</span> - 基金资金流出</li>
+          <li><span class="term">risk reset</span> - 风险重新定价</li>
+          <li><span class="term">regulated wrapper</span> - 受监管的产品包装</li>
+          <li><span class="term">assets under management</span> - 管理资产规模</li>
+          <li><span class="term">risk appetite</span> - 风险偏好</li>
+          <li><span class="term">institutional allocation</span> - 机构资产配置</li>
+          <li><span class="term">market stability</span> - 市场稳定</li>
+          <li><span class="term">broad crypto beta</span> - 整体加密市场敞口</li>
+        </ul>
+        <h3>One High-quality Discussion Sentence</h3>
+        <p class="discussion">Institutional adoption does not remove crypto volatility; it connects crypto more tightly to traditional capital cycles.</p>
+      </article>
+
+      <section class="takeaway">
+        <h2>Today's Big Takeaway</h2>
+        <p>The big trend today is that AI governance is becoming operational. Governments are moving from abstract safety principles to testing, partnerships and formal security expectations.</p>
+        <p>Crypto is moving through a similar transition: stablecoins, ETFs and market structure are becoming regulated infrastructure, not just speculative technology.</p>
+      </section>
+
+      <p class="footer">Daily AI & Blockchain News Study Briefing · <a href="archive.html">Archive</a> · <a href="pdf/daily_ai_blockchain_briefing_2026-06-02.pdf">PDF</a></p>
+    </main>
+  </body>
+</html>
