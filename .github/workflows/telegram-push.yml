@@ -1,0 +1,42 @@
+name: Telegram briefing push
+
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Print the Telegram message without sending it"
+        required: false
+        default: false
+        type: boolean
+  push:
+    branches:
+      - main
+    paths:
+      - "index.html"
+      - "archive.html"
+      - "daily_ai_blockchain_briefing_*.html"
+      - "pdf/daily_ai_blockchain_briefing_*.pdf"
+
+jobs:
+  send-telegram-update:
+    if: ${{ github.event_name == 'workflow_dispatch' || (github.event_name == 'push' && contains(github.event.head_commit.message, 'daily briefing')) }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Send Telegram channel update
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          PUBLIC_BASE_URL: "https://chenchao9990-creator.github.io/ai-blockchain-briefing"
+          DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run && '1' || '0' }}
+        run: python3 tools/send_telegram_update.py
