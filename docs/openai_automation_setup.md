@@ -26,6 +26,7 @@ GitHub path:
 Optional variables:
 
 - `OPENAI_MODEL`: defaults to `gpt-5`.
+- `ENABLE_DAILY_AUTO_BRIEFING`: set to `true` only when you want the daily workflow to run automatically.
 - `ENABLE_BREAKING_NEWS`: set to `true` only when you want high-frequency breaking monitoring.
 - `BREAKING_THRESHOLD`: defaults to `8`. Higher means fewer alerts.
 
@@ -38,6 +39,8 @@ Workflow:
 Schedule:
 
 `08:30 UTC` every day.
+
+The scheduled run is skipped unless `ENABLE_DAILY_AUTO_BRIEFING` is set to `true`.
 
 Manual test:
 
@@ -56,7 +59,7 @@ Schedule:
 
 Every 30 minutes.
 
-It will not send alerts unless `ENABLE_BREAKING_NEWS` is set to `true`.
+The scheduled run is skipped unless `ENABLE_BREAKING_NEWS` is set to `true`.
 
 Manual test:
 

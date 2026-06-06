@@ -13,6 +13,7 @@ on:
 
 jobs:
   generate-daily-briefing:
+    if: ${{ github.event_name == 'workflow_dispatch' || vars.ENABLE_DAILY_AUTO_BRIEFING == 'true' }}
     runs-on: ubuntu-latest
     permissions:
       contents: write
