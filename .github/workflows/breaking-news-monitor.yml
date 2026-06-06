@@ -1,0 +1,55 @@
+name: Breaking news monitor
+
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Preview candidate alerts without sending Telegram"
+        required: false
+        default: true
+        type: boolean
+  schedule:
+    - cron: "*/30 * * * *"
+
+jobs:
+  monitor-breaking-news:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Check and send breaking alerts
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_MODEL: ${{ vars.OPENAI_MODEL || 'gpt-5' }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          ENABLE_BREAKING_NEWS: ${{ vars.ENABLE_BREAKING_NEWS || 'false' }}
+          BREAKING_THRESHOLD: ${{ vars.BREAKING_THRESHOLD || '8' }}
+          DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run && '1' || '0' }}
+        run: python3 tools/newsletter_pipeline.py breaking
+
+      - name: Commit breaking alert state
+        if: ${{ github.event_name != 'workflow_dispatch' || !inputs.dry_run }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if [ -f data/breaking_sent.json ]; then
+            git add data/breaking_sent.json
+          else
+            echo "No breaking alert state file."
+          fi
+          if git diff --cached --quiet; then
+            echo "No breaking alert state changes."
+          else
+            git commit -m "Update breaking news alert state"
+            git push
+          fi

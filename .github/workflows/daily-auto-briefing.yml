@@ -1,0 +1,61 @@
+name: Daily auto briefing
+
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Generate preview JSON without writing files or sending Telegram"
+        required: false
+        default: false
+        type: boolean
+  schedule:
+    - cron: "30 8 * * *"
+
+jobs:
+  generate-daily-briefing:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: python3 -m pip install reportlab
+
+      - name: Generate daily briefing
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_MODEL: ${{ vars.OPENAI_MODEL || 'gpt-5' }}
+          DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run && '1' || '0' }}
+        run: python3 tools/newsletter_pipeline.py daily
+
+      - name: Commit generated briefing
+        id: commit
+        if: ${{ github.event_name != 'workflow_dispatch' || !inputs.dry_run }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add index.html archive.html daily_ai_blockchain_briefing_*.html pdf/daily_ai_blockchain_briefing_*.pdf
+          if git diff --cached --quiet; then
+            echo "No briefing changes to commit."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            git commit -m "Automated newsletter update"
+            git push
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Send Telegram update
+        if: ${{ steps.commit.outputs.changed == 'true' }}
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          PUBLIC_BASE_URL: "https://chenchao9990-creator.github.io/ai-blockchain-briefing"
+        run: python3 tools/send_telegram_update.py
