@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="A short English briefing on the latest Middle East situation, U.S. actions, Iran diplomacy and Strait of Hormuz risk." />
+    <title>June 27, 2026 | Middle East Special Briefing</title>
+    <style>
+
+      :root {
+        color-scheme: light;
+        --bg: #f6f4ef;
+        --ink: #17202a;
+        --muted: #667085;
+        --line: #ded8cc;
+        --blue: #164a7c;
+        --green: #24765d;
+        --soft-blue: #eaf3fb;
+        --soft-green: #edf7f2;
+        --soft-gold: #fff7e3;
+        --shadow: 0 16px 45px rgba(38, 52, 65, 0.08);
+      }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0;
+        background: linear-gradient(180deg, rgba(255, 253, 248, 0.9), rgba(246, 244, 239, 0.92)), var(--bg);
+        color: var(--ink);
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+        font-size: 17px;
+        line-height: 1.62;
+      }
+      a { color: var(--blue); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+      .page { width: min(100%, 860px); margin: 0 auto; padding: 18px 16px 44px; }
+      .site-nav {
+        display: flex; align-items: center; justify-content: space-between; gap: 12px;
+        padding: 6px 0 14px; color: var(--muted); font-size: 0.88rem; font-weight: 750;
+      }
+      .site-nav a { color: var(--muted); text-decoration: none; }
+      .site-nav-links { display: flex; gap: 12px; white-space: nowrap; }
+      .masthead { padding: 28px 0 18px; border-bottom: 1px solid var(--line); }
+      .kicker { margin: 0 0 12px; color: var(--muted); font-size: 0.82rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+      h1 { margin: 0 0 8px; color: var(--blue); font-family: Georgia, "Times New Roman", serif; font-size: clamp(2.05rem, 9vw, 4.5rem); line-height: 0.98; letter-spacing: 0; }
+      .headline { margin: 14px 0 0; font-size: clamp(1.24rem, 4.8vw, 2.1rem); line-height: 1.15; font-weight: 800; color: #151d27; }
+      .meta-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+      .pill { display: inline-flex; align-items: center; min-height: 34px; padding: 6px 11px; border: 1px solid var(--line); border-radius: 999px; background: rgba(255,255,255,0.72); color: #3f4a57; font-size: 0.86rem; font-weight: 700; text-decoration: none; }
+      .overview { margin: 22px 0 18px; padding: 17px 17px 15px; border: 1px solid #cfe0ed; border-radius: 14px; background: var(--soft-blue); box-shadow: var(--shadow); }
+      .overview p, .takeaway p { margin: 0 0 12px; }
+      .overview p:last-child, .takeaway p:last-child { margin-bottom: 0; }
+      .toc { margin: 22px 0 22px; padding: 0; list-style: none; border-top: 1px solid var(--line); }
+      .toc li { border-bottom: 1px solid var(--line); }
+      .toc a { display: block; padding: 12px 0; color: var(--ink); font-size: 1rem; font-weight: 750; text-decoration: none; }
+      article { margin: 28px 0 0; padding: 0 0 26px; border-bottom: 1px solid var(--line); }
+      h2 { margin: 0 0 14px; color: var(--blue); font-size: clamp(1.55rem, 6vw, 2.4rem); line-height: 1.12; letter-spacing: 0; }
+      h3 { margin: 23px 0 7px; color: var(--green); font-size: 0.94rem; line-height: 1.28; letter-spacing: 0; text-transform: none; }
+      p { margin: 0 0 13px; }
+      .reference { margin: 0 0 18px; padding: 13px 14px; border: 1px solid var(--line); border-radius: 12px; background: rgba(255,255,255,0.76); font-size: 0.94rem; line-height: 1.46; overflow-wrap: anywhere; }
+      .reference div + div { margin-top: 4px; }
+      .label { font-weight: 800; }
+      .spoken, .discussion, .takeaway { border-radius: 14px; padding: 15px 16px; }
+      .spoken { background: var(--soft-gold); border: 1px solid #ead9ad; font-style: italic; }
+      .discussion { background: var(--soft-blue); border: 1px solid #cfe0ed; font-weight: 780; font-style: italic; }
+      .vocab { display: grid; grid-template-columns: 1fr; gap: 8px; margin: 0; padding: 0; list-style: none; }
+      .vocab li { padding: 9px 10px; border: 1px solid rgba(222,216,204,0.85); border-radius: 10px; background: rgba(255,255,255,0.62); font-size: 0.96rem; line-height: 1.35; }
+      .term { font-weight: 800; }
+      .takeaway { margin: 32px 0 0; background: var(--soft-green); border: 1px solid #c8e2d6; }
+      .footer { margin-top: 28px; color: var(--muted); font-size: 0.88rem; text-align: center; }
+      .footer a { color: var(--muted); }
+      @media (min-width: 720px) {
+        body { font-size: 18px; }
+        .page { padding: 30px 32px 58px; }
+        .masthead { padding-top: 42px; }
+        .overview, .reference, .spoken, .discussion, .takeaway { border-radius: 16px; }
+        .vocab { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      }
+      @media print {
+        body { background: #fff; font-size: 11pt; }
+        .page { width: 100%; padding: 0; }
+        .overview, .reference, .spoken, .discussion, .takeaway, .vocab li { box-shadow: none; break-inside: avoid; }
+        article { break-inside: avoid; }
+        a { color: #000; }
+      }
+
+
+      .masthead { padding-top: 24px; }
+      .reading-note { color: var(--muted); font-size: 0.9rem; }
+      .overview { box-shadow: none; }
+      .story-number { margin: 0 0 7px; color: var(--green); font-size: 0.78rem; font-weight: 850; text-transform: uppercase; }
+      .source-line { margin: 0 0 3px; color: var(--muted); font-size: 0.88rem; font-weight: 750; }
+      .source-title { margin: 0 0 17px; color: #46515e; font-size: 0.88rem; line-height: 1.42; }
+      .source-title a { color: #46515e; }
+      .watch-list { margin: 7px 0 0; padding-left: 1.2rem; }
+      .watch-list li { margin: 0 0 7px; padding-left: 2px; }
+      .terms { margin-top: 30px; padding-top: 1px; }
+      .terms h2 { font-size: 1.45rem; }
+      .term-note { margin-top: -5px; color: var(--muted); font-size: 0.92rem; }
+      .reader-lookup[hidden] { display: none; }
+      .reader-lookup {
+        position: fixed; z-index: 1000; left: 50%; bottom: max(12px, env(safe-area-inset-bottom));
+        width: min(calc(100% - 24px), 560px); padding: 14px; transform: translateX(-50%);
+        border: 1px solid #c8d4df; border-radius: 8px; background: rgba(255, 255, 255, 0.98);
+        box-shadow: 0 18px 46px rgba(23, 32, 42, 0.18); backdrop-filter: blur(12px);
+      }
+      .reader-lookup-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+      .reader-lookup-label { margin: 0; color: var(--green); font-size: 0.72rem; font-weight: 850; text-transform: uppercase; }
+      .reader-lookup-close {
+        display: inline-grid; width: 34px; height: 34px; padding: 0; place-items: center;
+        border: 0; border-radius: 50%; background: transparent; color: var(--muted);
+        font: inherit; font-size: 1.1rem; cursor: pointer;
+      }
+      .reader-lookup-close:hover { background: #f1f4f6; color: var(--ink); }
+      .reader-lookup-selection { margin: 4px 0 6px; color: var(--ink); font-size: 1.08rem; font-weight: 800; line-height: 1.32; }
+      .reader-lookup-meaning { min-height: 1.45em; margin: 0; color: #46515e; font-size: 0.93rem; line-height: 1.45; }
+      .reader-lookup-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+      .reader-lookup-action {
+        min-height: 40px; padding: 8px 12px; border: 1px solid #c8d4df; border-radius: 6px;
+        background: #fff; color: var(--blue); font: inherit; font-size: 0.86rem; font-weight: 800; cursor: pointer;
+      }
+      .reader-lookup-action.primary { border-color: var(--blue); background: var(--blue); color: #fff; }
+      .reader-lookup-action:focus-visible, .reader-lookup-close:focus-visible { outline: 3px solid rgba(22, 74, 124, 0.25); outline-offset: 2px; }
+      @media (max-width: 430px) {
+        body { font-size: 16.5px; line-height: 1.58; }
+        .page { padding-left: 15px; padding-right: 15px; }
+        h1 { font-size: 2.15rem; }
+        .headline { font-size: 1.35rem; }
+        h2 { font-size: 1.55rem; }
+        .overview { padding: 15px; }
+      }
+
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="./">AI, Crypto &amp; Tech Power Briefing</a>
+        <div class="site-nav-links">
+          <a href="./">Latest</a>
+          <a href="archive.html">Archive</a>
+        </div>
+      </nav>
+
+      <header class="masthead">
+        <p class="kicker">Geopolitics · U.S. Policy · Energy Security</p>
+        <h1>June 27, 2026</h1>
+        <p class="headline">A Fragile Middle East Deal, Backed by U.S. Force and Diplomacy</p>
+      </header>
+
+      <section class="overview" aria-label="Executive overview">
+        <h3>Executive overview</h3>
+        <p>The Middle East is not in a clean peace moment. It is in a fragile pause, where diplomacy is still alive but military pressure is still being used.</p>
+        <p>The main story is the same across both articles: the U.S. is trying to keep Iran inside a deal, protect the Strait of Hormuz, and stop the conflict from spreading through Israel, Lebanon and the wider Gulf.</p>
+      </section>
+
+      <ol class="toc" aria-label="Articles">
+        <li><a href="#us-iran-fragile-deal">1. The U.S.-Iran deal is alive, but it is still fragile</a></li>
+        <li><a href="#us-strikes-hormuz">2. The U.S. is using limited strikes to protect the Strait of Hormuz</a></li>
+      </ol>
+
+      <article id="us-iran-fragile-deal">
+        <p class="story-number">Article 1</p>
+        <h2>The U.S.-Iran deal is alive, but it is still fragile</h2>
+        <p class="source-line">AP News &middot; June 27, 2026 &middot; <a href="https://apnews.com/article/us-iran-war-mediation-peace-deal-pakistan-qatar-33e3fd72a890ff28e1b8401b51a25aa3" target="_blank" rel="noopener">Read source</a></p>
+        <p class="source-title"><em>Mediators worked through threats and strikes to broker the US-Iran deal, and challenges remain</em></p>
+
+        <h3>The story</h3>
+        <p>AP&#x27;s article explains how Pakistan and Qatar helped keep the U.S.-Iran channel open even after threats and military strikes. The deal is not a simple peace agreement. It is a temporary framework that tries to stop a wider regional war while bigger issues are still being negotiated.</p>
+        <p>The key topics are Iran&#x27;s nuclear program, the Strait of Hormuz, sanctions, and Iran&#x27;s influence through regional partners such as Hezbollah. Talks are continuing through diplomatic channels, but the article makes clear that the deal can still break if one side decides the other is acting in bad faith.</p>
+
+        <h3>Why it matters</h3>
+        <p>For the U.S., the goal is to avoid a full regional war while still showing Iran that military pressure remains available. That is why the strategy looks mixed: talk through mediators, but keep the option of strikes on the table.</p>
+        <p>For markets and businesses, the most important issue is energy security. If the Strait of Hormuz becomes unsafe, oil prices, shipping insurance and global supply chains can move very quickly. This is why governments care even if the fighting looks geographically limited.</p>
+
+        <h3>What to watch</h3>
+        <ul class="watch-list">
+          <li>Whether Qatar and Pakistan can keep both sides communicating after the latest strikes.</li>
+          <li>Whether nuclear talks keep moving or get blocked by new attacks in the Gulf, Israel, Lebanon or Iraq.</li>
+          <li>Whether oil markets start pricing in a bigger disruption risk.</li>
+        </ul>
+      </article>
+      <article id="us-strikes-hormuz">
+        <p class="story-number">Article 2</p>
+        <h2>The U.S. is using limited strikes to protect the Strait of Hormuz</h2>
+        <p class="source-line">The Guardian &middot; June 26, 2026 &middot; <a href="https://www.theguardian.com/world/2026/jun/26/us-says-it-struck-iran-targets-after-attack-on-cargo-ship-on-the-strait-of-hormuz" target="_blank" rel="noopener">Read source</a></p>
+        <p class="source-title"><em>US says it struck Iran targets after attack on cargo ship in the Strait of Hormuz</em></p>
+
+        <h3>The story</h3>
+        <p>The Guardian reports that the U.S. struck Iranian missile and drone facilities after a Singapore-flagged cargo ship was attacked near the Strait of Hormuz. Washington framed the response as limited and defensive, not as the start of a larger war.</p>
+        <p>The message from the U.S. is direct: talks can continue, but attacks on commercial shipping will trigger a military response. Iran, meanwhile, is trying to show that it still has leverage over one of the world&#x27;s most important energy routes.</p>
+
+        <h3>Why it matters</h3>
+        <p>The Strait of Hormuz is a choke point for global energy. If ships cannot move safely through it, oil prices can rise, inflation pressure can return, and governments may face pressure to secure shipping lanes.</p>
+        <p>From a policy view, this is about deterrence. The U.S. wants Iran to believe that harassment of commercial shipping will be costly, but it also wants to avoid a cycle where every strike forces a larger counterstrike.</p>
+
+        <h3>What to watch</h3>
+        <ul class="watch-list">
+          <li>Whether Iran or Iranian-backed groups attack another ship or U.S. position.</li>
+          <li>Whether Gulf countries quietly support U.S. action or push harder for de-escalation.</li>
+          <li>Whether shipping companies reroute vessels or raise insurance costs.</li>
+        </ul>
+      </article>
+
+      <section class="terms">
+        <h2>Useful terms</h2>
+        <p class="term-note">High-frequency language for geopolitics, policy and markets.</p>
+        <ul class="vocab">
+        <li><span class="term">fragile pause</span> - 脆弱暂停</li>
+        <li><span class="term">ceasefire framework</span> - 停火框架</li>
+        <li><span class="term">back-channel diplomacy</span> - 秘密外交渠道</li>
+        <li><span class="term">mediator</span> - 调停方</li>
+        <li><span class="term">military pressure</span> - 军事压力</li>
+        <li><span class="term">limited strike</span> - 有限打击</li>
+        <li><span class="term">deterrence</span> - 威慑</li>
+        <li><span class="term">escalation risk</span> - 升级风险</li>
+        <li><span class="term">choke point</span> - 咽喉要道</li>
+        <li><span class="term">shipping lane</span> - 航运通道</li>
+        <li><span class="term">commercial vessel</span> - 商船</li>
+        <li><span class="term">energy security</span> - 能源安全</li>
+        <li><span class="term">sanctions relief</span> - 制裁缓解</li>
+        <li><span class="term">nuclear talks</span> - 核谈判</li>
+        <li><span class="term">regional proxy</span> - 地区代理力量</li>
+        <li><span class="term">bad faith</span> - 恶意 / 不诚信</li>
+        <li><span class="term">supply-chain disruption</span> - 供应链中断</li>
+        <li><span class="term">insurance premium</span> - 保险费溢价</li>
+        </ul>
+      </section>
+
+      <section class="takeaway">
+        <h3>Today's big picture</h3>
+        <p>The big picture is that the U.S. is trying to control escalation without looking weak. It wants diplomacy with Iran, but it also wants to prove that attacks on shipping and regional partners will have a cost.</p>
+        <p>For business and markets, the key issue is not only who fires the next missile. It is whether the Strait of Hormuz stays open and whether oil, shipping and insurance markets start pricing in a longer crisis.</p>
+      </section>
+
+      <footer class="footer">
+        <p>Special briefing for English reading and policy sense &middot; <a href="archive.html">Browse the archive</a></p>
+      </footer>
+    </main>
+    <aside class="reader-lookup" id="reader-lookup" role="dialog" aria-label="Selected text tools" aria-live="polite" hidden>
+      <div class="reader-lookup-head">
+        <p class="reader-lookup-label">Selected text</p>
+        <button class="reader-lookup-close" type="button" aria-label="Close translation panel" title="Close">x</button>
+      </div>
+      <p class="reader-lookup-selection"></p>
+      <p class="reader-lookup-meaning"></p>
+      <div class="reader-lookup-actions">
+        <button class="reader-lookup-action primary" type="button" data-action="translate">DeepL</button>
+        <button class="reader-lookup-action" type="button" data-action="speak">Listen</button>
+      </div>
+    </aside>
+    <script src="assets/reader-translate.js" defer></script>
+  </body>
+</html>
