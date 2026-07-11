@@ -124,11 +124,18 @@ def latest_briefing_file() -> Path:
 def parse_briefing(path: Path) -> Briefing:
     parser = BriefingParser()
     parser.feed(path.read_text(encoding="utf-8"))
+    title = parser.title or "Daily AI & Blockchain Briefing"
+    date = parser.date or "Latest issue"
+    if not re.search(
+        r"\b(?:January|February|March|April|May|June|July|August|September|October|November|December)\b|\b20\d{2}\b",
+        date,
+    ):
+        date = title
 
     return Briefing(
         path=path,
-        title=parser.title or "Daily AI & Blockchain Briefing",
-        date=parser.date or "Latest issue",
+        title=title,
+        date=date,
         headline=parser.headline or "Daily AI & Blockchain Briefing",
         overview=parser.overview[:2],
         stories=parser.stories[:5],
@@ -149,11 +156,10 @@ def build_message(briefing: Briefing, base_url: str) -> str:
 
     parts = [
         f"<b>{escape(briefing.title)}</b>",
-        escape(briefing.date),
-        "",
-        f"<b>{escape(briefing.headline)}</b>",
-        "",
     ]
+    if briefing.date and briefing.date != briefing.title:
+        parts.append(escape(briefing.date))
+    parts.extend(["", f"<b>{escape(briefing.headline)}</b>", ""])
 
     for paragraph in briefing.overview:
         parts.append(escape(paragraph))
