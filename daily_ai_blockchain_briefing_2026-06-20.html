@@ -94,30 +94,6 @@
       .terms { margin-top: 30px; padding-top: 1px; }
       .terms h2 { font-size: 1.45rem; }
       .term-note { margin-top: -5px; color: var(--muted); font-size: 0.92rem; }
-      .reader-lookup[hidden] { display: none; }
-      .reader-lookup {
-        position: fixed; z-index: 1000; left: 50%; bottom: max(12px, env(safe-area-inset-bottom));
-        width: min(calc(100% - 24px), 560px); padding: 14px; transform: translateX(-50%);
-        border: 1px solid #c8d4df; border-radius: 8px; background: rgba(255, 255, 255, 0.98);
-        box-shadow: 0 18px 46px rgba(23, 32, 42, 0.18); backdrop-filter: blur(12px);
-      }
-      .reader-lookup-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
-      .reader-lookup-label { margin: 0; color: var(--green); font-size: 0.72rem; font-weight: 850; text-transform: uppercase; }
-      .reader-lookup-close {
-        display: inline-grid; width: 34px; height: 34px; padding: 0; place-items: center;
-        border: 0; border-radius: 50%; background: transparent; color: var(--muted);
-        font: inherit; font-size: 1.1rem; cursor: pointer;
-      }
-      .reader-lookup-close:hover { background: #f1f4f6; color: var(--ink); }
-      .reader-lookup-selection { margin: 4px 0 6px; color: var(--ink); font-size: 1.08rem; font-weight: 800; line-height: 1.32; }
-      .reader-lookup-meaning { min-height: 1.45em; margin: 0; color: #46515e; font-size: 0.93rem; line-height: 1.45; }
-      .reader-lookup-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
-      .reader-lookup-action {
-        min-height: 40px; padding: 8px 12px; border: 1px solid #c8d4df; border-radius: 6px;
-        background: #fff; color: var(--blue); font: inherit; font-size: 0.86rem; font-weight: 800; cursor: pointer;
-      }
-      .reader-lookup-action.primary { border-color: var(--blue); background: var(--blue); color: #fff; }
-      .reader-lookup-action:focus-visible, .reader-lookup-close:focus-visible { outline: 3px solid rgba(22, 74, 124, 0.25); outline-offset: 2px; }
       @media (max-width: 430px) {
         body { font-size: 16.5px; line-height: 1.58; }
         .page { padding-left: 15px; padding-right: 15px; }
@@ -299,18 +275,5 @@
         <p>Daily AI, Crypto &amp; Tech Power News Study Briefing &middot; <a href="archive.html">Browse the archive</a></p>
       </footer>
     </main>
-    <aside class="reader-lookup" id="reader-lookup" role="dialog" aria-label="Selected text tools" aria-live="polite" hidden>
-      <div class="reader-lookup-head">
-        <p class="reader-lookup-label">Selected text</p>
-        <button class="reader-lookup-close" type="button" aria-label="Close translation panel" title="Close">x</button>
-      </div>
-      <p class="reader-lookup-selection"></p>
-      <p class="reader-lookup-meaning"></p>
-      <div class="reader-lookup-actions">
-        <button class="reader-lookup-action primary" type="button" data-action="translate">DeepL</button>
-        <button class="reader-lookup-action" type="button" data-action="speak">Listen</button>
-      </div>
-    </aside>
-    <script src="assets/reader-translate.js" defer></script>
   </body>
 </html>
