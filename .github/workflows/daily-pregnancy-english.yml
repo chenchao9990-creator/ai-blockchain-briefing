@@ -4,14 +4,15 @@ on:
   workflow_dispatch:
     inputs:
       dry_run:
-        description: "Generate a preview without sending Telegram or advancing the course"
+        description: "Preview the latest saved lesson without sending Telegram"
         required: false
         default: false
         type: boolean
-  schedule:
-    # 08:30 America/Vancouver: 15:30 UTC in daylight time, 16:30 UTC in standard time.
-    - cron: "30 15 * * *"
-    - cron: "30 16 * * *"
+  push:
+    branches:
+      - main
+    paths:
+      - "data/pregnancy_english_lessons/*.json"
 
 concurrency:
   group: daily-b2-pregnancy-english
@@ -32,47 +33,20 @@ jobs:
         with:
           python-version: "3.x"
 
-      - name: Check Vancouver schedule
-        id: schedule
-        env:
-          EVENT_NAME: ${{ github.event_name }}
-          SCHEDULE: ${{ github.event.schedule }}
+      - name: Find latest saved lesson
+        id: lesson
         run: |
-          python3 - <<'PY'
-          import os
-          from datetime import datetime
-          from zoneinfo import ZoneInfo
+          lesson=$(find data/pregnancy_english_lessons -maxdepth 1 -name '*.json' -type f | sort | tail -n 1)
+          if [ -z "$lesson" ]; then
+            echo "No saved English lesson found."
+            exit 1
+          fi
+          echo "path=$lesson" >> "$GITHUB_OUTPUT"
 
-          event_name = os.environ.get("EVENT_NAME")
-          schedule = os.environ.get("SCHEDULE", "")
-          offset = int(datetime.now(ZoneInfo("America/Vancouver")).utcoffset().total_seconds() // 3600)
-          should_run = event_name == "workflow_dispatch" or (
-              (schedule == "30 15 * * *" and offset == -7)
-              or (schedule == "30 16 * * *" and offset == -8)
-          )
-          with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as output:
-              output.write(f"should_run={'true' if should_run else 'false'}\n")
-          PY
-
-      - name: Generate and send lesson
-        if: ${{ steps.schedule.outputs.should_run == 'true' }}
+      - name: Send saved lesson to Telegram
         env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          OPENAI_MODEL: ${{ vars.OPENAI_MODEL || 'gpt-5' }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run && '1' || '0' }}
+          LESSON_JSON: ${{ steps.lesson.outputs.path }}
         run: python3 tools/daily_pregnancy_english.py
-
-      - name: Save course progress
-        if: ${{ steps.schedule.outputs.should_run == 'true' && !(github.event_name == 'workflow_dispatch' && inputs.dry_run) }}
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/pregnancy_english_state.json
-          if git diff --cached --quiet; then
-            echo "No English-course progress change to commit."
-          else
-            git commit -m "Advance daily B2 pregnancy English course"
-            git push
-          fi

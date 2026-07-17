@@ -313,6 +313,27 @@ def save_state(day: int, state: dict[str, Any], lesson: dict[str, Any]) -> None:
 
 def main() -> int:
     dry_run = truthy(os.environ.get("DRY_RUN"))
+    existing_lesson = os.environ.get("LESSON_JSON")
+    if existing_lesson:
+        lesson_path = Path(existing_lesson)
+        payload = json.loads(lesson_path.read_text(encoding="utf-8"))
+        day = int(payload["day"])
+        lesson = payload["lesson"]
+        messages = pack_messages(lesson_blocks(day, lesson))
+        if dry_run:
+            for index, message in enumerate(messages, start=1):
+                print(f"--- Telegram message {index}/{len(messages)} ---")
+                print(message)
+            return 0
+        token = os.environ.get("TELEGRAM_BOT_TOKEN")
+        chat_id = os.environ.get("TELEGRAM_CHAT_ID")
+        if not token or not chat_id:
+            raise RuntimeError("Missing TELEGRAM_BOT_TOKEN or TELEGRAM_CHAT_ID")
+        for message in messages:
+            send_telegram(token, chat_id, message)
+        print(f"Sent saved B2 pregnancy English Day {day} in {len(messages)} Telegram messages.")
+        return 0
+
     state = load_state()
     day = int(state.get("last_day", 0)) + 1
     lesson = generate_lesson(day, state)
