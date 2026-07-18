@@ -44,6 +44,16 @@
       .headline { margin: 14px 0 0; font-size: clamp(1.24rem, 4.8vw, 2.1rem); line-height: 1.15; font-weight: 800; color: #151d27; }
       .meta-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
       .pill { display: inline-flex; align-items: center; min-height: 34px; padding: 6px 11px; border: 1px solid var(--line); border-radius: 999px; background: rgba(255,255,255,0.72); color: #3f4a57; font-size: 0.86rem; font-weight: 700; text-decoration: none; }
+      .sections { margin: 24px 0 6px; }
+      .sections-label { margin: 0 0 10px; color: var(--muted); font-size: 0.78rem; font-weight: 850; letter-spacing: 0.08em; text-transform: uppercase; }
+      .section-grid { display: grid; grid-template-columns: 1fr; gap: 10px; }
+      .section-card { display: block; min-height: 122px; padding: 16px; border: 1px solid var(--line); border-radius: 14px; background: rgba(255,255,255,0.78); color: var(--ink); text-decoration: none; transition: transform 160ms ease, box-shadow 160ms ease; }
+      .section-card:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
+      .section-card.current { border-color: #cfe0ed; background: var(--soft-blue); }
+      .section-card.breaking { border-color: #ead9ad; background: var(--soft-gold); }
+      .section-card.archive { border-color: #c8e2d6; background: var(--soft-green); }
+      .section-card strong { display: block; margin-bottom: 5px; color: var(--blue); font-size: 1.05rem; }
+      .section-card span { display: block; color: #485463; font-size: 0.91rem; line-height: 1.42; }
       .overview { margin: 22px 0 18px; padding: 17px 17px 15px; border: 1px solid #cfe0ed; border-radius: 14px; background: var(--soft-blue); box-shadow: var(--shadow); }
       .overview p, .takeaway p { margin: 0 0 12px; }
       .overview p:last-child, .takeaway p:last-child { margin-bottom: 0; }
@@ -70,6 +80,7 @@
         body { font-size: 18px; }
         .page { padding: 30px 32px 58px; }
         .masthead { padding-top: 42px; }
+        .section-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
         .overview, .reference, .spoken, .discussion, .takeaway { border-radius: 16px; }
         .vocab { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       }
@@ -124,6 +135,24 @@
           <a class="pill" href="breaking-news.html">Breaking News</a>
         </div>
       </header>
+
+      <section class="sections" aria-label="Sections">
+        <p class="sections-label">Explore sections</p>
+        <div class="section-grid">
+          <a class="section-card current" href="./">
+            <strong>Daily Briefing</strong>
+            <span>Today's reader-first AI, crypto and technology stories.</span>
+          </a>
+          <a class="section-card breaking" href="breaking-news.html">
+            <strong>Breaking News</strong>
+            <span>Major AI, crypto, conflict and US / UK policy updates.</span>
+          </a>
+          <a class="section-card archive" href="archive.html">
+            <strong>News Archive</strong>
+            <span>Browse previous briefings and PDFs by date.</span>
+          </a>
+        </div>
+      </section>
 
       <section class="overview" aria-label="Executive overview">
         <h3>Executive overview</h3>
