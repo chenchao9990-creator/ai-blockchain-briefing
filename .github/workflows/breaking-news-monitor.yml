@@ -13,7 +13,6 @@ on:
 
 jobs:
   monitor-breaking-news:
-    if: ${{ github.event_name == 'workflow_dispatch' || vars.ENABLE_BREAKING_NEWS == 'true' }}
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -29,14 +28,10 @@ jobs:
 
       - name: Check and send breaking alerts
         env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          OPENAI_MODEL: ${{ vars.OPENAI_MODEL || 'gpt-5' }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-          ENABLE_BREAKING_NEWS: ${{ vars.ENABLE_BREAKING_NEWS || 'false' }}
-          BREAKING_THRESHOLD: ${{ vars.BREAKING_THRESHOLD || '8' }}
           DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run && '1' || '0' }}
-        run: python3 tools/newsletter_pipeline.py breaking
+        run: python3 tools/breaking_rss_monitor.py
 
       - name: Commit breaking alert state
         if: ${{ github.event_name != 'workflow_dispatch' || !inputs.dry_run }}
@@ -44,7 +39,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           if [ -f data/breaking_sent.json ]; then
-            git add data/breaking_sent.json
+            git add data/breaking_sent.json breaking-news.html
           else
             echo "No breaking alert state file."
           fi
