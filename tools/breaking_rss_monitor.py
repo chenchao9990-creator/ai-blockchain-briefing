@@ -57,6 +57,24 @@ AI_WORDS = {
 CRYPTO_WORDS = {
     "bitcoin", "ethereum", "crypto", "stablecoin", "blockchain", "token", "etf", "defi",
 }
+KEYWORD_MEANINGS = {
+    "US-Iran conflict": "美伊冲突",
+    "Jordan": "约旦",
+    "Revolutionary Guard": "伊朗革命卫队",
+    "Strait of Hormuz": "霍尔木兹海峡",
+    "Conflict": "冲突",
+    "Breaking News": "突发新闻",
+    "War": "战争",
+    "Military": "军事行动",
+    "Sanctions": "制裁",
+    "White House": "白宫",
+    "Executive Order": "行政命令",
+    "Policy": "政策",
+    "AI": "人工智能",
+    "Crypto": "加密货币",
+    "Bitcoin": "比特币",
+    "Stablecoin": "稳定币",
+}
 
 
 def plain(value: str | None) -> str:
@@ -124,6 +142,14 @@ def keywords(text: str, category: str) -> list[str]:
     return labels or [category]
 
 
+def display_keywords(value: str) -> str:
+    terms = [term.strip() for term in value.split("|") if term.strip()]
+    return " | ".join(
+        f"{term} ({KEYWORD_MEANINGS[term]})" if term in KEYWORD_MEANINGS else term
+        for term in terms
+    )
+
+
 def load_state() -> list[dict[str, str]]:
     if not STATE_PATH.exists():
         return []
@@ -163,7 +189,7 @@ def telegram_message(alert: dict[str, str]) -> str:
     return "\n\n".join([
         f"<b>Breaking News: {html.escape(alert['headline'])}</b>",
         html.escape(alert["story"]),
-        f"<b>Keywords:</b> {html.escape(alert['keywords'])}",
+        f"<b>Keywords:</b> {html.escape(display_keywords(alert['keywords']))}",
         f"<b>Source:</b> <a href=\"{html.escape(alert['url'], quote=True)}\">{html.escape(alert['publication'])}</a>",
     ])
 
@@ -193,7 +219,7 @@ def send_telegram(alert: dict[str, str]) -> None:
 
 def write_page(alerts: list[dict[str, str]]) -> None:
     rows = "".join(
-        f'''<li><p class="category">{html.escape(item['category'])}</p><h2><a href="{html.escape(item['url'], quote=True)}">{html.escape(item['headline'])}</a></h2><p>{html.escape(item['story'])}</p><p class="keywords">Keywords: {html.escape(item['keywords'])}</p><p class="source">{html.escape(item['publication'])} · {html.escape(item['sent_at'])}</p></li>'''
+        f'''<li><p class="category">{html.escape(item['category'])}</p><h2><a href="{html.escape(item['url'], quote=True)}">{html.escape(item['headline'])}</a></h2><p>{html.escape(item['story'])}</p><p class="keywords">Keywords: {html.escape(display_keywords(item['keywords']))}</p><p class="source">{html.escape(item['publication'])} · {html.escape(item['sent_at'])}</p></li>'''
         for item in reversed(alerts[-30:])
     ) or "<li><p>No breaking alerts have been published yet.</p></li>"
     BREAKING_PAGE.write_text(f'''<!doctype html>
