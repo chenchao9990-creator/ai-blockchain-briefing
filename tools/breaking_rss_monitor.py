@@ -161,7 +161,7 @@ def build_alert(entry: dict[str, str], feed: Feed) -> dict[str, str] | None:
 
 def telegram_message(alert: dict[str, str]) -> str:
     return "\n\n".join([
-        f"<b>BREAKING: {html.escape(alert['headline'])}</b>",
+        f"<b>Breaking News: {html.escape(alert['headline'])}</b>",
         html.escape(alert["story"]),
         f"<b>Keywords:</b> {html.escape(alert['keywords'])}",
         f"<b>Source:</b> <a href=\"{html.escape(alert['url'], quote=True)}\">{html.escape(alert['publication'])}</a>",
