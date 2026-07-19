@@ -206,17 +206,35 @@ def main() -> int:
     dry_run = os.environ.get("DRY_RUN", "0") == "1"
     state = load_state()
     seen = {item.get("key") for item in state}
-    candidates: list[dict[str, str]] = []
-    for feed in FEEDS:
-        try:
-            for entry in fetch_feed(feed):
-                alert = build_alert(entry, feed)
-                if alert and alert["key"] not in seen:
-                    candidates.append(alert)
-        except (urllib.error.URLError, urllib.error.HTTPError, ET.ParseError) as exc:
-            print(f"Skipping {feed.name}: {exc}", file=sys.stderr)
-    candidates.sort(key=lambda item: item["published_at"], reverse=True)
-    new_alerts = candidates[:2]
+    manual_headline = os.environ.get("BREAKING_HEADLINE", "").strip()
+    if manual_headline:
+        manual_url = os.environ.get("BREAKING_URL", "").strip()
+        if not manual_url:
+            raise RuntimeError("BREAKING_URL is required with BREAKING_HEADLINE")
+        new_alerts = [{
+            "key": alert_key(manual_url),
+            "headline": manual_headline,
+            "story": os.environ.get("BREAKING_STORY", "").strip() or manual_headline,
+            "keywords": os.environ.get("BREAKING_KEYWORDS", "").strip() or "Breaking News",
+            "category": "Conflict",
+            "publication": os.environ.get("BREAKING_SOURCE", "").strip() or "Verified source",
+            "url": manual_url,
+            "published_at": datetime.now(timezone.utc).isoformat(),
+            "sent_at": datetime.now(timezone.utc).isoformat(),
+        }]
+    else:
+        candidates: list[dict[str, str]] = []
+        for feed in FEEDS:
+            try:
+                for entry in fetch_feed(feed):
+                    alert = build_alert(entry, feed)
+                    if alert and alert["key"] not in seen:
+                        candidates.append(alert)
+            except (urllib.error.URLError, urllib.error.HTTPError, ET.ParseError) as exc:
+                print(f"Skipping {feed.name}: {exc}", file=sys.stderr)
+        candidates.sort(key=lambda item: item["published_at"], reverse=True)
+        new_alerts = candidates[:2]
+    new_alerts = [alert for alert in new_alerts if alert["key"] not in seen]
     if dry_run:
         print(json.dumps(new_alerts, ensure_ascii=False, indent=2))
         return 0

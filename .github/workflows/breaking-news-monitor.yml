@@ -8,6 +8,26 @@ on:
         required: false
         default: true
         type: boolean
+      manual_headline:
+        description: "Optional verified breaking-news headline"
+        required: false
+        type: string
+      manual_story:
+        description: "Optional factual story summary"
+        required: false
+        type: string
+      manual_keywords:
+        description: "Optional keywords separated by vertical bars"
+        required: false
+        type: string
+      manual_source:
+        description: "Optional source publication"
+        required: false
+        type: string
+      manual_url:
+        description: "Optional source URL"
+        required: false
+        type: string
   schedule:
     - cron: "*/30 * * * *"
 
@@ -31,6 +51,11 @@ jobs:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run && '1' || '0' }}
+          BREAKING_HEADLINE: ${{ github.event_name == 'workflow_dispatch' && inputs.manual_headline || '' }}
+          BREAKING_STORY: ${{ github.event_name == 'workflow_dispatch' && inputs.manual_story || '' }}
+          BREAKING_KEYWORDS: ${{ github.event_name == 'workflow_dispatch' && inputs.manual_keywords || '' }}
+          BREAKING_SOURCE: ${{ github.event_name == 'workflow_dispatch' && inputs.manual_source || '' }}
+          BREAKING_URL: ${{ github.event_name == 'workflow_dispatch' && inputs.manual_url || '' }}
         run: python3 tools/breaking_rss_monitor.py
 
       - name: Commit breaking alert state
