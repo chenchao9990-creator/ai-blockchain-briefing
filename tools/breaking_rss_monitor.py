@@ -42,48 +42,151 @@ FEEDS = (
 )
 
 CONFLICT_WORDS = {
-    "war", "military", "missile", "strike", "attack", "troops", "ceasefire", "invasion",
-    "iran", "israel", "gaza", "ukraine", "russia", "hormuz", "navy", "sanctions",
+    "war", "military", "missile", "strike", "strikes", "airstrike", "airstrikes",
+    "attack", "attacks", "troops", "ceasefire", "invasion", "iran", "israel",
+    "gaza", "ukraine", "russia", "hormuz", "navy", "sanctions",
 }
 POLICY_WORDS = {
     "white house", "executive order", "state department", "treasury", "congress", "senate",
-    "law", "bill", "regulation", "policy", "tariff", "sanctions", "home office", "parliament",
-    "downing street", "uk government", "gov.uk", "ministry", "cma", "bank of england",
+    "law", "bill", "bills", "tax", "taxes", "regulation", "regulatory", "policy",
+    "tariff", "sanctions", "home office", "parliament", "prime minister",
+    "downing street", "ministry", "review", "imports", "cma", "bank of england",
+    "moj", "mod", "tra",
 }
 AI_WORDS = {
     "artificial intelligence", "openai", "anthropic", "google", "deepmind", "microsoft",
-    "meta", "nvidia", "xai", "chip", "semiconductor", "data centre", "data center",
+    "meta", "nvidia", "xai", "chip", "chips", "semiconductor", "semiconductors",
+    "data centre", "data center", "llm", "gpu",
 }
 CRYPTO_WORDS = {
-    "bitcoin", "ethereum", "crypto", "stablecoin", "blockchain", "token", "etf", "defi",
+    "bitcoin", "ethereum", "crypto", "stablecoin", "blockchain", "token", "tokenisation",
+    "tokenization", "etf", "defi", "aml", "kyc",
 }
-KEYWORD_MEANINGS = {
-    "US-Iran conflict": "美伊冲突",
-    "Jordan": "约旦",
-    "Revolutionary Guard": "伊朗革命卫队",
-    "Strait of Hormuz": "霍尔木兹海峡",
-    "Conflict": "冲突",
-    "Breaking News": "突发新闻",
-    "War": "战争",
-    "Military": "军事行动",
-    "Sanctions": "制裁",
-    "White House": "白宫",
-    "Executive Order": "行政命令",
-    "Policy": "政策",
-    "AI": "artificial intelligence, 人工智能",
-    "Crypto": "加密货币",
-    "Bitcoin": "比特币",
-    "Stablecoin": "稳定币",
-    "ETF": "exchange-traded fund, 交易所交易基金",
-    "DeFi": "decentralized finance, 去中心化金融",
+TERM_MEANINGS = {
+    "AI (artificial intelligence)": "人工智能",
+    "LLM (large language model)": "大语言模型",
+    "GPU (graphics processing unit)": "图形处理器",
+    "AI safety": "AI 安全",
+    "antitrust scrutiny": "反垄断审查",
+    "compute capacity": "算力容量",
+    "data center capacity": "数据中心容量",
+    "semiconductor supply chain": "半导体供应链",
+    "ETF (exchange-traded fund)": "交易所交易基金",
+    "DeFi (decentralized finance)": "去中心化金融",
+    "stablecoin": "稳定币",
+    "institutional adoption": "机构采用",
+    "liquidation cascade": "连环爆仓",
+    "crypto regulation": "加密货币监管",
+    "tokenisation": "代币化",
+    "AML (anti-money laundering)": "反洗钱",
+    "KYC (know your customer)": "了解你的客户",
+    "fiscal policy": "财政政策",
+    "tax cut": "减税",
+    "cost-of-living support": "生活成本支持",
+    "legislation": "立法",
+    "public policy": "公共政策",
+    "regulatory review": "监管审查",
+    "trade remedy": "贸易救济",
+    "import review": "进口审查",
+    "government transition": "政府交接",
+    "executive order": "行政令",
+    "monetary policy": "货币政策",
+    "CMA (Competition and Markets Authority)": "英国竞争与市场管理局",
+    "MOJ (Ministry of Justice)": "英国司法部",
+    "MOD (Ministry of Defence)": "英国国防部",
+    "TRA (Trade Remedies Authority)": "英国贸易救济署",
+    "public-sector funding": "公共部门资金支持",
+    "legal technology": "法律科技",
+    "geopolitical risk": "地缘政治风险",
+    "military escalation": "军事升级",
+    "ceasefire": "停火协议",
+    "sanctions": "制裁",
+    "energy-route disruption": "能源运输路线中断",
+    "defense policy": "国防政策",
+    "regional security": "地区安全",
+    "state-backed military actor": "国家支持的军事行为体",
+    "high-level diplomacy": "高层外交",
+    "market-moving event": "影响市场的大事件",
+    "financial stability": "金融稳定",
+    "liquidity": "流动性",
 }
 
-KEYWORD_LABELS = {
-    "ai": "AI",
-    "etf": "ETF",
-    "defi": "DeFi",
-    "xai": "xAI",
-    "cma": "CMA",
+TERM_ALIASES = {
+    "AI": "AI (artificial intelligence)",
+    "ETF": "ETF (exchange-traded fund)",
+    "DeFi": "DeFi (decentralized finance)",
+    "Crypto": "crypto regulation",
+    "Bitcoin": "institutional adoption",
+    "Stablecoin": "stablecoin",
+    "US-Iran conflict": "geopolitical risk",
+    "Jordan": "regional security",
+    "Revolutionary Guard": "state-backed military actor",
+    "Strait of Hormuz": "energy-route disruption",
+    "Conflict": "geopolitical risk",
+    "Breaking News": "market-moving event",
+    "War": "geopolitical risk",
+    "Military": "defense policy",
+    "Sanctions": "sanctions",
+    "White House": "executive order",
+    "Executive Order": "executive order",
+    "Policy": "public policy",
+    "Bill": "legislation",
+    "Ukraine": "high-level diplomacy",
+    "Downing Street": "government transition",
+}
+
+TERM_RULES = (
+    ("Conflict", ("ceasefire",), "ceasefire"),
+    ("Conflict", ("sanction", "sanctions"), "sanctions"),
+    ("Conflict", ("hormuz", "shipping route", "energy route"), "energy-route disruption"),
+    ("Conflict", ("strike", "strikes", "airstrike", "airstrikes", "attack", "attacks", "missile"), "military escalation"),
+    ("Conflict", ("troops", "navy", "armed forces", "military"), "defense policy"),
+    ("Conflict", ("iran", "israel", "gaza", "ukraine", "russia", "jordan"), "geopolitical risk"),
+    ("Conflict", ("revolutionary guard",), "state-backed military actor"),
+    ("Conflict", ("president", "prime minister", "call with"), "high-level diplomacy"),
+    ("US / UK Policy", ("tax", "taxes", "household bills", "electricity bills"), "fiscal policy"),
+    ("US / UK Policy", ("cut tax", "cuts tax", "tax cut", "tax cuts"), "tax cut"),
+    ("US / UK Policy", ("cost of living", "cost-of-living"), "cost-of-living support"),
+    ("US / UK Policy", ("bill", "bills", "law", "legislation"), "legislation"),
+    ("US / UK Policy", ("regulation", "regulatory", "review", "interim review"), "regulatory review"),
+    ("US / UK Policy", ("tariff", "trade", "import", "imports", "tra"), "trade remedy"),
+    ("US / UK Policy", ("ceramic", "tableware", "kitchenware"), "import review"),
+    ("US / UK Policy", ("prime minister", "downing street"), "government transition"),
+    ("US / UK Policy", ("executive order", "white house"), "executive order"),
+    ("US / UK Policy", ("treasury", "federal reserve", "bank of england"), "monetary policy"),
+    ("US / UK Policy", ("cma",), "CMA (Competition and Markets Authority)"),
+    ("US / UK Policy", ("moj", "ministry of justice"), "MOJ (Ministry of Justice)"),
+    ("US / UK Policy", ("mod", "ministry of defence", "ministry of defense"), "MOD (Ministry of Defence)"),
+    ("US / UK Policy", ("lawtech",), "legal technology"),
+    ("US / UK Policy", ("grant", "funding"), "public-sector funding"),
+    ("AI", ("artificial intelligence", "openai", "anthropic", "deepmind", "xai"), "AI (artificial intelligence)"),
+    ("AI", ("llm", "large language model"), "LLM (large language model)"),
+    ("AI", ("gpu", "nvidia"), "GPU (graphics processing unit)"),
+    ("AI", ("chip", "chips", "semiconductor", "semiconductors"), "semiconductor supply chain"),
+    ("AI", ("compute", "computing power"), "compute capacity"),
+    ("AI", ("data center", "data centre"), "data center capacity"),
+    ("AI", ("safety", "risk"), "AI safety"),
+    ("AI", ("antitrust", "competition"), "antitrust scrutiny"),
+    ("Crypto", ("etf",), "ETF (exchange-traded fund)"),
+    ("Crypto", ("defi",), "DeFi (decentralized finance)"),
+    ("Crypto", ("stablecoin", "stablecoins"), "stablecoin"),
+    ("Crypto", ("institutional", "fund", "asset manager"), "institutional adoption"),
+    ("Crypto", ("liquidation", "liquidations"), "liquidation cascade"),
+    ("Crypto", ("sec", "cftc", "regulation", "regulator"), "crypto regulation"),
+    ("Crypto", ("tokenisation", "tokenization", "token"), "tokenisation"),
+    ("Crypto", ("aml",), "AML (anti-money laundering)"),
+    ("Crypto", ("kyc",), "KYC (know your customer)"),
+    ("Markets", ("bank", "central bank", "inflation", "rates"), "monetary policy"),
+    ("Markets", ("liquidity",), "liquidity"),
+    ("Markets", ("stability",), "financial stability"),
+)
+
+CATEGORY_DEFAULT_TERMS = {
+    "Conflict": ["geopolitical risk"],
+    "US / UK Policy": ["public policy"],
+    "AI": ["AI (artificial intelligence)"],
+    "Crypto": ["crypto regulation"],
+    "Markets": ["market-moving event"],
 }
 
 
@@ -124,8 +227,15 @@ def parse_published(value: str) -> datetime | None:
         return None
 
 
-def contains_any(text: str, words: set[str]) -> bool:
-    return any(word in text for word in words)
+def contains_phrase(text: str, phrase: str) -> bool:
+    phrase = phrase.lower()
+    if re.fullmatch(r"[a-z0-9 ]+", phrase):
+        return re.search(rf"(?<![a-z0-9]){re.escape(phrase)}(?![a-z0-9])", text) is not None
+    return phrase in text
+
+
+def contains_any(text: str, words: set[str] | tuple[str, ...]) -> bool:
+    return any(contains_phrase(text, word) for word in words)
 
 
 def classify(text: str, fallback: str) -> str | None:
@@ -140,22 +250,30 @@ def classify(text: str, fallback: str) -> str | None:
     return fallback if fallback == "Conflict" else None
 
 
+def unique_terms(terms: list[str]) -> list[str]:
+    seen: set[str] = set()
+    result: list[str] = []
+    for term in terms:
+        canonical = TERM_ALIASES.get(term, term)
+        if canonical not in seen:
+            seen.add(canonical)
+            result.append(canonical)
+    return result
+
+
 def keywords(text: str, category: str) -> list[str]:
-    vocabulary = {
-        "Conflict": CONFLICT_WORDS,
-        "US / UK Policy": POLICY_WORDS,
-        "AI": AI_WORDS,
-        "Crypto": CRYPTO_WORDS,
-    }.get(category, set())
-    found = [word for word in vocabulary if word in text]
-    labels = [KEYWORD_LABELS.get(word, word.title()) for word in found[:5]]
-    return labels or [category]
+    terms = [
+        term
+        for rule_category, triggers, term in TERM_RULES
+        if rule_category == category and contains_any(text, triggers)
+    ]
+    return unique_terms(terms or CATEGORY_DEFAULT_TERMS.get(category, ["market-moving event"]))[:4]
 
 
 def display_keywords(value: str) -> str:
-    terms = [term.strip() for term in value.split("|") if term.strip()]
+    terms = unique_terms([term.strip() for term in value.split("|") if term.strip()])
     return " | ".join(
-        f"{term} ({KEYWORD_MEANINGS[term]})" if term in KEYWORD_MEANINGS else term
+        f"{term} - {TERM_MEANINGS[term]}" if term in TERM_MEANINGS else term
         for term in terms
     )
 
