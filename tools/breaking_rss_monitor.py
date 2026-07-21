@@ -70,10 +70,20 @@ KEYWORD_MEANINGS = {
     "White House": "白宫",
     "Executive Order": "行政命令",
     "Policy": "政策",
-    "AI": "人工智能",
+    "AI": "artificial intelligence, 人工智能",
     "Crypto": "加密货币",
     "Bitcoin": "比特币",
     "Stablecoin": "稳定币",
+    "ETF": "exchange-traded fund, 交易所交易基金",
+    "DeFi": "decentralized finance, 去中心化金融",
+}
+
+KEYWORD_LABELS = {
+    "ai": "AI",
+    "etf": "ETF",
+    "defi": "DeFi",
+    "xai": "xAI",
+    "cma": "CMA",
 }
 
 
@@ -138,7 +148,7 @@ def keywords(text: str, category: str) -> list[str]:
         "Crypto": CRYPTO_WORDS,
     }.get(category, set())
     found = [word for word in vocabulary if word in text]
-    labels = [word.title() if word != "ai" else "AI" for word in found[:5]]
+    labels = [KEYWORD_LABELS.get(word, word.title()) for word in found[:5]]
     return labels or [category]
 
 
@@ -189,7 +199,7 @@ def telegram_message(alert: dict[str, str]) -> str:
     return "\n\n".join([
         f"<b>Breaking News: {html.escape(alert['headline'])}</b>",
         html.escape(alert["story"]),
-        f"<b>Keywords:</b> {html.escape(display_keywords(alert['keywords']))}",
+        f"<b>Key terms:</b> {html.escape(display_keywords(alert['keywords']))}",
         f"<b>Source:</b> <a href=\"{html.escape(alert['url'], quote=True)}\">{html.escape(alert['publication'])}</a>",
     ])
 
@@ -219,13 +229,13 @@ def send_telegram(alert: dict[str, str]) -> None:
 
 def write_page(alerts: list[dict[str, str]]) -> None:
     rows = "".join(
-        f'''<li><p class="category">{html.escape(item['category'])}</p><h2><a href="{html.escape(item['url'], quote=True)}">{html.escape(item['headline'])}</a></h2><p>{html.escape(item['story'])}</p><p class="keywords">Keywords: {html.escape(display_keywords(item['keywords']))}</p><p class="source">{html.escape(item['publication'])} · {html.escape(item['sent_at'])}</p></li>'''
+        f'''<li><p class="category">{html.escape(item['category'])}</p><h2><a href="{html.escape(item['url'], quote=True)}">{html.escape(item['headline'])}</a></h2><p>{html.escape(item['story'])}</p><p class="keywords">Key terms: {html.escape(display_keywords(item['keywords']))}</p><p class="source">{html.escape(item['publication'])} · {html.escape(item['sent_at'])}</p></li>'''
         for item in reversed(alerts[-30:])
     ) or "<li><p>No breaking alerts have been published yet.</p></li>"
     BREAKING_PAGE.write_text(f'''<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Breaking News | AI, Crypto &amp; Tech Power Briefing</title><style>
 body{{margin:0;background:#f6f4ef;color:#17202a;font:17px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}}main{{max-width:860px;margin:auto;padding:26px 16px 54px}}nav{{padding-bottom:18px;border-bottom:1px solid #ded8cc}}a{{color:#164a7c;text-underline-offset:3px}}h1{{font:clamp(2.3rem,8vw,4.5rem)/1.05 Georgia,serif;color:#164a7c;margin:28px 0 12px}}h2{{font-size:1.35rem;line-height:1.25;margin:0 0 9px}}ul{{list-style:none;padding:0;margin:26px 0;border-top:1px solid #ded8cc}}li{{padding:22px 0;border-bottom:1px solid #ded8cc}}p{{margin:0 0 10px}}.category,.keywords{{font-weight:750;color:#24765d}}.source{{color:#667085;font-size:.9rem}}</style></head>
-<body><main><nav><a href="index.html">Latest briefing</a> · <a href="archive.html">Archive</a> · Breaking News</nav><header><h1>Breaking News</h1><p>Major AI, crypto, conflict and US / UK policy updates. Facts first, with keywords and source links.</p></header><ul>{rows}</ul></main></body></html>''', encoding="utf-8")
+<body><main><nav><a href="index.html">Latest briefing</a> · <a href="archive.html">Archive</a> · Breaking News</nav><header><h1>Breaking News</h1><p>Major AI, crypto, conflict and US / UK policy updates. Facts first, with key terms and source links.</p></header><ul>{rows}</ul></main></body></html>''', encoding="utf-8")
 
 
 def main() -> int:
