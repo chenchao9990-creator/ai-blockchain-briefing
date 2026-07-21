@@ -116,6 +116,11 @@ HTML_STYLE = """
       .vocab { display: grid; grid-template-columns: 1fr; gap: 8px; margin: 0; padding: 0; list-style: none; }
       .vocab li { padding: 9px 10px; border: 1px solid rgba(222,216,204,0.85); border-radius: 10px; background: rgba(255,255,255,0.62); font-size: 0.96rem; line-height: 1.35; }
       .term { font-weight: 800; }
+      .watch-list { margin: 7px 0 0; padding-left: 1.2rem; }
+      .watch-list li { margin: 0 0 7px; padding-left: 2px; }
+      .terms { margin-top: 30px; padding-top: 1px; }
+      .terms h2 { font-size: 1.45rem; }
+      .term-note { margin-top: -5px; color: var(--muted); font-size: 0.92rem; }
       .takeaway { margin: 32px 0 0; background: var(--soft-green); border: 1px solid #c8e2d6; }
       .footer { margin-top: 28px; color: var(--muted); font-size: 0.88rem; text-align: center; }
       .footer a { color: var(--muted); }
@@ -278,46 +283,40 @@ def daily_schema() -> dict[str, Any]:
         "required": [
             "title",
             "reference",
-            "what",
-            "policy",
-            "business",
-            "consequences",
-            "spoken",
-            "vocabulary",
-            "discussion",
+            "story",
+            "why",
+            "watch",
         ],
         "properties": {
             "title": {"type": "string"},
             "reference": reference,
-            "what": {"type": "array", "minItems": 3, "maxItems": 3, "items": {"type": "string"}},
-            "policy": {"type": "array", "minItems": 3, "maxItems": 3, "items": {"type": "string"}},
-            "business": {"type": "array", "minItems": 3, "maxItems": 3, "items": {"type": "string"}},
-            "consequences": {"type": "array", "minItems": 3, "maxItems": 3, "items": {"type": "string"}},
-            "spoken": {"type": "string"},
-            "vocabulary": {
-                "type": "array",
-                "minItems": 6,
-                "maxItems": 10,
-                "items": {
-                    "type": "object",
-                    "additionalProperties": False,
-                    "required": ["term", "meaning_cn"],
-                    "properties": {"term": {"type": "string"}, "meaning_cn": {"type": "string"}},
-                },
-            },
-            "discussion": {"type": "string"},
+            "story": {"type": "array", "minItems": 2, "maxItems": 3, "items": {"type": "string"}},
+            "why": {"type": "array", "minItems": 2, "maxItems": 3, "items": {"type": "string"}},
+            "watch": {"type": "array", "minItems": 3, "maxItems": 5, "items": {"type": "string"}},
+        },
+    }
+    vocabulary = {
+        "type": "array",
+        "minItems": 12,
+        "maxItems": 20,
+        "items": {
+            "type": "object",
+            "additionalProperties": False,
+            "required": ["term", "meaning_cn"],
+            "properties": {"term": {"type": "string"}, "meaning_cn": {"type": "string"}},
         },
     }
     return {
         "type": "object",
         "additionalProperties": False,
-        "required": ["date_label", "headline", "overview", "archive_summary", "items", "takeaway"],
+        "required": ["date_label", "headline", "overview", "archive_summary", "items", "vocabulary", "takeaway"],
         "properties": {
             "date_label": {"type": "string"},
             "headline": {"type": "string"},
             "overview": {"type": "array", "minItems": 2, "maxItems": 2, "items": {"type": "string"}},
             "archive_summary": {"type": "string"},
-            "items": {"type": "array", "minItems": 3, "maxItems": 7, "items": item},
+            "items": {"type": "array", "minItems": 3, "maxItems": 5, "items": item},
+            "vocabulary": vocabulary,
             "takeaway": {"type": "array", "minItems": 2, "maxItems": 3, "items": {"type": "string"}},
         },
     }
@@ -350,22 +349,25 @@ def build_daily_prompt(date_label: str) -> str:
     return f"""
 Create the {date_label} daily AI, Crypto & Tech Power newsletter.
 
-Select 5 to 7 important, real news items from the last 24 to 36 hours. Quality is more important than quantity.
+Select 3 to 5 important, real news items from the last 24 to 36 hours. Quality is more important than quantity.
 Focus on:
 - AI: OpenAI, Anthropic, Google DeepMind, Microsoft, Meta, NVIDIA, xAI, Apple, Amazon.
 - Crypto: Bitcoin, Ethereum, stablecoins, ETF, DeFi, tokenisation, crypto regulation, institutional adoption.
 - Tech Power: Musk ecosystem, Tesla, SpaceX, Starlink, xAI, AI data centers, chips, energy, national-security technology.
 
-For each item, write native-style English. Chinese is allowed only in vocabulary meanings.
+Write in simple, natural business English. The goal is to help a reader understand the news, stay interested, and remember useful professional language. Avoid academic phrasing and repetitive sections.
+Chinese is allowed only in vocabulary meanings.
 Each item must include:
 1. Reference
-2. What the article says
-3. Political / Policy Analysis
-4. Business Analysis
-5. Possible Consequences
-6. Spoken Retelling Version
-7. Useful Vocabulary & Phrases
-8. One High-quality Discussion Sentence
+2. The story
+3. Why it matters
+4. What to watch
+
+At the end, include Professional terms:
+- Choose 12 to 20 reusable professional terms from business, policy, AI, crypto, finance and technology.
+- Do not output generic keywords, company names, tickers, simple nouns, or one-off labels.
+- If a term is an acronym or abbreviation, include the full English form beside it, for example: ETF (exchange-traded fund), SEC (Securities and Exchange Commission), GPU (graphics processing unit), LLM (large language model), CPI (Consumer Price Index).
+- Keep the Chinese meaning concise in meaning_cn.
 
 Avoid pure gossip, minor product tweaks, and weak price-only stories unless they affect policy, capital flows, infrastructure or market structure.
 Use real URLs and dates. Do not use general background knowledge as a reference.
@@ -407,6 +409,10 @@ def render_issue_html(slug: str, issue: dict[str, Any]) -> str:
 
     overview = "\n".join(f"        <p>{escape(p)}</p>" for p in issue["overview"])
     takeaway = "\n".join(f"        <p>{escape(p)}</p>" for p in issue["takeaway"])
+    vocabulary = "\n".join(
+        f'          <li><span class="term">{escape(v["term"])}</span> - {escape(v["meaning_cn"])}</li>'
+        for v in issue["vocabulary"]
+    )
     pdf_href = f"pdf/{slug}.pdf"
     return f"""<!doctype html>
 <html lang="en">
@@ -435,8 +441,6 @@ def render_issue_html(slug: str, issue: dict[str, Any]) -> str:
         <h1>{escape(SITE_TITLE)}</h1>
         <p class="headline">{escape(issue['headline'])}</p>
         <div class="meta-row">
-          <span class="pill">Read time: 10-15 min</span>
-          <span class="pill">{escape(SITE_SCOPE)}</span>
           <a class="pill" href="archive.html">Archive</a>
           <a class="pill" href="{escape(pdf_href)}">PDF</a>
         </div>
@@ -454,6 +458,14 @@ def render_issue_html(slug: str, issue: dict[str, Any]) -> str:
 
 {chr(10).join(articles)}
 
+      <section class="terms">
+        <h2>Professional terms</h2>
+        <p class="term-note">Important business, policy, AI and crypto terms. Acronyms include the full English form.</p>
+        <ul class="vocab">
+{vocabulary}
+        </ul>
+      </section>
+
       <section class="takeaway">
         <h2>Today's Big Takeaway</h2>
 {takeaway}
@@ -468,19 +480,9 @@ def render_issue_html(slug: str, issue: dict[str, Any]) -> str:
 
 def render_article(item_slug: str, numbered_title: str, item: dict[str, Any]) -> str:
     ref = item["reference"]
-    vocab = "\n".join(
-        f'          <li><span class="term">{escape(v["term"])}</span> - {escape(v["meaning_cn"])}</li>'
-        for v in item["vocabulary"]
-    )
-    sections = []
-    for title, key in [
-        ("What the article says", "what"),
-        ("Political / Policy Analysis", "policy"),
-        ("Business Analysis", "business"),
-        ("Possible Consequences", "consequences"),
-    ]:
-        sections.append(f"        <h3>{title}</h3>")
-        sections.extend(f"        <p>{escape(p)}</p>" for p in item[key])
+    story = "\n".join(f"        <p>{escape(p)}</p>" for p in item["story"])
+    why = "\n".join(f"        <p>{escape(p)}</p>" for p in item["why"])
+    watch = "\n".join(f"          <li>{escape(p)}</li>" for p in item["watch"])
     supporting = ""
     if ref.get("supporting"):
         supporting = f'\n          <div><span class="label">Supporting:</span> {escape(ref["supporting"])}</div>'
@@ -494,15 +496,17 @@ def render_article(item_slug: str, numbered_title: str, item: dict[str, Any]) ->
           <div><span class="label">Source type:</span> {escape(ref["source_type"])}</div>
           <div><span class="label">Source:</span> <a href="{escape(ref["url"], quote=True)}">{escape(ref["url"])}</a></div>{supporting}
         </section>
-{chr(10).join(sections)}
-        <h3>Spoken Retelling Version</h3>
-        <p class="spoken">{escape(item["spoken"])}</p>
-        <h3>Useful Vocabulary & Phrases</h3>
-        <ul class="vocab">
-{vocab}
+
+        <h3>The story</h3>
+{story}
+
+        <h3>Why it matters</h3>
+{why}
+
+        <h3>What to watch</h3>
+        <ul class="watch-list">
+{watch}
         </ul>
-        <h3>One High-quality Discussion Sentence</h3>
-        <p class="discussion">{escape(item["discussion"])}</p>
       </article>
 """
 
@@ -529,9 +533,8 @@ def render_pdf(path: Path, issue: dict[str, Any]) -> None:
     styles.add(ParagraphStyle(name="Section", parent=styles["Heading3"], fontName="Helvetica-Bold", fontSize=8.6, leading=11, textColor=colors.HexColor("#24765d"), spaceBefore=7, spaceAfter=3))
     styles.add(ParagraphStyle(name="Body", parent=styles["BodyText"], fontName="Helvetica", fontSize=8.8, leading=12.4, textColor=colors.HexColor("#17202a"), spaceAfter=4))
     styles.add(ParagraphStyle(name="Ref", parent=styles["BodyText"], fontName="Helvetica", fontSize=7.6, leading=10.5, textColor=colors.HexColor("#17202a"), spaceAfter=1))
-    styles.add(ParagraphStyle(name="Spoken", parent=styles["BodyText"], fontName="Helvetica-Oblique", fontSize=8.5, leading=12.0, textColor=colors.HexColor("#27313a"), leftIndent=4, rightIndent=4))
     styles.add(ParagraphStyle(name="Vocab", parent=styles["BodyText"], fontName="STSong-Light", fontSize=8.4, leading=11.4, textColor=colors.HexColor("#17202a"), spaceAfter=1.1))
-    styles.add(ParagraphStyle(name="Discussion", parent=styles["BodyText"], fontName="Helvetica-BoldOblique", fontSize=8.5, leading=12.2, textColor=colors.HexColor("#253545"), leftIndent=4, rightIndent=4))
+    styles.add(ParagraphStyle(name="Bullet", parent=styles["BodyText"], fontName="Helvetica", fontSize=8.6, leading=11.8, leftIndent=10, firstLineIndent=-7, textColor=colors.HexColor("#17202a"), spaceAfter=3))
 
     page_size = portrait((106 * mm, 188 * mm))
     width, height = page_size
@@ -592,21 +595,18 @@ def render_pdf(path: Path, issue: dict[str, Any]) -> None:
             ref_text += f"<br/><b>Supporting:</b> {pdf_escape(ref['supporting'])}"
         story.append(table_box(Paragraph(ref_text, styles["Ref"]), colors.HexColor("#f5f7fa"), colors.HexColor("#ded8cc")))
         for section, key in [
-            ("What the article says", "what"),
-            ("Political / Policy Analysis", "policy"),
-            ("Business Analysis", "business"),
-            ("Possible Consequences", "consequences"),
+            ("The story", "story"),
+            ("Why it matters", "why"),
         ]:
             story.append(Paragraph(section, styles["Section"]))
             story.extend(Paragraph(pdf_escape(p), styles["Body"]) for p in item[key])
-        story.append(Paragraph("Spoken Retelling Version", styles["Section"]))
-        story.append(table_box(Paragraph(pdf_escape(item["spoken"]), styles["Spoken"]), colors.HexColor("#fff7e3"), colors.HexColor("#ead9ad")))
-        story.append(Paragraph("Useful Vocabulary & Phrases", styles["Section"]))
-        for vocab in item["vocabulary"]:
-            story.append(Paragraph(pdf_escape(f"{vocab['term']} - {vocab['meaning_cn']}"), styles["Vocab"]))
-        story.append(Paragraph("One High-quality Discussion Sentence", styles["Section"]))
-        story.append(table_box(Paragraph(pdf_escape(item["discussion"]), styles["Discussion"]), colors.HexColor("#eaf3fb")))
+        story.append(Paragraph("What to watch", styles["Section"]))
+        for bullet in item["watch"]:
+            story.append(Paragraph(pdf_escape(f"• {bullet}"), styles["Bullet"]))
         story.append(HRFlowable(width="100%", color=colors.HexColor("#ded8cc"), thickness=0.4, spaceBefore=6, spaceAfter=4))
+    story.append(Paragraph("Professional terms", styles["ItemTitle"]))
+    for vocab in issue["vocabulary"]:
+        story.append(Paragraph(pdf_escape(f"{vocab['term']} - {vocab['meaning_cn']}"), styles["Vocab"]))
     story.append(Paragraph("Today's Big Takeaway", styles["ItemTitle"]))
     story.append(table_box(Paragraph(pdf_escape("\n\n".join(issue["takeaway"])), styles["Body"]), colors.HexColor("#edf7f2"), colors.HexColor("#c8e2d6")))
     doc.build(story)
