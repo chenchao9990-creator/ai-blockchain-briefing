@@ -262,5 +262,27 @@
     "url": "https://www.gov.uk/government/news/2026-government-chemist-conference-report-and-recordings",
     "published_at": "2026-07-22T17:28:32+00:00",
     "sent_at": "2026-07-22T17:34:39.059159+00:00"
+  },
+  {
+    "key": "0a1b65b4ca5d5caba753",
+    "headline": "PM call with Prime Minister Meloni of Italy: 22 July 2026",
+    "story": "The Prime Minister spoke to the Prime Minister of Italy, Giorgia Meloni, this evening.",
+    "keywords": "government transition",
+    "category": "US / UK Policy",
+    "publication": "GOV.UK",
+    "url": "https://www.gov.uk/government/news/pm-call-with-prime-minister-meloni-of-italy-22-july-2026",
+    "published_at": "2026-07-22T21:19:40+00:00",
+    "sent_at": "2026-07-22T21:25:29.664059+00:00"
+  },
+  {
+    "key": "109dca961f9fccf9b53f",
+    "headline": "PM call with Prime Minister Carney of of Canada: 22 July 2026",
+    "story": "The Prime Minister spoke to the Prime Minister of Canada, Mark Carney, this evening.",
+    "keywords": "government transition",
+    "category": "US / UK Policy",
+    "publication": "GOV.UK",
+    "url": "https://www.gov.uk/government/news/pm-call-with-prime-minister-carney-of-of-canada-22-july-2026",
+    "published_at": "2026-07-22T21:15:01+00:00",
+    "sent_at": "2026-07-22T21:25:29.664452+00:00"
   }
 ]
