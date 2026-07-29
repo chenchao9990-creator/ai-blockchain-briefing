@@ -23,6 +23,8 @@ STATE_PATH = Path("data/breaking_sent.json")
 BREAKING_PAGE = Path("breaking-news.html")
 PUBLIC_BASE_URL = "https://chenchao9990-creator.github.io/ai-blockchain-briefing"
 LOOKBACK = timedelta(hours=3)
+BREAKING_THRESHOLD = 9
+MAX_ALERTS_PER_RUN = 1
 
 
 @dataclass(frozen=True)
@@ -34,11 +36,15 @@ class Feed:
 
 FEEDS = (
     Feed("BBC News World", "https://feeds.bbci.co.uk/news/world/rss.xml", "Conflict"),
-    Feed("BBC News UK", "https://feeds.bbci.co.uk/news/uk/rss.xml", "US / UK Policy"),
     Feed("BBC News Business", "https://feeds.bbci.co.uk/news/business/rss.xml", "Markets"),
+    Feed("TechCrunch", "https://techcrunch.com/feed/", "AI"),
+    Feed("The Verge", "https://www.theverge.com/rss/index.xml", "AI"),
+    Feed("CoinDesk", "https://www.coindesk.com/arc/outboundfeeds/rss/", "Crypto"),
     Feed("The White House", "https://www.whitehouse.gov/feed/", "US / UK Policy"),
     Feed("U.S. Department of State", "https://www.state.gov/feed/", "US / UK Policy"),
-    Feed("GOV.UK", "https://www.gov.uk/search/news-and-communications.atom", "US / UK Policy"),
+    Feed("Federal Reserve", "https://www.federalreserve.gov/feeds/press_all.xml", "US / UK Policy"),
+    Feed("SEC", "https://www.sec.gov/news/pressreleases.rss", "US / UK Policy"),
+    Feed("CFTC", "https://www.cftc.gov/RSS/RSSPressReleases.xml", "US / UK Policy"),
 )
 
 CONFLICT_WORDS = {
@@ -48,10 +54,9 @@ CONFLICT_WORDS = {
 }
 POLICY_WORDS = {
     "white house", "executive order", "state department", "treasury", "congress", "senate",
-    "law", "bill", "bills", "tax", "taxes", "regulation", "regulatory", "policy",
-    "tariff", "sanctions", "home office", "parliament", "prime minister",
-    "downing street", "ministry", "review", "imports", "cma", "bank of england",
-    "moj", "mod", "tra",
+    "federal reserve", "sec", "cftc", "executive order", "sanctions", "tariff",
+    "export controls", "national emergency", "interest rate", "rate decision",
+    "financial stability", "market structure",
 }
 AI_WORDS = {
     "artificial intelligence", "openai", "anthropic", "google", "deepmind", "microsoft",
@@ -109,6 +114,8 @@ TERM_MEANINGS = {
     "market-moving event": "影响市场的大事件",
     "financial stability": "金融稳定",
     "liquidity": "流动性",
+    "export controls": "出口管制",
+    "systemic risk": "系统性风险",
 }
 
 TERM_ALIASES = {
@@ -144,21 +151,10 @@ TERM_RULES = (
     ("Conflict", ("iran", "israel", "gaza", "ukraine", "russia", "jordan"), "geopolitical risk"),
     ("Conflict", ("revolutionary guard",), "state-backed military actor"),
     ("Conflict", ("president", "prime minister", "call with"), "high-level diplomacy"),
-    ("US / UK Policy", ("tax", "taxes", "household bills", "electricity bills"), "fiscal policy"),
-    ("US / UK Policy", ("cut tax", "cuts tax", "tax cut", "tax cuts"), "tax cut"),
-    ("US / UK Policy", ("cost of living", "cost-of-living"), "cost-of-living support"),
-    ("US / UK Policy", ("bill", "bills", "law", "legislation"), "legislation"),
-    ("US / UK Policy", ("regulation", "regulatory", "review", "interim review"), "regulatory review"),
-    ("US / UK Policy", ("tariff", "trade", "import", "imports", "tra"), "trade remedy"),
-    ("US / UK Policy", ("ceramic", "tableware", "kitchenware"), "import review"),
-    ("US / UK Policy", ("prime minister", "downing street"), "government transition"),
     ("US / UK Policy", ("executive order", "white house"), "executive order"),
-    ("US / UK Policy", ("treasury", "federal reserve", "bank of england"), "monetary policy"),
-    ("US / UK Policy", ("cma",), "CMA (Competition and Markets Authority)"),
-    ("US / UK Policy", ("moj", "ministry of justice"), "MOJ (Ministry of Justice)"),
-    ("US / UK Policy", ("mod", "ministry of defence", "ministry of defense"), "MOD (Ministry of Defence)"),
-    ("US / UK Policy", ("lawtech",), "legal technology"),
-    ("US / UK Policy", ("grant", "funding"), "public-sector funding"),
+    ("US / UK Policy", ("treasury", "federal reserve", "interest rate", "rate decision"), "monetary policy"),
+    ("US / UK Policy", ("export controls",), "export controls"),
+    ("US / UK Policy", ("sanctions",), "sanctions"),
     ("AI", ("artificial intelligence", "openai", "anthropic", "deepmind", "xai"), "AI (artificial intelligence)"),
     ("AI", ("llm", "large language model"), "LLM (large language model)"),
     ("AI", ("gpu", "nvidia"), "GPU (graphics processing unit)"),
@@ -247,7 +243,37 @@ def classify(text: str, fallback: str) -> str | None:
         return "AI"
     if contains_any(text, POLICY_WORDS):
         return "US / UK Policy"
-    return fallback if fallback == "Conflict" else None
+    return None
+
+
+def importance_score(text: str, category: str, publication: str) -> int:
+    """Return a deliberately conservative 0-10 breaking-news materiality score."""
+    score = 0
+    official = {"The White House", "U.S. Department of State", "Federal Reserve", "SEC", "CFTC"}
+    if publication in official:
+        score += 2
+
+    if category == "Conflict":
+        if contains_any(text, ("invasion", "airstrike", "missile", "troops", "ceasefire", "hormuz", "attack")):
+            score += 6
+        if contains_any(text, ("iran", "israel", "ukraine", "russia", "sanctions", "oil", "shipping")):
+            score += 3
+    elif category == "AI":
+        if contains_any(text, ("openai", "anthropic", "nvidia", "google", "microsoft", "meta", "semiconductor", "chip")):
+            score += 4
+        if contains_any(text, ("acquisition", "funding", "raises", "billion", "launch", "export controls", "ban", "data center", "deal")):
+            score += 5
+    elif category == "Crypto":
+        if contains_any(text, ("bitcoin", "ethereum", "stablecoin", "exchange", "etf", "crypto")):
+            score += 4
+        if contains_any(text, ("approval", "hack", "exploit", "sanctions", "regulation", "sec", "cftc", "billion", "liquidation")):
+            score += 5
+    elif category == "US / UK Policy":
+        if contains_any(text, ("executive order", "sanctions", "tariff", "export controls", "interest rate", "rate decision", "national emergency")):
+            score += 5
+        if contains_any(text, ("ai", "artificial intelligence", "semiconductor", "chip", "crypto", "stablecoin", "bank", "financial", "trade")):
+            score += 3
+    return min(score, 10)
 
 
 def unique_terms(terms: list[str]) -> list[str]:
@@ -299,6 +325,9 @@ def build_alert(entry: dict[str, str], feed: Feed) -> dict[str, str] | None:
     category = classify(text, feed.default_category)
     if not category:
         return None
+    score = importance_score(text, category, feed.name)
+    if score < BREAKING_THRESHOLD:
+        return None
     detail = entry["summary"] or entry["title"]
     return {
         "key": alert_key(entry["url"]),
@@ -306,6 +335,7 @@ def build_alert(entry: dict[str, str], feed: Feed) -> dict[str, str] | None:
         "story": detail[:900],
         "keywords": " | ".join(keywords(text, category)),
         "category": category,
+        "importance_score": str(score),
         "publication": feed.name,
         "url": entry["url"],
         "published_at": published.isoformat(),
@@ -358,7 +388,16 @@ body{{margin:0;background:#f6f4ef;color:#17202a;font:17px/1.65 -apple-system,Bli
 
 def main() -> int:
     dry_run = os.environ.get("DRY_RUN", "0") == "1"
-    state = load_state()
+    prune_only = os.environ.get("PRUNE_LOW_VALUE_ALERTS", "0") == "1"
+    state = [
+        item for item in load_state()
+        if item.get("publication") not in {"GOV.UK", "BBC News UK"}
+    ]
+    if prune_only:
+        STATE_PATH.write_text(json.dumps(state, ensure_ascii=False, indent=2), encoding="utf-8")
+        write_page(state)
+        print(f"Retained {len(state)} high-value historical alert(s).")
+        return 0
     seen = {item.get("key") for item in state}
     manual_headline = os.environ.get("BREAKING_HEADLINE", "").strip()
     if manual_headline:
@@ -386,8 +425,8 @@ def main() -> int:
                         candidates.append(alert)
             except (urllib.error.URLError, urllib.error.HTTPError, ET.ParseError) as exc:
                 print(f"Skipping {feed.name}: {exc}", file=sys.stderr)
-        candidates.sort(key=lambda item: item["published_at"], reverse=True)
-        new_alerts = candidates[:2]
+        candidates.sort(key=lambda item: (int(item["importance_score"]), item["published_at"]), reverse=True)
+        new_alerts = candidates[:MAX_ALERTS_PER_RUN]
     new_alerts = [alert for alert in new_alerts if alert["key"] not in seen]
     if dry_run:
         print(json.dumps(new_alerts, ensure_ascii=False, indent=2))
