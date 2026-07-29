@@ -658,5 +658,27 @@
     "url": "https://www.gov.uk/government/news/rsh-finds-serious-failings-with-aves-housing-and-ymca-thames-gateway",
     "published_at": "2026-07-29T08:30:03+00:00",
     "sent_at": "2026-07-29T09:26:22.064510+00:00"
+  },
+  {
+    "key": "d4cbcfbe282753bce23f",
+    "headline": "CMA investigates Microsoft over marketing of subscription plans",
+    "story": "Investigation will examine whether customers were misled about Microsoft 365 subscription options and paid more as a result.",
+    "keywords": "AI (artificial intelligence)",
+    "category": "AI",
+    "publication": "GOV.UK",
+    "url": "https://www.gov.uk/government/news/cma-investigates-microsoft-over-marketing-of-subscription-plans",
+    "published_at": "2026-07-29T10:00:14+00:00",
+    "sent_at": "2026-07-29T10:21:44.935898+00:00"
+  },
+  {
+    "key": "8f925a6ca4dc27a24cf1",
+    "headline": "MHRA clarifies regulatory status of ambient voice technologies used in the NHS",
+    "story": "The Medicines and Healthcare products Regulatory Agency has published guidance, developed in close partnership with NHS England, clarifying how existing medical device law applies to ambient voice technology (AVT) products u…",
+    "keywords": "legislation | regulatory review",
+    "category": "US / UK Policy",
+    "publication": "GOV.UK",
+    "url": "https://www.gov.uk/government/news/mhra-clarifies-regulatory-status-of-ambient-voice-technologies-used-in-the-nhs",
+    "published_at": "2026-07-29T09:37:52+00:00",
+    "sent_at": "2026-07-29T10:21:44.937140+00:00"
   }
 ]
