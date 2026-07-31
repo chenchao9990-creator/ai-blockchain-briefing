@@ -106,5 +106,17 @@
     "url": "https://www.coindesk.com/business/2026/07/31/tether-posts-usd1-5-billion-operating-profit-in-q2-as-reserve-buffer-falls-by-half",
     "published_at": "2026-07-31T18:24:55+00:00",
     "sent_at": "2026-07-31T19:35:15.266334+00:00"
+  },
+  {
+    "key": "025855eb9f0e7a95e31e",
+    "headline": "Google nixes its Earth AI feature one day after launch, amid criticism it would spread misinformation",
+    "story": "A tool that allowed anyone to generate fake AI-generated imagery and superimpose it over real Google Earth maps quickly spurred backlash.",
+    "keywords": "AI (artificial intelligence)",
+    "category": "AI",
+    "importance_score": "9",
+    "publication": "TechCrunch",
+    "url": "https://techcrunch.com/2026/07/31/google-nixes-its-earth-ai-feature-one-day-after-launch-amid-criticism-it-would-spread-misinformation/",
+    "published_at": "2026-07-31T19:47:28+00:00",
+    "sent_at": "2026-07-31T20:29:42.644207+00:00"
   }
 ]
