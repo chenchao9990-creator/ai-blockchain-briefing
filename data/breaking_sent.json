@@ -82,5 +82,17 @@
     "url": "https://www.coindesk.com/business/2026/07/31/coldcard-s-usd38-million-so-far-exploit-shakes-faith-in-self-custody-may-push-investors-to-etfs",
     "published_at": "2026-07-31T17:07:30+00:00",
     "sent_at": "2026-07-31T18:02:02.944186+00:00"
+  },
+  {
+    "key": "bc137ab1c9370b55d5de",
+    "headline": "Google might launch a ‘Pixel Tag’",
+    "story": "Google is seemingly working on an item tracker that might compete with Apple's AirTag. 9to5Google obtained an image of something called a \"Google Pixel Tag\" that has a small oval shape. The publication also linked to a Slovenian store listing about the Pixel Tag that describes the gadget as an item tracker with a speaker […]",
+    "keywords": "AI (artificial intelligence)",
+    "category": "AI",
+    "importance_score": "9",
+    "publication": "The Verge",
+    "url": "https://www.theverge.com/tech/973889/google-pixel-tag-item-tracker",
+    "published_at": "2026-07-31T18:27:24+00:00",
+    "sent_at": "2026-07-31T18:57:19.416318+00:00"
   }
 ]
