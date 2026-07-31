@@ -70,5 +70,17 @@
     "url": "https://techcrunch.com/2026/07/31/samsung-expects-memory-shortage-to-worsen-through-2027-and-last-until-2028/",
     "published_at": "2026-07-31T15:37:58+00:00",
     "sent_at": "2026-07-31T16:09:59.562504+00:00"
+  },
+  {
+    "key": "dd0b9624b14afd878a95",
+    "headline": "Coldcard's $38 million (so far) exploit shakes faith in self-custody, may push investors to ETFs",
+    "story": "A software bug in popular hardware wallet Coldcard that led to the theft to this point of nearly 600 bitcoin worth roughly $38 million is prompting questions about security and whether managing private keys has become too risky for everyday investors.",
+    "keywords": "crypto regulation",
+    "category": "Crypto",
+    "importance_score": "9",
+    "publication": "CoinDesk",
+    "url": "https://www.coindesk.com/business/2026/07/31/coldcard-s-usd38-million-so-far-exploit-shakes-faith-in-self-custody-may-push-investors-to-etfs",
+    "published_at": "2026-07-31T17:07:30+00:00",
+    "sent_at": "2026-07-31T18:02:02.944186+00:00"
   }
 ]
