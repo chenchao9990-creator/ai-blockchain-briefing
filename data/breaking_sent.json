@@ -94,5 +94,17 @@
     "url": "https://www.theverge.com/tech/973889/google-pixel-tag-item-tracker",
     "published_at": "2026-07-31T18:27:24+00:00",
     "sent_at": "2026-07-31T18:57:19.416318+00:00"
+  },
+  {
+    "key": "008b26263c4c33c1c6ee",
+    "headline": "Tether posts $1.5 billion operating profit in Q2 as reserve buffer falls by half",
+    "story": "The world’s largest stablecoin issuer added 14 metric tons of gold and about 1,800 bitcoin to its reserves during the second quarter.",
+    "keywords": "stablecoin",
+    "category": "Crypto",
+    "importance_score": "9",
+    "publication": "CoinDesk",
+    "url": "https://www.coindesk.com/business/2026/07/31/tether-posts-usd1-5-billion-operating-profit-in-q2-as-reserve-buffer-falls-by-half",
+    "published_at": "2026-07-31T18:24:55+00:00",
+    "sent_at": "2026-07-31T19:35:15.266334+00:00"
   }
 ]
