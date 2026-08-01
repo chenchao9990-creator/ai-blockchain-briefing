@@ -118,5 +118,17 @@
     "url": "https://techcrunch.com/2026/07/31/google-nixes-its-earth-ai-feature-one-day-after-launch-amid-criticism-it-would-spread-misinformation/",
     "published_at": "2026-07-31T19:47:28+00:00",
     "sent_at": "2026-07-31T20:29:42.644207+00:00"
+  },
+  {
+    "key": "200fb443f8d4821d34af",
+    "headline": "SEC to review Nasdaq bitcoin options approval after CME challenge",
+    "story": "CME argues that because bitcoin is a commodity, options tied to its value fall under CFTC jurisdiction, not the SEC's authority.",
+    "keywords": "crypto regulation",
+    "category": "Crypto",
+    "importance_score": "9",
+    "publication": "CoinDesk",
+    "url": "https://www.coindesk.com/policy/2026/08/01/sec-to-review-nasdaq-bitcoin-options-approval-after-cme-challenge",
+    "published_at": "2026-08-01T15:48:27+00:00",
+    "sent_at": "2026-08-01T16:21:30.334999+00:00"
   }
 ]
