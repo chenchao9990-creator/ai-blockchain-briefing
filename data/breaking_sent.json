@@ -130,5 +130,17 @@
     "url": "https://www.coindesk.com/policy/2026/08/01/sec-to-review-nasdaq-bitcoin-options-approval-after-cme-challenge",
     "published_at": "2026-08-01T15:48:27+00:00",
     "sent_at": "2026-08-01T16:21:30.334999+00:00"
+  },
+  {
+    "key": "c77e9c426a2c6f947ff6",
+    "headline": "Unlike the FTX collapse, the $89 million Coldcard exploit has investors sending bitcoin back to exchanges",
+    "story": "The Coldcard vulnerability has smaller bitcoin holders moving funds onto exchanges for safety, according to blockchain analytics firms. This is opposite of the trend seen following the FTX collapse in late 2022.",
+    "keywords": "crypto regulation",
+    "category": "Crypto",
+    "importance_score": "9",
+    "publication": "CoinDesk",
+    "url": "https://www.coindesk.com/markets/2026/08/02/unlike-the-ftx-collapse-the-usd88-million-coldcard-exploit-has-investors-sending-bitcoin-back-to-exchanges",
+    "published_at": "2026-08-02T12:03:51+00:00",
+    "sent_at": "2026-08-02T12:24:03.569091+00:00"
   }
 ]
