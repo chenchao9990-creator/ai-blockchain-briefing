@@ -154,5 +154,17 @@
     "url": "https://www.coindesk.com/markets/2026/08/03/bitcoin-ether-decline-as-coldcard-exploit-enters-a-fifth-day",
     "published_at": "2026-08-03T10:51:37+00:00",
     "sent_at": "2026-08-03T12:04:51.852094+00:00"
+  },
+  {
+    "key": "b6fb0c6837a176838d21",
+    "headline": "Sequoia’s Shaun Maguire leads $1B round for nuclear startup Valar Atomics",
+    "story": "Valar Atomics raised $1 billion at a $6 billion valuation after signing a development deal with Nvidia in June.",
+    "keywords": "GPU (graphics processing unit)",
+    "category": "AI",
+    "importance_score": "9",
+    "publication": "TechCrunch",
+    "url": "https://techcrunch.com/2026/08/03/sequoias-shaun-maguire-leads-1b-round-for-nuclear-startup-valar-atomics/",
+    "published_at": "2026-08-03T17:16:43+00:00",
+    "sent_at": "2026-08-03T18:08:01.567551+00:00"
   }
 ]
