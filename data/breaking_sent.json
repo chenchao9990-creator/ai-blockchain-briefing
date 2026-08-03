@@ -142,5 +142,17 @@
     "url": "https://www.coindesk.com/markets/2026/08/02/unlike-the-ftx-collapse-the-usd88-million-coldcard-exploit-has-investors-sending-bitcoin-back-to-exchanges",
     "published_at": "2026-08-02T12:03:51+00:00",
     "sent_at": "2026-08-02T12:24:03.569091+00:00"
+  },
+  {
+    "key": "d00636f0a9f8ecc68357",
+    "headline": "Bitcoin, ether decline as Coldcard exploit enters a fifth day",
+    "story": "Nevertheless, the drop in crypto prices seems restrained given the magnitude of losses in the wallet hack and the erosion of confidence in cold storage.",
+    "keywords": "crypto regulation",
+    "category": "Crypto",
+    "importance_score": "9",
+    "publication": "CoinDesk",
+    "url": "https://www.coindesk.com/markets/2026/08/03/bitcoin-ether-decline-as-coldcard-exploit-enters-a-fifth-day",
+    "published_at": "2026-08-03T10:51:37+00:00",
+    "sent_at": "2026-08-03T12:04:51.852094+00:00"
   }
 ]
