@@ -166,5 +166,17 @@
     "url": "https://techcrunch.com/2026/08/03/sequoias-shaun-maguire-leads-1b-round-for-nuclear-startup-valar-atomics/",
     "published_at": "2026-08-03T17:16:43+00:00",
     "sent_at": "2026-08-03T18:08:01.567551+00:00"
+  },
+  {
+    "key": "cb18946844697b4a4fb7",
+    "headline": "New Ethereum proposal would cut issuance to zero if staked ETH reaches $112 billion",
+    "story": "The EIP-8361 draft proposal calls for burning a rising share of validator rewards as the staking ratio climbs.",
+    "keywords": "crypto regulation",
+    "category": "Crypto",
+    "importance_score": "9",
+    "publication": "CoinDesk",
+    "url": "https://www.coindesk.com/tech/2026/08/05/new-ethereum-proposal-would-cut-issuance-to-zero-if-staked-eth-reaches-usd112-billion",
+    "published_at": "2026-08-05T05:49:57+00:00",
+    "sent_at": "2026-08-05T06:24:38.505831+00:00"
   }
 ]
