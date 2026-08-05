@@ -190,5 +190,17 @@
     "url": "https://www.coindesk.com/daybook-us/2026/08/05/the-usd120-million-coldcard-hack-lights-up-bitcoin-s-memory-pool",
     "published_at": "2026-08-05T11:20:58+00:00",
     "sent_at": "2026-08-05T11:36:13.457671+00:00"
+  },
+  {
+    "key": "e3d75c75452dac859ee9",
+    "headline": "Coldcard exploit could boost demand for regulated bitcoin exposure, analysts say",
+    "story": "Cantor sees positive read-through for crypto custody providers, while FRNT says the breach could drive some investors toward bitcoin ETFs.",
+    "keywords": "crypto regulation",
+    "category": "Crypto",
+    "importance_score": "9",
+    "publication": "CoinDesk",
+    "url": "https://www.coindesk.com/tech/2026/08/05/coldcard-exploit-could-boost-demand-for-regulated-bitcoin-exposure-analysts-say",
+    "published_at": "2026-08-05T15:44:08+00:00",
+    "sent_at": "2026-08-05T16:14:08.817159+00:00"
   }
 ]
