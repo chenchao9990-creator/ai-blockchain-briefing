@@ -262,5 +262,17 @@
     "url": "https://www.coindesk.com/markets/2026/08/07/live-updates-bitcoin-flat-at-usd64-300-before-us-jobs-report-with-oil-back-as-a-headwind",
     "published_at": "2026-08-07T07:44:57+00:00",
     "sent_at": "2026-08-07T07:51:37.416431+00:00"
+  },
+  {
+    "key": "334267b79fdd38233db0",
+    "headline": "Crypto market maker Wintermute lands SEC approval to trade equities and ETF blocks",
+    "story": "The crypto market maker can now trade US stocks and options and support ETFs as crypto moves closer to traditional markets.",
+    "keywords": "ETF (exchange-traded fund) | crypto regulation",
+    "category": "Crypto",
+    "importance_score": "9",
+    "publication": "CoinDesk",
+    "url": "https://www.coindesk.com/business/2026/08/07/wintermute-gains-u-s-broker-dealer-status-in-wall-street-push",
+    "published_at": "2026-08-07T08:46:17+00:00",
+    "sent_at": "2026-08-07T08:55:27.903503+00:00"
   }
 ]
