@@ -286,5 +286,17 @@
     "url": "https://www.theverge.com/tech/976537/meta-new-mexico-cild-safety-fine-public-nuisance",
     "published_at": "2026-08-07T09:10:01+00:00",
     "sent_at": "2026-08-07T09:58:35.096965+00:00"
+  },
+  {
+    "key": "87c112e32d6121baadd3",
+    "headline": "Another Bitcoin infrastructure exploit hits, this time draining Lightning payment servers",
+    "story": "BTCPay told users running LND to update immediately or take servers offline after attackers stole credentials that can control Lightning wallets and move funds.",
+    "keywords": "crypto regulation",
+    "category": "Crypto",
+    "importance_score": "9",
+    "publication": "CoinDesk",
+    "url": "https://www.coindesk.com/tech/2026/08/08/another-bitcoin-infrastructure-exploit-hits-this-time-draining-merchant-lightning-nodes",
+    "published_at": "2026-08-08T07:46:04+00:00",
+    "sent_at": "2026-08-08T08:35:49.000499+00:00"
   }
 ]
