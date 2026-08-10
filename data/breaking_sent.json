@@ -298,5 +298,17 @@
     "url": "https://www.coindesk.com/tech/2026/08/08/another-bitcoin-infrastructure-exploit-hits-this-time-draining-merchant-lightning-nodes",
     "published_at": "2026-08-08T07:46:04+00:00",
     "sent_at": "2026-08-08T08:35:49.000499+00:00"
+  },
+  {
+    "key": "1f97ef9d403f14696225",
+    "headline": "Bitcoin steadies above $65,000 as Iran-Oman deal talk eases Hormuz concerns, lifts risk assets",
+    "story": "BTC rose to $65,209 and Nasdaq 100 index futures gained 0.45% on reports that Iran may strike a deal with Oman to reopen the Strait of Hormuz.",
+    "keywords": "energy-route disruption | military escalation | geopolitical risk",
+    "category": "Conflict",
+    "importance_score": "9",
+    "publication": "CoinDesk",
+    "url": "https://www.coindesk.com/markets/2026/08/10/bitcoin-steadies-above-usd65-000-as-iran-oman-deal-talk-eases-hormuz-concerns-lifts-risk-assets",
+    "published_at": "2026-08-10T10:45:43+00:00",
+    "sent_at": "2026-08-10T11:29:41.037938+00:00"
   }
 ]
