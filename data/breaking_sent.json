@@ -442,5 +442,17 @@
     "url": "https://www.coindesk.com/business/2026/08/12/wintermute-plans-usd1-billion-ai-push-beyond-crypto-bloomberg",
     "published_at": "2026-08-12T16:34:24+00:00",
     "sent_at": "2026-08-12T16:56:04.506410+00:00"
+  },
+  {
+    "key": "0afb458e7b0878f0965d",
+    "headline": "OpenAI-backed Thrive Holdings raises $2B to bring AI to the enterprise",
+    "story": "Thrive Holdings has raised $2 billion in new funding at a $12 billion valuation from investors like SoftBank, D1 Capital Partners, and Alitmeter Capital.",
+    "keywords": "AI (artificial intelligence)",
+    "category": "AI",
+    "importance_score": "9",
+    "publication": "TechCrunch",
+    "url": "https://techcrunch.com/2026/08/12/openai-backed-thrive-holdings-raises-2b-to-bring-ai-to-the-enterprise/",
+    "published_at": "2026-08-12T17:41:29+00:00",
+    "sent_at": "2026-08-12T17:55:50.360108+00:00"
   }
 ]
