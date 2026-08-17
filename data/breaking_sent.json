@@ -538,5 +538,17 @@
     "url": "https://www.coindesk.com/markets/2026/08/17/live-updates-bitcoin-flat-near-usd63-500-but-the-flows-have-quietly-turned",
     "published_at": "2026-08-17T08:38:26+00:00",
     "sent_at": "2026-08-17T10:28:02.262510+00:00"
+  },
+  {
+    "key": "ed062953a33235315778",
+    "headline": "Israel’s largest crypto broker Bits of Gold hit by data breach affecting 200,000 customers",
+    "story": "Funds and digital assets were not touched, but names, bank account details, and national ID numbers may have been exposed in what the company says was a wider global attack.",
+    "keywords": "military escalation | geopolitical risk",
+    "category": "Conflict",
+    "importance_score": "9",
+    "publication": "CoinDesk",
+    "url": "https://www.coindesk.com/tech/2026/08/17/israel-s-largest-crypto-broker-bits-of-gold-hit-by-data-breach-affecting-200-000-customers",
+    "published_at": "2026-08-17T11:59:23+00:00",
+    "sent_at": "2026-08-17T12:36:15.498932+00:00"
   }
 ]
