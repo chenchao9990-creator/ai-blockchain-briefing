@@ -586,5 +586,17 @@
     "url": "https://techcrunch.com/2026/08/17/anthropics-annualized-revenue-surges-to-65b/",
     "published_at": "2026-08-17T23:56:26+00:00",
     "sent_at": "2026-08-18T01:00:52.907746+00:00"
+  },
+  {
+    "key": "ba537370f7532a789e1d",
+    "headline": "ChatGPT is getting a dedicated mode for teens",
+    "story": "OpenAI is introducing a dedicated ChatGPT mode for teenagers, combining existing youth safeguards and new safety features under one roof. The launch comes amid mounting public scrutiny over how AI tools affect younger users, as other platforms implement their own age checks and teen-specific protections. ChatGPT for Teens is \"an experience designed to help teens […]",
+    "keywords": "AI (artificial intelligence) | AI safety",
+    "category": "AI",
+    "importance_score": "9",
+    "publication": "The Verge",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/981333/openai-chatgpt-teen-mode",
+    "published_at": "2026-08-18T11:00:00+00:00",
+    "sent_at": "2026-08-18T11:50:17.484111+00:00"
   }
 ]
