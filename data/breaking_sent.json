@@ -598,5 +598,17 @@
     "url": "https://www.theverge.com/ai-artificial-intelligence/981333/openai-chatgpt-teen-mode",
     "published_at": "2026-08-18T11:00:00+00:00",
     "sent_at": "2026-08-18T11:50:17.484111+00:00"
+  },
+  {
+    "key": "58971760ecb14500b915",
+    "headline": "Maya Protocol exploit drains bitcoin and other assets as pool value drops $11 million",
+    "story": "A chain of six flaws caused the cross-chain trading network to credit a pool with nearly 50 million tokens that were never properly funded, letting an attacker drain real assets.",
+    "keywords": "crypto regulation",
+    "category": "Crypto",
+    "importance_score": "9",
+    "publication": "CoinDesk",
+    "url": "https://www.coindesk.com/markets/2026/08/19/maya-protocol-exploit-drains-bitcoin-and-other-assets-as-pool-value-drops-usd11-million",
+    "published_at": "2026-08-19T06:36:11+00:00",
+    "sent_at": "2026-08-19T06:38:25.590650+00:00"
   }
 ]
