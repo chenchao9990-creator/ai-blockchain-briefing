@@ -646,5 +646,17 @@
     "url": "https://www.theverge.com/ai-artificial-intelligence/981668/nvidias-goldman-blackrock-gpu-compute-asset",
     "published_at": "2026-08-19T12:00:00+00:00",
     "sent_at": "2026-08-19T14:29:00.687180+00:00"
+  },
+  {
+    "key": "4d842757e5ca75357e9e",
+    "headline": "Crypto Long & Short: Where DeFi yield really comes from (and why it broke this spring)",
+    "story": "In this week's Crypto Long & Short, Solstice Finance's David Plisek argues that most of the money lost in DeFi this spring wasn't taken by hackers but by yield strategies that quietly stopped working. Looking at April's $13 billion drawdown, he shows that a headline yield number reveals almost nothing about whether it will hold under stress, laying out four questions an allocator should ask before committing capital.",
+    "keywords": "DeFi (decentralized finance)",
+    "category": "Crypto",
+    "importance_score": "9",
+    "publication": "CoinDesk",
+    "url": "https://www.coindesk.com/coindesk-indices/2026/08/18/crypto-long-and-short-where-defi-yield-really-comes-from-and-why-it-broke-this-spring",
+    "published_at": "2026-08-19T14:57:35+00:00",
+    "sent_at": "2026-08-19T15:03:06.283372+00:00"
   }
 ]
