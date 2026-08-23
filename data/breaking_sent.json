@@ -766,5 +766,17 @@
     "url": "https://techcrunch.com/2026/08/21/nvidia-partners-with-data-center-developer-cloverleaf/",
     "published_at": "2026-08-21T22:37:38+00:00",
     "sent_at": "2026-08-21T22:49:46.212019+00:00"
+  },
+  {
+    "key": "983fa0a7b2dd4ad2d60c",
+    "headline": "Crypto card spending tops $1 billion as stablecoins move into everyday purchases",
+    "story": "Tracked card volume more than tripled in a year, with USDC and USDT funding over 70% of spending as users increasingly paid for groceries, rides and subscriptions.",
+    "keywords": "stablecoin",
+    "category": "Crypto",
+    "importance_score": "9",
+    "publication": "CoinDesk",
+    "url": "https://www.coindesk.com/business/2026/08/23/crypto-card-spending-tops-usd1-billion-as-stablecoins-move-into-everyday-purchases",
+    "published_at": "2026-08-23T15:00:00+00:00",
+    "sent_at": "2026-08-23T15:18:07.463183+00:00"
   }
 ]
