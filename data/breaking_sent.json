@@ -778,5 +778,17 @@
     "url": "https://www.coindesk.com/business/2026/08/23/crypto-card-spending-tops-usd1-billion-as-stablecoins-move-into-everyday-purchases",
     "published_at": "2026-08-23T15:00:00+00:00",
     "sent_at": "2026-08-23T15:18:07.463183+00:00"
+  },
+  {
+    "key": "cfeb5ba9eb61bfc32139",
+    "headline": "Crypto’s next billion users might be AI agents, and they’re paying with stablecoins",
+    "story": "According to Coinbase’s head of AI product, we’re currently in the “Napster/LimeWire era” of agentic payments.",
+    "keywords": "stablecoin",
+    "category": "Crypto",
+    "importance_score": "9",
+    "publication": "CoinDesk",
+    "url": "https://www.coindesk.com/business/2026/08/23/crypto-s-next-billion-users-might-be-ai-agents-and-they-re-paying-with-stablecoins",
+    "published_at": "2026-08-23T13:00:00+00:00",
+    "sent_at": "2026-08-23T15:45:53.087460+00:00"
   }
 ]
