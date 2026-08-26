@@ -850,5 +850,17 @@
     "url": "https://www.coindesk.com/business/2026/08/24/standard-chartered-first-bank-to-distribute-anchorpoint-s-hong-kong-dollar-stablecoin",
     "published_at": "2026-08-24T11:36:55+00:00",
     "sent_at": "2026-08-24T11:53:15.403508+00:00"
+  },
+  {
+    "key": "4b73af7f6f1d70c265fa",
+    "headline": "OpenAI loses a top data center exec, as stream of high-profile departures continues",
+    "story": "Before Malone left, OpenAI had already reshuffled its infrastructure org, shifting his reporting line away from President Greg Brockman and putting Vice President Sachin Katti in charge of the group.",
+    "keywords": "AI (artificial intelligence) | data center capacity",
+    "category": "AI",
+    "importance_score": "9",
+    "publication": "TechCrunch",
+    "url": "https://techcrunch.com/2026/08/25/openai-loses-a-top-data-center-exec-as-stream-of-high-profile-departures-continues/",
+    "published_at": "2026-08-26T00:06:20+00:00",
+    "sent_at": "2026-08-26T01:04:58.396452+00:00"
   }
 ]
