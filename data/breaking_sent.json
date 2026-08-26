@@ -922,5 +922,17 @@
     "url": "https://www.theverge.com/games/985003/microsoft-xbox-25th-anniversary-console-price",
     "published_at": "2026-08-26T14:05:38+00:00",
     "sent_at": "2026-08-26T14:40:25.023834+00:00"
+  },
+  {
+    "key": "7c52495c1b9c6f1e5bb7",
+    "headline": "Crypto Long & Short: Tokenized equities: the model underneath the trade",
+    "story": "In this week's Crypto Long & Short, CoinDesk's Joshua DeVos writes that demand for tokenized equities is accelerating fast, from $16 billion to more than $590 billion in perpetual futures in a single year, but that the headline growth hides the question that matters most. Two tokens can trade under the same ticker while granting entirely different rights, and the structure underneath, whether it conveys real ownership or a synthetic claim, determines the risks and protections a holder actually has.",
+    "keywords": "crypto regulation",
+    "category": "Crypto",
+    "importance_score": "9",
+    "publication": "CoinDesk",
+    "url": "https://www.coindesk.com/coindesk-indices/2026/08/26/crypto-long-and-short-tokenized-equities-the-model-underneath-the-trade",
+    "published_at": "2026-08-26T15:00:09+00:00",
+    "sent_at": "2026-08-26T16:14:45.921073+00:00"
   }
 ]
