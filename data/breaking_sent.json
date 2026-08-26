@@ -946,5 +946,17 @@
     "url": "https://www.theverge.com/tech/985186/google-gemini-3-5-transcribe-audio-ai",
     "published_at": "2026-08-26T17:00:00+00:00",
     "sent_at": "2026-08-26T18:13:02.104036+00:00"
+  },
+  {
+    "key": "8d3f34ac051470c1db82",
+    "headline": "Nvidia tops earnings estimates, guides to $108 billion in revenue next quarter",
+    "story": "The tech bellwether reported fiscal second-quarter results after the bell on Wednesday.",
+    "keywords": "GPU (graphics processing unit)",
+    "category": "AI",
+    "importance_score": "9",
+    "publication": "CoinDesk",
+    "url": "https://www.coindesk.com/markets/2026/08/26/nvidia-tops-earnings-estimates-guides-to-usd108-billion-in-revenue-next-quarter",
+    "published_at": "2026-08-26T20:24:31+00:00",
+    "sent_at": "2026-08-26T20:30:54.036275+00:00"
   }
 ]
