@@ -934,5 +934,17 @@
     "url": "https://www.coindesk.com/coindesk-indices/2026/08/26/crypto-long-and-short-tokenized-equities-the-model-underneath-the-trade",
     "published_at": "2026-08-26T15:00:09+00:00",
     "sent_at": "2026-08-26T16:14:45.921073+00:00"
+  },
+  {
+    "key": "b9b7e9271a29b3a2870f",
+    "headline": "Google’s new AI transcription edits out your ‘ums’ and ‘ahs’",
+    "story": "Google has updated Gemini Audio with new transcription capabilities that automatically detect specialized jargon and more than 85 languages. Gemini 3.5 Transcribe is a new addition to the Gemini family that follows the launch of 3.5 Live Translate, and comes as we're still waiting for Google to release the Gemini 3.5 Pro model that it […]",
+    "keywords": "AI (artificial intelligence)",
+    "category": "AI",
+    "importance_score": "9",
+    "publication": "The Verge",
+    "url": "https://www.theverge.com/tech/985186/google-gemini-3-5-transcribe-audio-ai",
+    "published_at": "2026-08-26T17:00:00+00:00",
+    "sent_at": "2026-08-26T18:13:02.104036+00:00"
   }
 ]
