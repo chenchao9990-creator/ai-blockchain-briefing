@@ -970,5 +970,17 @@
     "url": "https://www.coindesk.com/news-analysis/2026/08/26/sec-resurrecting-u-s-crypto-custody-rule-the-previous-administration-failed-to-land",
     "published_at": "2026-08-26T23:01:44+00:00",
     "sent_at": "2026-08-27T00:24:51.065619+00:00"
+  },
+  {
+    "key": "a85aa69b831be69ce347",
+    "headline": "Nvidia’s AI advantage is moving beyond the GPU",
+    "story": "The new generation of data center systems is increasing efficiency with smarter traffic control instead of just more processor cycles.",
+    "keywords": "GPU (graphics processing unit) | data center capacity",
+    "category": "AI",
+    "importance_score": "9",
+    "publication": "TechCrunch",
+    "url": "https://techcrunch.com/2026/08/29/nvidias-ai-advantage-is-moving-beyond-the-gpu/",
+    "published_at": "2026-08-29T13:00:00+00:00",
+    "sent_at": "2026-08-29T13:55:19.331062+00:00"
   }
 ]
