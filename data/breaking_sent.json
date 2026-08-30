@@ -982,5 +982,17 @@
     "url": "https://techcrunch.com/2026/08/29/nvidias-ai-advantage-is-moving-beyond-the-gpu/",
     "published_at": "2026-08-29T13:00:00+00:00",
     "sent_at": "2026-08-29T13:55:19.331062+00:00"
+  },
+  {
+    "key": "34b6a1545bb54dc49eee",
+    "headline": "A $1.1 million crypto card hack crashed a neobank's token 49%",
+    "story": "The exploit caused the neobank's AVICI token to drop 49% from a 24-hour high, hitting a record low before paring some of the losses.",
+    "keywords": "tokenisation",
+    "category": "Crypto",
+    "importance_score": "9",
+    "publication": "CoinDesk",
+    "url": "https://www.coindesk.com/web3/2026/08/29/a-usd1-1-million-crypto-card-hack-crashed-a-neobank-s-token-49",
+    "published_at": "2026-08-29T23:49:17+00:00",
+    "sent_at": "2026-08-30T00:36:23.761814+00:00"
   }
 ]
