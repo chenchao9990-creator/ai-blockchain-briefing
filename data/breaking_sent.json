@@ -994,5 +994,17 @@
     "url": "https://www.coindesk.com/web3/2026/08/29/a-usd1-1-million-crypto-card-hack-crashed-a-neobank-s-token-49",
     "published_at": "2026-08-29T23:49:17+00:00",
     "sent_at": "2026-08-30T00:36:23.761814+00:00"
+  },
+  {
+    "key": "b72dc2155f8b26f1bd13",
+    "headline": "Enhanced geothermal notches another win as Google buys 400 MW from Fervo",
+    "story": "Fervo's deal with Google could expand to 1 gigawatt of geothermal power, enough to supply a very large AI data center in Utah.",
+    "keywords": "data center capacity",
+    "category": "AI",
+    "importance_score": "9",
+    "publication": "TechCrunch",
+    "url": "https://techcrunch.com/2026/09/02/enhanced-geothermal-notches-another-win-as-google-buys-400-mw-from-fervo/",
+    "published_at": "2026-09-02T16:54:23+00:00",
+    "sent_at": "2026-09-02T16:57:51.521805+00:00"
   }
 ]
