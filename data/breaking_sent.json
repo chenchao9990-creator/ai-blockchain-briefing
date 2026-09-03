@@ -1018,5 +1018,17 @@
     "url": "https://www.theverge.com/tech/985474/nvidia-buying-hugging-face-deal",
     "published_at": "2026-09-03T12:12:06+00:00",
     "sent_at": "2026-09-03T13:45:06.159039+00:00"
+  },
+  {
+    "key": "d16111dc8adfb9592490",
+    "headline": "Nvidia’s new RTX Spark laptops launch in October with two different configs",
+    "story": "All the rumors leading up to Nvidia's announcement of its Arm-based RTX Spark chips over the summer mentioned two specific chips: the N1X and N1. While the N1 won't be arriving this year, Nvidia says its N1X chip is arriving in RTX Spark laptops in two different configurations in October. You'll be able to buy […]",
+    "keywords": "GPU (graphics processing unit) | semiconductor supply chain",
+    "category": "AI",
+    "importance_score": "9",
+    "publication": "The Verge",
+    "url": "https://www.theverge.com/news/989133/nvidia-rtx-spark-laptops-n1x-specifications",
+    "published_at": "2026-09-03T16:00:00+00:00",
+    "sent_at": "2026-09-03T17:29:33.296763+00:00"
   }
 ]
