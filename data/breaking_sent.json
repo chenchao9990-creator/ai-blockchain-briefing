@@ -1006,5 +1006,17 @@
     "url": "https://techcrunch.com/2026/09/02/enhanced-geothermal-notches-another-win-as-google-buys-400-mw-from-fervo/",
     "published_at": "2026-09-02T16:54:23+00:00",
     "sent_at": "2026-09-02T16:57:51.521805+00:00"
+  },
+  {
+    "key": "cf9e32aa49ffe52cf581",
+    "headline": "Nvidia is buying Hugging Face for almost $13 billion",
+    "story": "Nvidia has agreed to buy Hugging Face for $12.93 billion, bringing one of the most popular hosting platforms for open-source AI models, datasets, and tools under the ownership of the world's biggest AI chipmaker. Hugging Face is an online platform founded in 2016 that gives AI developers a space to share their projects and data […]",
+    "keywords": "GPU (graphics processing unit)",
+    "category": "AI",
+    "importance_score": "9",
+    "publication": "The Verge",
+    "url": "https://www.theverge.com/tech/985474/nvidia-buying-hugging-face-deal",
+    "published_at": "2026-09-03T12:12:06+00:00",
+    "sent_at": "2026-09-03T13:45:06.159039+00:00"
   }
 ]
