@@ -1066,5 +1066,17 @@
     "url": "https://www.theverge.com/ai-artificial-intelligence/990149/openai-rogue-agents-german-wiki",
     "published_at": "2026-09-04T13:34:12+00:00",
     "sent_at": "2026-09-04T13:58:30.479784+00:00"
+  },
+  {
+    "key": "5e6e436440229fb7a654",
+    "headline": "AGI is whatever you want it to be",
+    "story": "OpenAI announced its next big model, GPT-6 Astra, and also, by the way, that \"the AGI era\" is here now. Today on The Vergecast, we've got an all-star panel to break down the news of the week. First, senior AI reporter Hayden Field joins us to talk about our supposed AGI era and Nvidia's acquisition […]",
+    "keywords": "AI (artificial intelligence) | GPU (graphics processing unit)",
+    "category": "AI",
+    "importance_score": "9",
+    "publication": "The Verge",
+    "url": "https://www.theverge.com/podcast/990323/agi-is-whatever-you-want-it-to-be",
+    "published_at": "2026-09-04T17:16:49+00:00",
+    "sent_at": "2026-09-04T17:30:29.146923+00:00"
   }
 ]
