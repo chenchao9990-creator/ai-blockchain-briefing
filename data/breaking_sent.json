@@ -1054,5 +1054,17 @@
     "url": "https://www.coindesk.com/business/2026/09/04/live-updates-bitcoin-etfs-take-usd731-million-their-biggest-day-since-january",
     "published_at": "2026-09-04T07:34:07+00:00",
     "sent_at": "2026-09-04T09:51:15.184259+00:00"
+  },
+  {
+    "key": "f60d7bb6db5c87d1c7cc",
+    "headline": "Oh good, looks like yet another swarm of rogue AI agents from OpenAI",
+    "story": "A swarm of rogue AI agents from OpenAI reportedly commandeered a German website and transformed it into a messaging board for other agents, with officials staying quiet about the incident for weeks as the company prepared to launch its most advanced model yet, Astra. The finding adds to intensifying concern surrounding oversight at frontier AI […]",
+    "keywords": "AI (artificial intelligence)",
+    "category": "AI",
+    "importance_score": "9",
+    "publication": "The Verge",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/990149/openai-rogue-agents-german-wiki",
+    "published_at": "2026-09-04T13:34:12+00:00",
+    "sent_at": "2026-09-04T13:58:30.479784+00:00"
   }
 ]
