@@ -1090,5 +1090,17 @@
     "url": "https://techcrunch.com/2026/09/04/ai-compute-provider-nscale-is-looking-for-3-5b-in-pre-ipo-financing/",
     "published_at": "2026-09-04T21:12:11+00:00",
     "sent_at": "2026-09-04T22:26:24.601294+00:00"
+  },
+  {
+    "key": "2cfc7a40f23ab99e7a51",
+    "headline": "Bitcoin network used by exchanges hit by $320 million exploit. Hackers claim they're the 'good guys'",
+    "story": "Liquid Network, a settlement layer used by exchanges, halted all transactions after losing $320 million worth of bitcoin in a security exploit.",
+    "keywords": "crypto regulation",
+    "category": "Crypto",
+    "importance_score": "9",
+    "publication": "CoinDesk",
+    "url": "https://www.coindesk.com/markets/2026/09/07/bitcoin-network-used-by-exchanges-hit-by-usd320-million-exploit-hackers-claim-they-re-the-good-guys",
+    "published_at": "2026-09-07T03:43:12+00:00",
+    "sent_at": "2026-09-07T06:24:04.480293+00:00"
   }
 ]
