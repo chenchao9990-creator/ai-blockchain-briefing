@@ -1210,5 +1210,17 @@
     "url": "https://www.coindesk.com/policy/2026/09/18/cftc-sends-crypto-rules-to-white-house-to-review-as-congress-stalls-on-clarity-act",
     "published_at": "2026-09-18T15:16:37+00:00",
     "sent_at": "2026-09-18T18:02:19.361923+00:00"
+  },
+  {
+    "key": "9c545f160a6b86e71858",
+    "headline": "Coinbase, Robinhood, Circle could be early winners of SEC's tokenized-stock push, analysts say",
+    "story": "Goldman Sachs and Citizens analysts said the agency's move create new opportunities in custody, tokenization infrastructure and stablecoin settlement, while giving brokers room to expand onchain products.",
+    "keywords": "stablecoin | crypto regulation | tokenisation",
+    "category": "Crypto",
+    "importance_score": "9",
+    "publication": "CoinDesk",
+    "url": "https://www.coindesk.com/business/2026/09/20/coinbase-robinhood-circle-could-be-early-winners-of-sec-s-tokenized-stock-push-analysts-say",
+    "published_at": "2026-09-20T12:00:00+00:00",
+    "sent_at": "2026-09-20T13:58:49.311733+00:00"
   }
 ]
