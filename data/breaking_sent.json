@@ -1234,5 +1234,17 @@
     "url": "https://www.coindesk.com/markets/2026/09/21/bitcoin-hits-usd85-000-as-short-squeeze-forces-out-usd648-million-of-bearish-bets",
     "published_at": "2026-09-21T10:30:00+00:00",
     "sent_at": "2026-09-21T10:56:38.685407+00:00"
+  },
+  {
+    "key": "45630c163fbd9bd0816b",
+    "headline": "Meta’s Muse is outpacing ChatGPT’s early mobile launch",
+    "story": "Meta’s new AI agent Muse has racked up more downloads and daily active users in the U.S. and Canada than ChatGPT did over the same period after its mobile debut, according to new estimates from Appfigures.",
+    "keywords": "AI (artificial intelligence)",
+    "category": "AI",
+    "importance_score": "9",
+    "publication": "TechCrunch",
+    "url": "https://techcrunch.com/2026/09/21/metas-muse-is-outpacing-chatgpts-early-mobile-launch/",
+    "published_at": "2026-09-21T19:19:21+00:00",
+    "sent_at": "2026-09-21T20:45:39.520513+00:00"
   }
 ]
