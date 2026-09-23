@@ -1270,5 +1270,17 @@
     "url": "https://techcrunch.com/2026/09/23/ema-raises-77m-as-ai-starts-eating-into-enterprise-software-and-services/",
     "published_at": "2026-09-23T12:00:00+00:00",
     "sent_at": "2026-09-23T12:52:53.261745+00:00"
+  },
+  {
+    "key": "9020c960742a061f8760",
+    "headline": "Crypto Long & Short: Inside the chain settling $150 billion of stablecoins a week",
+    "story": "Tron launched as a content-distribution project and has become the settlement layer for a large share of the world's USDT, processing roughly $150 billion to $190 billion of stablecoin transfers a week. Josh Olszewicz of Canary Capital breaks down how the network's economics work and what stablecoin regulation could do to the thesis.",
+    "keywords": "stablecoin | crypto regulation",
+    "category": "Crypto",
+    "importance_score": "9",
+    "publication": "CoinDesk",
+    "url": "https://www.coindesk.com/coindesk-indices/2026/09/23/crypto-long-and-short-inside-the-chain-settling-usd150-billion-of-stablecoins-a-week",
+    "published_at": "2026-09-23T15:07:21+00:00",
+    "sent_at": "2026-09-23T17:40:42.429538+00:00"
   }
 ]
