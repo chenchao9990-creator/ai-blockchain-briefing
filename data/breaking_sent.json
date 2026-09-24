@@ -1306,5 +1306,17 @@
     "url": "https://www.theverge.com/tech/998480/meta-connect-2026-biggest-news-announcements",
     "published_at": "2026-09-23T22:45:00+00:00",
     "sent_at": "2026-09-23T23:50:20.345589+00:00"
+  },
+  {
+    "key": "dac80f12a88a9c0ac84f",
+    "headline": "Muse sure looks a lot like OpenClaw",
+    "story": "We seem to be entering into an AI agent renaissance. Meta's new consumer-facing AI agent, Muse, topped the App Store charts soon after its release and has 600,000 daily active users in the US, by an Apptopia estimate. And AI agent platform Instinct, whose eponymous creator is fundraising at a $2.5 billion valuation, has been […]",
+    "keywords": "AI (artificial intelligence)",
+    "category": "AI",
+    "importance_score": "9",
+    "publication": "The Verge",
+    "url": "https://www.theverge.com/report/1000180/muse-openclaw-instinct-lookalike",
+    "published_at": "2026-09-24T17:10:38+00:00",
+    "sent_at": "2026-09-24T18:08:27.157692+00:00"
   }
 ]
