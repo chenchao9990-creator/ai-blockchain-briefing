@@ -1318,5 +1318,17 @@
     "url": "https://www.theverge.com/report/1000180/muse-openclaw-instinct-lookalike",
     "published_at": "2026-09-24T17:10:38+00:00",
     "sent_at": "2026-09-24T18:08:27.157692+00:00"
+  },
+  {
+    "key": "fb19fb48c045935d34c4",
+    "headline": "Bitcoin ETFs have erased a $5.8 billion hole",
+    "story": "At one point in July, ETFs were down $5.8 billion in net outflows for the year. Now, that’s turned into $800 million in net inflows.",
+    "keywords": "crypto regulation",
+    "category": "Crypto",
+    "importance_score": "9",
+    "publication": "CoinDesk",
+    "url": "https://www.coindesk.com/markets/2026/09/25/bitcoin-etfs-have-erased-a-usd5-8-billion-hole",
+    "published_at": "2026-09-25T09:13:01+00:00",
+    "sent_at": "2026-09-25T10:22:57.974067+00:00"
   }
 ]
