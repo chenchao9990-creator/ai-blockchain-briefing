@@ -1366,5 +1366,17 @@
     "url": "https://www.theverge.com/ai-artificial-intelligence/1002671/meta-muse-ai",
     "published_at": "2026-09-30T15:18:49+00:00",
     "sent_at": "2026-09-30T15:34:38.204552+00:00"
+  },
+  {
+    "key": "a1e114ae8e87c8d152cc",
+    "headline": "Once a $2 billion Ethereum layer-2, Blast is shutting down after assets plunge 98%",
+    "story": "Once home to more than $2 billion in crypto assets, Blast is shutting down as activity fades, costs rise, and bigger platforms like Coinbase and Robinhood build networks of their own.",
+    "keywords": "crypto regulation",
+    "category": "Crypto",
+    "importance_score": "9",
+    "publication": "CoinDesk",
+    "url": "https://www.coindesk.com/tech/2026/10/02/once-a-usd2-billion-ethereum-layer-2-blast-is-shutting-down-after-assets-plunge-98",
+    "published_at": "2026-10-02T17:15:35+00:00",
+    "sent_at": "2026-10-02T20:03:43.607177+00:00"
   }
 ]
