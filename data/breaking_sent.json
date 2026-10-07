@@ -1402,5 +1402,17 @@
     "url": "https://www.theverge.com/report/1005859/microsoft-xbox-gta-6-streaming-rights",
     "published_at": "2026-10-06T22:12:27+00:00",
     "sent_at": "2026-10-06T23:32:03.270702+00:00"
+  },
+  {
+    "key": "18b9eaf9312938cffc19",
+    "headline": "The Surface Laptop Ultra finally has a release date — and a starting price of $2,599",
+    "story": "Months after revealing its Surface Laptop Ultra, Microsoft has announced that the Nvidia RTX Spark-equipped device will launch on October 16th. Pricing starts at $2,599 for the base configuration, featuring an 18-core CPU, 24GB of RAM, and 512GB of storage. The Surface Laptop Ultra ships with a 15-inch HDR touchscreen display with up to 2,000 […]",
+    "keywords": "GPU (graphics processing unit)",
+    "category": "AI",
+    "importance_score": "9",
+    "publication": "The Verge",
+    "url": "https://www.theverge.com/news/1006378/microsoft-surface-laptop-ultra-pricing-release-date",
+    "published_at": "2026-10-07T17:48:45+00:00",
+    "sent_at": "2026-10-07T17:53:29.458767+00:00"
   }
 ]
