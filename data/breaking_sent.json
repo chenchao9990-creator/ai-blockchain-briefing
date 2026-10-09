@@ -1414,5 +1414,17 @@
     "url": "https://www.theverge.com/news/1006378/microsoft-surface-laptop-ultra-pricing-release-date",
     "published_at": "2026-10-07T17:48:45+00:00",
     "sent_at": "2026-10-07T17:53:29.458767+00:00"
+  },
+  {
+    "key": "b424326b3c8c065da692",
+    "headline": "Live updates: XRP ETFs the only ones in green as BTC, ETH, ZEC funds post outflows",
+    "story": "Bitcoin ETFs lost $244 million on Thursday and the ZEC fund extended a run of October outflows. Bitcoin is back near $82,000 after a $1 billion liquidation.",
+    "keywords": "institutional adoption | liquidation cascade",
+    "category": "Crypto",
+    "importance_score": "9",
+    "publication": "CoinDesk",
+    "url": "https://www.coindesk.com/business/2026/10/09/live-updates-xrp-etfs-the-only-ones-in-green-as-btc-eth-zec-funds-post-outflows",
+    "published_at": "2026-10-09T06:51:32+00:00",
+    "sent_at": "2026-10-09T08:26:01.152575+00:00"
   }
 ]
