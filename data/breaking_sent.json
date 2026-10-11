@@ -1462,5 +1462,17 @@
     "url": "https://www.coindesk.com/markets/2026/10/10/bitcoin-s-usd19-billion-wake-up-call-one-year-later-has-crypto-learned-anything",
     "published_at": "2026-10-10T11:00:00+00:00",
     "sent_at": "2026-10-10T12:50:57.662765+00:00"
+  },
+  {
+    "key": "728994ea3975afb5c5d9",
+    "headline": "President Trump declares 'energy ceasefire' between Russia and Ukraine",
+    "story": "\"Ukraine supports the ceasefire, and it is important that Russia support it as well,\" said Ukrainian President Zelensky.",
+    "keywords": "ceasefire | geopolitical risk | high-level diplomacy",
+    "category": "Conflict",
+    "importance_score": "9",
+    "publication": "CoinDesk",
+    "url": "https://www.coindesk.com/markets/2026/10/11/president-trump-declares-energy-ceasefire-between-russia-and-ukraine",
+    "published_at": "2026-10-11T15:40:47+00:00",
+    "sent_at": "2026-10-11T18:16:24.352234+00:00"
   }
 ]
