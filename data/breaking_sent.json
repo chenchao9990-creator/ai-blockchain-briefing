@@ -1486,5 +1486,17 @@
     "url": "https://www.theverge.com/gadgets/1009971/apple-homepod-mini-2-preorder-buy",
     "published_at": "2026-10-13T14:15:00+00:00",
     "sent_at": "2026-10-13T16:13:20.269687+00:00"
+  },
+  {
+    "key": "5bbafbb919982fbe4d83",
+    "headline": "BlackRock's crypto ETF assets surge 63% but remain far below 2025 peak",
+    "story": "The asset manager's crypto assets surged 63% to $79.6 billion as investors returned, but holdings remain 23% below year-ago levels.",
+    "keywords": "ETF (exchange-traded fund) | institutional adoption",
+    "category": "Crypto",
+    "importance_score": "9",
+    "publication": "CoinDesk",
+    "url": "https://www.coindesk.com/markets/2026/10/14/blackrock-s-crypto-etf-assets-surge-63-but-remain-far-below-2025-peak",
+    "published_at": "2026-10-14T14:31:14+00:00",
+    "sent_at": "2026-10-14T15:20:17.235741+00:00"
   }
 ]
