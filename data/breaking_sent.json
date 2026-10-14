@@ -1498,5 +1498,17 @@
     "url": "https://www.coindesk.com/markets/2026/10/14/blackrock-s-crypto-etf-assets-surge-63-but-remain-far-below-2025-peak",
     "published_at": "2026-10-14T14:31:14+00:00",
     "sent_at": "2026-10-14T15:20:17.235741+00:00"
+  },
+  {
+    "key": "fa361691c0a6800a4ded",
+    "headline": "Microsoft and Japan took down a cybercrime network behind over a billion scam messages",
+    "story": "We've all gotten a scam text about a nonexistent parking ticket or a fake package delivery, but hopefully you'll start seeing fewer of them. Microsoft says it helped dismantle a marketplace for scammers sending phishing messages like those around the world. Through an investigation with Japan's National Police Agency, it tracked scam activity back to […]",
+    "keywords": "AI (artificial intelligence)",
+    "category": "AI",
+    "importance_score": "9",
+    "publication": "The Verge",
+    "url": "https://www.theverge.com/tech/1011487/microsoft-scam-messages-marketplace-takedown",
+    "published_at": "2026-10-14T20:03:43+00:00",
+    "sent_at": "2026-10-14T22:57:26.721877+00:00"
   }
 ]
