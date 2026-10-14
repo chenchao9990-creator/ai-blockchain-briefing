@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Microsoft expands its Maia custom AI chip program, BNY and Citadel complete a tokenized-Treasury repo workflow, ESMA tightens expectations around non-compliant stablecoins, and Aptos adds encrypted transaction handling." />
+    <title>October 14, 2026 | Daily AI, Crypto &amp; Tech Power Briefing</title>
+    <style>
+
+      :root {
+        color-scheme: light;
+        --bg: #f6f4ef;
+        --ink: #17202a;
+        --muted: #667085;
+        --line: #ded8cc;
+        --blue: #164a7c;
+        --green: #24765d;
+        --soft-blue: #eaf3fb;
+        --soft-green: #edf7f2;
+        --soft-gold: #fff7e3;
+        --shadow: 0 16px 45px rgba(38, 52, 65, 0.08);
+      }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0;
+        background: linear-gradient(180deg, rgba(255, 253, 248, 0.9), rgba(246, 244, 239, 0.92)), var(--bg);
+        color: var(--ink);
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+        font-size: 17px;
+        line-height: 1.62;
+      }
+      a { color: var(--blue); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+      .page { width: min(100%, 860px); margin: 0 auto; padding: 18px 16px 44px; }
+      .site-nav {
+        display: flex; align-items: center; justify-content: space-between; gap: 12px;
+        padding: 6px 0 14px; color: var(--muted); font-size: 0.88rem; font-weight: 750;
+      }
+      .site-nav a { color: var(--muted); text-decoration: none; }
+      .site-nav-links { display: flex; gap: 12px; white-space: nowrap; }
+      .masthead { padding: 28px 0 18px; border-bottom: 1px solid var(--line); }
+      .kicker { margin: 0 0 12px; color: var(--muted); font-size: 0.82rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+      h1 { margin: 0 0 8px; color: var(--blue); font-family: Georgia, "Times New Roman", serif; font-size: clamp(2.05rem, 9vw, 4.5rem); line-height: 0.98; letter-spacing: 0; }
+      .headline { margin: 14px 0 0; font-size: clamp(1.24rem, 4.8vw, 2.1rem); line-height: 1.15; font-weight: 800; color: #151d27; }
+      .meta-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+      .pill { display: inline-flex; align-items: center; min-height: 34px; padding: 6px 11px; border: 1px solid var(--line); border-radius: 999px; background: rgba(255,255,255,0.72); color: #3f4a57; font-size: 0.86rem; font-weight: 700; text-decoration: none; }
+      .overview { margin: 22px 0 18px; padding: 17px 17px 15px; border: 1px solid #cfe0ed; border-radius: 14px; background: var(--soft-blue); box-shadow: var(--shadow); }
+      .overview p, .takeaway p { margin: 0 0 12px; }
+      .overview p:last-child, .takeaway p:last-child { margin-bottom: 0; }
+      .toc { margin: 22px 0 22px; padding: 0; list-style: none; border-top: 1px solid var(--line); }
+      .toc li { border-bottom: 1px solid var(--line); }
+      .toc a { display: block; padding: 12px 0; color: var(--ink); font-size: 1rem; font-weight: 750; text-decoration: none; }
+      article { margin: 28px 0 0; padding: 0 0 26px; border-bottom: 1px solid var(--line); }
+      h2 { margin: 0 0 14px; color: var(--blue); font-size: clamp(1.55rem, 6vw, 2.4rem); line-height: 1.12; letter-spacing: 0; }
+      h3 { margin: 23px 0 7px; color: var(--green); font-size: 0.94rem; line-height: 1.28; letter-spacing: 0; text-transform: none; }
+      p { margin: 0 0 13px; }
+      .reference { margin: 0 0 18px; padding: 13px 14px; border: 1px solid var(--line); border-radius: 12px; background: rgba(255,255,255,0.76); font-size: 0.94rem; line-height: 1.46; overflow-wrap: anywhere; }
+      .reference div + div { margin-top: 4px; }
+      .label { font-weight: 800; }
+      .spoken, .discussion, .takeaway { border-radius: 14px; padding: 15px 16px; }
+      .spoken { background: var(--soft-gold); border: 1px solid #ead9ad; font-style: italic; }
+      .discussion { background: var(--soft-blue); border: 1px solid #cfe0ed; font-weight: 780; font-style: italic; }
+      .vocab { display: grid; grid-template-columns: 1fr; gap: 8px; margin: 0; padding: 0; list-style: none; }
+      .vocab li { padding: 9px 10px; border: 1px solid rgba(222,216,204,0.85); border-radius: 10px; background: rgba(255,255,255,0.62); font-size: 0.96rem; line-height: 1.35; }
+      .term { font-weight: 800; }
+      .takeaway { margin: 32px 0 0; background: var(--soft-green); border: 1px solid #c8e2d6; }
+      .footer { margin-top: 28px; color: var(--muted); font-size: 0.88rem; text-align: center; }
+      .footer a { color: var(--muted); }
+      @media (min-width: 720px) {
+        body { font-size: 18px; }
+        .page { padding: 30px 32px 58px; }
+        .masthead { padding-top: 42px; }
+        .overview, .reference, .spoken, .discussion, .takeaway { border-radius: 16px; }
+        .vocab { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      }
+      @media print {
+        body { background: #fff; font-size: 11pt; }
+        .page { width: 100%; padding: 0; }
+        .overview, .reference, .spoken, .discussion, .takeaway, .vocab li { box-shadow: none; break-inside: avoid; }
+        article { break-inside: avoid; }
+        a { color: #000; }
+      }
+
+
+      .masthead { padding-top: 24px; }
+      .sections { margin: 24px 0 6px; }
+      .sections-label { margin: 0 0 10px; color: var(--muted); font-size: 0.78rem; font-weight: 850; letter-spacing: 0.08em; text-transform: uppercase; }
+      .section-grid { display: grid; grid-template-columns: 1fr; gap: 10px; }
+      .section-card { display: block; min-height: 122px; padding: 16px; border: 1px solid var(--line); border-radius: 14px; background: rgba(255,255,255,0.78); color: var(--ink); text-decoration: none; }
+      .section-card.current { border-color: #cfe0ed; background: var(--soft-blue); }
+      .section-card.breaking { border-color: #ead9ad; background: var(--soft-gold); }
+      .section-card.archive { border-color: #c8e2d6; background: var(--soft-green); }
+      .section-card strong { display: block; margin-bottom: 5px; color: var(--blue); font-size: 1.05rem; }
+      .section-card span { display: block; color: #485463; font-size: 0.91rem; line-height: 1.42; }
+      .reading-note { color: var(--muted); font-size: 0.9rem; }
+      .overview { box-shadow: none; }
+      .story-number { margin: 0 0 7px; color: var(--green); font-size: 0.78rem; font-weight: 850; text-transform: uppercase; }
+      .source-line { margin: 0 0 3px; color: var(--muted); font-size: 0.88rem; font-weight: 750; }
+      .source-title { margin: 0 0 17px; color: #46515e; font-size: 0.88rem; line-height: 1.42; }
+      .source-title a { color: #46515e; }
+      .watch-list { margin: 7px 0 0; padding-left: 1.2rem; }
+      .watch-list li { margin: 0 0 7px; padding-left: 2px; }
+      .terms { margin-top: 30px; padding-top: 1px; }
+      .terms h2 { font-size: 1.45rem; }
+      .term-note { margin-top: -5px; color: var(--muted); font-size: 0.92rem; }
+      @media (max-width: 430px) {
+        body { font-size: 16.5px; line-height: 1.58; }
+        .page { padding-left: 15px; padding-right: 15px; }
+        h1 { font-size: 2.15rem; }
+        .headline { font-size: 1.35rem; }
+        h2 { font-size: 1.55rem; }
+        .overview { padding: 15px; }
+      }
+      @media (min-width: 720px) { .section-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="./">AI, Crypto &amp; Tech Power Briefing</a>
+        <div class="site-nav-links">
+          <a href="./">Latest</a>
+          <a href="archive.html">Archive</a>
+        </div>
+      </nav>
+
+      <header class="masthead">
+        <p class="kicker">AI · Crypto · Tech Power · Policy · Business</p>
+        <h1>October 14, 2026</h1>
+        <p class="headline">AI Infrastructure Shifts Toward Custom Silicon While Tokenized Assets Move Into Core Market Plumbing</p>
+        <div class="meta-row">
+          <a class="pill" href="pdf/daily_ai_blockchain_briefing_2026-10-14.pdf">PDF</a>
+        </div>
+      </header>
+
+      <section class="sections" aria-label="Sections">
+        <p class="sections-label">Explore sections</p>
+        <div class="section-grid">
+          <a class="section-card current" href="./"><strong>Daily Briefing</strong><span>Today's reader-first AI, crypto and technology stories.</span></a>
+          <a class="section-card breaking" href="breaking-news.html"><strong>Breaking News</strong><span>Major AI, crypto, conflict and US / UK policy updates.</span></a>
+          <a class="section-card archive" href="archive.html"><strong>News Archive</strong><span>Browse previous briefings and PDFs by date.</span></a>
+        </div>
+      </section>
+
+      <section class="overview" aria-label="Executive overview">
+        <h3>Executive overview</h3>
+        <p>Microsoft is moving its Maia program from a production chip into a multi-gigawatt infrastructure plan, showing how the AI race is becoming a question of inference economics, memory bandwidth and power per rack rather than model quality alone.</p>
+        <p>In digital markets, the more consequential news is operational. BNY and Citadel Securities completed a tokenized-Treasury repo workflow, European supervisors clarified expectations for non-compliant stablecoins, and Aptos added encrypted transaction handling to reduce order-flow exploitation.</p>
+      </section>
+
+      <ol class="toc" aria-label="Today's stories">
+        <li><a href="#microsoft-maia-300">1. Microsoft puts custom AI silicon at the center of its future inference capacity</a></li>
+        <li><a href="#bny-citadel-tokenized-repo">2. BNY and Citadel put a tokenized Treasury through settlement and overnight financing</a></li>
+        <li><a href="#esma-stablecoin-supervision">3. European supervisors clarify that MiCA-authorised firms should stop servicing unauthorised stablecoins</a></li>
+        <li><a href="#aptos-encrypted-mempool">4. Aptos introduces encrypted transaction handling to make on-chain trading harder to exploit</a></li>
+      </ol>
+
+      <article id="microsoft-maia-300">
+        <p class="story-number">Story 1</p>
+        <h2>Microsoft puts custom AI silicon at the center of its future inference capacity</h2>
+        <p class="source-line">Microsoft &middot; October 12, 2026 &middot; <a href="https://blogs.microsoft.com/blog/2026/10/12/microsoft-to-expand-azure-maia-system-to-multi-gigawatt-deployments/" target="_blank" rel="noopener">Read source</a></p>
+        <p class="source-title"><em>Microsoft to expand Azure Maia system to multi-gigawatt deployments</em></p>
+
+        <h3>The story</h3>
+        <p>Microsoft said its Maia 200 accelerator is now serving production workloads, including Microsoft Copilot, and that Maia 300 will enter production deployments in 2027. The company plans multi-gigawatt Maia deployments and says the family will become the primary inference system for its own products and services.</p>
+        <p>Maia 300 is designed for inference-heavy workloads such as long-context and memory-intensive AI interactions. Microsoft says one rack combines 96 accelerators in a 167-kilowatt power envelope, with 27.6 terabytes of high-bandwidth memory and 1.7 petabytes per second of aggregate memory bandwidth.</p>
+
+        <h3>Why it matters</h3>
+        <p>The strategic issue is not simply whether custom chips replace GPUs. Owning more of the silicon stack can give a cloud provider tighter control over inference cost, supply allocation and the hardware-software tuning needed for its most common workloads.</p>
+        <p>The announcement also makes power efficiency a product metric. As AI services scale, a provider has to turn a limited power connection into more useful responses, lower latency and predictable capacity. Custom silicon can help, but it raises the burden of building reliable networking, memory and software around it.</p>
+
+        <h3>What to watch</h3>
+        <ul class="watch-list">
+          <li>Whether Maia 300&#x27;s 2027 deployment schedule holds as demand for memory and packaging rises.</li>
+          <li>How much Microsoft keeps Maia capacity for its own services versus offering it through Azure.</li>
+          <li>Evidence on cost per inference and energy efficiency once the systems are operating at scale.</li>
+        </ul>
+      </article>
+      <article id="bny-citadel-tokenized-repo">
+        <p class="story-number">Story 2</p>
+        <h2>BNY and Citadel put a tokenized Treasury through settlement and overnight financing</h2>
+        <p class="source-line">BNY &middot; October 13, 2026 &middot; <a href="https://www.bny.com/corporate/global/en/about-us/newsroom/press-release/bny-completes-tokenized-us-treasury-triparty-repo-workflow-with-citadel-securities.html" target="_blank" rel="noopener">Read source</a></p>
+        <p class="source-title"><em>BNY Completes Tokenized U.S. Treasury Triparty Repo Workflow with Citadel Securities</em></p>
+
+        <h3>The story</h3>
+        <p>BNY said Citadel Securities bought a two-year US Treasury through Tradeweb, recorded a tokenized representation of it on BNY&#x27;s private digital ledger, and settled the transaction within minutes. Citadel then used the tokenized Treasury as collateral in an overnight triparty repurchase agreement, with BNY providing cash.</p>
+        <p>The firms describe it as the first use of tokenized assets on a major triparty repo platform. The point is not that a Treasury became a speculative token; it is that the same collateral moved from trade execution to settlement and then into short-term financing in a connected institutional workflow.</p>
+
+        <h3>Why it matters</h3>
+        <p>Repo is core financial plumbing. Faster collateral mobility can reduce settlement friction and help trading firms access liquidity, but any benefit depends on legal ownership, custody controls, eligibility rules and default procedures working as reliably as the existing system.</p>
+        <p>This is more meaningful than a tokenized-asset launch because it tests use inside a financing workflow. Institutional tokenization will be judged by operational resilience and integration with established market infrastructure, not by an on-chain record alone.</p>
+
+        <h3>What to watch</h3>
+        <ul class="watch-list">
+          <li>Whether repeat transactions disclose clearer legal, technical and risk-management details.</li>
+          <li>Expansion beyond a single Treasury and overnight repo into broader collateral workflows.</li>
+          <li>How settlement finality, custody segregation and collateral substitution are handled under stress.</li>
+        </ul>
+      </article>
+      <article id="esma-stablecoin-supervision">
+        <p class="story-number">Story 3</p>
+        <h2>European supervisors clarify that MiCA-authorised firms should stop servicing unauthorised stablecoins</h2>
+        <p class="source-line">European Securities and Markets Authority &middot; October 8, 2026 &middot; <a href="https://www.esma.europa.eu/press-news/esma-news/esma-sets-out-supervisory-expectations-services-related-unauthorised" target="_blank" rel="noopener">Read source</a></p>
+        <p class="source-title"><em>ESMA sets out supervisory expectations on services related to unauthorised stablecoins</em></p>
+
+        <h3>The story</h3>
+        <p>The European Securities and Markets Authority published an opinion on services involving asset-referenced tokens and e-money tokens that do not meet the Markets in Crypto-Assets Regulation, or MiCA. It says authorised crypto-asset service providers should cease providing services related to non-compliant stablecoins to clients in the European Union.</p>
+        <p>The opinion applies across trading platforms, exchange, execution, transfers, custody, administration and portfolio management. That scope matters because a token can remain technically accessible while regulated firms face limits on how they list, hold or facilitate it for EU clients.</p>
+
+        <h3>Why it matters</h3>
+        <p>Stablecoin regulation is becoming a distribution constraint. A stablecoin&#x27;s reserve design is important, but its practical reach also depends on whether regulated exchanges, custodians and brokers can offer it to customers in a major market.</p>
+        <p>For institutions, compliance is not a one-time issuer check. Product teams need to map every service touching the token, identify which clients and jurisdictions are in scope, and plan how clients can exit or transition without disorderly operational changes.</p>
+
+        <h3>What to watch</h3>
+        <ul class="watch-list">
+          <li>How national supervisors translate the opinion into firm-level timetables and examinations.</li>
+          <li>Whether affected issuers change their structure, disclosures or authorisation plans.</li>
+          <li>Client migration, custody and redemption arrangements for tokens that lose EU distribution.</li>
+        </ul>
+      </article>
+      <article id="aptos-encrypted-mempool">
+        <p class="story-number">Story 4</p>
+        <h2>Aptos introduces encrypted transaction handling to make on-chain trading harder to exploit</h2>
+        <p class="source-line">Cointelegraph &middot; October 13, 2026 &middot; <a href="https://cointelegraph.com/news/what-happened-in-crypto-today?t=1734734711065" target="_blank" rel="noopener">Read source</a></p>
+        <p class="source-title"><em>Crypto Today: Aptos encrypted mempools, stablecoin rules, G20 risks</em></p>
+
+        <h3>The story</h3>
+        <p>Aptos launched an optional encrypted mempool feature intended to shield pending transactions from attacks such as frontrunning and sandwich attacks. A mempool is the queue of transactions awaiting inclusion in a block; if a trader&#x27;s order is visible before execution, another party may be able to trade around it.</p>
+        <p>Encryption can reduce pre-trade information leakage, but it does not remove every form of maximal extractable value. The relevant question is how transactions are decrypted, ordered and verified, and whether the design preserves predictable execution for users and validators.</p>
+
+        <h3>Why it matters</h3>
+        <p>Market structure is a product issue, not an obscure protocol detail. If users routinely receive worse prices because their orders are exposed, liquidity providers, applications and institutional users have less reason to route activity to the chain.</p>
+        <p>For builders, privacy features introduce a tradeoff between fair ordering, transparency and operational complexity. Encrypted transaction flows require credible key management and failure handling, particularly when a network is busy or validators disagree.</p>
+
+        <h3>What to watch</h3>
+        <ul class="watch-list">
+          <li>Adoption by wallets and trading applications rather than the protocol launch alone.</li>
+          <li>Measured reductions in sandwich attacks and other adverse execution outcomes.</li>
+          <li>The decryption, ordering and validator incentives used by the final implementation.</li>
+        </ul>
+      </article>
+
+      <section class="terms">
+        <h2>Professional terms</h2>
+        <p class="term-note">Important business, policy, AI and crypto terms. Abbreviations should include the full form.</p>
+        <ul class="vocab">
+        <li><span class="term">inference cost</span> - 推理成本</li>
+        <li><span class="term">custom silicon</span> - 定制芯片</li>
+        <li><span class="term">high-bandwidth memory (HBM)</span> - 高带宽内存</li>
+        <li><span class="term">memory bandwidth</span> - 内存带宽</li>
+        <li><span class="term">power envelope</span> - 功耗上限</li>
+        <li><span class="term">supply-chain bottleneck</span> - 供应链瓶颈</li>
+        <li><span class="term">model routing</span> - 模型路由</li>
+        <li><span class="term">capital expenditure (capex)</span> - 资本支出</li>
+        <li><span class="term">tokenized assets</span> - 代币化资产</li>
+        <li><span class="term">triparty repo</span> - 三方回购协议</li>
+        <li><span class="term">settlement finality</span> - 结算终局性</li>
+        <li><span class="term">collateral mobility</span> - 抵押品流动性</li>
+        <li><span class="term">custody segregation</span> - 托管隔离</li>
+        <li><span class="term">redemption mechanism</span> - 赎回机制</li>
+        <li><span class="term">institutional distribution</span> - 机构分销渠道</li>
+        <li><span class="term">mempool</span> - 待打包交易池</li>
+        <li><span class="term">maximal extractable value (MEV)</span> - 最大可提取价值</li>
+        <li><span class="term">sandwich attack</span> - 三明治攻击</li>
+        </ul>
+      </section>
+
+      <section class="takeaway">
+        <h3>Today's big picture</h3>
+        <p>The AI race is moving closer to industrial operations. Model capability still matters, but differentiated economics increasingly come from power-efficient silicon, memory availability, networking and the ability to keep inference capacity online for real workloads.</p>
+        <p>Crypto&#x27;s most durable progress is similarly operational. Tokenized collateral, compliant stablecoin distribution and fairer transaction execution are all tests of whether digital assets can work inside systems where legal certainty, liquidity and execution quality matter every day.</p>
+      </section>
+
+      <footer class="footer">
+        <p>Daily AI, Crypto &amp; Tech Power News Study Briefing &middot; <a href="archive.html">Browse the archive</a></p>
+      </footer>
+    </main>
+  </body>
+</html>
