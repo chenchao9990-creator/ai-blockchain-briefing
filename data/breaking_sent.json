@@ -1510,5 +1510,17 @@
     "url": "https://www.theverge.com/tech/1011487/microsoft-scam-messages-marketplace-takedown",
     "published_at": "2026-10-14T20:03:43+00:00",
     "sent_at": "2026-10-14T22:57:26.721877+00:00"
+  },
+  {
+    "key": "b7e6e91e4028317e604e",
+    "headline": "How Windows is being optimized for Nvidia’s RTX Spark laptops",
+    "story": "Microsoft and Nvidia held a launch party for the first wave of RTX Spark laptops last week in San Francisco, where a new wave of AI PCs took center stage amid a packed crowd and a lively hands-on area. A day after the media event, I was invited to a quieter Nvidia event to hear […]",
+    "keywords": "GPU (graphics processing unit)",
+    "category": "AI",
+    "importance_score": "9",
+    "publication": "The Verge",
+    "url": "https://www.theverge.com/tech/1011996/microsoft-windows-rtx-spark-platform-changes-notepad",
+    "published_at": "2026-10-15T14:30:00+00:00",
+    "sent_at": "2026-10-15T16:14:46.097138+00:00"
   }
 ]
