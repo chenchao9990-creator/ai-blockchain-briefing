@@ -1522,5 +1522,17 @@
     "url": "https://www.theverge.com/tech/1011996/microsoft-windows-rtx-spark-platform-changes-notepad",
     "published_at": "2026-10-15T14:30:00+00:00",
     "sent_at": "2026-10-15T16:14:46.097138+00:00"
+  },
+  {
+    "key": "308c58ea57762ef3b778",
+    "headline": "Volvo will use Nvidia’s tech for hands-free, point-to-point driving",
+    "story": "Volvo plans to launch hands-free, point-to-point driving by 2030, powered by Nvidia's latest AI technology. The Chinese-owned, Swedish-designed automaker said Thursday it would use Nvidia's autonomous driving stack to power a new partially automated driving system similar to Tesla's Full Self-Driving (Supervised). Volvo says the new point-to-point system will be Level 2++, meaning it can […]",
+    "keywords": "GPU (graphics processing unit)",
+    "category": "AI",
+    "importance_score": "9",
+    "publication": "The Verge",
+    "url": "https://www.theverge.com/transportation/1011653/volvo-nvidia-autonomous-driving-level-2-hands-free-urban",
+    "published_at": "2026-10-15T17:30:00+00:00",
+    "sent_at": "2026-10-15T19:57:41.886942+00:00"
   }
 ]
