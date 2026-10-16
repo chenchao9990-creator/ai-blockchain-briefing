@@ -1534,5 +1534,17 @@
     "url": "https://www.theverge.com/transportation/1011653/volvo-nvidia-autonomous-driving-level-2-hands-free-urban",
     "published_at": "2026-10-15T17:30:00+00:00",
     "sent_at": "2026-10-15T19:57:41.886942+00:00"
+  },
+  {
+    "key": "c3e530d3513089f8fa05",
+    "headline": "Scammer gets scammed in Ledger spy-chip exploit, loses almost $5 million in bitcoin",
+    "story": "Chainalysis says a fraudster who tricked people through fake online jobs became one of the biggest victims of the compromised hardware wallets.",
+    "keywords": "crypto regulation",
+    "category": "Crypto",
+    "importance_score": "9",
+    "publication": "CoinDesk",
+    "url": "https://www.coindesk.com/business/2026/10/16/scammer-gets-scammed-in-ledger-spy-chip-exploit-loses-almost-usd5-million-in-bitcoin",
+    "published_at": "2026-10-16T10:24:30+00:00",
+    "sent_at": "2026-10-16T11:44:02.649100+00:00"
   }
 ]
