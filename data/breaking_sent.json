@@ -1546,5 +1546,17 @@
     "url": "https://www.coindesk.com/business/2026/10/16/scammer-gets-scammed-in-ledger-spy-chip-exploit-loses-almost-usd5-million-in-bitcoin",
     "published_at": "2026-10-16T10:24:30+00:00",
     "sent_at": "2026-10-16T11:44:02.649100+00:00"
+  },
+  {
+    "key": "fb4c99eaa11794faf225",
+    "headline": "Stablecoin supply stalls, but payments jump 45% as Visa, Mastercard and Stripe connect crypto to cash",
+    "story": "Analytics firm Allium said stablecoin payments hit $482 billion this year so far, up 45%, as card spending surges and global payment firms add crypto rails.",
+    "keywords": "stablecoin",
+    "category": "Crypto",
+    "importance_score": "9",
+    "publication": "CoinDesk",
+    "url": "https://www.coindesk.com/business/2026/10/18/stablecoin-supply-stalls-but-payments-jump-45-as-visa-mastercard-and-stripe-connect-crypto-to-cash",
+    "published_at": "2026-10-18T14:00:00+00:00",
+    "sent_at": "2026-10-18T15:19:47.479573+00:00"
   }
 ]
