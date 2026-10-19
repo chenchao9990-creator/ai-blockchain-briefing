@@ -16,6 +16,18 @@ on:
         description: "Optional factual story summary"
         required: false
         type: string
+      manual_headline_zh:
+        description: "Chinese headline for the separate Chinese Telegram alert"
+        required: false
+        type: string
+      manual_story_zh:
+        description: "Chinese summary explaining what happened"
+        required: false
+        type: string
+      manual_keywords_zh:
+        description: "Optional Chinese professional terms separated by vertical bars"
+        required: false
+        type: string
       manual_keywords:
         description: "Optional keywords separated by vertical bars"
         required: false
@@ -53,6 +65,9 @@ jobs:
           DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run && '1' || '0' }}
           BREAKING_HEADLINE: ${{ github.event_name == 'workflow_dispatch' && inputs.manual_headline || '' }}
           BREAKING_STORY: ${{ github.event_name == 'workflow_dispatch' && inputs.manual_story || '' }}
+          BREAKING_HEADLINE_ZH: ${{ github.event_name == 'workflow_dispatch' && inputs.manual_headline_zh || '' }}
+          BREAKING_STORY_ZH: ${{ github.event_name == 'workflow_dispatch' && inputs.manual_story_zh || '' }}
+          BREAKING_KEYWORDS_ZH: ${{ github.event_name == 'workflow_dispatch' && inputs.manual_keywords_zh || '' }}
           BREAKING_KEYWORDS: ${{ github.event_name == 'workflow_dispatch' && inputs.manual_keywords || '' }}
           BREAKING_SOURCE: ${{ github.event_name == 'workflow_dispatch' && inputs.manual_source || '' }}
           BREAKING_URL: ${{ github.event_name == 'workflow_dispatch' && inputs.manual_url || '' }}

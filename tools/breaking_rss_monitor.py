@@ -352,14 +352,29 @@ def telegram_message(alert: dict[str, str]) -> str:
     ])
 
 
-def send_telegram(alert: dict[str, str]) -> None:
-    token = os.environ.get("TELEGRAM_BOT_TOKEN")
-    chat_id = os.environ.get("TELEGRAM_CHAT_ID")
-    if not token or not chat_id:
-        raise RuntimeError("Missing TELEGRAM_BOT_TOKEN or TELEGRAM_CHAT_ID")
+def telegram_message_zh(alert: dict[str, str]) -> str | None:
+    """Build the separate Chinese alert only when editorial Chinese is available.
+
+    Breaking alerts are public but high-stakes. Do not silently label an English
+    RSS title as Chinese: a translator or editor must supply both Chinese fields.
+    """
+    headline = alert.get("headline_zh", "").strip()
+    story = alert.get("story_zh", "").strip()
+    if not headline or not story:
+        return None
+    terms = alert.get("keywords_zh", "").strip() or display_keywords(alert["keywords"])
+    return "\n\n".join([
+        f"<b>突发新闻：{html.escape(headline)}</b>",
+        f"<b>发生了什么：</b>{html.escape(story)}",
+        f"<b>关键术语：</b>{html.escape(terms)}",
+        f"<b>来源：</b><a href=\"{html.escape(alert['url'], quote=True)}\">{html.escape(alert['publication'])}</a>",
+    ])
+
+
+def send_message(token: str, chat_id: str, message: str) -> None:
     payload = json.dumps({
         "chat_id": chat_id,
-        "text": telegram_message(alert),
+        "text": message,
         "parse_mode": "HTML",
         "link_preview_options": {"is_disabled": False},
     }).encode("utf-8")
@@ -375,9 +390,20 @@ def send_telegram(alert: dict[str, str]) -> None:
         raise RuntimeError(f"Telegram API error: {result}")
 
 
+def send_telegram(alert: dict[str, str]) -> None:
+    token = os.environ.get("TELEGRAM_BOT_TOKEN")
+    chat_id = os.environ.get("TELEGRAM_CHAT_ID")
+    if not token or not chat_id:
+        raise RuntimeError("Missing TELEGRAM_BOT_TOKEN or TELEGRAM_CHAT_ID")
+    send_message(token, chat_id, telegram_message(alert))
+    chinese_message = telegram_message_zh(alert)
+    if chinese_message:
+        send_message(token, chat_id, chinese_message)
+
+
 def write_page(alerts: list[dict[str, str]]) -> None:
     rows = "".join(
-        f'''<li><p class="category">{html.escape(item['category'])}</p><h2><a href="{html.escape(item['url'], quote=True)}">{html.escape(item['headline'])}</a></h2><p>{html.escape(item['story'])}</p><p class="keywords">Key terms: {html.escape(display_keywords(item['keywords']))}</p><p class="source">{html.escape(item['publication'])} · {html.escape(item['sent_at'])}</p></li>'''
+        f'''<li><p class="category">{html.escape(item['category'])}</p><h2><a href="{html.escape(item['url'], quote=True)}">{html.escape(item['headline'])}</a></h2><p>{html.escape(item['story'])}</p>{f'<h3>中文摘要：{html.escape(item.get("headline_zh", ""))}</h3><p>{html.escape(item.get("story_zh", ""))}</p>' if item.get("headline_zh") and item.get("story_zh") else ''}<p class="keywords">Key terms: {html.escape(display_keywords(item['keywords']))}</p><p class="source">{html.escape(item['publication'])} · {html.escape(item['sent_at'])}</p></li>'''
         for item in reversed(alerts[-30:])
     ) or "<li><p>No breaking alerts have been published yet.</p></li>"
     BREAKING_PAGE.write_text(f'''<!doctype html>
@@ -408,6 +434,9 @@ def main() -> int:
             "key": alert_key(manual_url),
             "headline": manual_headline,
             "story": os.environ.get("BREAKING_STORY", "").strip() or manual_headline,
+            "headline_zh": os.environ.get("BREAKING_HEADLINE_ZH", "").strip(),
+            "story_zh": os.environ.get("BREAKING_STORY_ZH", "").strip(),
+            "keywords_zh": os.environ.get("BREAKING_KEYWORDS_ZH", "").strip(),
             "keywords": os.environ.get("BREAKING_KEYWORDS", "").strip() or "Breaking News",
             "category": "Conflict",
             "publication": os.environ.get("BREAKING_SOURCE", "").strip() or "Verified source",
