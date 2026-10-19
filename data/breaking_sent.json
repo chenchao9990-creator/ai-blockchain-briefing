@@ -1570,5 +1570,17 @@
     "url": "https://www.coindesk.com/markets/2026/10/19/crypto-vault-deposits-top-usd10-billion-as-lending-risks-draw-regulatory-scrutiny",
     "published_at": "2026-10-19T09:32:38+00:00",
     "sent_at": "2026-10-19T12:01:20.617122+00:00"
+  },
+  {
+    "key": "2b9227ae1c18986a2fbe",
+    "headline": "Tenstorrent hits $6.2B valuation to scale open-weight AI chips",
+    "story": "After drawing acquisition interest earlier this year, the Nvidia challenger raised $1.5 billion to remain independent.",
+    "keywords": "GPU (graphics processing unit) | semiconductor supply chain",
+    "category": "AI",
+    "importance_score": "9",
+    "publication": "TechCrunch",
+    "url": "https://techcrunch.com/2026/10/19/tenstorrent-hits-6-2b-valuation-to-scale-open-weight-ai-chips/",
+    "published_at": "2026-10-19T18:37:27+00:00",
+    "sent_at": "2026-10-19T18:46:56.987289+00:00"
   }
 ]
