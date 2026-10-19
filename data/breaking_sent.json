@@ -1558,5 +1558,17 @@
     "url": "https://www.coindesk.com/business/2026/10/18/stablecoin-supply-stalls-but-payments-jump-45-as-visa-mastercard-and-stripe-connect-crypto-to-cash",
     "published_at": "2026-10-18T14:00:00+00:00",
     "sent_at": "2026-10-18T15:19:47.479573+00:00"
+  },
+  {
+    "key": "926a4a81599213676f4c",
+    "headline": "Crypto vault deposits top $10 billion as lending risks draw regulatory scrutiny",
+    "story": "Curator-managed lending strategies are attracting institutional capital, while exposing depositors to collateral, liquidity and smart-contract risks.",
+    "keywords": "institutional adoption",
+    "category": "Crypto",
+    "importance_score": "9",
+    "publication": "CoinDesk",
+    "url": "https://www.coindesk.com/markets/2026/10/19/crypto-vault-deposits-top-usd10-billion-as-lending-risks-draw-regulatory-scrutiny",
+    "published_at": "2026-10-19T09:32:38+00:00",
+    "sent_at": "2026-10-19T12:01:20.617122+00:00"
   }
 ]
