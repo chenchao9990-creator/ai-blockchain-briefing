@@ -1582,5 +1582,17 @@
     "url": "https://techcrunch.com/2026/10/19/tenstorrent-hits-6-2b-valuation-to-scale-open-weight-ai-chips/",
     "published_at": "2026-10-19T18:37:27+00:00",
     "sent_at": "2026-10-19T18:46:56.987289+00:00"
+  },
+  {
+    "key": "68a6b53f34def307ff2f",
+    "headline": "Nscale and Anthropic are reportedly in talks for yet another $45 billion compute deal",
+    "story": "In August, Nscale and Anthropic announced a $45 billion compute deal. The two companies are reportedly discussing yet another deal of the same magnitude.",
+    "keywords": "AI (artificial intelligence) | compute capacity",
+    "category": "AI",
+    "importance_score": "9",
+    "publication": "TechCrunch",
+    "url": "https://techcrunch.com/2026/10/19/nscale-and-anthropic-are-reportedly-in-talks-for-yet-another-45-billion-compute-deal/",
+    "published_at": "2026-10-19T23:39:38+00:00",
+    "sent_at": "2026-10-20T01:32:03.136099+00:00"
   }
 ]
