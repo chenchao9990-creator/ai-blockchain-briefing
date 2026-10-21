@@ -1594,5 +1594,17 @@
     "url": "https://techcrunch.com/2026/10/19/nscale-and-anthropic-are-reportedly-in-talks-for-yet-another-45-billion-compute-deal/",
     "published_at": "2026-10-19T23:39:38+00:00",
     "sent_at": "2026-10-20T01:32:03.136099+00:00"
+  },
+  {
+    "key": "81c67a369952d6caf312",
+    "headline": "Crypto Long & Short: Why real-world assets need fixed-rate loans onchain",
+    "story": "Real-world assets already back the largest stablecoins, yet borrowing against them onchain still runs through variable-rate pools. Peter Gaffney of O2O Capital Partners explains why fixed-rate, fixed-term lending is the missing piece, and how a 5% shift in Sky and Ethena reserves could create $1.8 billion of demand for real-world assets.",
+    "keywords": "stablecoin",
+    "category": "Crypto",
+    "importance_score": "9",
+    "publication": "CoinDesk",
+    "url": "https://www.coindesk.com/coindesk-indices/2026/10/21/crypto-long-and-short-why-real-world-assets-need-fixed-rate-loans-onchain",
+    "published_at": "2026-10-21T15:00:53+00:00",
+    "sent_at": "2026-10-21T15:28:36.197870+00:00"
   }
 ]
