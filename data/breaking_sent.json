@@ -1618,5 +1618,17 @@
     "url": "https://www.theverge.com/policy/1015782/meta-new-mexico-cambridge-analytica-penalty",
     "published_at": "2026-10-21T19:02:49+00:00",
     "sent_at": "2026-10-21T19:30:08.792495+00:00"
+  },
+  {
+    "key": "ae4a4fcac1b8ddb4b1c2",
+    "headline": "Meta says it would’ve made over $22 billion if it didn’t have to pay a child safety settlement",
+    "story": "Meta had to shell out $9.89 billion to pay for a chunk of the child safety settlement it reached with US attorneys general. That's according to the company's third-quarter earnings report released on Wednesday, which says Meta's income from operations would have been $22.89 billion without the settlement. In August, Meta agreed to pay $17.1 […]",
+    "keywords": "AI safety",
+    "category": "AI",
+    "importance_score": "9",
+    "publication": "The Verge",
+    "url": "https://www.theverge.com/tech/1015877/meta-q3-2026-earnings-child-safety-settlement",
+    "published_at": "2026-10-21T20:46:56+00:00",
+    "sent_at": "2026-10-21T22:59:37.830491+00:00"
   }
 ]
