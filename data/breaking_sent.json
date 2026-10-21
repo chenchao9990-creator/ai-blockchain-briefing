@@ -1606,5 +1606,17 @@
     "url": "https://www.coindesk.com/coindesk-indices/2026/10/21/crypto-long-and-short-why-real-world-assets-need-fixed-rate-loans-onchain",
     "published_at": "2026-10-21T15:00:53+00:00",
     "sent_at": "2026-10-21T15:28:36.197870+00:00"
+  },
+  {
+    "key": "986dfb3f67a1f9879d82",
+    "headline": "Meta ordered to pay $25 billion in penalties over the Cambridge Analytica scandal",
+    "story": "The Cambridge Analytica scandal has come back to haunt Meta after a New Mexico judge ordered it to pay $25 billion in penalties for more than 43 million violations of the state's unfair practices law. The ruling marks the biggest legal hit Meta has taken this year, even as it's faced several other losses or […]",
+    "keywords": "AI (artificial intelligence)",
+    "category": "AI",
+    "importance_score": "9",
+    "publication": "The Verge",
+    "url": "https://www.theverge.com/policy/1015782/meta-new-mexico-cambridge-analytica-penalty",
+    "published_at": "2026-10-21T19:02:49+00:00",
+    "sent_at": "2026-10-21T19:30:08.792495+00:00"
   }
 ]
