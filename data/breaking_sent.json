@@ -1642,5 +1642,17 @@
     "url": "https://www.theverge.com/ai-artificial-intelligence/1016879/spacex-tesla-cursed-katamari",
     "published_at": "2026-10-22T19:45:00+00:00",
     "sent_at": "2026-10-22T20:43:02.529236+00:00"
+  },
+  {
+    "key": "5eee804247a435ab2dff",
+    "headline": "Canva’s first AI image model plans designs before generating them",
+    "story": "Canva is diving even deeper into AI with the launch of an image generation model that competes directly with those from OpenAI, Microsoft, and Google. The model, called Canva Craft, uses a two-stage architecture that allows it to plan a design before generating an image, allowing for \"greater precision, consistency and control,\" according to an […]",
+    "keywords": "AI (artificial intelligence)",
+    "category": "AI",
+    "importance_score": "9",
+    "publication": "The Verge",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/1017151/canva-craft-in-house-ai-model",
+    "published_at": "2026-10-22T21:51:25+00:00",
+    "sent_at": "2026-10-22T23:52:03.281787+00:00"
   }
 ]
