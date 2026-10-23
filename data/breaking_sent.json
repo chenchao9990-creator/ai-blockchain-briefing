@@ -1654,5 +1654,17 @@
     "url": "https://www.theverge.com/ai-artificial-intelligence/1017151/canva-craft-in-house-ai-model",
     "published_at": "2026-10-22T21:51:25+00:00",
     "sent_at": "2026-10-22T23:52:03.281787+00:00"
+  },
+  {
+    "key": "24c8b8c3e7a4bc871c84",
+    "headline": "Elon Musk’s dangerous grip on outer space",
+    "story": "Last week, Starshield - the version of SpaceX's Starlink used by the Ukrainian military - was throttled to block terminals traveling above certain speeds from accessing the service. The Ukrainian army's interceptors, which counter Russian drones carrying bombs, suddenly stopped working at high speeds, making it easier for Russia to attack the country's energy infrastructure […]",
+    "keywords": "military escalation | defense policy | geopolitical risk",
+    "category": "Conflict",
+    "importance_score": "9",
+    "publication": "The Verge",
+    "url": "https://www.theverge.com/science/1017443/spacex-starlink-ukraine-elon-musk-monopoly",
+    "published_at": "2026-10-23T17:35:15+00:00",
+    "sent_at": "2026-10-23T18:35:37.828688+00:00"
   }
 ]
