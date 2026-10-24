@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Google and Amazon make alternative AI chips easier to use, Anthropic proposes a catastrophic-risk release test, Nscale and Anthropic reportedly discuss a major compute deal, and US agencies move ahead with crypto rules." />
-    <title>October 23, 2026 | Daily AI, Crypto &amp; Tech Power Briefing</title>
+    <meta name="description" content="OpenAI widens access to a low-latency decision model, 1Password introduces credential-controlled agent sign-ins, Reuters examines data-center delivery risk, and US regulators preserve a path for stablecoin rewards." />
+    <title>October 24, 2026 | Daily AI, Crypto &amp; Tech Power Briefing</title>
     <style>
 
       :root {
@@ -127,10 +127,10 @@
 
       <header class="masthead">
         <p class="kicker">AI · Crypto · Tech Power · Policy · Business</p>
-        <h1>October 23, 2026</h1>
-        <p class="headline">The AI Stack Opens Up Below Nvidia While Safety, Infrastructure and Crypto Rules Become Operating Questions</p>
+        <h1>October 24, 2026</h1>
+        <p class="headline">AI Moves From Bigger Models to Faster Decisions, Safer Delegation and Harder Infrastructure Economics</p>
         <div class="meta-row">
-          <a class="pill" href="pdf/daily_ai_blockchain_briefing_2026-10-23.pdf">PDF</a>
+          <a class="pill" href="pdf/daily_ai_blockchain_briefing_2026-10-24.pdf">PDF</a>
         </div>
       </header>
 
@@ -145,99 +145,99 @@
 
       <section class="overview" aria-label="Executive overview">
         <h3>Executive overview</h3>
-        <p>Google and Amazon are making it easier to run the software stack built around PyTorch on their own chips, attacking a major source of Nvidia&#x27;s infrastructure advantage without assuming developers will switch overnight.</p>
-        <p>The surrounding constraints are becoming clearer: AI-safety proposals are moving toward measurable release thresholds, large compute projects still need credible capacity plans, and US crypto firms face a more active agency-led rulemaking path.</p>
+        <p>The next phase of AI competition is less about a single general-purpose model and more about the operating layers around it: low-latency decisions, controlled access to accounts and reliable delivery of physical compute capacity.</p>
+        <p>Crypto is facing a comparable boundary-setting moment. US bank regulators have kept a path open for platform-paid stablecoin rewards, sharpening the distinction between a token issuer, an exchange and a bank deposit.</p>
       </section>
 
       <ol class="toc" aria-label="Today's stories">
-        <li><a href="#pytorch-chip-portability">1. Google and Amazon target Nvidia&#x27;s developer lock-in, not just its chips</a></li>
-        <li><a href="#anthropic-catastrophic-risk-bill">2. Anthropic&#x27;s draft safety bill puts a number on the model-release question</a></li>
-        <li><a href="#nscale-anthropic-compute-capacity">3. A reported Nscale-Anthropic deal shows why AI capacity must be financed before it is delivered</a></li>
-        <li><a href="#us-agency-led-crypto-rules">4. US crypto regulation moves through agencies after Congress stalls on market structure</a></li>
+        <li><a href="#decision-models-inference-economics">1. AI competition shifts toward fast decisions, not only broad reasoning</a></li>
+        <li><a href="#agent-credential-delegation">2. Agent adoption makes credential delegation an enterprise control problem</a></li>
+        <li><a href="#data-center-delivery-risk">3. Data centers are not a simple pick-and-shovel bet when power delivery slips</a></li>
+        <li><a href="#stablecoin-reward-boundary">4. US stablecoin rules preserve a platform-reward route and reopen the deposit debate</a></li>
       </ol>
 
-      <article id="pytorch-chip-portability">
+      <article id="decision-models-inference-economics">
         <p class="story-number">Story 1</p>
-        <h2>Google and Amazon target Nvidia&#x27;s developer lock-in, not just its chips</h2>
-        <p class="source-line">TechCrunch &middot; October 20, 2026 &middot; <a href="https://techcrunch.com/2026/10/20/google-has-joined-amazon-in-attacking-nvidias-stronghold-with-ai-app-developers/" target="_blank" rel="noopener">Read source</a></p>
-        <p class="source-title"><em>Google has joined Amazon in attacking Nvidia&#x27;s stronghold with AI app developers</em></p>
+        <h2>AI competition shifts toward fast decisions, not only broad reasoning</h2>
+        <p class="source-line">TechCrunch &middot; October 22, 2026 &middot; <a href="https://techcrunch.com/2026/10/22/openai-makes-its-jev-competitor-widely-available-as-decision-model-competition-heats-up/" target="_blank" rel="noopener">Read source</a></p>
+        <p class="source-title"><em>OpenAI makes its Jev competitor widely available as decision model competition heats up</em></p>
 
         <h3>The story</h3>
-        <p>TechCrunch reported that Google released TorchTPU as an open-source way to run PyTorch workloads on its tensor processing units, following Amazon&#x27;s TorchNeuron work for Trainium. Both efforts aim to reduce the code changes required to move AI applications away from Nvidia graphics processing units and onto their clouds&#x27; in-house accelerators.</p>
-        <p>The strategic issue is the software layer. PyTorch is embedded in many model-development and production workflows, so cloud providers are trying to make alternative hardware feel less like a migration project. Google also introduced tools intended to help developers port applications and resolve errors.</p>
+        <p>TechCrunch reported that OpenAI made its Decisions API broadly available. The product is designed for rapid selection among options with a confidence signal, rather than for a long, open-ended answer. The company says it reconfigured an existing model to lower inference latency and cost, and added voice and visual support to the public version.</p>
+        <p>This is part of a wider category of decision or System One models. Their appeal is operational: a workflow that needs classification, ranking or a repeated next-step choice may value predictable response times and high throughput more than a large model&#x27;s broadest capabilities.</p>
 
         <h3>Why it matters</h3>
-        <p>Hardware performance alone does not determine adoption. Framework compatibility, model libraries, debugging tools and skilled engineers create switching costs that can preserve a supplier&#x27;s advantage even when alternatives are available.</p>
-        <p>For AI buyers, greater portability can improve negotiating leverage and reduce concentration risk. It also adds a new due-diligence task: confirm that a workload&#x27;s performance, reliability and tooling remain acceptable across more than one accelerator stack.</p>
+        <p>Cheaper, faster inference can make AI viable in product surfaces where a multi-second delay or a high per-call cost was previously unacceptable. That changes application design as much as it changes model choice.</p>
+        <p>A benchmark result is not enough for procurement. Teams need to test calibration, error costs, regional latency and fallback behavior on their own decisions before substituting a specialized model for an LLM.</p>
 
         <h3>What to watch</h3>
         <ul class="watch-list">
-          <li>Whether major model and inference projects publish comparable performance and cost results across chips.</li>
-          <li>How much code, training and operational work a real production migration requires.</li>
-          <li>Whether open-source contributions make portability a default feature of PyTorch rather than a cloud-specific option.</li>
+          <li>Whether customers publish production metrics for accuracy, latency and cost per decision.</li>
+          <li>How providers expose confidence, abstention and human-review controls.</li>
+          <li>Whether model routing becomes standard as applications combine decision models with general LLMs.</li>
         </ul>
       </article>
-      <article id="anthropic-catastrophic-risk-bill">
+      <article id="agent-credential-delegation">
         <p class="story-number">Story 2</p>
-        <h2>Anthropic&#x27;s draft safety bill puts a number on the model-release question</h2>
-        <p class="source-line">TechCrunch &middot; October 20, 2026 &middot; <a href="https://techcrunch.com/2026/10/20/anthropic-pitches-ai-safety-bill-that-may-block-a-model-if-50-people-could-be-killed/" target="_blank" rel="noopener">Read source</a></p>
-        <p class="source-title"><em>Anthropic pitches AI safety bill that may block a model if 50+ people could be killed</em></p>
+        <h2>Agent adoption makes credential delegation an enterprise control problem</h2>
+        <p class="source-line">TechCrunch &middot; October 22, 2026 &middot; <a href="https://techcrunch.com/2026/10/22/1password-launches-a-way-for-ai-agents-to-log-in-on-your-behalf-without-seeing-your-password/" target="_blank" rel="noopener">Read source</a></p>
+        <p class="source-title"><em>1Password launches a way for AI agents to log in on your behalf without seeing your password</em></p>
 
         <h3>The story</h3>
-        <p>TechCrunch reported on a draft AI-safety bill circulated by Anthropic that would create a process to seek a court order delaying a model release when an independent evaluation identifies a foreseeable, imminent catastrophic risk. The reported thresholds include potential mass casualties or more than $1 billion in property damage linked to biological weapons, loss of developer control or a cyberattack.</p>
-        <p>The proposal would use evaluators registered with the US Commerce Department and give the department a role in seeking judicial action, rather than letting an agency halt distribution unilaterally. It is a proposal, not current law, and its design would invite debate about measurement, independence and enforceability.</p>
+        <p>1Password introduced a service intended to let an AI agent sign into an account without receiving the user&#x27;s password. As described by TechCrunch, the system identifies the agent with a digital key, alerts the user to the request and has the password manager complete the sign-in only after approval.</p>
+        <p>The important design choice is separation: the agent can request an action, but it is not handed a reusable secret. That is relevant as agents begin to operate across shopping, support and financial accounts where a copied password would be difficult to retrieve or audit later.</p>
 
         <h3>Why it matters</h3>
-        <p>Safety commitments become commercially meaningful when they specify who tests a model, what triggers escalation and who has authority to act. A defined threshold can make governance more legible, but it can also encourage companies to optimize for a narrow test.</p>
-        <p>The proposal shows that AI policy is shifting from broad principles toward operational controls such as external evaluation, reporting deadlines and release governance. Those controls may affect launch schedules, insurance, procurement and audit obligations.</p>
+        <p>A promise that an agent acts on a user&#x27;s behalf does not establish authorization, identity or scope. Enterprises need a clear chain from user consent to the exact credential use and resulting action.</p>
+        <p>Credential brokers may reduce password exposure, but they introduce new dependencies around approvals, logs, session control and revocation. Security architecture has to cover the agent, the broker and the destination service together.</p>
 
         <h3>What to watch</h3>
         <ul class="watch-list">
-          <li>Whether lawmakers or other labs support an evaluator-registration model.</li>
-          <li>How catastrophic risk is measured and whether evaluations can be independently replicated.</li>
-          <li>The treatment of agentic cyber risk, which may not fit cleanly into headline thresholds.</li>
+          <li>Whether banks and other sensitive services accept delegated-agent logins.</li>
+          <li>The granularity of permissions, approval limits and audit records.</li>
+          <li>How quickly a user or administrator can revoke an agent&#x27;s access after a mistake or compromise.</li>
         </ul>
       </article>
-      <article id="nscale-anthropic-compute-capacity">
+      <article id="data-center-delivery-risk">
         <p class="story-number">Story 3</p>
-        <h2>A reported Nscale-Anthropic deal shows why AI capacity must be financed before it is delivered</h2>
-        <p class="source-line">TechCrunch &middot; October 20, 2026 &middot; <a href="https://techcrunch.com/2026/10/20/nscale-and-anthropic-are-reportedly-in-talks-for-yet-another-45b-compute-deal/" target="_blank" rel="noopener">Read source</a></p>
-        <p class="source-title"><em>Nscale and Anthropic are reportedly in talks for yet another $45B compute deal</em></p>
+        <h2>Data centers are not a simple pick-and-shovel bet when power delivery slips</h2>
+        <p class="source-line">Reuters Breakingviews &middot; October 23, 2026 &middot; <a href="https://www.breakingviews.com/ddb76cfb4026/columns/considered-view/data-centres-fail-ai-pick-and-shovel-trade-2026-10-23/" target="_blank" rel="noopener">Read source</a></p>
+        <p class="source-title"><em>Data centres fail as AI pick-and-shovel trade</em></p>
 
         <h3>The story</h3>
-        <p>TechCrunch reported that Nscale and Anthropic were in talks over a potential compute agreement reportedly worth as much as $45 billion. The report described the discussion as another large commitment in a market where frontier-model companies seek long-duration access to power, data centers, networking and accelerators before their future usage revenue is certain.</p>
-        <p>A reported contract value is not the same as installed capacity or recognized revenue. Large infrastructure agreements usually depend on build milestones, power delivery, financing and technical acceptance, while the customer still carries demand and funding risk over a multi-year term.</p>
+        <p>Reuters Breakingviews highlighted how NextDC&#x27;s shares fell after a power-upgrade delay linked to community opposition, and noted Amazon&#x27;s decision to abandon a Virginia data-center plan after local resistance. The column argues that AI infrastructure providers face a combination of debt-funded buildouts, utility timing, chip supply and demanding hyperscaler customers.</p>
+        <p>Demand for compute does not automatically become revenue. A project still needs power connections, permits, financing, hardware, construction and customer acceptance to arrive in the right sequence. A contracted customer can also have protections if delivery is late.</p>
 
         <h3>Why it matters</h3>
-        <p>Compute contracts can help a developer secure scarce capacity and help an infrastructure provider raise capital. But they can also concentrate exposure to a few customers and turn changes in a customer&#x27;s product plan or funding into a project-level risk.</p>
-        <p>For investors and procurement teams, the useful question is not only the headline commitment. It is how much capacity is contracted, when it becomes available, who pays if deployment slips and whether the counterparty can fund its obligations.</p>
+        <p>The relevant infrastructure risk is execution risk, not simply demand risk. Delays can consume capital while pushing back the date at which a facility begins earning, which can weaken returns and refinancing options.</p>
+        <p>For AI buyers, power and site milestones now belong in vendor diligence. For investors, headline capacity and customer commitments need to be separated from energised, usable capacity and enforceable cash flows.</p>
 
         <h3>What to watch</h3>
         <ul class="watch-list">
-          <li>Confirmation from the companies and detail on capacity, geography and term.</li>
-          <li>Power, financing and construction milestones behind any contracted amount.</li>
-          <li>How much demand is backed by end-user revenue versus forecasts of future model usage.</li>
+          <li>Utility, permitting and community milestones at major AI campuses.</li>
+          <li>Termination rights, deposits and completion protections in customer contracts.</li>
+          <li>Whether providers slow capital expenditure on sites without firm customer and power support.</li>
         </ul>
       </article>
-      <article id="us-agency-led-crypto-rules">
+      <article id="stablecoin-reward-boundary">
         <p class="story-number">Story 4</p>
-        <h2>US crypto regulation moves through agencies after Congress stalls on market structure</h2>
-        <p class="source-line">Cointelegraph &middot; October 19, 2026 &middot; <a href="https://cointelegraph.com/news/public-comments-us-sec-proposed-crypto-rules" target="_blank" rel="noopener">Read source</a></p>
-        <p class="source-title"><em>Market participants weigh in on SEC&#x27;s proposed crypto regulations</em></p>
+        <h2>US stablecoin rules preserve a platform-reward route and reopen the deposit debate</h2>
+        <p class="source-line">Associated Press &middot; October 21, 2026 &middot; <a href="https://apnews.com/article/stablecoins-circle-usdc-banks-interest-cryptocurrencies-db6b787c7c2a5fe434ce84b23413d966" target="_blank" rel="noopener">Read source</a></p>
+        <p class="source-title"><em>Cryptocurrency companies can keep paying interest-like rewards, say federal bank regulators</em></p>
 
         <h3>The story</h3>
-        <p>Cointelegraph reported that the Securities and Exchange Commission closed comments on its proposed Regulation Crypto Assets framework after Congress failed to advance the CLARITY Act. The proposal addresses issues including a possible safe harbor and disclosure expectations for certain crypto-asset offerings, while the Commodity Futures Trading Commission has separately discussed a framework for retail leveraged crypto trading.</p>
-        <p>Agency rulemaking can provide interim operating rules, but it is different from a statute that settles the division of authority across regulators. The comment record now becomes part of a longer process of final rules, potential litigation and implementation guidance.</p>
+        <p>The Associated Press reported that the Office of the Comptroller of the Currency&#x27;s GENIUS Act implementation rules continue to bar stablecoin issuers from paying interest to holders, while allowing exchanges and other platforms to pass along earnings as interest-like rewards on a case-by-case basis. Those rewards are tied to income earned on reserve assets such as bank deposits and US Treasuries.</p>
+        <p>That distinction matters commercially. It leaves platforms room to compete for balances while drawing a formal line around the issuer. Banking groups argue that higher crypto-platform yields could pull deposits out of banks; consumer advocates note that a reward-bearing crypto balance does not carry bank deposit insurance.</p>
 
         <h3>Why it matters</h3>
-        <p>For token issuers, exchanges and investors, the compliance question may increasingly turn on the activity and product design rather than a broad label such as crypto. Disclosure, custody, leverage and market-access arrangements can place a firm in different regulatory lanes.</p>
-        <p>Regulatory arbitrage becomes harder when agencies offer usable frameworks, but uncertainty remains if rules can be revised or challenged. Businesses should build compliance programs that can adapt rather than treating a proposal as settled law.</p>
+        <p>The regulation of a token depends on the product stack, not only the token itself. Issuance, reserve custody, distribution and rewards can have different rules, risks and economic beneficiaries.</p>
+        <p>For users and treasury teams, yield must be evaluated alongside redemption rights, custody, reserve transparency and the absence of deposit insurance. A quoted return is not a complete risk description.</p>
 
         <h3>What to watch</h3>
         <ul class="watch-list">
-          <li>The SEC&#x27;s next rulemaking steps and whether it changes the proposal after comments.</li>
-          <li>How the SEC and CFTC describe their respective jurisdiction in final materials.</li>
-          <li>Whether firms adjust token-offering, custody or leveraged-trading products before final rules arrive.</li>
+          <li>How the OCC applies its case-by-case approach in published guidance or supervisory practice.</li>
+          <li>Whether banks change deposit pricing or lobby for a narrower rewards rule.</li>
+          <li>How platforms describe custody, redemption and risk disclosures alongside advertised rewards.</li>
         </ul>
       </article>
 
@@ -245,32 +245,31 @@
         <h2>Professional terms</h2>
         <p class="term-note">Important business, policy, AI and crypto terms. Abbreviations should include the full form.</p>
         <ul class="vocab">
-        <li><span class="term">graphics processing unit (GPU)</span> - 图形处理器</li>
-        <li><span class="term">tensor processing unit (TPU)</span> - 张量处理器</li>
-        <li><span class="term">accelerator stack</span> - 加速器软件栈</li>
-        <li><span class="term">framework compatibility</span> - 框架兼容性</li>
-        <li><span class="term">switching cost</span> - 转换成本</li>
-        <li><span class="term">vendor lock-in</span> - 供应商锁定</li>
-        <li><span class="term">benchmark portability</span> - 基准可移植性</li>
-        <li><span class="term">independent evaluator</span> - 独立评估机构</li>
-        <li><span class="term">catastrophic risk threshold</span> - 灾难性风险阈值</li>
-        <li><span class="term">release governance</span> - 发布治理</li>
-        <li><span class="term">capacity reservation</span> - 容量预留</li>
-        <li><span class="term">offtake agreement</span> - 承购协议</li>
+        <li><span class="term">inference cost</span> - 推理成本</li>
+        <li><span class="term">inference latency</span> - 推理延迟</li>
+        <li><span class="term">decision model</span> - 决策模型</li>
+        <li><span class="term">model routing</span> - 模型路由</li>
+        <li><span class="term">confidence calibration</span> - 置信度校准</li>
+        <li><span class="term">human-in-the-loop</span> - 人工参与审核</li>
+        <li><span class="term">credential broker</span> - 凭证中介服务</li>
+        <li><span class="term">least-privilege access</span> - 最小权限访问</li>
+        <li><span class="term">revocation mechanism</span> - 撤销机制</li>
+        <li><span class="term">audit trail</span> - 审计追踪</li>
         <li><span class="term">capital expenditure (capex)</span> - 资本支出</li>
-        <li><span class="term">counterparty risk</span> - 交易对手风险</li>
+        <li><span class="term">project finance</span> - 项目融资</li>
         <li><span class="term">supply-chain bottleneck</span> - 供应链瓶颈</li>
-        <li><span class="term">regulatory arbitrage</span> - 监管套利</li>
-        <li><span class="term">safe harbor</span> - 安全港规则</li>
+        <li><span class="term">counterparty risk</span> - 交易对手风险</li>
+        <li><span class="term">reserve assets</span> - 储备资产</li>
+        <li><span class="term">redemption mechanism</span> - 赎回机制</li>
         <li><span class="term">custody risk</span> - 托管风险</li>
-        <li><span class="term">market structure</span> - 市场结构</li>
+        <li><span class="term">deposit flight</span> - 存款外流</li>
         </ul>
       </section>
 
       <section class="takeaway">
         <h3>Today's big picture</h3>
-        <p>AI competition is broadening from model quality to the conditions that make deployment possible: portable software, credible safety controls and financed physical capacity. Each layer can change the economics and timetable of a product launch.</p>
-        <p>Crypto is moving through a similar operating transition. A proposal or a comment process is not a final legal answer, but firms that map their products, custody and disclosures now will be better prepared as agency rules take shape.</p>
+        <p>The useful AI question is increasingly operational: which model should make which decision, under what latency and approval constraints, and on infrastructure that can actually be delivered. The answers determine product economics as much as model quality does.</p>
+        <p>In crypto, the same discipline applies to yield. The issuer, distributor and custodian may play different roles, so readers should map the cash flow and the redemption path before treating a stablecoin reward like a bank deposit rate.</p>
       </section>
 
       <footer class="footer">

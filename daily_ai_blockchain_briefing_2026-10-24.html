@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="OpenAI widens access to a low-latency decision model, 1Password introduces credential-controlled agent sign-ins, Reuters examines data-center delivery risk, and US regulators preserve a path for stablecoin rewards." />
+    <title>October 24, 2026 | Daily AI, Crypto &amp; Tech Power Briefing</title>
+    <style>
+
+      :root {
+        color-scheme: light;
+        --bg: #f6f4ef;
+        --ink: #17202a;
+        --muted: #667085;
+        --line: #ded8cc;
+        --blue: #164a7c;
+        --green: #24765d;
+        --soft-blue: #eaf3fb;
+        --soft-green: #edf7f2;
+        --soft-gold: #fff7e3;
+        --shadow: 0 16px 45px rgba(38, 52, 65, 0.08);
+      }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0;
+        background: linear-gradient(180deg, rgba(255, 253, 248, 0.9), rgba(246, 244, 239, 0.92)), var(--bg);
+        color: var(--ink);
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+        font-size: 17px;
+        line-height: 1.62;
+      }
+      a { color: var(--blue); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+      .page { width: min(100%, 860px); margin: 0 auto; padding: 18px 16px 44px; }
+      .site-nav {
+        display: flex; align-items: center; justify-content: space-between; gap: 12px;
+        padding: 6px 0 14px; color: var(--muted); font-size: 0.88rem; font-weight: 750;
+      }
+      .site-nav a { color: var(--muted); text-decoration: none; }
+      .site-nav-links { display: flex; gap: 12px; white-space: nowrap; }
+      .masthead { padding: 28px 0 18px; border-bottom: 1px solid var(--line); }
+      .kicker { margin: 0 0 12px; color: var(--muted); font-size: 0.82rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+      h1 { margin: 0 0 8px; color: var(--blue); font-family: Georgia, "Times New Roman", serif; font-size: clamp(2.05rem, 9vw, 4.5rem); line-height: 0.98; letter-spacing: 0; }
+      .headline { margin: 14px 0 0; font-size: clamp(1.24rem, 4.8vw, 2.1rem); line-height: 1.15; font-weight: 800; color: #151d27; }
+      .meta-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+      .pill { display: inline-flex; align-items: center; min-height: 34px; padding: 6px 11px; border: 1px solid var(--line); border-radius: 999px; background: rgba(255,255,255,0.72); color: #3f4a57; font-size: 0.86rem; font-weight: 700; text-decoration: none; }
+      .overview { margin: 22px 0 18px; padding: 17px 17px 15px; border: 1px solid #cfe0ed; border-radius: 14px; background: var(--soft-blue); box-shadow: var(--shadow); }
+      .overview p, .takeaway p { margin: 0 0 12px; }
+      .overview p:last-child, .takeaway p:last-child { margin-bottom: 0; }
+      .toc { margin: 22px 0 22px; padding: 0; list-style: none; border-top: 1px solid var(--line); }
+      .toc li { border-bottom: 1px solid var(--line); }
+      .toc a { display: block; padding: 12px 0; color: var(--ink); font-size: 1rem; font-weight: 750; text-decoration: none; }
+      article { margin: 28px 0 0; padding: 0 0 26px; border-bottom: 1px solid var(--line); }
+      h2 { margin: 0 0 14px; color: var(--blue); font-size: clamp(1.55rem, 6vw, 2.4rem); line-height: 1.12; letter-spacing: 0; }
+      h3 { margin: 23px 0 7px; color: var(--green); font-size: 0.94rem; line-height: 1.28; letter-spacing: 0; text-transform: none; }
+      p { margin: 0 0 13px; }
+      .reference { margin: 0 0 18px; padding: 13px 14px; border: 1px solid var(--line); border-radius: 12px; background: rgba(255,255,255,0.76); font-size: 0.94rem; line-height: 1.46; overflow-wrap: anywhere; }
+      .reference div + div { margin-top: 4px; }
+      .label { font-weight: 800; }
+      .spoken, .discussion, .takeaway { border-radius: 14px; padding: 15px 16px; }
+      .spoken { background: var(--soft-gold); border: 1px solid #ead9ad; font-style: italic; }
+      .discussion { background: var(--soft-blue); border: 1px solid #cfe0ed; font-weight: 780; font-style: italic; }
+      .vocab { display: grid; grid-template-columns: 1fr; gap: 8px; margin: 0; padding: 0; list-style: none; }
+      .vocab li { padding: 9px 10px; border: 1px solid rgba(222,216,204,0.85); border-radius: 10px; background: rgba(255,255,255,0.62); font-size: 0.96rem; line-height: 1.35; }
+      .term { font-weight: 800; }
+      .takeaway { margin: 32px 0 0; background: var(--soft-green); border: 1px solid #c8e2d6; }
+      .footer { margin-top: 28px; color: var(--muted); font-size: 0.88rem; text-align: center; }
+      .footer a { color: var(--muted); }
+      @media (min-width: 720px) {
+        body { font-size: 18px; }
+        .page { padding: 30px 32px 58px; }
+        .masthead { padding-top: 42px; }
+        .overview, .reference, .spoken, .discussion, .takeaway { border-radius: 16px; }
+        .vocab { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      }
+      @media print {
+        body { background: #fff; font-size: 11pt; }
+        .page { width: 100%; padding: 0; }
+        .overview, .reference, .spoken, .discussion, .takeaway, .vocab li { box-shadow: none; break-inside: avoid; }
+        article { break-inside: avoid; }
+        a { color: #000; }
+      }
+
+
+      .masthead { padding-top: 24px; }
+      .sections { margin: 24px 0 6px; }
+      .sections-label { margin: 0 0 10px; color: var(--muted); font-size: 0.78rem; font-weight: 850; letter-spacing: 0.08em; text-transform: uppercase; }
+      .section-grid { display: grid; grid-template-columns: 1fr; gap: 10px; }
+      .section-card { display: block; min-height: 122px; padding: 16px; border: 1px solid var(--line); border-radius: 14px; background: rgba(255,255,255,0.78); color: var(--ink); text-decoration: none; }
+      .section-card.current { border-color: #cfe0ed; background: var(--soft-blue); }
+      .section-card.breaking { border-color: #ead9ad; background: var(--soft-gold); }
+      .section-card.archive { border-color: #c8e2d6; background: var(--soft-green); }
+      .section-card strong { display: block; margin-bottom: 5px; color: var(--blue); font-size: 1.05rem; }
+      .section-card span { display: block; color: #485463; font-size: 0.91rem; line-height: 1.42; }
+      .reading-note { color: var(--muted); font-size: 0.9rem; }
+      .overview { box-shadow: none; }
+      .story-number { margin: 0 0 7px; color: var(--green); font-size: 0.78rem; font-weight: 850; text-transform: uppercase; }
+      .source-line { margin: 0 0 3px; color: var(--muted); font-size: 0.88rem; font-weight: 750; }
+      .source-title { margin: 0 0 17px; color: #46515e; font-size: 0.88rem; line-height: 1.42; }
+      .source-title a { color: #46515e; }
+      .watch-list { margin: 7px 0 0; padding-left: 1.2rem; }
+      .watch-list li { margin: 0 0 7px; padding-left: 2px; }
+      .terms { margin-top: 30px; padding-top: 1px; }
+      .terms h2 { font-size: 1.45rem; }
+      .term-note { margin-top: -5px; color: var(--muted); font-size: 0.92rem; }
+      @media (max-width: 430px) {
+        body { font-size: 16.5px; line-height: 1.58; }
+        .page { padding-left: 15px; padding-right: 15px; }
+        h1 { font-size: 2.15rem; }
+        .headline { font-size: 1.35rem; }
+        h2 { font-size: 1.55rem; }
+        .overview { padding: 15px; }
+      }
+      @media (min-width: 720px) { .section-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="./">AI, Crypto &amp; Tech Power Briefing</a>
+        <div class="site-nav-links">
+          <a href="./">Latest</a>
+          <a href="archive.html">Archive</a>
+        </div>
+      </nav>
+
+      <header class="masthead">
+        <p class="kicker">AI · Crypto · Tech Power · Policy · Business</p>
+        <h1>October 24, 2026</h1>
+        <p class="headline">AI Moves From Bigger Models to Faster Decisions, Safer Delegation and Harder Infrastructure Economics</p>
+        <div class="meta-row">
+          <a class="pill" href="pdf/daily_ai_blockchain_briefing_2026-10-24.pdf">PDF</a>
+        </div>
+      </header>
+
+      <section class="sections" aria-label="Sections">
+        <p class="sections-label">Explore sections</p>
+        <div class="section-grid">
+          <a class="section-card current" href="./"><strong>Daily Briefing</strong><span>Today's reader-first AI, crypto and technology stories.</span></a>
+          <a class="section-card breaking" href="breaking-news.html"><strong>Breaking News</strong><span>Major AI, crypto, conflict and US / UK policy updates.</span></a>
+          <a class="section-card archive" href="archive.html"><strong>News Archive</strong><span>Browse previous briefings and PDFs by date.</span></a>
+        </div>
+      </section>
+
+      <section class="overview" aria-label="Executive overview">
+        <h3>Executive overview</h3>
+        <p>The next phase of AI competition is less about a single general-purpose model and more about the operating layers around it: low-latency decisions, controlled access to accounts and reliable delivery of physical compute capacity.</p>
+        <p>Crypto is facing a comparable boundary-setting moment. US bank regulators have kept a path open for platform-paid stablecoin rewards, sharpening the distinction between a token issuer, an exchange and a bank deposit.</p>
+      </section>
+
+      <ol class="toc" aria-label="Today's stories">
+        <li><a href="#decision-models-inference-economics">1. AI competition shifts toward fast decisions, not only broad reasoning</a></li>
+        <li><a href="#agent-credential-delegation">2. Agent adoption makes credential delegation an enterprise control problem</a></li>
+        <li><a href="#data-center-delivery-risk">3. Data centers are not a simple pick-and-shovel bet when power delivery slips</a></li>
+        <li><a href="#stablecoin-reward-boundary">4. US stablecoin rules preserve a platform-reward route and reopen the deposit debate</a></li>
+      </ol>
+
+      <article id="decision-models-inference-economics">
+        <p class="story-number">Story 1</p>
+        <h2>AI competition shifts toward fast decisions, not only broad reasoning</h2>
+        <p class="source-line">TechCrunch &middot; October 22, 2026 &middot; <a href="https://techcrunch.com/2026/10/22/openai-makes-its-jev-competitor-widely-available-as-decision-model-competition-heats-up/" target="_blank" rel="noopener">Read source</a></p>
+        <p class="source-title"><em>OpenAI makes its Jev competitor widely available as decision model competition heats up</em></p>
+
+        <h3>The story</h3>
+        <p>TechCrunch reported that OpenAI made its Decisions API broadly available. The product is designed for rapid selection among options with a confidence signal, rather than for a long, open-ended answer. The company says it reconfigured an existing model to lower inference latency and cost, and added voice and visual support to the public version.</p>
+        <p>This is part of a wider category of decision or System One models. Their appeal is operational: a workflow that needs classification, ranking or a repeated next-step choice may value predictable response times and high throughput more than a large model&#x27;s broadest capabilities.</p>
+
+        <h3>Why it matters</h3>
+        <p>Cheaper, faster inference can make AI viable in product surfaces where a multi-second delay or a high per-call cost was previously unacceptable. That changes application design as much as it changes model choice.</p>
+        <p>A benchmark result is not enough for procurement. Teams need to test calibration, error costs, regional latency and fallback behavior on their own decisions before substituting a specialized model for an LLM.</p>
+
+        <h3>What to watch</h3>
+        <ul class="watch-list">
+          <li>Whether customers publish production metrics for accuracy, latency and cost per decision.</li>
+          <li>How providers expose confidence, abstention and human-review controls.</li>
+          <li>Whether model routing becomes standard as applications combine decision models with general LLMs.</li>
+        </ul>
+      </article>
+      <article id="agent-credential-delegation">
+        <p class="story-number">Story 2</p>
+        <h2>Agent adoption makes credential delegation an enterprise control problem</h2>
+        <p class="source-line">TechCrunch &middot; October 22, 2026 &middot; <a href="https://techcrunch.com/2026/10/22/1password-launches-a-way-for-ai-agents-to-log-in-on-your-behalf-without-seeing-your-password/" target="_blank" rel="noopener">Read source</a></p>
+        <p class="source-title"><em>1Password launches a way for AI agents to log in on your behalf without seeing your password</em></p>
+
+        <h3>The story</h3>
+        <p>1Password introduced a service intended to let an AI agent sign into an account without receiving the user&#x27;s password. As described by TechCrunch, the system identifies the agent with a digital key, alerts the user to the request and has the password manager complete the sign-in only after approval.</p>
+        <p>The important design choice is separation: the agent can request an action, but it is not handed a reusable secret. That is relevant as agents begin to operate across shopping, support and financial accounts where a copied password would be difficult to retrieve or audit later.</p>
+
+        <h3>Why it matters</h3>
+        <p>A promise that an agent acts on a user&#x27;s behalf does not establish authorization, identity or scope. Enterprises need a clear chain from user consent to the exact credential use and resulting action.</p>
+        <p>Credential brokers may reduce password exposure, but they introduce new dependencies around approvals, logs, session control and revocation. Security architecture has to cover the agent, the broker and the destination service together.</p>
+
+        <h3>What to watch</h3>
+        <ul class="watch-list">
+          <li>Whether banks and other sensitive services accept delegated-agent logins.</li>
+          <li>The granularity of permissions, approval limits and audit records.</li>
+          <li>How quickly a user or administrator can revoke an agent&#x27;s access after a mistake or compromise.</li>
+        </ul>
+      </article>
+      <article id="data-center-delivery-risk">
+        <p class="story-number">Story 3</p>
+        <h2>Data centers are not a simple pick-and-shovel bet when power delivery slips</h2>
+        <p class="source-line">Reuters Breakingviews &middot; October 23, 2026 &middot; <a href="https://www.breakingviews.com/ddb76cfb4026/columns/considered-view/data-centres-fail-ai-pick-and-shovel-trade-2026-10-23/" target="_blank" rel="noopener">Read source</a></p>
+        <p class="source-title"><em>Data centres fail as AI pick-and-shovel trade</em></p>
+
+        <h3>The story</h3>
+        <p>Reuters Breakingviews highlighted how NextDC&#x27;s shares fell after a power-upgrade delay linked to community opposition, and noted Amazon&#x27;s decision to abandon a Virginia data-center plan after local resistance. The column argues that AI infrastructure providers face a combination of debt-funded buildouts, utility timing, chip supply and demanding hyperscaler customers.</p>
+        <p>Demand for compute does not automatically become revenue. A project still needs power connections, permits, financing, hardware, construction and customer acceptance to arrive in the right sequence. A contracted customer can also have protections if delivery is late.</p>
+
+        <h3>Why it matters</h3>
+        <p>The relevant infrastructure risk is execution risk, not simply demand risk. Delays can consume capital while pushing back the date at which a facility begins earning, which can weaken returns and refinancing options.</p>
+        <p>For AI buyers, power and site milestones now belong in vendor diligence. For investors, headline capacity and customer commitments need to be separated from energised, usable capacity and enforceable cash flows.</p>
+
+        <h3>What to watch</h3>
+        <ul class="watch-list">
+          <li>Utility, permitting and community milestones at major AI campuses.</li>
+          <li>Termination rights, deposits and completion protections in customer contracts.</li>
+          <li>Whether providers slow capital expenditure on sites without firm customer and power support.</li>
+        </ul>
+      </article>
+      <article id="stablecoin-reward-boundary">
+        <p class="story-number">Story 4</p>
+        <h2>US stablecoin rules preserve a platform-reward route and reopen the deposit debate</h2>
+        <p class="source-line">Associated Press &middot; October 21, 2026 &middot; <a href="https://apnews.com/article/stablecoins-circle-usdc-banks-interest-cryptocurrencies-db6b787c7c2a5fe434ce84b23413d966" target="_blank" rel="noopener">Read source</a></p>
+        <p class="source-title"><em>Cryptocurrency companies can keep paying interest-like rewards, say federal bank regulators</em></p>
+
+        <h3>The story</h3>
+        <p>The Associated Press reported that the Office of the Comptroller of the Currency&#x27;s GENIUS Act implementation rules continue to bar stablecoin issuers from paying interest to holders, while allowing exchanges and other platforms to pass along earnings as interest-like rewards on a case-by-case basis. Those rewards are tied to income earned on reserve assets such as bank deposits and US Treasuries.</p>
+        <p>That distinction matters commercially. It leaves platforms room to compete for balances while drawing a formal line around the issuer. Banking groups argue that higher crypto-platform yields could pull deposits out of banks; consumer advocates note that a reward-bearing crypto balance does not carry bank deposit insurance.</p>
+
+        <h3>Why it matters</h3>
+        <p>The regulation of a token depends on the product stack, not only the token itself. Issuance, reserve custody, distribution and rewards can have different rules, risks and economic beneficiaries.</p>
+        <p>For users and treasury teams, yield must be evaluated alongside redemption rights, custody, reserve transparency and the absence of deposit insurance. A quoted return is not a complete risk description.</p>
+
+        <h3>What to watch</h3>
+        <ul class="watch-list">
+          <li>How the OCC applies its case-by-case approach in published guidance or supervisory practice.</li>
+          <li>Whether banks change deposit pricing or lobby for a narrower rewards rule.</li>
+          <li>How platforms describe custody, redemption and risk disclosures alongside advertised rewards.</li>
+        </ul>
+      </article>
+
+      <section class="terms">
+        <h2>Professional terms</h2>
+        <p class="term-note">Important business, policy, AI and crypto terms. Abbreviations should include the full form.</p>
+        <ul class="vocab">
+        <li><span class="term">inference cost</span> - 推理成本</li>
+        <li><span class="term">inference latency</span> - 推理延迟</li>
+        <li><span class="term">decision model</span> - 决策模型</li>
+        <li><span class="term">model routing</span> - 模型路由</li>
+        <li><span class="term">confidence calibration</span> - 置信度校准</li>
+        <li><span class="term">human-in-the-loop</span> - 人工参与审核</li>
+        <li><span class="term">credential broker</span> - 凭证中介服务</li>
+        <li><span class="term">least-privilege access</span> - 最小权限访问</li>
+        <li><span class="term">revocation mechanism</span> - 撤销机制</li>
+        <li><span class="term">audit trail</span> - 审计追踪</li>
+        <li><span class="term">capital expenditure (capex)</span> - 资本支出</li>
+        <li><span class="term">project finance</span> - 项目融资</li>
+        <li><span class="term">supply-chain bottleneck</span> - 供应链瓶颈</li>
+        <li><span class="term">counterparty risk</span> - 交易对手风险</li>
+        <li><span class="term">reserve assets</span> - 储备资产</li>
+        <li><span class="term">redemption mechanism</span> - 赎回机制</li>
+        <li><span class="term">custody risk</span> - 托管风险</li>
+        <li><span class="term">deposit flight</span> - 存款外流</li>
+        </ul>
+      </section>
+
+      <section class="takeaway">
+        <h3>Today's big picture</h3>
+        <p>The useful AI question is increasingly operational: which model should make which decision, under what latency and approval constraints, and on infrastructure that can actually be delivered. The answers determine product economics as much as model quality does.</p>
+        <p>In crypto, the same discipline applies to yield. The issuer, distributor and custodian may play different roles, so readers should map the cash flow and the redemption path before treating a stablecoin reward like a bank deposit rate.</p>
+      </section>
+
+      <footer class="footer">
+        <p>Daily AI, Crypto &amp; Tech Power News Study Briefing &middot; <a href="archive.html">Browse the archive</a></p>
+      </footer>
+    </main>
+  </body>
+</html>
