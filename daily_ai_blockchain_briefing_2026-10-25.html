@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="AI accelerates vulnerability discovery, debt concerns pressure AI-cloud operators, hyperscaler earnings become the next spending test, and US regulators clarify the stablecoin-reward boundary." />
+    <title>October 25, 2026 | Daily AI, Crypto &amp; Tech Power Briefing</title>
+    <style>
+
+      :root {
+        color-scheme: light;
+        --bg: #f6f4ef;
+        --ink: #17202a;
+        --muted: #667085;
+        --line: #ded8cc;
+        --blue: #164a7c;
+        --green: #24765d;
+        --soft-blue: #eaf3fb;
+        --soft-green: #edf7f2;
+        --soft-gold: #fff7e3;
+        --shadow: 0 16px 45px rgba(38, 52, 65, 0.08);
+      }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0;
+        background: linear-gradient(180deg, rgba(255, 253, 248, 0.9), rgba(246, 244, 239, 0.92)), var(--bg);
+        color: var(--ink);
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+        font-size: 17px;
+        line-height: 1.62;
+      }
+      a { color: var(--blue); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+      .page { width: min(100%, 860px); margin: 0 auto; padding: 18px 16px 44px; }
+      .site-nav {
+        display: flex; align-items: center; justify-content: space-between; gap: 12px;
+        padding: 6px 0 14px; color: var(--muted); font-size: 0.88rem; font-weight: 750;
+      }
+      .site-nav a { color: var(--muted); text-decoration: none; }
+      .site-nav-links { display: flex; gap: 12px; white-space: nowrap; }
+      .masthead { padding: 28px 0 18px; border-bottom: 1px solid var(--line); }
+      .kicker { margin: 0 0 12px; color: var(--muted); font-size: 0.82rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+      h1 { margin: 0 0 8px; color: var(--blue); font-family: Georgia, "Times New Roman", serif; font-size: clamp(2.05rem, 9vw, 4.5rem); line-height: 0.98; letter-spacing: 0; }
+      .headline { margin: 14px 0 0; font-size: clamp(1.24rem, 4.8vw, 2.1rem); line-height: 1.15; font-weight: 800; color: #151d27; }
+      .meta-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+      .pill { display: inline-flex; align-items: center; min-height: 34px; padding: 6px 11px; border: 1px solid var(--line); border-radius: 999px; background: rgba(255,255,255,0.72); color: #3f4a57; font-size: 0.86rem; font-weight: 700; text-decoration: none; }
+      .overview { margin: 22px 0 18px; padding: 17px 17px 15px; border: 1px solid #cfe0ed; border-radius: 14px; background: var(--soft-blue); box-shadow: var(--shadow); }
+      .overview p, .takeaway p { margin: 0 0 12px; }
+      .overview p:last-child, .takeaway p:last-child { margin-bottom: 0; }
+      .toc { margin: 22px 0 22px; padding: 0; list-style: none; border-top: 1px solid var(--line); }
+      .toc li { border-bottom: 1px solid var(--line); }
+      .toc a { display: block; padding: 12px 0; color: var(--ink); font-size: 1rem; font-weight: 750; text-decoration: none; }
+      article { margin: 28px 0 0; padding: 0 0 26px; border-bottom: 1px solid var(--line); }
+      h2 { margin: 0 0 14px; color: var(--blue); font-size: clamp(1.55rem, 6vw, 2.4rem); line-height: 1.12; letter-spacing: 0; }
+      h3 { margin: 23px 0 7px; color: var(--green); font-size: 0.94rem; line-height: 1.28; letter-spacing: 0; text-transform: none; }
+      p { margin: 0 0 13px; }
+      .reference { margin: 0 0 18px; padding: 13px 14px; border: 1px solid var(--line); border-radius: 12px; background: rgba(255,255,255,0.76); font-size: 0.94rem; line-height: 1.46; overflow-wrap: anywhere; }
+      .reference div + div { margin-top: 4px; }
+      .label { font-weight: 800; }
+      .spoken, .discussion, .takeaway { border-radius: 14px; padding: 15px 16px; }
+      .spoken { background: var(--soft-gold); border: 1px solid #ead9ad; font-style: italic; }
+      .discussion { background: var(--soft-blue); border: 1px solid #cfe0ed; font-weight: 780; font-style: italic; }
+      .vocab { display: grid; grid-template-columns: 1fr; gap: 8px; margin: 0; padding: 0; list-style: none; }
+      .vocab li { padding: 9px 10px; border: 1px solid rgba(222,216,204,0.85); border-radius: 10px; background: rgba(255,255,255,0.62); font-size: 0.96rem; line-height: 1.35; }
+      .term { font-weight: 800; }
+      .takeaway { margin: 32px 0 0; background: var(--soft-green); border: 1px solid #c8e2d6; }
+      .footer { margin-top: 28px; color: var(--muted); font-size: 0.88rem; text-align: center; }
+      .footer a { color: var(--muted); }
+      @media (min-width: 720px) {
+        body { font-size: 18px; }
+        .page { padding: 30px 32px 58px; }
+        .masthead { padding-top: 42px; }
+        .overview, .reference, .spoken, .discussion, .takeaway { border-radius: 16px; }
+        .vocab { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      }
+      @media print {
+        body { background: #fff; font-size: 11pt; }
+        .page { width: 100%; padding: 0; }
+        .overview, .reference, .spoken, .discussion, .takeaway, .vocab li { box-shadow: none; break-inside: avoid; }
+        article { break-inside: avoid; }
+        a { color: #000; }
+      }
+
+
+      .masthead { padding-top: 24px; }
+      .sections { margin: 24px 0 6px; }
+      .sections-label { margin: 0 0 10px; color: var(--muted); font-size: 0.78rem; font-weight: 850; letter-spacing: 0.08em; text-transform: uppercase; }
+      .section-grid { display: grid; grid-template-columns: 1fr; gap: 10px; }
+      .section-card { display: block; min-height: 122px; padding: 16px; border: 1px solid var(--line); border-radius: 14px; background: rgba(255,255,255,0.78); color: var(--ink); text-decoration: none; }
+      .section-card.current { border-color: #cfe0ed; background: var(--soft-blue); }
+      .section-card.breaking { border-color: #ead9ad; background: var(--soft-gold); }
+      .section-card.archive { border-color: #c8e2d6; background: var(--soft-green); }
+      .section-card strong { display: block; margin-bottom: 5px; color: var(--blue); font-size: 1.05rem; }
+      .section-card span { display: block; color: #485463; font-size: 0.91rem; line-height: 1.42; }
+      .reading-note { color: var(--muted); font-size: 0.9rem; }
+      .overview { box-shadow: none; }
+      .story-number { margin: 0 0 7px; color: var(--green); font-size: 0.78rem; font-weight: 850; text-transform: uppercase; }
+      .source-line { margin: 0 0 3px; color: var(--muted); font-size: 0.88rem; font-weight: 750; }
+      .source-title { margin: 0 0 17px; color: #46515e; font-size: 0.88rem; line-height: 1.42; }
+      .source-title a { color: #46515e; }
+      .watch-list { margin: 7px 0 0; padding-left: 1.2rem; }
+      .watch-list li { margin: 0 0 7px; padding-left: 2px; }
+      .terms { margin-top: 30px; padding-top: 1px; }
+      .terms h2 { font-size: 1.45rem; }
+      .term-note { margin-top: -5px; color: var(--muted); font-size: 0.92rem; }
+      @media (max-width: 430px) {
+        body { font-size: 16.5px; line-height: 1.58; }
+        .page { padding-left: 15px; padding-right: 15px; }
+        h1 { font-size: 2.15rem; }
+        .headline { font-size: 1.35rem; }
+        h2 { font-size: 1.55rem; }
+        .overview { padding: 15px; }
+      }
+      @media (min-width: 720px) { .section-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="./">AI, Crypto &amp; Tech Power Briefing</a>
+        <div class="site-nav-links">
+          <a href="./">Latest</a>
+          <a href="archive.html">Archive</a>
+        </div>
+      </nav>
+
+      <header class="masthead">
+        <p class="kicker">AI · Crypto · Tech Power · Policy · Business</p>
+        <h1>October 25, 2026</h1>
+        <p class="headline">AI&#x27;s Security and Financing Tests Get Real While Stablecoin Yield Draws a Clearer Line</p>
+        <div class="meta-row">
+          <a class="pill" href="pdf/daily_ai_blockchain_briefing_2026-10-25.pdf">PDF</a>
+        </div>
+      </header>
+
+      <section class="sections" aria-label="Sections">
+        <p class="sections-label">Explore sections</p>
+        <div class="section-grid">
+          <a class="section-card current" href="./"><strong>Daily Briefing</strong><span>Today's reader-first AI, crypto and technology stories.</span></a>
+          <a class="section-card breaking" href="breaking-news.html"><strong>Breaking News</strong><span>Major AI, crypto, conflict and US / UK policy updates.</span></a>
+          <a class="section-card archive" href="archive.html"><strong>News Archive</strong><span>Browse previous briefings and PDFs by date.</span></a>
+        </div>
+      </section>
+
+      <section class="overview" aria-label="Executive overview">
+        <h3>Executive overview</h3>
+        <p>The AI cycle is becoming an operating-risk story as well as a product story. Models can help find and turn software flaws into usable exploits faster, while heavily financed AI-cloud projects face a sharper investor test.</p>
+        <p>The next earnings reports from the largest cloud companies will show whether spending on compute still has a visible path to revenue. In crypto, regulators are drawing a practical boundary between stablecoin issuance and platform-paid rewards.</p>
+      </section>
+
+      <ol class="toc" aria-label="Today's stories">
+        <li><a href="#ai-vulnerability-discovery">1. AI shortens the distance between a hidden software flaw and a real incident</a></li>
+        <li><a href="#ai-cloud-credit-risk">2. AI-cloud providers face a financing test alongside the demand boom</a></li>
+        <li><a href="#hyperscaler-earnings-test">3. Alphabet, Amazon and Microsoft earnings become the next test of AI spending</a></li>
+        <li><a href="#stablecoin-reward-boundary">4. US rules leave room for stablecoin rewards, but not for issuer-paid interest</a></li>
+      </ol>
+
+      <article id="ai-vulnerability-discovery">
+        <p class="story-number">Story 1</p>
+        <h2>AI shortens the distance between a hidden software flaw and a real incident</h2>
+        <p class="source-line">Reuters &middot; October 23, 2026 &middot; <a href="https://www.investing.com/news/stock-market-news/aidiscovered-bugs-may-soon-trigger-fresh-disruptions-cyber-experts-say-4968682" target="_blank" rel="noopener">Read source</a></p>
+        <p class="source-title"><em>AI-discovered bugs may soon trigger fresh disruptions, cyber experts say</em></p>
+
+        <h3>The story</h3>
+        <p>Reuters reported that cybersecurity professionals expect AI to uncover a growing stream of vulnerabilities and to make disruptive incidents more common. The recent PHP security episode illustrated the problem: models can inspect large codebases continuously and help turn a difficult-to-exploit weakness into a working proof of concept in hours rather than weeks.</p>
+        <p>The same capability can support defenders, but it compresses the response window. A company that once had time to assess a public vulnerability may now need to decide quickly whether to patch, isolate a service, add a temporary control or take an exposed system offline.</p>
+
+        <h3>Why it matters</h3>
+        <p>Security teams should treat AI-assisted discovery as a change in vulnerability-management economics. The priority is less about predicting the next flaw and more about knowing which internet-facing systems can be patched or isolated first.</p>
+        <p>For executives, this makes asset inventory, tested rollback plans and clear incident authority more valuable. A technically good patch is not enough if ownership, maintenance windows or third-party dependencies delay deployment.</p>
+
+        <h3>What to watch</h3>
+        <ul class="watch-list">
+          <li>Evidence of exploitation against newly disclosed vulnerabilities, not only research demonstrations.</li>
+          <li>Whether suppliers provide machine-readable mitigation guidance and emergency patches faster.</li>
+          <li>How companies measure time to remediate their most exposed software dependencies.</li>
+        </ul>
+      </article>
+      <article id="ai-cloud-credit-risk">
+        <p class="story-number">Story 2</p>
+        <h2>AI-cloud providers face a financing test alongside the demand boom</h2>
+        <p class="source-line">Reuters &middot; October 22, 2026 &middot; <a href="https://www.marketscreener.com/news/short-sellers-pocket-6-billion-in-profits-as-neoclouds-slide-on-ai-debt-fears-ce785cdeda81f021" target="_blank" rel="noopener">Read source</a></p>
+        <p class="source-title"><em>Short sellers make $6 billion in unrealized profits as neoclouds slide on AI debt fears</em></p>
+
+        <h3>The story</h3>
+        <p>Reuters reported that investors betting against US neocloud and data-center companies had accumulated about $6 billion in paper profits during October as concern grew about debt-funded AI expansion. Shares of several operators fell as the market questioned whether rapid construction, costly hardware and large financing needs can be supported by the timing of customer revenue.</p>
+        <p>This is not a verdict that demand for AI compute has disappeared. It is a reminder that a provider must convert contracted interest into delivered, powered capacity and cash flow before debt service becomes a constraint. Those milestones can move at different speeds.</p>
+
+        <h3>Why it matters</h3>
+        <p>AI infrastructure is an execution business as much as a technology business. A provider can have strong customer demand yet still face refinancing pressure if power, chips, construction or customer acceptance slip.</p>
+        <p>For buyers, a vendor&#x27;s balance sheet is part of service reliability. For investors, headline backlog and announced capacity should be separated from energised capacity, contract protections and recurring cash flow.</p>
+
+        <h3>What to watch</h3>
+        <ul class="watch-list">
+          <li>Debt maturities, interest expense and any new equity or asset-finance plans.</li>
+          <li>Power-delivery and construction milestones behind reported customer commitments.</li>
+          <li>Whether large customers diversify suppliers or demand stronger completion protections.</li>
+        </ul>
+      </article>
+      <article id="hyperscaler-earnings-test">
+        <p class="story-number">Story 3</p>
+        <h2>Alphabet, Amazon and Microsoft earnings become the next test of AI spending</h2>
+        <p class="source-line">Reuters &middot; October 23, 2026 &middot; <a href="https://www.investing.com/news/economy-news/take-five-ai-trade-meets-the-fed-4968194" target="_blank" rel="noopener">Read source</a></p>
+        <p class="source-title"><em>Take Five: AI trade meets the Fed</em></p>
+
+        <h3>The story</h3>
+        <p>Reuters highlighted the coming earnings reports from Alphabet, Amazon and Microsoft as a pivotal test for the AI market. Investors will look beyond product announcements to capital-expenditure guidance, cloud growth and management explanations of how new data centers and accelerators are being funded and used.</p>
+        <p>The reports matter because these companies sit at the center of the AI build-out. Their demand affects chip orders, data-center construction and the economics of smaller infrastructure providers, while their cloud results offer an early read on whether enterprise AI usage is broadening.</p>
+
+        <h3>Why it matters</h3>
+        <p>Capital expenditure is not automatically a negative. It can be a rational response to strong demand, but the market needs evidence on utilization, pricing and the period over which an investment will earn a return.</p>
+        <p>Readers should distinguish investment in durable cloud capacity from one-off spending that merely preserves a competitive position. Revenue growth, depreciation, power availability and customer commitments help make that distinction.</p>
+
+        <h3>What to watch</h3>
+        <ul class="watch-list">
+          <li>Capital-expenditure guidance and discussion of power and accelerator supply constraints.</li>
+          <li>Cloud revenue growth, backlog and signs of AI-product monetization.</li>
+          <li>Whether management comments change the expected payback period for recent infrastructure spending.</li>
+        </ul>
+      </article>
+      <article id="stablecoin-reward-boundary">
+        <p class="story-number">Story 4</p>
+        <h2>US rules leave room for stablecoin rewards, but not for issuer-paid interest</h2>
+        <p class="source-line">Associated Press &middot; October 21, 2026 &middot; <a href="https://apnews.com/article/db6b787c7c2a5fe434ce84b23413d966" target="_blank" rel="noopener">Read source</a></p>
+        <p class="source-title"><em>Cryptocurrency companies can keep paying interest-like rewards, say federal bank regulators</em></p>
+
+        <h3>The story</h3>
+        <p>The Associated Press reported that US bank regulators&#x27; implementation of the GENIUS Act continues to prohibit payment-stablecoin issuers from paying interest to holders, while allowing exchanges and other platforms to offer interest-like rewards in some circumstances. The economic source is income earned on reserve assets such as bank deposits and US Treasuries.</p>
+        <p>The distinction separates the issuer from the distribution platform. It gives platforms a route to compete for customer balances, but it also means a reward-bearing crypto balance is not the same product as an insured bank deposit and may involve separate custody and redemption arrangements.</p>
+
+        <h3>Why it matters</h3>
+        <p>The regulatory treatment of a stablecoin product depends on the full stack: issuance, reserve management, custody, distribution and rewards. A single token can support products with materially different risks and economics.</p>
+        <p>For users and corporate treasuries, yield should be assessed with reserve transparency, redemption rights, custody risk and loss allocation. The advertised return alone does not describe the product&#x27;s protection or liquidity.</p>
+
+        <h3>What to watch</h3>
+        <ul class="watch-list">
+          <li>How the case-by-case approach appears in supervisory guidance and platform disclosures.</li>
+          <li>Whether banks change deposit pricing or press for tighter limits on platform rewards.</li>
+          <li>How exchanges explain redemption, custody and the absence of deposit insurance to customers.</li>
+        </ul>
+      </article>
+
+      <section class="terms">
+        <h2>Professional terms</h2>
+        <p class="term-note">Important business, policy, AI and crypto terms. Abbreviations should include the full form.</p>
+        <ul class="vocab">
+        <li><span class="term">vulnerability management</span> - 漏洞管理</li>
+        <li><span class="term">attack surface</span> - 攻击面</li>
+        <li><span class="term">remote code execution (RCE)</span> - 远程代码执行</li>
+        <li><span class="term">proof of concept (PoC)</span> - 概念验证</li>
+        <li><span class="term">software dependency</span> - 软件依赖项</li>
+        <li><span class="term">patch management</span> - 补丁管理</li>
+        <li><span class="term">incident response</span> - 事件响应</li>
+        <li><span class="term">capital expenditure (capex)</span> - 资本支出</li>
+        <li><span class="term">project finance</span> - 项目融资</li>
+        <li><span class="term">debt service</span> - 债务偿付</li>
+        <li><span class="term">refinancing risk</span> - 再融资风险</li>
+        <li><span class="term">backlog</span> - 订单储备</li>
+        <li><span class="term">capacity utilization</span> - 产能利用率</li>
+        <li><span class="term">payback period</span> - 投资回收期</li>
+        <li><span class="term">reserve assets</span> - 储备资产</li>
+        <li><span class="term">redemption mechanism</span> - 赎回机制</li>
+        <li><span class="term">custody risk</span> - 托管风险</li>
+        <li><span class="term">deposit insurance</span> - 存款保险</li>
+        </ul>
+      </section>
+
+      <section class="takeaway">
+        <h3>Today's big picture</h3>
+        <p>AI is moving more quickly into the parts of the economy that carry operational consequence: software security, credit markets and large fixed infrastructure. The key question is no longer simply whether demand exists, but whether a system can be secured, financed and operated reliably at speed.</p>
+        <p>Crypto&#x27;s yield debate points to the same practical habit. Map the entity that issues the asset, holds the reserves, controls custody and pays the reward before comparing it with a familiar bank product.</p>
+      </section>
+
+      <footer class="footer">
+        <p>Daily AI, Crypto &amp; Tech Power News Study Briefing &middot; <a href="archive.html">Browse the archive</a></p>
+      </footer>
+    </main>
+  </body>
+</html>
