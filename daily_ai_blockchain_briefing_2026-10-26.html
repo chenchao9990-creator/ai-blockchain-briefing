@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="OpenAI models enter Google Cloud&#x27;s marketplace, multi-agent research finds biological leads, Bitcoin Core shortens disclosure for AI-discoverable flaws, and HSBC launches a regulated Hong Kong-dollar stablecoin for PayMe users." />
+    <title>October 26, 2026 | Daily AI, Crypto &amp; Tech Power Briefing</title>
+    <style>
+
+      :root {
+        color-scheme: light;
+        --bg: #f6f4ef;
+        --ink: #17202a;
+        --muted: #667085;
+        --line: #ded8cc;
+        --blue: #164a7c;
+        --green: #24765d;
+        --soft-blue: #eaf3fb;
+        --soft-green: #edf7f2;
+        --soft-gold: #fff7e3;
+        --shadow: 0 16px 45px rgba(38, 52, 65, 0.08);
+      }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0;
+        background: linear-gradient(180deg, rgba(255, 253, 248, 0.9), rgba(246, 244, 239, 0.92)), var(--bg);
+        color: var(--ink);
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+        font-size: 17px;
+        line-height: 1.62;
+      }
+      a { color: var(--blue); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+      .page { width: min(100%, 860px); margin: 0 auto; padding: 18px 16px 44px; }
+      .site-nav {
+        display: flex; align-items: center; justify-content: space-between; gap: 12px;
+        padding: 6px 0 14px; color: var(--muted); font-size: 0.88rem; font-weight: 750;
+      }
+      .site-nav a { color: var(--muted); text-decoration: none; }
+      .site-nav-links { display: flex; gap: 12px; white-space: nowrap; }
+      .masthead { padding: 28px 0 18px; border-bottom: 1px solid var(--line); }
+      .kicker { margin: 0 0 12px; color: var(--muted); font-size: 0.82rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+      h1 { margin: 0 0 8px; color: var(--blue); font-family: Georgia, "Times New Roman", serif; font-size: clamp(2.05rem, 9vw, 4.5rem); line-height: 0.98; letter-spacing: 0; }
+      .headline { margin: 14px 0 0; font-size: clamp(1.24rem, 4.8vw, 2.1rem); line-height: 1.15; font-weight: 800; color: #151d27; }
+      .meta-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+      .pill { display: inline-flex; align-items: center; min-height: 34px; padding: 6px 11px; border: 1px solid var(--line); border-radius: 999px; background: rgba(255,255,255,0.72); color: #3f4a57; font-size: 0.86rem; font-weight: 700; text-decoration: none; }
+      .overview { margin: 22px 0 18px; padding: 17px 17px 15px; border: 1px solid #cfe0ed; border-radius: 14px; background: var(--soft-blue); box-shadow: var(--shadow); }
+      .overview p, .takeaway p { margin: 0 0 12px; }
+      .overview p:last-child, .takeaway p:last-child { margin-bottom: 0; }
+      .toc { margin: 22px 0 22px; padding: 0; list-style: none; border-top: 1px solid var(--line); }
+      .toc li { border-bottom: 1px solid var(--line); }
+      .toc a { display: block; padding: 12px 0; color: var(--ink); font-size: 1rem; font-weight: 750; text-decoration: none; }
+      article { margin: 28px 0 0; padding: 0 0 26px; border-bottom: 1px solid var(--line); }
+      h2 { margin: 0 0 14px; color: var(--blue); font-size: clamp(1.55rem, 6vw, 2.4rem); line-height: 1.12; letter-spacing: 0; }
+      h3 { margin: 23px 0 7px; color: var(--green); font-size: 0.94rem; line-height: 1.28; letter-spacing: 0; text-transform: none; }
+      p { margin: 0 0 13px; }
+      .reference { margin: 0 0 18px; padding: 13px 14px; border: 1px solid var(--line); border-radius: 12px; background: rgba(255,255,255,0.76); font-size: 0.94rem; line-height: 1.46; overflow-wrap: anywhere; }
+      .reference div + div { margin-top: 4px; }
+      .label { font-weight: 800; }
+      .spoken, .discussion, .takeaway { border-radius: 14px; padding: 15px 16px; }
+      .spoken { background: var(--soft-gold); border: 1px solid #ead9ad; font-style: italic; }
+      .discussion { background: var(--soft-blue); border: 1px solid #cfe0ed; font-weight: 780; font-style: italic; }
+      .vocab { display: grid; grid-template-columns: 1fr; gap: 8px; margin: 0; padding: 0; list-style: none; }
+      .vocab li { padding: 9px 10px; border: 1px solid rgba(222,216,204,0.85); border-radius: 10px; background: rgba(255,255,255,0.62); font-size: 0.96rem; line-height: 1.35; }
+      .term { font-weight: 800; }
+      .takeaway { margin: 32px 0 0; background: var(--soft-green); border: 1px solid #c8e2d6; }
+      .footer { margin-top: 28px; color: var(--muted); font-size: 0.88rem; text-align: center; }
+      .footer a { color: var(--muted); }
+      @media (min-width: 720px) {
+        body { font-size: 18px; }
+        .page { padding: 30px 32px 58px; }
+        .masthead { padding-top: 42px; }
+        .overview, .reference, .spoken, .discussion, .takeaway { border-radius: 16px; }
+        .vocab { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      }
+      @media print {
+        body { background: #fff; font-size: 11pt; }
+        .page { width: 100%; padding: 0; }
+        .overview, .reference, .spoken, .discussion, .takeaway, .vocab li { box-shadow: none; break-inside: avoid; }
+        article { break-inside: avoid; }
+        a { color: #000; }
+      }
+
+
+      .masthead { padding-top: 24px; }
+      .sections { margin: 24px 0 6px; }
+      .sections-label { margin: 0 0 10px; color: var(--muted); font-size: 0.78rem; font-weight: 850; letter-spacing: 0.08em; text-transform: uppercase; }
+      .section-grid { display: grid; grid-template-columns: 1fr; gap: 10px; }
+      .section-card { display: block; min-height: 122px; padding: 16px; border: 1px solid var(--line); border-radius: 14px; background: rgba(255,255,255,0.78); color: var(--ink); text-decoration: none; }
+      .section-card.current { border-color: #cfe0ed; background: var(--soft-blue); }
+      .section-card.breaking { border-color: #ead9ad; background: var(--soft-gold); }
+      .section-card.archive { border-color: #c8e2d6; background: var(--soft-green); }
+      .section-card strong { display: block; margin-bottom: 5px; color: var(--blue); font-size: 1.05rem; }
+      .section-card span { display: block; color: #485463; font-size: 0.91rem; line-height: 1.42; }
+      .reading-note { color: var(--muted); font-size: 0.9rem; }
+      .overview { box-shadow: none; }
+      .story-number { margin: 0 0 7px; color: var(--green); font-size: 0.78rem; font-weight: 850; text-transform: uppercase; }
+      .source-line { margin: 0 0 3px; color: var(--muted); font-size: 0.88rem; font-weight: 750; }
+      .source-title { margin: 0 0 17px; color: #46515e; font-size: 0.88rem; line-height: 1.42; }
+      .source-title a { color: #46515e; }
+      .watch-list { margin: 7px 0 0; padding-left: 1.2rem; }
+      .watch-list li { margin: 0 0 7px; padding-left: 2px; }
+      .terms { margin-top: 30px; padding-top: 1px; }
+      .terms h2 { font-size: 1.45rem; }
+      .term-note { margin-top: -5px; color: var(--muted); font-size: 0.92rem; }
+      @media (max-width: 430px) {
+        body { font-size: 16.5px; line-height: 1.58; }
+        .page { padding-left: 15px; padding-right: 15px; }
+        h1 { font-size: 2.15rem; }
+        .headline { font-size: 1.35rem; }
+        h2 { font-size: 1.55rem; }
+        .overview { padding: 15px; }
+      }
+      @media (min-width: 720px) { .section-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="./">AI, Crypto &amp; Tech Power Briefing</a>
+        <div class="site-nav-links">
+          <a href="./">Latest</a>
+          <a href="archive.html">Archive</a>
+        </div>
+      </nav>
+
+      <header class="masthead">
+        <p class="kicker">AI · Crypto · Tech Power · Policy · Business</p>
+        <h1>October 26, 2026</h1>
+        <p class="headline">AI Distribution Expands Across Clouds While Security and Regulated Digital Money Move Into Operations</p>
+        <div class="meta-row">
+          <a class="pill" href="pdf/daily_ai_blockchain_briefing_2026-10-26.pdf">PDF</a>
+        </div>
+      </header>
+
+      <section class="sections" aria-label="Sections">
+        <p class="sections-label">Explore sections</p>
+        <div class="section-grid">
+          <a class="section-card current" href="./"><strong>Daily Briefing</strong><span>Today's reader-first AI, crypto and technology stories.</span></a>
+          <a class="section-card breaking" href="breaking-news.html"><strong>Breaking News</strong><span>Major AI, crypto, conflict and US / UK policy updates.</span></a>
+          <a class="section-card archive" href="archive.html"><strong>News Archive</strong><span>Browse previous briefings and PDFs by date.</span></a>
+        </div>
+      </section>
+
+      <section class="overview" aria-label="Executive overview">
+        <h3>Executive overview</h3>
+        <p>The AI market is becoming more modular. OpenAI models are moving into Google Cloud&#x27;s marketplace and governance layer, while research teams are using large groups of agents to turn huge biological datasets into testable scientific leads.</p>
+        <p>In crypto, operational rules matter as much as token launches. Bitcoin Core is changing disclosure practice because AI can rediscover some flaws quickly, and HSBC is putting a licensed Hong Kong-dollar stablecoin in front of retail payment users.</p>
+      </section>
+
+      <ol class="toc" aria-label="Today's stories">
+        <li><a href="#openai-google-cloud-distribution">1. OpenAI&#x27;s Google Cloud deal turns model access into a procurement and governance choice</a></li>
+        <li><a href="#multi-agent-biological-research">2. Large groups of AI agents are being used to turn biological data into research leads</a></li>
+        <li><a href="#bitcoin-ai-security-disclosure">3. Bitcoin Core shortens the secrecy window for flaws that AI can readily rediscover</a></li>
+        <li><a href="#hsbc-redcoin-retail-stablecoin">4. HSBC brings a licensed Hong Kong-dollar stablecoin to a retail payment app</a></li>
+      </ol>
+
+      <article id="openai-google-cloud-distribution">
+        <p class="story-number">Story 1</p>
+        <h2>OpenAI&#x27;s Google Cloud deal turns model access into a procurement and governance choice</h2>
+        <p class="source-line">OpenAI &middot; October 21, 2026 &middot; <a href="https://openai.com/index/openai-models-google-cloud/" target="_blank" rel="noopener">Read source</a></p>
+        <p class="source-title"><em>OpenAI models are coming to Google Cloud</em></p>
+
+        <h3>The story</h3>
+        <p>OpenAI said its frontier models and Codex workflows will be available through Google Cloud&#x27;s Model Garden, with general availability planned in the coming weeks. Customers will be able to purchase access through Google Cloud Marketplace and use existing Google Cloud spending commitments for those purchases.</p>
+        <p>The announcement does not change Microsoft&#x27;s role as OpenAI&#x27;s primary cloud partner. It does show how enterprise AI buying is shifting: a company can increasingly select models inside the cloud environment where its identity controls, billing, data governance and application workloads already live.</p>
+
+        <h3>Why it matters</h3>
+        <p>Model choice is becoming a cloud-architecture decision rather than a separate experimental purchase. Procurement, security and finance teams can evaluate the model, data boundary, account controls and invoice in one workflow.</p>
+        <p>That convenience does not remove the need for testing. Enterprises still need to compare quality, latency, inference cost, retention terms and fallback behavior for each workload, especially where an agent can take actions rather than only draft text.</p>
+
+        <h3>What to watch</h3>
+        <ul class="watch-list">
+          <li>The detailed availability, pricing and regional coverage when the service reaches general availability.</li>
+          <li>How customers use model routing across proprietary and open models inside one cloud account.</li>
+          <li>Whether marketplace purchasing speeds adoption in regulated industries with strict vendor and data-governance reviews.</li>
+        </ul>
+      </article>
+      <article id="multi-agent-biological-research">
+        <p class="story-number">Story 2</p>
+        <h2>Large groups of AI agents are being used to turn biological data into research leads</h2>
+        <p class="source-line">OpenAI &middot; October 21, 2026 &middot; <a href="https://openai.com/research/using-thousands-of-ai-agents-to-uncover-new-leads-in-biological-data/" target="_blank" rel="noopener">Read source</a></p>
+        <p class="source-title"><em>Using thousands of AI agents to uncover new leads in biological data</em></p>
+
+        <h3>The story</h3>
+        <p>OpenAI, PerturbAI and Scripps Research described a project that used distributed AI agents to examine data from millions of brain cells and propose biological hypotheses for researchers to investigate. The work is framed as a way to make large, complex datasets more searchable and to surface leads that can then be checked through conventional scientific methods.</p>
+        <p>The important point is not that an agent replaces laboratory validation. It is that a research team can decompose a broad search problem into many smaller tasks, trace their outputs and focus expert time on the few ideas worth testing first.</p>
+
+        <h3>Why it matters</h3>
+        <p>For business leaders, this is a useful picture of where agent systems may create value: not only in one impressive answer, but in coordinating many bounded research tasks with human review at the decision points.</p>
+        <p>For science and regulated industries, provenance is central. A promising lead needs an audit trail to the underlying data, the assumptions used by the agents and the subsequent experimental result before it can influence a development or investment decision.</p>
+
+        <h3>What to watch</h3>
+        <ul class="watch-list">
+          <li>Whether external researchers can reproduce the reported leads and validation results.</li>
+          <li>How teams measure false positives, novelty and the cost per useful hypothesis.</li>
+          <li>The controls used to protect sensitive datasets and to document multi-agent reasoning and tool use.</li>
+        </ul>
+      </article>
+      <article id="bitcoin-ai-security-disclosure">
+        <p class="story-number">Story 3</p>
+        <h2>Bitcoin Core shortens the secrecy window for flaws that AI can readily rediscover</h2>
+        <p class="source-line">CoinDesk &middot; October 23, 2026 &middot; <a href="https://www.coindesk.com/tech/2026/10/23/bitcoin-will-now-stop-hiding-bugs-an-ai-can-find-in-one-prompt" target="_blank" rel="noopener">Read source</a></p>
+        <p class="source-title"><em>Bitcoin Core changes security rules as AI makes finding code bugs dangerously easy</em></p>
+
+        <h3>The story</h3>
+        <p>CoinDesk reported that Bitcoin Core changed its security policy for vulnerabilities that can be found with minimal effort, including through a simple large language model prompt. Instead of relying on a long embargo, maintainers plan to ship fixes for supported versions as soon as possible with a security advisory.</p>
+        <p>The policy is a tradeoff. Faster disclosure and patching can reduce the period during which a publicly visible code change acts as a hidden clue for attackers, but it can also mean less time for testing before an update reaches node operators.</p>
+
+        <h3>Why it matters</h3>
+        <p>AI changes the economics of vulnerability discovery. A disclosure strategy built around scarcity of expertise is weaker when a flaw can be rediscovered cheaply and at scale from public code or a covert patch.</p>
+        <p>The broader lesson reaches beyond Bitcoin: organizations need a tested process to classify, backport, release and communicate urgent fixes. Software inventory and update authority become part of resilience, not administrative detail.</p>
+
+        <h3>What to watch</h3>
+        <ul class="watch-list">
+          <li>How the policy is applied to the first vulnerability classified as easily discoverable.</li>
+          <li>Whether point releases can be tested and adopted quickly enough by operators.</li>
+          <li>How other open-source projects revise embargo and coordinated-disclosure policies as AI-assisted review expands.</li>
+        </ul>
+      </article>
+      <article id="hsbc-redcoin-retail-stablecoin">
+        <p class="story-number">Story 4</p>
+        <h2>HSBC brings a licensed Hong Kong-dollar stablecoin to a retail payment app</h2>
+        <p class="source-line">CoinDesk &middot; October 23, 2026 &middot; <a href="https://www.coindesk.com/business/2026/10/23/hsbc-rolls-out-its-first-stablecoin-to-over-3-million-everyday-app-users" target="_blank" rel="noopener">Read source</a></p>
+        <p class="source-title"><em>HSBC rolls out its first stablecoin to over 3 million everyday app users</em></p>
+
+        <h3>The story</h3>
+        <p>CoinDesk reported that HSBC launched its Hong Kong-dollar stablecoin, RedCoin, through its PayMe app after HSBC and Anchorpoint received Hong Kong&#x27;s first stablecoin issuer licences in April. The rollout gives everyday users a regulated route for peer-to-peer and merchant payments inside an established payment application.</p>
+        <p>HSBC also plans a separate wallet in its banking app for tokenized investments, including a money market fund. That separation is commercially important: payments, tokenized investments and bank deposits may sit close together in a user interface, but they can have different redemption terms, reserve arrangements and protections.</p>
+
+        <h3>Why it matters</h3>
+        <p>The launch is a practical test of institutional distribution for tokenized money. A bank licence and a familiar consumer app can lower onboarding friction, but adoption will depend on merchants, user experience, redemption reliability and the economic reason to hold or spend the token.</p>
+        <p>For users and treasury teams, a stablecoin should still be assessed as a distinct product. The key questions are the reserve assets, redemption mechanism, custody arrangement, applicable regulatory protection and what happens during operational stress.</p>
+
+        <h3>What to watch</h3>
+        <ul class="watch-list">
+          <li>Independent reserve attestations and the information disclosed about backing and redemption.</li>
+          <li>Whether merchant acceptance and transaction volume grow beyond the initial wallet rollout.</li>
+          <li>How Hong Kong&#x27;s licensing framework influences bank-led stablecoin launches in other financial centres.</li>
+        </ul>
+      </article>
+
+      <section class="terms">
+        <h2>Professional terms</h2>
+        <p class="term-note">Important business, policy, AI and crypto terms. Abbreviations should include the full form.</p>
+        <ul class="vocab">
+        <li><span class="term">model routing</span> - 模型路由</li>
+        <li><span class="term">inference cost</span> - 推理成本</li>
+        <li><span class="term">data governance</span> - 数据治理</li>
+        <li><span class="term">access control</span> - 访问控制</li>
+        <li><span class="term">spend commitment</span> - 云服务消费承诺</li>
+        <li><span class="term">vendor due diligence</span> - 供应商尽职调查</li>
+        <li><span class="term">multi-agent system</span> - 多智能体系统</li>
+        <li><span class="term">hypothesis generation</span> - 假设生成</li>
+        <li><span class="term">provenance</span> - 可追溯来源</li>
+        <li><span class="term">validation study</span> - 验证研究</li>
+        <li><span class="term">coordinated disclosure</span> - 协调披露</li>
+        <li><span class="term">security advisory</span> - 安全公告</li>
+        <li><span class="term">patch management</span> - 补丁管理</li>
+        <li><span class="term">attack surface</span> - 攻击面</li>
+        <li><span class="term">stablecoin issuer</span> - 稳定币发行方</li>
+        <li><span class="term">reserve assets</span> - 储备资产</li>
+        <li><span class="term">redemption mechanism</span> - 赎回机制</li>
+        <li><span class="term">custody risk</span> - 托管风险</li>
+        <li><span class="term">tokenized assets</span> - 代币化资产</li>
+        </ul>
+      </section>
+
+      <section class="takeaway">
+        <h3>Today's big picture</h3>
+        <p>The common thread is operationalization. AI is moving into the places where distribution, auditability and response time matter as much as model capability, while crypto products are being judged on the practical safeguards around issuance, custody and redemption.</p>
+        <p>The useful reader habit is to trace the full operating stack. Ask who controls the data and billing for an AI workflow, or who holds reserves and provides redemption for a stablecoin. The answer usually explains more than the headline feature does.</p>
+      </section>
+
+      <footer class="footer">
+        <p>Daily AI, Crypto &amp; Tech Power News Study Briefing &middot; <a href="archive.html">Browse the archive</a></p>
+      </footer>
+    </main>
+  </body>
+</html>
