@@ -1690,5 +1690,17 @@
     "url": "https://www.theverge.com/ai-artificial-intelligence/1018994/anthropic-ipo-ai-data-center-energy-climate-risk",
     "published_at": "2026-10-26T21:45:31+00:00",
     "sent_at": "2026-10-26T23:00:42.369245+00:00"
+  },
+  {
+    "key": "b90659780b414dea9901",
+    "headline": "Trump DOE loans $5B to nuclear plants that will power data centers",
+    "story": "Constellation Energy will get $5 billion in government loans to modernize nuclear reactors. Most of the new capacity is already committed to Google, Amazon, and Meta.",
+    "keywords": "AI (artificial intelligence)",
+    "category": "AI",
+    "importance_score": "9",
+    "publication": "TechCrunch",
+    "url": "https://techcrunch.com/2026/10/28/trump-doe-loans-5b-to-nuclear-plants-that-will-power-data-centers/",
+    "published_at": "2026-10-28T15:53:21+00:00",
+    "sent_at": "2026-10-28T16:11:35.304511+00:00"
   }
 ]
