@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Microsoft and OpenAI&#x27;s commercial ties, Google monetizing AI Search, Anthropic&#x27;s enterprise ROI tools, and Bitcoin after the Fed hold." />
+    <title>October 29, 2026 | Daily AI, Crypto &amp; Tech Power Briefing</title>
+    <style>
+
+      :root {
+        color-scheme: light;
+        --bg: #f6f4ef;
+        --ink: #17202a;
+        --muted: #667085;
+        --line: #ded8cc;
+        --blue: #164a7c;
+        --green: #24765d;
+        --soft-blue: #eaf3fb;
+        --soft-green: #edf7f2;
+        --soft-gold: #fff7e3;
+        --shadow: 0 16px 45px rgba(38, 52, 65, 0.08);
+      }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0;
+        background: linear-gradient(180deg, rgba(255, 253, 248, 0.9), rgba(246, 244, 239, 0.92)), var(--bg);
+        color: var(--ink);
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+        font-size: 17px;
+        line-height: 1.62;
+      }
+      a { color: var(--blue); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+      .page { width: min(100%, 860px); margin: 0 auto; padding: 18px 16px 44px; }
+      .site-nav {
+        display: flex; align-items: center; justify-content: space-between; gap: 12px;
+        padding: 6px 0 14px; color: var(--muted); font-size: 0.88rem; font-weight: 750;
+      }
+      .site-nav a { color: var(--muted); text-decoration: none; }
+      .site-nav-links { display: flex; gap: 12px; white-space: nowrap; }
+      .masthead { padding: 28px 0 18px; border-bottom: 1px solid var(--line); }
+      .kicker { margin: 0 0 12px; color: var(--muted); font-size: 0.82rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+      h1 { margin: 0 0 8px; color: var(--blue); font-family: Georgia, "Times New Roman", serif; font-size: clamp(2.05rem, 9vw, 4.5rem); line-height: 0.98; letter-spacing: 0; }
+      .headline { margin: 14px 0 0; font-size: clamp(1.24rem, 4.8vw, 2.1rem); line-height: 1.15; font-weight: 800; color: #151d27; }
+      .meta-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+      .pill { display: inline-flex; align-items: center; min-height: 34px; padding: 6px 11px; border: 1px solid var(--line); border-radius: 999px; background: rgba(255,255,255,0.72); color: #3f4a57; font-size: 0.86rem; font-weight: 700; text-decoration: none; }
+      .overview { margin: 22px 0 18px; padding: 17px 17px 15px; border: 1px solid #cfe0ed; border-radius: 14px; background: var(--soft-blue); box-shadow: var(--shadow); }
+      .overview p, .takeaway p { margin: 0 0 12px; }
+      .overview p:last-child, .takeaway p:last-child { margin-bottom: 0; }
+      .toc { margin: 22px 0 22px; padding: 0; list-style: none; border-top: 1px solid var(--line); }
+      .toc li { border-bottom: 1px solid var(--line); }
+      .toc a { display: block; padding: 12px 0; color: var(--ink); font-size: 1rem; font-weight: 750; text-decoration: none; }
+      article { margin: 28px 0 0; padding: 0 0 26px; border-bottom: 1px solid var(--line); }
+      h2 { margin: 0 0 14px; color: var(--blue); font-size: clamp(1.55rem, 6vw, 2.4rem); line-height: 1.12; letter-spacing: 0; }
+      h3 { margin: 23px 0 7px; color: var(--green); font-size: 0.94rem; line-height: 1.28; letter-spacing: 0; text-transform: none; }
+      p { margin: 0 0 13px; }
+      .reference { margin: 0 0 18px; padding: 13px 14px; border: 1px solid var(--line); border-radius: 12px; background: rgba(255,255,255,0.76); font-size: 0.94rem; line-height: 1.46; overflow-wrap: anywhere; }
+      .reference div + div { margin-top: 4px; }
+      .label { font-weight: 800; }
+      .spoken, .discussion, .takeaway { border-radius: 14px; padding: 15px 16px; }
+      .spoken { background: var(--soft-gold); border: 1px solid #ead9ad; font-style: italic; }
+      .discussion { background: var(--soft-blue); border: 1px solid #cfe0ed; font-weight: 780; font-style: italic; }
+      .vocab { display: grid; grid-template-columns: 1fr; gap: 8px; margin: 0; padding: 0; list-style: none; }
+      .vocab li { padding: 9px 10px; border: 1px solid rgba(222,216,204,0.85); border-radius: 10px; background: rgba(255,255,255,0.62); font-size: 0.96rem; line-height: 1.35; }
+      .term { font-weight: 800; }
+      .takeaway { margin: 32px 0 0; background: var(--soft-green); border: 1px solid #c8e2d6; }
+      .footer { margin-top: 28px; color: var(--muted); font-size: 0.88rem; text-align: center; }
+      .footer a { color: var(--muted); }
+      @media (min-width: 720px) {
+        body { font-size: 18px; }
+        .page { padding: 30px 32px 58px; }
+        .masthead { padding-top: 42px; }
+        .overview, .reference, .spoken, .discussion, .takeaway { border-radius: 16px; }
+        .vocab { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      }
+      @media print {
+        body { background: #fff; font-size: 11pt; }
+        .page { width: 100%; padding: 0; }
+        .overview, .reference, .spoken, .discussion, .takeaway, .vocab li { box-shadow: none; break-inside: avoid; }
+        article { break-inside: avoid; }
+        a { color: #000; }
+      }
+
+
+      .masthead { padding-top: 24px; }
+      .sections { margin: 24px 0 6px; }
+      .sections-label { margin: 0 0 10px; color: var(--muted); font-size: 0.78rem; font-weight: 850; letter-spacing: 0.08em; text-transform: uppercase; }
+      .section-grid { display: grid; grid-template-columns: 1fr; gap: 10px; }
+      .section-card { display: block; min-height: 122px; padding: 16px; border: 1px solid var(--line); border-radius: 14px; background: rgba(255,255,255,0.78); color: var(--ink); text-decoration: none; }
+      .section-card.current { border-color: #cfe0ed; background: var(--soft-blue); }
+      .section-card.breaking { border-color: #ead9ad; background: var(--soft-gold); }
+      .section-card.archive { border-color: #c8e2d6; background: var(--soft-green); }
+      .section-card strong { display: block; margin-bottom: 5px; color: var(--blue); font-size: 1.05rem; }
+      .section-card span { display: block; color: #485463; font-size: 0.91rem; line-height: 1.42; }
+      .reading-note { color: var(--muted); font-size: 0.9rem; }
+      .overview { box-shadow: none; }
+      .story-number { margin: 0 0 7px; color: var(--green); font-size: 0.78rem; font-weight: 850; text-transform: uppercase; }
+      .source-line { margin: 0 0 3px; color: var(--muted); font-size: 0.88rem; font-weight: 750; }
+      .source-title { margin: 0 0 17px; color: #46515e; font-size: 0.88rem; line-height: 1.42; }
+      .source-title a { color: #46515e; }
+      .watch-list { margin: 7px 0 0; padding-left: 1.2rem; }
+      .watch-list li { margin: 0 0 7px; padding-left: 2px; }
+      .terms { margin-top: 30px; padding-top: 1px; }
+      .terms h2 { font-size: 1.45rem; }
+      .term-note { margin-top: -5px; color: var(--muted); font-size: 0.92rem; }
+      @media (max-width: 430px) {
+        body { font-size: 16.5px; line-height: 1.58; }
+        .page { padding-left: 15px; padding-right: 15px; }
+        h1 { font-size: 2.15rem; }
+        .headline { font-size: 1.35rem; }
+        h2 { font-size: 1.55rem; }
+        .overview { padding: 15px; }
+      }
+      @media (min-width: 720px) { .section-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="./">AI, Crypto &amp; Tech Power Briefing</a>
+        <div class="site-nav-links">
+          <a href="./">Latest</a>
+          <a href="archive.html">Archive</a>
+        </div>
+      </nav>
+
+      <header class="masthead">
+        <p class="kicker">AI · Crypto · Tech Power · Policy · Business</p>
+        <h1>October 29, 2026</h1>
+        <p class="headline">AI Moves From Access to Accountability While Crypto Reprices After the Fed Hold</p>
+        <div class="meta-row">
+          <a class="pill" href="pdf/daily_ai_blockchain_briefing_2026-10-29.pdf">PDF</a>
+        </div>
+      </header>
+
+      <section class="sections" aria-label="Sections">
+        <p class="sections-label">Explore sections</p>
+        <div class="section-grid">
+          <a class="section-card current" href="./"><strong>Daily Briefing</strong><span>Today's reader-first AI, crypto and technology stories.</span></a>
+          <a class="section-card breaking" href="breaking-news.html"><strong>Breaking News</strong><span>Major AI, crypto, conflict and US / UK policy updates.</span></a>
+          <a class="section-card archive" href="archive.html"><strong>News Archive</strong><span>Browse previous briefings and PDFs by date.</span></a>
+        </div>
+      </section>
+
+      <section class="overview" aria-label="Executive overview">
+        <h3>Executive overview</h3>
+        <p>The AI story is becoming more commercial and measurable. Microsoft disclosed the scale of its revenue relationship with OpenAI, Google is taking AI Search advertising international, and Anthropic is adding tools meant to show enterprise buyers whether token spending produces useful work.</p>
+        <p>In markets, the Federal Reserve held rates steady but retained its inflation warning. Bitcoin returned toward $81,000, illustrating that digital-asset liquidity still responds quickly to the dollar, yields and broad risk appetite.</p>
+      </section>
+
+      <ol class="toc" aria-label="Today's stories">
+        <li><a href="#microsoft-openai-commercial-revenue">1. Microsoft&#x27;s OpenAI revenue disclosure makes the AI partnership&#x27;s cash flows harder to ignore</a></li>
+        <li><a href="#google-ai-search-monetization">2. Google is taking AI Search advertising global, turning product usage into a monetization test</a></li>
+        <li><a href="#anthropic-enterprise-ai-roi">3. Anthropic is selling visibility into AI work, not just model access</a></li>
+        <li><a href="#bitcoin-fed-hold-liquidity">4. Bitcoin&#x27;s move after the Fed hold keeps macro liquidity at the center of the crypto story</a></li>
+      </ol>
+
+      <article id="microsoft-openai-commercial-revenue">
+        <p class="story-number">Story 1</p>
+        <h2>Microsoft&#x27;s OpenAI revenue disclosure makes the AI partnership&#x27;s cash flows harder to ignore</h2>
+        <p class="source-line">TechCrunch &middot; October 28, 2026 &middot; <a href="https://techcrunch.com/2026/10/28/microsoft-recorded-10-billion-in-revenue-from-openai/" target="_blank" rel="noopener">Read source</a></p>
+        <p class="source-title"><em>Microsoft recorded $10 billion in revenue from OpenAI</em></p>
+
+        <h3>The story</h3>
+        <p>Microsoft said a regulatory filing showed $10 billion of quarterly revenue from commercial arrangements with OpenAI, including revenue-sharing payments. TechCrunch reported that the figure was nearly 11% of Microsoft&#x27;s $92.3 billion quarterly revenue, while receivables from OpenAI rose to $7.2 billion.</p>
+        <p>The companies are both partners and increasingly competitors. That makes the distinction between recognized revenue, outstanding receivables, cloud consumption and revenue sharing important. A large headline number can signal real demand, but it can also reflect concentrated counterparty exposure and long-term contractual commitments.</p>
+
+        <h3>Why it matters</h3>
+        <p>AI infrastructure is shifting from a generic capital-expenditure narrative to identifiable commercial relationships. Investors and operators can now ask whether cloud demand is diversified, cash-generative and durable rather than assuming every large model customer creates the same quality of revenue.</p>
+        <p>For enterprise buyers, the relationship reinforces the value of portability. Contracts, data controls and model-routing options matter when a provider can be both a strategic supplier and a direct competitor to the AI vendor powering a workflow.</p>
+
+        <h3>What to watch</h3>
+        <ul class="watch-list">
+          <li>Whether Microsoft breaks out more detail on the mix of Azure consumption and revenue sharing.</li>
+          <li>OpenAI&#x27;s collection period and whether receivables grow faster than recognized revenue.</li>
+          <li>New cloud partnerships that reduce concentration while preserving interoperability.</li>
+        </ul>
+      </article>
+      <article id="google-ai-search-monetization">
+        <p class="story-number">Story 2</p>
+        <h2>Google is taking AI Search advertising global, turning product usage into a monetization test</h2>
+        <p class="source-line">TechCrunch &middot; October 28, 2026 &middot; <a href="https://techcrunch.com/2026/10/28/google-expands-ai-search-ads-globally-as-core-ad-growth-slows/" target="_blank" rel="noopener">Read source</a></p>
+        <p class="source-title"><em>Google expands AI Search ads globally as core ad growth slows</em></p>
+
+        <h3>The story</h3>
+        <p>Google said it will expand advertising in AI Mode to international markets, along with multi-turn ads in the United States. The move followed Alphabet&#x27;s reported third-quarter results, where Search advertising growth slowed even as Google Cloud revenue accelerated sharply.</p>
+        <p>AI answers change the surface where commercial intent appears. Longer, multimodal queries may create new inventory, but they also require Google to prove that ads remain relevant, measurable and attractive to advertisers without weakening trust in the generated answer.</p>
+
+        <h3>Why it matters</h3>
+        <p>This is a business-model question as much as a model question. Search has funded much of the consumer internet; its AI transition will be judged by conversion, advertiser return on investment and the economics of serving more computationally expensive answers.</p>
+        <p>Publishers and retailers should follow the distribution effect. If AI interfaces retain more of the user journey, referral traffic, product discovery and customer-acquisition costs can change even when search demand itself grows.</p>
+
+        <h3>What to watch</h3>
+        <ul class="watch-list">
+          <li>Click-through, conversion and advertiser-retention data as AI Mode ads expand.</li>
+          <li>Whether inference cost per query falls quickly enough to support profitable AI Search scale.</li>
+          <li>Changes in referral traffic and paid-search spending by content publishers and merchants.</li>
+        </ul>
+      </article>
+      <article id="anthropic-enterprise-ai-roi">
+        <p class="story-number">Story 3</p>
+        <h2>Anthropic is selling visibility into AI work, not just model access</h2>
+        <p class="source-line">TechCrunch &middot; October 28, 2026 &middot; <a href="https://techcrunch.com/2026/10/28/anthropic-just-launched-tools-to-show-companies-what-their-ai-spending-is-buying/" target="_blank" rel="noopener">Read source</a></p>
+        <p class="source-title"><em>Anthropic just launched tools to show companies what their AI spending is buying</em></p>
+
+        <h3>The story</h3>
+        <p>Anthropic introduced reporting tools designed to show managers a team&#x27;s AI-assisted output, token spending, workflow failures and suggested improvements over a selected period. It also announced pooled group budgets, addressing the practical problem of containing usage as more employees adopt agentic tools.</p>
+        <p>The product signal is clear: enterprise AI must connect usage to operational value. Model quality still matters, but finance and engineering leaders also need cost allocation, auditability and a way to see when an agent is adding rework rather than removing it.</p>
+
+        <h3>Why it matters</h3>
+        <p>Token spending is becoming an operating expense that teams have to govern. Usage analytics can make inference cost visible by workflow, helping organizations decide which tasks deserve a frontier model and which can use a smaller or less frequent model call.</p>
+        <p>The data can also create switching costs. Once an organization standardizes workflows, evaluations and reporting around one supplier, a model change requires more than comparing benchmark scores; it requires migrating process knowledge and governance.</p>
+
+        <h3>What to watch</h3>
+        <ul class="watch-list">
+          <li>Whether reporting shows measurable quality and cycle-time gains, not simply more prompts.</li>
+          <li>How customers set budget guardrails and approval paths for autonomous actions.</li>
+          <li>The degree to which analytics data stays isolated from model training and can be exported.</li>
+        </ul>
+      </article>
+      <article id="bitcoin-fed-hold-liquidity">
+        <p class="story-number">Story 4</p>
+        <h2>Bitcoin&#x27;s move after the Fed hold keeps macro liquidity at the center of the crypto story</h2>
+        <p class="source-line">CoinDesk &middot; October 28, 2026 &middot; <a href="https://www.coindesk.com/business/2026/10/28/live-updates-bitcoin-climbs-above-usd81-000-as-majors-rally-ahead-of-fed-decision?post-id=3521f8a2f6b5%5C" target="_blank" rel="noopener">Read source</a></p>
+        <p class="source-title"><em>Live updates: Bitcoin trading just above $80,000 as Fed delivers hold on rates</em></p>
+
+        <h3>The story</h3>
+        <p>The Federal Reserve left its policy range at 3.75% to 4.0% in a 10-2 vote and said inflation remained elevated. CoinDesk reported that Bitcoin rose toward $81,000 after the decision, while Treasury yields also moved as markets assessed the statement and future policy risk.</p>
+        <p>A widely expected hold does not remove market risk. The next repricing comes from inflation data, growth releases and expectations for later meetings. For crypto, those inputs affect leverage, the dollar and the willingness of investors to hold volatile assets alongside technology equities.</p>
+
+        <h3>Why it matters</h3>
+        <p>Crypto&#x27;s response is a reminder to separate protocol news from financial-conditions news. A price move after a central-bank decision may reveal more about liquidity and risk appetite than it does about Bitcoin&#x27;s own network fundamentals.</p>
+        <p>For institutions, the relevant dashboard includes derivatives positioning, stablecoin flows, spot-market depth and custody balances. Those measures help distinguish a broad accumulation of risk from a short-lived move amplified by thin liquidity.</p>
+
+        <h3>What to watch</h3>
+        <ul class="watch-list">
+          <li>PCE inflation, GDP data and European Central Bank guidance later this week.</li>
+          <li>Changes in Bitcoin derivatives open interest and funding rates after the policy statement.</li>
+          <li>Whether spot liquidity and stablecoin redemptions confirm or contradict the price recovery.</li>
+        </ul>
+      </article>
+
+      <section class="terms">
+        <h2>Professional terms</h2>
+        <p class="term-note">Important business, policy, AI and crypto terms. Abbreviations should include the full form.</p>
+        <ul class="vocab">
+        <li><span class="term">recognized revenue</span> - 已确认收入</li>
+        <li><span class="term">accounts receivable</span> - 应收账款</li>
+        <li><span class="term">counterparty exposure</span> - 交易对手风险敞口</li>
+        <li><span class="term">commercial concentration</span> - 商业集中度</li>
+        <li><span class="term">model routing</span> - 模型路由</li>
+        <li><span class="term">interoperability</span> - 互操作性</li>
+        <li><span class="term">customer acquisition cost</span> - 客户获取成本</li>
+        <li><span class="term">conversion rate</span> - 转化率</li>
+        <li><span class="term">inference cost</span> - 推理成本</li>
+        <li><span class="term">token spend</span> - 令牌支出</li>
+        <li><span class="term">cost allocation</span> - 成本分摊</li>
+        <li><span class="term">switching cost</span> - 转换成本</li>
+        <li><span class="term">auditability</span> - 可审计性</li>
+        <li><span class="term">policy rate</span> - 政策利率</li>
+        <li><span class="term">financial conditions</span> - 金融条件</li>
+        <li><span class="term">open interest</span> - 未平仓合约</li>
+        <li><span class="term">funding rate</span> - 资金费率</li>
+        <li><span class="term">market depth</span> - 市场深度</li>
+        </ul>
+      </section>
+
+      <section class="takeaway">
+        <h3>Today's big picture</h3>
+        <p>The common thread is accountability. AI providers are being pushed to show where revenue comes from, how a new interface monetizes and whether enterprise usage produces useful output. The technology may be new, but the business questions are familiar: cash flow, unit economics, controls and customer retention.</p>
+        <p>For crypto, the same discipline applies. A policy hold can move prices, but the lasting signal is in liquidity and positioning. Watch the underlying exposure, not only the immediate price candle.</p>
+      </section>
+
+      <footer class="footer">
+        <p>Daily AI, Crypto &amp; Tech Power News Study Briefing &middot; <a href="archive.html">Browse the archive</a></p>
+      </footer>
+    </main>
+  </body>
+</html>
