@@ -1726,5 +1726,17 @@
     "url": "https://www.coindesk.com/markets/2026/10/30/coindcx-halts-new-crypto-futures-bets-as-binance-incident-disrupts-liquidity",
     "published_at": "2026-10-30T05:43:07+00:00",
     "sent_at": "2026-10-30T06:10:20.233208+00:00"
+  },
+  {
+    "key": "a2250cf0dc98de398d6c",
+    "headline": "Binance arranges $6.34 billion to cover losses from record crypto hack",
+    "story": "Binance said it reserved its own funds to cover the $6.3 billion hack, including freezes of roughly $3 billion in stolen assets.",
+    "keywords": "crypto regulation",
+    "category": "Crypto",
+    "importance_score": "9",
+    "publication": "CoinDesk",
+    "url": "https://www.coindesk.com/business/2026/10/30/binance-arranges-usd6-34-billion-to-cover-losses-from-record-crypto-hack",
+    "published_at": "2026-10-30T12:13:02+00:00",
+    "sent_at": "2026-10-30T13:17:16.967931+00:00"
   }
 ]
