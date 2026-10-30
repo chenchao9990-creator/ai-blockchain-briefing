@@ -1714,5 +1714,17 @@
     "url": "https://www.theverge.com/tech/1020785/microsoft-earnings-revenue-q1-2027",
     "published_at": "2026-10-28T20:20:00+00:00",
     "sent_at": "2026-10-28T21:13:23.505820+00:00"
+  },
+  {
+    "key": "617b7ee17d5cb9b46dd8",
+    "headline": "Binance hack bites India's largest crypto exchange as it curbs futures trading",
+    "story": "CoinDCX has restricted new futures positions after Binance’s security incident disrupted a key liquidity provider. Deposits, withdrawals and customer funds remain unaffected, the exchange said.",
+    "keywords": "crypto regulation",
+    "category": "Crypto",
+    "importance_score": "9",
+    "publication": "CoinDesk",
+    "url": "https://www.coindesk.com/markets/2026/10/30/coindcx-halts-new-crypto-futures-bets-as-binance-incident-disrupts-liquidity",
+    "published_at": "2026-10-30T05:43:07+00:00",
+    "sent_at": "2026-10-30T06:10:20.233208+00:00"
   }
 ]
