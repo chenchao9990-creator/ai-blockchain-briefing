@@ -1738,5 +1738,17 @@
     "url": "https://www.coindesk.com/business/2026/10/30/binance-arranges-usd6-34-billion-to-cover-losses-from-record-crypto-hack",
     "published_at": "2026-10-30T12:13:02+00:00",
     "sent_at": "2026-10-30T13:17:16.967931+00:00"
+  },
+  {
+    "key": "235bb524b25e51667400",
+    "headline": "Google’s first data center satellite is online and writing poetry",
+    "story": "The first TPU in space is running a Google DeepMind Gemma 4 model and writing cheesy poetry.",
+    "keywords": "AI (artificial intelligence) | data center capacity",
+    "category": "AI",
+    "importance_score": "9",
+    "publication": "TechCrunch",
+    "url": "https://techcrunch.com/2026/10/30/googles-first-data-center-satellite-is-online-and-writing-poetry/",
+    "published_at": "2026-10-30T17:00:00+00:00",
+    "sent_at": "2026-10-30T18:42:11.541760+00:00"
   }
 ]
