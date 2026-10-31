@@ -1762,5 +1762,17 @@
     "url": "https://techcrunch.com/2026/10/30/anthropic-expected-to-receive-high-junk-rating-from-credit-agencies-following-ipo-report-says/",
     "published_at": "2026-10-30T21:52:03+00:00",
     "sent_at": "2026-10-30T22:45:22.893028+00:00"
+  },
+  {
+    "key": "420fd151ca6ffeb42af8",
+    "headline": "Nvidia weighs playing the cosigner for Nscale’s AI data center in West Virginia",
+    "story": "When investors get nervous about AI spending, it helps to have the chipmaker that sells the chips offer to cosign the loan.",
+    "keywords": "GPU (graphics processing unit) | semiconductor supply chain | data center capacity",
+    "category": "AI",
+    "importance_score": "9",
+    "publication": "TechCrunch",
+    "url": "https://techcrunch.com/2026/10/30/nvidia-weighs-playing-the-cosigner-for-nscales-ai-data-center-in-west-virginia/",
+    "published_at": "2026-10-31T01:20:05+00:00",
+    "sent_at": "2026-10-31T01:58:16.027879+00:00"
   }
 ]
