@@ -1798,5 +1798,17 @@
     "url": "https://www.theverge.com/tech/1024091/binance-ceo-90-percent-stolen-crypto",
     "published_at": "2026-10-31T18:40:32+00:00",
     "sent_at": "2026-10-31T19:03:27.303876+00:00"
+  },
+  {
+    "key": "e521e8be4198719165ca",
+    "headline": "North Korea linked to massive Binance crypto heist",
+    "story": "The FBI says North Korea was behind the massive $6.3 billion crypto heist that hit Binance on October 29th. The FBI labeled the activity \"TraderTraitor\" and said that it had observed actors it has connected to hack converting the tokens to Ethereum and preparing for further laundering of the funds. The agency offered few other […]",
+    "keywords": "crypto regulation",
+    "category": "Crypto",
+    "importance_score": "9",
+    "publication": "The Verge",
+    "url": "https://www.theverge.com/tech/1024176/north-korea-binance-crypto-heist",
+    "published_at": "2026-11-01T14:33:11+00:00",
+    "sent_at": "2026-11-01T15:43:03.647619+00:00"
   }
 ]
