@@ -1822,5 +1822,17 @@
     "url": "https://www.coindesk.com/policy/2026/11/01/the-crypto-reader-s-guide-to-the-2026-midterm-election-state-of-crypto",
     "published_at": "2026-11-01T19:30:00+00:00",
     "sent_at": "2026-11-01T20:07:30.086942+00:00"
+  },
+  {
+    "key": "33872bdc3f6c9c126765",
+    "headline": "Bitcoin eases to $77,900 as Binance customers pull $3.6 billion after withdrawals reopen",
+    "story": "Bitcoin fell 0.4% to around $77,900 since midnight UTC as Binance customers pulled a net $3.64 billion after withdrawals reopened and ETFs lost $643 million.",
+    "keywords": "crypto regulation",
+    "category": "Crypto",
+    "importance_score": "9",
+    "publication": "CoinDesk",
+    "url": "https://www.coindesk.com/markets/2026/11/02/bitcoin-eases-to-usd77-900-as-binance-customers-pull-usd3-6-billion-after-withdrawals-reopen",
+    "published_at": "2026-11-02T11:30:00+00:00",
+    "sent_at": "2026-11-02T12:44:06.503369+00:00"
   }
 ]
