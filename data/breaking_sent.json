@@ -1834,5 +1834,17 @@
     "url": "https://www.coindesk.com/markets/2026/11/02/bitcoin-eases-to-usd77-900-as-binance-customers-pull-usd3-6-billion-after-withdrawals-reopen",
     "published_at": "2026-11-02T11:30:00+00:00",
     "sent_at": "2026-11-02T12:44:06.503369+00:00"
+  },
+  {
+    "key": "8c318df44cdd33329f01",
+    "headline": "The Xbox Nano has a hidden cloud secret",
+    "story": "Microsoft is about to launch its new Xbox Nano controller tomorrow, and the tiny device has a little secret. The Nano can connect directly to Xbox Cloud Gaming over Wi-Fi to improve latency. It's a feature Microsoft hasn't officially announced yet, but one I've been anticipating since the Xbox Nano leaked earlier this year. The […]",
+    "keywords": "AI (artificial intelligence)",
+    "category": "AI",
+    "importance_score": "9",
+    "publication": "The Verge",
+    "url": "https://www.theverge.com/games/1025430/xbox-nano-controller-direct-cloud-wifi-connectivity",
+    "published_at": "2026-11-03T17:16:04+00:00",
+    "sent_at": "2026-11-03T18:59:26.801355+00:00"
   }
 ]
