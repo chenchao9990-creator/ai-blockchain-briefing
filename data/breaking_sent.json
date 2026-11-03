@@ -1846,5 +1846,17 @@
     "url": "https://www.theverge.com/games/1025430/xbox-nano-controller-direct-cloud-wifi-connectivity",
     "published_at": "2026-11-03T17:16:04+00:00",
     "sent_at": "2026-11-03T18:59:26.801355+00:00"
+  },
+  {
+    "key": "e7a1033d90db68004bc4",
+    "headline": "Binance says hackers used fake job interviews and an internal AI tool to pull off the $6.3 billion heist",
+    "story": "The largest crypto theft to date was pulled off by combining some well-known hacking techniques over the course of a few months, according to Binance. A postmortem from the company says the process started in June with one developer downloading a tampered installer apparently spread by a malicious Google ad, exposing details about the engineers […]",
+    "keywords": "crypto regulation",
+    "category": "Crypto",
+    "importance_score": "9",
+    "publication": "The Verge",
+    "url": "https://www.theverge.com/news/1025576/binance-cyrpto-theft-explained",
+    "published_at": "2026-11-03T22:04:02+00:00",
+    "sent_at": "2026-11-03T23:55:51.623777+00:00"
   }
 ]
