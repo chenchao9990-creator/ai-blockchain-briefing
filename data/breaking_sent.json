@@ -1858,5 +1858,17 @@
     "url": "https://www.theverge.com/news/1025576/binance-cyrpto-theft-explained",
     "published_at": "2026-11-03T22:04:02+00:00",
     "sent_at": "2026-11-03T23:55:51.623777+00:00"
+  },
+  {
+    "key": "8f1efed04af428e1f4d0",
+    "headline": "Tokenization and stablecoins may weather Democrats' sweep as broader crypto rules face uncertainty",
+    "story": "Wall Street's push to bring finance onto blockchain rails may continue under existing laws, though the SEC and CFTC face tougher oversight and questions over how long their rules will last, experts said.",
+    "keywords": "stablecoin | crypto regulation | tokenisation",
+    "category": "Crypto",
+    "importance_score": "9",
+    "publication": "CoinDesk",
+    "url": "https://www.coindesk.com/policy/2026/11/04/tokenization-and-stablecoins-may-weather-democrats-sweep-as-broader-crypto-rules-face-uncertainty",
+    "published_at": "2026-11-04T22:55:00+00:00",
+    "sent_at": "2026-11-05T00:58:15.186491+00:00"
   }
 ]
