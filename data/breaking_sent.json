@@ -1870,5 +1870,17 @@
     "url": "https://www.coindesk.com/policy/2026/11/04/tokenization-and-stablecoins-may-weather-democrats-sweep-as-broader-crypto-rules-face-uncertainty",
     "published_at": "2026-11-04T22:55:00+00:00",
     "sent_at": "2026-11-05T00:58:15.186491+00:00"
+  },
+  {
+    "key": "ad929875c5a71925cbce",
+    "headline": "OpenAI is stepping back from NDAs for data center projects",
+    "story": "Following this week's midterms where voters resoundingly voiced their opposition to data center expansion, OpenAI today announced new commitments to communities where it is working on data center projects, including that it won't use non-disclosure agreements (NDAs) with public officials. Many data center projects have come under scrutiny for relying on NDAs to hide discussions […]",
+    "keywords": "AI (artificial intelligence) | data center capacity",
+    "category": "AI",
+    "importance_score": "9",
+    "publication": "The Verge",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/1028454/openai-data-center-nda",
+    "published_at": "2026-11-06T00:37:56+00:00",
+    "sent_at": "2026-11-06T02:41:38.984749+00:00"
   }
 ]
