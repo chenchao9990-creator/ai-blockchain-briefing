@@ -1906,5 +1906,17 @@
     "url": "https://www.coindesk.com/markets/2026/11/09/spacex-proposes-a-usd24-billion-texas-supercomputer-worth-17-times-its-bitcoin-pile",
     "published_at": "2026-11-09T06:54:41+00:00",
     "sent_at": "2026-11-09T08:22:26.294009+00:00"
+  },
+  {
+    "key": "2f05eab281f5e9f67b4e",
+    "headline": "Anthropic joins AI’s natural gas frenzy, buys $3.4B worth of turbines",
+    "story": "Anthropic bought billions of dollars worth of natural gas turbines in a deal that could give it buyer's remorse.",
+    "keywords": "AI (artificial intelligence)",
+    "category": "AI",
+    "importance_score": "9",
+    "publication": "TechCrunch",
+    "url": "https://techcrunch.com/2026/11/09/anthropic-joins-ais-natural-gas-frenzy-buys-3-4b-worth-of-turbines/",
+    "published_at": "2026-11-09T16:56:54+00:00",
+    "sent_at": "2026-11-09T18:59:17.600634+00:00"
   }
 ]
