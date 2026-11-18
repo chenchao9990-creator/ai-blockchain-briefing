@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Enterprise AI moves toward managed agent workflows and model-output controls, while tokenized payments and crypto security put settlement design and custody risk in focus." />
+    <title>November 18, 2026 | Daily AI, Crypto &amp; Tech Power Briefing</title>
+    <style>
+
+      :root {
+        color-scheme: light;
+        --bg: #f6f4ef;
+        --ink: #17202a;
+        --muted: #667085;
+        --line: #ded8cc;
+        --blue: #164a7c;
+        --green: #24765d;
+        --soft-blue: #eaf3fb;
+        --soft-green: #edf7f2;
+        --soft-gold: #fff7e3;
+        --shadow: 0 16px 45px rgba(38, 52, 65, 0.08);
+      }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0;
+        background: linear-gradient(180deg, rgba(255, 253, 248, 0.9), rgba(246, 244, 239, 0.92)), var(--bg);
+        color: var(--ink);
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+        font-size: 17px;
+        line-height: 1.62;
+      }
+      a { color: var(--blue); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+      .page { width: min(100%, 860px); margin: 0 auto; padding: 18px 16px 44px; }
+      .site-nav {
+        display: flex; align-items: center; justify-content: space-between; gap: 12px;
+        padding: 6px 0 14px; color: var(--muted); font-size: 0.88rem; font-weight: 750;
+      }
+      .site-nav a { color: var(--muted); text-decoration: none; }
+      .site-nav-links { display: flex; gap: 12px; white-space: nowrap; }
+      .masthead { padding: 28px 0 18px; border-bottom: 1px solid var(--line); }
+      .kicker { margin: 0 0 12px; color: var(--muted); font-size: 0.82rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+      h1 { margin: 0 0 8px; color: var(--blue); font-family: Georgia, "Times New Roman", serif; font-size: clamp(2.05rem, 9vw, 4.5rem); line-height: 0.98; letter-spacing: 0; }
+      .headline { margin: 14px 0 0; font-size: clamp(1.24rem, 4.8vw, 2.1rem); line-height: 1.15; font-weight: 800; color: #151d27; }
+      .meta-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+      .pill { display: inline-flex; align-items: center; min-height: 34px; padding: 6px 11px; border: 1px solid var(--line); border-radius: 999px; background: rgba(255,255,255,0.72); color: #3f4a57; font-size: 0.86rem; font-weight: 700; text-decoration: none; }
+      .overview { margin: 22px 0 18px; padding: 17px 17px 15px; border: 1px solid #cfe0ed; border-radius: 14px; background: var(--soft-blue); box-shadow: var(--shadow); }
+      .overview p, .takeaway p { margin: 0 0 12px; }
+      .overview p:last-child, .takeaway p:last-child { margin-bottom: 0; }
+      .toc { margin: 22px 0 22px; padding: 0; list-style: none; border-top: 1px solid var(--line); }
+      .toc li { border-bottom: 1px solid var(--line); }
+      .toc a { display: block; padding: 12px 0; color: var(--ink); font-size: 1rem; font-weight: 750; text-decoration: none; }
+      article { margin: 28px 0 0; padding: 0 0 26px; border-bottom: 1px solid var(--line); }
+      h2 { margin: 0 0 14px; color: var(--blue); font-size: clamp(1.55rem, 6vw, 2.4rem); line-height: 1.12; letter-spacing: 0; }
+      h3 { margin: 23px 0 7px; color: var(--green); font-size: 0.94rem; line-height: 1.28; letter-spacing: 0; text-transform: none; }
+      p { margin: 0 0 13px; }
+      .reference { margin: 0 0 18px; padding: 13px 14px; border: 1px solid var(--line); border-radius: 12px; background: rgba(255,255,255,0.76); font-size: 0.94rem; line-height: 1.46; overflow-wrap: anywhere; }
+      .reference div + div { margin-top: 4px; }
+      .label { font-weight: 800; }
+      .spoken, .discussion, .takeaway { border-radius: 14px; padding: 15px 16px; }
+      .spoken { background: var(--soft-gold); border: 1px solid #ead9ad; font-style: italic; }
+      .discussion { background: var(--soft-blue); border: 1px solid #cfe0ed; font-weight: 780; font-style: italic; }
+      .vocab { display: grid; grid-template-columns: 1fr; gap: 8px; margin: 0; padding: 0; list-style: none; }
+      .vocab li { padding: 9px 10px; border: 1px solid rgba(222,216,204,0.85); border-radius: 10px; background: rgba(255,255,255,0.62); font-size: 0.96rem; line-height: 1.35; }
+      .term { font-weight: 800; }
+      .takeaway { margin: 32px 0 0; background: var(--soft-green); border: 1px solid #c8e2d6; }
+      .footer { margin-top: 28px; color: var(--muted); font-size: 0.88rem; text-align: center; }
+      .footer a { color: var(--muted); }
+      @media (min-width: 720px) {
+        body { font-size: 18px; }
+        .page { padding: 30px 32px 58px; }
+        .masthead { padding-top: 42px; }
+        .overview, .reference, .spoken, .discussion, .takeaway { border-radius: 16px; }
+        .vocab { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      }
+      @media print {
+        body { background: #fff; font-size: 11pt; }
+        .page { width: 100%; padding: 0; }
+        .overview, .reference, .spoken, .discussion, .takeaway, .vocab li { box-shadow: none; break-inside: avoid; }
+        article { break-inside: avoid; }
+        a { color: #000; }
+      }
+
+
+      .masthead { padding-top: 24px; }
+      .sections { margin: 24px 0 6px; }
+      .sections-label { margin: 0 0 10px; color: var(--muted); font-size: 0.78rem; font-weight: 850; letter-spacing: 0.08em; text-transform: uppercase; }
+      .section-grid { display: grid; grid-template-columns: 1fr; gap: 10px; }
+      .section-card { display: block; min-height: 122px; padding: 16px; border: 1px solid var(--line); border-radius: 14px; background: rgba(255,255,255,0.78); color: var(--ink); text-decoration: none; }
+      .section-card.current { border-color: #cfe0ed; background: var(--soft-blue); }
+      .section-card.breaking { border-color: #ead9ad; background: var(--soft-gold); }
+      .section-card.archive { border-color: #c8e2d6; background: var(--soft-green); }
+      .section-card strong { display: block; margin-bottom: 5px; color: var(--blue); font-size: 1.05rem; }
+      .section-card span { display: block; color: #485463; font-size: 0.91rem; line-height: 1.42; }
+      .reading-note { color: var(--muted); font-size: 0.9rem; }
+      .overview { box-shadow: none; }
+      .story-number { margin: 0 0 7px; color: var(--green); font-size: 0.78rem; font-weight: 850; text-transform: uppercase; }
+      .source-line { margin: 0 0 3px; color: var(--muted); font-size: 0.88rem; font-weight: 750; }
+      .source-title { margin: 0 0 17px; color: #46515e; font-size: 0.88rem; line-height: 1.42; }
+      .source-title a { color: #46515e; }
+      .watch-list { margin: 7px 0 0; padding-left: 1.2rem; }
+      .watch-list li { margin: 0 0 7px; padding-left: 2px; }
+      .terms { margin-top: 30px; padding-top: 1px; }
+      .terms h2 { font-size: 1.45rem; }
+      .term-note { margin-top: -5px; color: var(--muted); font-size: 0.92rem; }
+      @media (max-width: 430px) {
+        body { font-size: 16.5px; line-height: 1.58; }
+        .page { padding-left: 15px; padding-right: 15px; }
+        h1 { font-size: 2.15rem; }
+        .headline { font-size: 1.35rem; }
+        h2 { font-size: 1.55rem; }
+        .overview { padding: 15px; }
+      }
+      @media (min-width: 720px) { .section-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="./">AI, Crypto &amp; Tech Power Briefing</a>
+        <div class="site-nav-links">
+          <a href="./">Latest</a>
+          <a href="archive.html">Archive</a>
+        </div>
+      </nav>
+
+      <header class="masthead">
+        <p class="kicker">AI · Crypto · Tech Power · Policy · Business</p>
+        <h1>November 18, 2026</h1>
+        <p class="headline">AI Shifts From a Standalone Tool to Managed Workflows, While Model Access and Crypto Security Become Infrastructure Questions</p>
+        <div class="meta-row">
+          <a class="pill" href="pdf/daily_ai_blockchain_briefing_2026-11-18.pdf">PDF</a>
+        </div>
+      </header>
+
+      <section class="sections" aria-label="Sections">
+        <p class="sections-label">Explore sections</p>
+        <div class="section-grid">
+          <a class="section-card current" href="./"><strong>Daily Briefing</strong><span>Today's reader-first AI, crypto and technology stories.</span></a>
+          <a class="section-card breaking" href="breaking-news.html"><strong>Breaking News</strong><span>Major AI, crypto, conflict and US / UK policy updates.</span></a>
+          <a class="section-card archive" href="archive.html"><strong>News Archive</strong><span>Browse previous briefings and PDFs by date.</span></a>
+        </div>
+      </section>
+
+      <section class="overview" aria-label="Executive overview">
+        <h3>Executive overview</h3>
+        <p>The latest AI announcements point to a distribution shift. Microsoft is packaging agents, enterprise context and controls into a shared work environment, while a Reuters investigation shows that model outputs themselves have become a valuable input for training smaller systems. The business question is no longer only who has the strongest model, but who controls the workflow, context and permitted reuse around it.</p>
+        <p>In digital assets, attention is moving past a simple onchain-versus-offchain debate. A Federal Reserve governor described a future with several types of tokenized money and settlement methods, while the Justice Department&#x27;s response to a major theft shows why custody controls, identity verification and software-supply-chain security remain prerequisites for institutional distribution.</p>
+      </section>
+
+      <ol class="toc" aria-label="Today's stories">
+        <li><a href="#microsoft-copilot-workspaces">1. Microsoft turns enterprise AI into a managed workspace for people and agents</a></li>
+        <li><a href="#model-distillation-controls">2. Reuters reports that AI model output is becoming a strategic training input</a></li>
+        <li><a href="#waller-tokenized-payments">3. The Fed frames tokenized money as a multi-rail settlement choice, not a winner-take-all replacement</a></li>
+        <li><a href="#doj-crypto-security-seizure">4. A major crypto seizure shows that recovery depends on fast coordination, while deepfakes widen the security perimeter</a></li>
+      </ol>
+
+      <article id="microsoft-copilot-workspaces">
+        <p class="story-number">Story 1</p>
+        <h2>Microsoft turns enterprise AI into a managed workspace for people and agents</h2>
+        <p class="source-line">Microsoft &middot; November 17, 2026 &middot; <a href="https://news.microsoft.com/source/2026/11/17/microsoft-ignite-2026-empowering-human-ambition-intelligence-and-trust/" target="_blank" rel="noopener">Read source</a></p>
+        <p class="source-title"><em>Microsoft Ignite 2026: Empowering human ambition, intelligence and trust</em></p>
+
+        <h3>The story</h3>
+        <p>At Ignite, Microsoft introduced Copilot Workspaces, a shared environment intended for employees and agents to work toward a common goal. The company also described Autopilot for recurring work, Microsoft IQ for governed enterprise context, and Agent 365 analytics and controls for observing agent activity and cost.</p>
+        <p>The product message is that an enterprise AI system is not just a model endpoint. It is a workplace layer that needs identity, permissions, reusable context, tool access and monitoring. Microsoft is also expanding connections to business systems, including a Salesforce integration in preview.</p>
+
+        <h3>Why it matters</h3>
+        <p>The practical unit of AI adoption is shifting from a chat session to an end-to-end workflow. That can create value when an agent can retrieve approved information and complete a defined action, but it also increases the impact of an incorrect permission, stale record or poorly designed escalation path.</p>
+        <p>This puts governance closer to the product. Buyers should examine the control plane: which identities an agent can assume, which tools it may call, how output is logged, what can be reversed, and whether finance teams can connect usage to a measurable business outcome.</p>
+
+        <h3>What to watch</h3>
+        <ul class="watch-list">
+          <li>Availability, pricing and regional limits for Copilot Workspaces and Autopilot.</li>
+          <li>How enterprise administrators set identity, least-privilege access and approval boundaries for actions.</li>
+          <li>Whether customers can show durable productivity gains after accounting for integration, supervision and change-management costs.</li>
+        </ul>
+      </article>
+      <article id="model-distillation-controls">
+        <p class="story-number">Story 2</p>
+        <h2>Reuters reports that AI model output is becoming a strategic training input</h2>
+        <p class="source-line">Reuters &middot; November 17, 2026 &middot; <a href="https://www.marketscreener.com/news/china-taps-us-ai-models-to-train-homegrown-rivals-as-chip-curbs-bite-ce785edfdf8efe2d" target="_blank" rel="noopener">Read source</a></p>
+        <p class="source-title"><em>China taps US AI models to train homegrown rivals as chip curbs bite</em></p>
+
+        <h3>The story</h3>
+        <p>A Reuters review of more than 300 Chinese academic papers, patents, company disclosures, job postings and government documents found increasingly sophisticated use of output from leading United States models to train domestic systems. The practice, known as distillation, uses a stronger teacher model&#x27;s answers or demonstrations as training material for a smaller student model.</p>
+        <p>The report says the approach has expanded beyond academic experiments into industrial use. It can lower inference cost and preserve selected capabilities in a smaller system, even though it cannot fully reproduce a frontier model or remove the need for advanced compute.</p>
+
+        <h3>Why it matters</h3>
+        <p>Model access is now a supply-chain issue. A developer may use an API for a legitimate task, yet repeated, automated collection of high-value outputs can turn that service into a source of training data for a competitor. Contract terms, rate limits, provenance signals and abuse detection therefore matter alongside chip controls.</p>
+        <p>Distillation also complicates the economics of model competition. It can help organizations deploy targeted capabilities at lower cost, but it may reduce a frontier provider&#x27;s ability to capture value from expensive research and training. The key distinction is between permitted learning from public behavior and prohibited extraction of proprietary capability.</p>
+
+        <h3>What to watch</h3>
+        <ul class="watch-list">
+          <li>Whether major model providers tighten acceptable-use terms, rate limits or identity checks for high-volume users.</li>
+          <li>Evidence that provenance tooling can distinguish normal API use from systematic model extraction.</li>
+          <li>How regulators frame intellectual-property, competition and export-control issues without blocking legitimate research.</li>
+        </ul>
+      </article>
+      <article id="waller-tokenized-payments">
+        <p class="story-number">Story 3</p>
+        <h2>The Fed frames tokenized money as a multi-rail settlement choice, not a winner-take-all replacement</h2>
+        <p class="source-line">Federal Reserve &middot; November 17, 2026 &middot; <a href="https://www.federalreserve.gov/newsevents/speech/waller20261117a.htm" target="_blank" rel="noopener">Read source</a></p>
+        <p class="source-title"><em>Considerations at the Intersection of Payments and Tokenized Markets</em></p>
+
+        <h3>The story</h3>
+        <p>Federal Reserve Governor Christopher Waller said tokenized markets are likely to use several forms of money, including stablecoins, tokenized deposits and tokenized money-market funds. He emphasized that these instruments offer different issuer models, regulatory treatments, connectivity to traditional systems and ecosystem reach.</p>
+        <p>Waller also cautioned against treating atomic settlement as the only useful design. Atomic settlement can reduce delivery-versus-payment risk in a linked transaction, while net and batch settlement can remain useful when high-volume markets need to economize on liquidity. Traditional payment rails, he said, remain an important foundation for trust and final funds settlement.</p>
+
+        <h3>Why it matters</h3>
+        <p>The important question for tokenized assets is not whether a transaction is onchain. It is whether the selected settlement asset and timing fit the activity. A corporate payment, a securities trade and a margin process can have very different liquidity, legal-finality and operating-hour requirements.</p>
+        <p>For institutions, interoperability is as important as issuance. A tokenized product needs credible on- and off-ramps, clear redemption mechanisms, compliant custody and procedures for failed trades. That makes payment architecture and market infrastructure more consequential than a headline about a single chain or token.</p>
+
+        <h3>What to watch</h3>
+        <ul class="watch-list">
+          <li>Which tokenized-money products gain regulated distribution and real corporate or securities-market use.</li>
+          <li>Standards for cross-system connectivity, settlement finality and redemption under stress.</li>
+          <li>Whether banks and payment providers offer multi-rail services rather than forcing customers into one settlement model.</li>
+        </ul>
+      </article>
+      <article id="doj-crypto-security-seizure">
+        <p class="story-number">Story 4</p>
+        <h2>A major crypto seizure shows that recovery depends on fast coordination, while deepfakes widen the security perimeter</h2>
+        <p class="source-line">U.S. Department of Justice &middot; November 12, 2026 &middot; <a href="https://www.justice.gov/opa/pr/justice-department-announces-actions-disrupt-north-koreas-massive-theft-cryptocurrency" target="_blank" rel="noopener">Read source</a></p>
+        <p class="source-title"><em>Justice Department Announces Actions to Disrupt North Korea&#x27;s Massive Theft of Cryptocurrency</em></p>
+
+        <h3>The story</h3>
+        <p>The Justice Department said it obtained court authorization to seize or restrain more than $1.2 billion of cryptocurrency recently stolen from Binance, as part of a broader effort that it says has frozen more than $2.7 billion. The department said tracing, freezing and forfeiture efforts remain ongoing as the actors use bridges, mixers and exchanges to launder funds.</p>
+        <p>The same announcement described the FaceStealer social-engineering campaign, which the government says used compromised accounts, fake video meetings and deepfakes to target crypto and Web3 workers. It also warned that the campaign has increasingly targeted open-source maintainers and their repository access, extending the risk toward the software supply chain.</p>
+
+        <h3>Why it matters</h3>
+        <p>Custody risk is not limited to a private-key failure. Recovery in a large incident can depend on transaction monitoring, exchange cooperation, legal process, asset segregation and the speed with which a provider can identify and freeze suspicious flows. Those capabilities shape the real value of institutional-grade infrastructure.</p>
+        <p>AI-enabled impersonation changes the human layer of security. Organizations need controls that do not assume a familiar face, voice or meeting invitation is authentic. Privileged changes, wallet approvals and repository access should require independent verification and robust separation of duties.</p>
+
+        <h3>What to watch</h3>
+        <ul class="watch-list">
+          <li>Whether virtual asset service providers expand screening for bridge, mixer and cross-venue laundering patterns.</li>
+          <li>How exchanges disclose freeze, recovery and client-asset segregation procedures after a major incident.</li>
+          <li>Adoption of phishing-resistant identity checks and approval controls for crypto operations and software maintainers.</li>
+        </ul>
+      </article>
+
+      <section class="terms">
+        <h2>Professional terms</h2>
+        <p class="term-note">Important business, policy, AI and crypto terms. Abbreviations should include the full form.</p>
+        <ul class="vocab">
+        <li><span class="term">agentic workflow</span> - 智能体工作流</li>
+        <li><span class="term">enterprise context</span> - 企业上下文</li>
+        <li><span class="term">control plane</span> - 控制平面</li>
+        <li><span class="term">least privilege</span> - 最小权限原则</li>
+        <li><span class="term">observability</span> - 可观测性</li>
+        <li><span class="term">model routing</span> - 模型路由</li>
+        <li><span class="term">model distillation</span> - 模型蒸馏</li>
+        <li><span class="term">teacher model</span> - 教师模型</li>
+        <li><span class="term">student model</span> - 学生模型</li>
+        <li><span class="term">inference cost</span> - 推理成本</li>
+        <li><span class="term">data provenance</span> - 数据来源可追溯性</li>
+        <li><span class="term">tokenized deposits</span> - 代币化存款</li>
+        <li><span class="term">tokenized money market fund</span> - 代币化货币市场基金</li>
+        <li><span class="term">atomic settlement</span> - 原子化结算</li>
+        <li><span class="term">net settlement</span> - 净额结算</li>
+        <li><span class="term">settlement finality</span> - 结算终局性</li>
+        <li><span class="term">redemption mechanism</span> - 赎回机制</li>
+        <li><span class="term">custody risk</span> - 托管风险</li>
+        <li><span class="term">software supply-chain risk</span> - 软件供应链风险</li>
+        </ul>
+      </section>
+
+      <section class="takeaway">
+        <h3>Today's big picture</h3>
+        <p>AI competition is broadening from model capability to the surrounding operating system: controlled context, workflow design, distribution and the rules governing model output. The durable advantage may come from connecting a model to trusted enterprise data and actions while keeping permissions, costs and error handling visible.</p>
+        <p>For digital assets, the winning architecture is unlikely to be a single token or settlement method. It will be the system that can move safely between instruments and rails, protect client assets, respond quickly to an attack and preserve trust when a transaction or identity claim must be challenged.</p>
+      </section>
+
+      <footer class="footer">
+        <p>Daily AI, Crypto &amp; Tech Power News Study Briefing &middot; <a href="archive.html">Browse the archive</a></p>
+      </footer>
+    </main>
+  </body>
+</html>
