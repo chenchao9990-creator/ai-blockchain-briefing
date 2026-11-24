@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Amazon&#x27;s Decart technology deal, OpenAI and Cisco&#x27;s Shirudo runtime, Nvidia&#x27;s Rubin revenue ramp and an SEC action against fake crypto platforms show that AI economics and digital-asset adoption both depend on operational controls." />
+    <title>November 24, 2026 | Daily AI, Crypto &amp; Tech Power Briefing</title>
+    <style>
+
+      :root {
+        color-scheme: light;
+        --bg: #f6f4ef;
+        --ink: #17202a;
+        --muted: #667085;
+        --line: #ded8cc;
+        --blue: #164a7c;
+        --green: #24765d;
+        --soft-blue: #eaf3fb;
+        --soft-green: #edf7f2;
+        --soft-gold: #fff7e3;
+        --shadow: 0 16px 45px rgba(38, 52, 65, 0.08);
+      }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0;
+        background: linear-gradient(180deg, rgba(255, 253, 248, 0.9), rgba(246, 244, 239, 0.92)), var(--bg);
+        color: var(--ink);
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+        font-size: 17px;
+        line-height: 1.62;
+      }
+      a { color: var(--blue); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+      .page { width: min(100%, 860px); margin: 0 auto; padding: 18px 16px 44px; }
+      .site-nav {
+        display: flex; align-items: center; justify-content: space-between; gap: 12px;
+        padding: 6px 0 14px; color: var(--muted); font-size: 0.88rem; font-weight: 750;
+      }
+      .site-nav a { color: var(--muted); text-decoration: none; }
+      .site-nav-links { display: flex; gap: 12px; white-space: nowrap; }
+      .masthead { padding: 28px 0 18px; border-bottom: 1px solid var(--line); }
+      .kicker { margin: 0 0 12px; color: var(--muted); font-size: 0.82rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+      h1 { margin: 0 0 8px; color: var(--blue); font-family: Georgia, "Times New Roman", serif; font-size: clamp(2.05rem, 9vw, 4.5rem); line-height: 0.98; letter-spacing: 0; }
+      .headline { margin: 14px 0 0; font-size: clamp(1.24rem, 4.8vw, 2.1rem); line-height: 1.15; font-weight: 800; color: #151d27; }
+      .meta-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+      .pill { display: inline-flex; align-items: center; min-height: 34px; padding: 6px 11px; border: 1px solid var(--line); border-radius: 999px; background: rgba(255,255,255,0.72); color: #3f4a57; font-size: 0.86rem; font-weight: 700; text-decoration: none; }
+      .overview { margin: 22px 0 18px; padding: 17px 17px 15px; border: 1px solid #cfe0ed; border-radius: 14px; background: var(--soft-blue); box-shadow: var(--shadow); }
+      .overview p, .takeaway p { margin: 0 0 12px; }
+      .overview p:last-child, .takeaway p:last-child { margin-bottom: 0; }
+      .toc { margin: 22px 0 22px; padding: 0; list-style: none; border-top: 1px solid var(--line); }
+      .toc li { border-bottom: 1px solid var(--line); }
+      .toc a { display: block; padding: 12px 0; color: var(--ink); font-size: 1rem; font-weight: 750; text-decoration: none; }
+      article { margin: 28px 0 0; padding: 0 0 26px; border-bottom: 1px solid var(--line); }
+      h2 { margin: 0 0 14px; color: var(--blue); font-size: clamp(1.55rem, 6vw, 2.4rem); line-height: 1.12; letter-spacing: 0; }
+      h3 { margin: 23px 0 7px; color: var(--green); font-size: 0.94rem; line-height: 1.28; letter-spacing: 0; text-transform: none; }
+      p { margin: 0 0 13px; }
+      .reference { margin: 0 0 18px; padding: 13px 14px; border: 1px solid var(--line); border-radius: 12px; background: rgba(255,255,255,0.76); font-size: 0.94rem; line-height: 1.46; overflow-wrap: anywhere; }
+      .reference div + div { margin-top: 4px; }
+      .label { font-weight: 800; }
+      .spoken, .discussion, .takeaway { border-radius: 14px; padding: 15px 16px; }
+      .spoken { background: var(--soft-gold); border: 1px solid #ead9ad; font-style: italic; }
+      .discussion { background: var(--soft-blue); border: 1px solid #cfe0ed; font-weight: 780; font-style: italic; }
+      .vocab { display: grid; grid-template-columns: 1fr; gap: 8px; margin: 0; padding: 0; list-style: none; }
+      .vocab li { padding: 9px 10px; border: 1px solid rgba(222,216,204,0.85); border-radius: 10px; background: rgba(255,255,255,0.62); font-size: 0.96rem; line-height: 1.35; }
+      .term { font-weight: 800; }
+      .takeaway { margin: 32px 0 0; background: var(--soft-green); border: 1px solid #c8e2d6; }
+      .footer { margin-top: 28px; color: var(--muted); font-size: 0.88rem; text-align: center; }
+      .footer a { color: var(--muted); }
+      @media (min-width: 720px) {
+        body { font-size: 18px; }
+        .page { padding: 30px 32px 58px; }
+        .masthead { padding-top: 42px; }
+        .overview, .reference, .spoken, .discussion, .takeaway { border-radius: 16px; }
+        .vocab { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      }
+      @media print {
+        body { background: #fff; font-size: 11pt; }
+        .page { width: 100%; padding: 0; }
+        .overview, .reference, .spoken, .discussion, .takeaway, .vocab li { box-shadow: none; break-inside: avoid; }
+        article { break-inside: avoid; }
+        a { color: #000; }
+      }
+
+
+      .masthead { padding-top: 24px; }
+      .sections { margin: 24px 0 6px; }
+      .sections-label { margin: 0 0 10px; color: var(--muted); font-size: 0.78rem; font-weight: 850; letter-spacing: 0.08em; text-transform: uppercase; }
+      .section-grid { display: grid; grid-template-columns: 1fr; gap: 10px; }
+      .section-card { display: block; min-height: 122px; padding: 16px; border: 1px solid var(--line); border-radius: 14px; background: rgba(255,255,255,0.78); color: var(--ink); text-decoration: none; }
+      .section-card.current { border-color: #cfe0ed; background: var(--soft-blue); }
+      .section-card.breaking { border-color: #ead9ad; background: var(--soft-gold); }
+      .section-card.archive { border-color: #c8e2d6; background: var(--soft-green); }
+      .section-card strong { display: block; margin-bottom: 5px; color: var(--blue); font-size: 1.05rem; }
+      .section-card span { display: block; color: #485463; font-size: 0.91rem; line-height: 1.42; }
+      .reading-note { color: var(--muted); font-size: 0.9rem; }
+      .overview { box-shadow: none; }
+      .story-number { margin: 0 0 7px; color: var(--green); font-size: 0.78rem; font-weight: 850; text-transform: uppercase; }
+      .source-line { margin: 0 0 3px; color: var(--muted); font-size: 0.88rem; font-weight: 750; }
+      .source-title { margin: 0 0 17px; color: #46515e; font-size: 0.88rem; line-height: 1.42; }
+      .source-title a { color: #46515e; }
+      .watch-list { margin: 7px 0 0; padding-left: 1.2rem; }
+      .watch-list li { margin: 0 0 7px; padding-left: 2px; }
+      .terms { margin-top: 30px; padding-top: 1px; }
+      .terms h2 { font-size: 1.45rem; }
+      .term-note { margin-top: -5px; color: var(--muted); font-size: 0.92rem; }
+      @media (max-width: 430px) {
+        body { font-size: 16.5px; line-height: 1.58; }
+        .page { padding-left: 15px; padding-right: 15px; }
+        h1 { font-size: 2.15rem; }
+        .headline { font-size: 1.35rem; }
+        h2 { font-size: 1.55rem; }
+        .overview { padding: 15px; }
+      }
+      @media (min-width: 720px) { .section-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="./">AI, Crypto &amp; Tech Power Briefing</a>
+        <div class="site-nav-links">
+          <a href="./">Latest</a>
+          <a href="archive.html">Archive</a>
+        </div>
+      </nav>
+
+      <header class="masthead">
+        <p class="kicker">AI · Crypto · Tech Power · Policy · Business</p>
+        <h1>November 24, 2026</h1>
+        <p class="headline">AI Competition Shifts Toward Cheaper Inference and Safer Production Systems, While Crypto Fraud Keeps the Focus on Platform Controls</p>
+        <div class="meta-row">
+          <a class="pill" href="pdf/daily_ai_blockchain_briefing_2026-11-24.pdf">PDF</a>
+        </div>
+      </header>
+
+      <section class="sections" aria-label="Sections">
+        <p class="sections-label">Explore sections</p>
+        <div class="section-grid">
+          <a class="section-card current" href="./"><strong>Daily Briefing</strong><span>Today's reader-first AI, crypto and technology stories.</span></a>
+          <a class="section-card breaking" href="breaking-news.html"><strong>Breaking News</strong><span>Major AI, crypto, conflict and US / UK policy updates.</span></a>
+          <a class="section-card archive" href="archive.html"><strong>News Archive</strong><span>Browse previous briefings and PDFs by date.</span></a>
+        </div>
+      </section>
+
+      <section class="overview" aria-label="Executive overview">
+        <h3>Executive overview</h3>
+        <p>The AI race is increasingly an efficiency race. Amazon&#x27;s planned purchase of Decart&#x27;s optimization technology is aimed at extracting more performance from custom chips and models, while OpenAI and Cisco have released a security runtime for systems that cannot wait for every patch window.</p>
+        <p>The physical buildout still has exceptional demand signals, but market value depends on turning hardware supply into useful, economical services. In crypto, a new SEC action is a reminder that access controls, withdrawal rules and basic due diligence remain more important than a platform&#x27;s branding.</p>
+      </section>
+
+      <ol class="toc" aria-label="Today's stories">
+        <li><a href="#amazon-decart-optimization">1. Amazon moves to make inference and custom chips more economical with Decart technology</a></li>
+        <li><a href="#openai-cisco-shirudo">2. OpenAI and Cisco target the patch gap with an open-source runtime security layer</a></li>
+        <li><a href="#nvidia-rubin-ramp">3. Nvidia&#x27;s Rubin ramp keeps the AI infrastructure debate focused on supply, utilization and returns</a></li>
+        <li><a href="#sec-fake-crypto-platforms">4. SEC action against fake crypto platforms highlights withdrawal controls and custody risk</a></li>
+      </ol>
+
+      <article id="amazon-decart-optimization">
+        <p class="story-number">Story 1</p>
+        <h2>Amazon moves to make inference and custom chips more economical with Decart technology</h2>
+        <p class="source-line">Amazon &middot; November 23, 2026 &middot; <a href="https://www.aboutamazon.com/news/company-news/amazon-decart-ai-optimization" target="_blank" rel="noopener">Read source</a></p>
+        <p class="source-title"><em>Amazon to purchase Decart&#x27;s AI optimization technology to advance chip and model innovation for customers</em></p>
+
+        <h3>The story</h3>
+        <p>Amazon said it has signed an agreement to buy the proprietary Decart Optimization Stack and bring Decart&#x27;s co-founders and AI researchers into Amazon. The company said the technology will help optimize inference and the performance of its custom silicon, including the Trainium platform.</p>
+        <p>The announcement is a technology-and-talent transaction rather than a claim that a new chip is ready. Its central premise is that performance gains can come from the full stack: compiler and runtime work, model behavior, hardware scheduling and the way those layers are tuned together.</p>
+
+        <h3>Why it matters</h3>
+        <p>As models are deployed at scale, inference cost becomes a core commercial variable. A cloud provider that can deliver a response with less compute, memory traffic or latency can offer lower prices, preserve margin or support more demanding workloads on the same installed base.</p>
+        <p>The deal also illustrates how custom silicon competes. Hardware alone is not enough; adoption depends on compatible tooling, model optimization and a developer path that makes switching from a dominant accelerator ecosystem practical.</p>
+
+        <h3>What to watch</h3>
+        <ul class="watch-list">
+          <li>Whether Amazon gives measurable performance or cost comparisons for optimized Trainium workloads.</li>
+          <li>How the Decart team and technology are integrated after regulatory closing conditions are met.</li>
+          <li>Whether customers gain portable tools or become more dependent on one cloud and chip stack.</li>
+        </ul>
+      </article>
+      <article id="openai-cisco-shirudo">
+        <p class="story-number">Story 2</p>
+        <h2>OpenAI and Cisco target the patch gap with an open-source runtime security layer</h2>
+        <p class="source-line">OpenAI &middot; November 23, 2026 &middot; <a href="https://openai.com/index/openai-cisco-shirudo/" target="_blank" rel="noopener">Read source</a></p>
+        <p class="source-title"><em>OpenAI and Cisco introduce Shirudo</em></p>
+
+        <h3>The story</h3>
+        <p>OpenAI and Cisco introduced Shirudo, an open-source Linux runtime intended to help teams protect running systems while patches are being prepared and deployed. The announcement positions the tool around the gap between discovering a vulnerability and completing remediation across a production fleet.</p>
+        <p>This is an operational security story, not a substitute for patching. Runtime controls can limit exposure or detect suspicious behavior during a response window, but the long-term fix remains disciplined vulnerability management, testing and deployment of a corrected version.</p>
+
+        <h3>Why it matters</h3>
+        <p>AI workloads are becoming part of production systems that handle code, data and business processes. A security control that works at runtime can be useful when a patch has dependencies, requires downtime or needs validation before it reaches every server.</p>
+        <p>Open sourcing a security component can widen review and adoption, but it also shifts responsibility to operators. Teams need clear ownership for configuration, alerts, updates and evidence that the control is functioning under real workloads.</p>
+
+        <h3>What to watch</h3>
+        <ul class="watch-list">
+          <li>Independent testing of coverage, false positives and performance overhead.</li>
+          <li>How Shirudo fits with endpoint detection, container controls and existing incident-response processes.</li>
+          <li>Whether enterprises publish deployment guidance for AI and other high-value workloads.</li>
+        </ul>
+      </article>
+      <article id="nvidia-rubin-ramp">
+        <p class="story-number">Story 3</p>
+        <h2>Nvidia&#x27;s Rubin ramp keeps the AI infrastructure debate focused on supply, utilization and returns</h2>
+        <p class="source-line">NVIDIA &middot; November 19, 2026 &middot; <a href="https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-third-quarter-fiscal-2027" target="_blank" rel="noopener">Read source</a></p>
+        <p class="source-title"><em>NVIDIA Announces Financial Results for Third Quarter Fiscal 2027</em></p>
+
+        <h3>The story</h3>
+        <p>Nvidia reported third-quarter revenue of $115.8 billion for the period ended October 25, up 103% from a year earlier and 20% from the preceding quarter. The company said the Vera Rubin platform had shipped and generated nearly $20 billion in its first quarter of production shipments.</p>
+        <p>Those figures reinforce that demand for AI infrastructure remains large, even after a volatile month for AI-linked equities. They do not by themselves answer the broader economic question: whether customers can turn rapidly installed capacity into sustained revenue and productivity gains.</p>
+
+        <h3>Why it matters</h3>
+        <p>A fast hardware ramp can ease a supply-chain bottleneck for buyers, but it raises the importance of utilization. Capital expenditure creates capacity first; the financial return depends on workloads, pricing, power availability and the ability to keep systems productively used.</p>
+        <p>For investors and operators, revenue concentration also matters. Strong vendor sales can coexist with a harder return calculation downstream if a small number of large customers carry most of the infrastructure commitment.</p>
+
+        <h3>What to watch</h3>
+        <ul class="watch-list">
+          <li>Cloud-provider capital-expenditure plans and disclosures about AI service revenue.</li>
+          <li>Power, networking and data-center construction constraints as Rubin deployments expand.</li>
+          <li>Evidence that enterprise inference demand is becoming a durable utilization base.</li>
+        </ul>
+      </article>
+      <article id="sec-fake-crypto-platforms">
+        <p class="story-number">Story 4</p>
+        <h2>SEC action against fake crypto platforms highlights withdrawal controls and custody risk</h2>
+        <p class="source-line">U.S. Securities and Exchange Commission &middot; November 19, 2026 &middot; <a href="https://www.sec.gov/newsroom/press-releases/2026-115" target="_blank" rel="noopener">Read source</a></p>
+        <p class="source-title"><em>SEC: Eight Entities Used Fake Crypto Asset Trading Platforms to Steal More Than $37 Million From U.S. Investors</em></p>
+
+        <h3>The story</h3>
+        <p>The SEC said it charged eight entities that allegedly used websites posing as crypto-asset trading platforms to steal more than $37 million from U.S. investors. According to the agency, the sites displayed fabricated balances and returns, then demanded additional payments before allowing supposed withdrawals.</p>
+        <p>The enforcement action focuses on a basic failure mode in digital-asset markets: a trading screen is not proof that assets exist, that custody is real or that redemption will be honored. A credible platform must be assessed through its legal entity, controls, disclosures and withdrawal process, not its interface alone.</p>
+
+        <h3>Why it matters</h3>
+        <p>Custody risk is not limited to a market price decline. It includes who holds keys or assets, whether transfers can be completed, how client property is segregated and what recourse exists if a counterparty freezes or invents a balance.</p>
+        <p>For institutions, the case supports a due-diligence approach that tests the redemption mechanism before committing material funds. For retail users, it underlines the warning signs of guaranteed returns, pressure to pay additional fees and channels that cannot independently verify a counterparty.</p>
+
+        <h3>What to watch</h3>
+        <ul class="watch-list">
+          <li>Whether regulators identify additional operators, payment routes or promoters connected to the alleged scheme.</li>
+          <li>How exchanges and wallet providers strengthen fraud warnings and transaction monitoring.</li>
+          <li>Disclosure standards for custody, asset segregation and withdrawals across crypto products.</li>
+        </ul>
+      </article>
+
+      <section class="terms">
+        <h2>Professional terms</h2>
+        <p class="term-note">Important business, policy, AI and crypto terms. Abbreviations should include the full form.</p>
+        <ul class="vocab">
+        <li><span class="term">inference cost</span> - 模型推理成本</li>
+        <li><span class="term">custom silicon</span> - 定制芯片</li>
+        <li><span class="term">full-stack optimization</span> - 全栈优化</li>
+        <li><span class="term">model routing</span> - 模型路由</li>
+        <li><span class="term">latency</span> - 响应延迟</li>
+        <li><span class="term">runtime security</span> - 运行时安全</li>
+        <li><span class="term">vulnerability management</span> - 漏洞管理</li>
+        <li><span class="term">attack surface</span> - 攻击面</li>
+        <li><span class="term">endpoint detection and response (EDR)</span> - 端点检测与响应</li>
+        <li><span class="term">supply-chain bottleneck</span> - 供应链瓶颈</li>
+        <li><span class="term">capital expenditure</span> - 资本支出</li>
+        <li><span class="term">utilization rate</span> - 利用率</li>
+        <li><span class="term">valuation multiple</span> - 估值倍数</li>
+        <li><span class="term">custody risk</span> - 托管风险</li>
+        <li><span class="term">asset segregation</span> - 资产隔离</li>
+        <li><span class="term">redemption mechanism</span> - 赎回机制</li>
+        <li><span class="term">anti-money laundering (AML)</span> - 反洗钱</li>
+        <li><span class="term">know your customer (KYC)</span> - 了解你的客户</li>
+        </ul>
+      </section>
+
+      <section class="takeaway">
+        <h3>Today's big picture</h3>
+        <p>AI advantage is moving below the headline model. Cost, latency, runtime protection and the ability to keep expensive infrastructure utilized will increasingly determine who can turn technical capability into a durable service business.</p>
+        <p>The crypto story carries the same operational lesson. Product access and polished interfaces matter less than controls that can be tested: legitimate custody, credible redemptions, clear ownership and a response plan when something goes wrong.</p>
+      </section>
+
+      <footer class="footer">
+        <p>Daily AI, Crypto &amp; Tech Power News Study Briefing &middot; <a href="archive.html">Browse the archive</a></p>
+      </footer>
+    </main>
+  </body>
+</html>
