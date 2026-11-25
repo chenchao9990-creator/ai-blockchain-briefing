@@ -2062,5 +2062,17 @@
     "url": "https://www.coindesk.com/coindesk-indices/2026/11/25/crypto-long-and-short-bitcoin-investors-can-t-keep-ignoring-japan",
     "published_at": "2026-11-25T15:59:44+00:00",
     "sent_at": "2026-11-25T16:33:32.362279+00:00"
+  },
+  {
+    "key": "17929128d139e3d01b22",
+    "headline": "FCC signs off on SpaceX’s plan to put up to 1 million data center satellites into space",
+    "story": "In an announcement on Wednesday, the FCC says it authorized SpaceX to deploy up to 1 million AI chip-equipped satellites as part of the Elon Musk-owned company's \"Starmind\" initiative. With several others also pursuing the idea of putting AI data centers in space, including Google and Blue Origin, this is the first approval the agency […]",
+    "keywords": "semiconductor supply chain | data center capacity",
+    "category": "AI",
+    "importance_score": "9",
+    "publication": "The Verge",
+    "url": "https://www.theverge.com/science/1042278/spacex-fcc-starmind-ai-space-data-centers",
+    "published_at": "2026-11-25T17:44:51+00:00",
+    "sent_at": "2026-11-25T18:07:24.645087+00:00"
   }
 ]
