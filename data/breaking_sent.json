@@ -2026,5 +2026,17 @@
     "url": "https://www.coindesk.com/markets/2026/11/21/bitcoin-bounces-9-from-two-year-low-to-retake-usd60-000-as-traders-eye-monday-s-stock-open",
     "published_at": "2026-11-21T17:50:00+00:00",
     "sent_at": "2026-11-21T19:37:29.743036+00:00"
+  },
+  {
+    "key": "9d204a99ce77317cf5ef",
+    "headline": "Amazon and Meta reportedly in talks to lift blockade on AI agent Muse",
+    "story": "Amazon and Meta are discussing a potential deal that would end a two-month-long blockade of Muse.",
+    "keywords": "AI (artificial intelligence)",
+    "category": "AI",
+    "importance_score": "9",
+    "publication": "TechCrunch",
+    "url": "https://techcrunch.com/2026/11/25/amazon-and-meta-reportedly-in-talks-to-lift-blockade-on-ai-agent-muse/",
+    "published_at": "2026-11-25T14:10:18+00:00",
+    "sent_at": "2026-11-25T14:33:29.494994+00:00"
   }
 ]
