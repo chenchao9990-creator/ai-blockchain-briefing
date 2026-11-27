@@ -2086,5 +2086,17 @@
     "url": "https://www.theverge.com/tech/1042532/whatsapp-scheduled-messages",
     "published_at": "2026-11-25T20:31:48+00:00",
     "sent_at": "2026-11-25T20:33:27.660778+00:00"
+  },
+  {
+    "key": "afa767450c39e1250534",
+    "headline": "Tether can freeze stolen crypto in minutes. Getting it back can take years.",
+    "story": "Tether says it has returned $1.28 billion in frozen USDT, but victims can wait years to recover their money and face fees of up to 20%.",
+    "keywords": "crypto regulation",
+    "category": "Crypto",
+    "importance_score": "9",
+    "publication": "CoinDesk",
+    "url": "https://www.coindesk.com/business/2026/11/27/tether-can-freeze-stolen-crypto-in-minutes-getting-it-back-can-take-years",
+    "published_at": "2026-11-27T10:00:00+00:00",
+    "sent_at": "2026-11-27T10:05:50.491515+00:00"
   }
 ]
