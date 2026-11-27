@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Nvidia&#x27;s reported Southeast Asia shipment halt, new U.S. advanced-chip controls, the SEC&#x27;s Molecule token no-action letter and bitcoin ETF outflows show how compliance, product structure and liquidity shape AI and crypto markets." />
+    <title>November 27, 2026 | Daily AI, Crypto &amp; Tech Power Briefing</title>
+    <style>
+
+      :root {
+        color-scheme: light;
+        --bg: #f6f4ef;
+        --ink: #17202a;
+        --muted: #667085;
+        --line: #ded8cc;
+        --blue: #164a7c;
+        --green: #24765d;
+        --soft-blue: #eaf3fb;
+        --soft-green: #edf7f2;
+        --soft-gold: #fff7e3;
+        --shadow: 0 16px 45px rgba(38, 52, 65, 0.08);
+      }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0;
+        background: linear-gradient(180deg, rgba(255, 253, 248, 0.9), rgba(246, 244, 239, 0.92)), var(--bg);
+        color: var(--ink);
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+        font-size: 17px;
+        line-height: 1.62;
+      }
+      a { color: var(--blue); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+      .page { width: min(100%, 860px); margin: 0 auto; padding: 18px 16px 44px; }
+      .site-nav {
+        display: flex; align-items: center; justify-content: space-between; gap: 12px;
+        padding: 6px 0 14px; color: var(--muted); font-size: 0.88rem; font-weight: 750;
+      }
+      .site-nav a { color: var(--muted); text-decoration: none; }
+      .site-nav-links { display: flex; gap: 12px; white-space: nowrap; }
+      .masthead { padding: 28px 0 18px; border-bottom: 1px solid var(--line); }
+      .kicker { margin: 0 0 12px; color: var(--muted); font-size: 0.82rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+      h1 { margin: 0 0 8px; color: var(--blue); font-family: Georgia, "Times New Roman", serif; font-size: clamp(2.05rem, 9vw, 4.5rem); line-height: 0.98; letter-spacing: 0; }
+      .headline { margin: 14px 0 0; font-size: clamp(1.24rem, 4.8vw, 2.1rem); line-height: 1.15; font-weight: 800; color: #151d27; }
+      .meta-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+      .pill { display: inline-flex; align-items: center; min-height: 34px; padding: 6px 11px; border: 1px solid var(--line); border-radius: 999px; background: rgba(255,255,255,0.72); color: #3f4a57; font-size: 0.86rem; font-weight: 700; text-decoration: none; }
+      .overview { margin: 22px 0 18px; padding: 17px 17px 15px; border: 1px solid #cfe0ed; border-radius: 14px; background: var(--soft-blue); box-shadow: var(--shadow); }
+      .overview p, .takeaway p { margin: 0 0 12px; }
+      .overview p:last-child, .takeaway p:last-child { margin-bottom: 0; }
+      .toc { margin: 22px 0 22px; padding: 0; list-style: none; border-top: 1px solid var(--line); }
+      .toc li { border-bottom: 1px solid var(--line); }
+      .toc a { display: block; padding: 12px 0; color: var(--ink); font-size: 1rem; font-weight: 750; text-decoration: none; }
+      article { margin: 28px 0 0; padding: 0 0 26px; border-bottom: 1px solid var(--line); }
+      h2 { margin: 0 0 14px; color: var(--blue); font-size: clamp(1.55rem, 6vw, 2.4rem); line-height: 1.12; letter-spacing: 0; }
+      h3 { margin: 23px 0 7px; color: var(--green); font-size: 0.94rem; line-height: 1.28; letter-spacing: 0; text-transform: none; }
+      p { margin: 0 0 13px; }
+      .reference { margin: 0 0 18px; padding: 13px 14px; border: 1px solid var(--line); border-radius: 12px; background: rgba(255,255,255,0.76); font-size: 0.94rem; line-height: 1.46; overflow-wrap: anywhere; }
+      .reference div + div { margin-top: 4px; }
+      .label { font-weight: 800; }
+      .spoken, .discussion, .takeaway { border-radius: 14px; padding: 15px 16px; }
+      .spoken { background: var(--soft-gold); border: 1px solid #ead9ad; font-style: italic; }
+      .discussion { background: var(--soft-blue); border: 1px solid #cfe0ed; font-weight: 780; font-style: italic; }
+      .vocab { display: grid; grid-template-columns: 1fr; gap: 8px; margin: 0; padding: 0; list-style: none; }
+      .vocab li { padding: 9px 10px; border: 1px solid rgba(222,216,204,0.85); border-radius: 10px; background: rgba(255,255,255,0.62); font-size: 0.96rem; line-height: 1.35; }
+      .term { font-weight: 800; }
+      .takeaway { margin: 32px 0 0; background: var(--soft-green); border: 1px solid #c8e2d6; }
+      .footer { margin-top: 28px; color: var(--muted); font-size: 0.88rem; text-align: center; }
+      .footer a { color: var(--muted); }
+      @media (min-width: 720px) {
+        body { font-size: 18px; }
+        .page { padding: 30px 32px 58px; }
+        .masthead { padding-top: 42px; }
+        .overview, .reference, .spoken, .discussion, .takeaway { border-radius: 16px; }
+        .vocab { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      }
+      @media print {
+        body { background: #fff; font-size: 11pt; }
+        .page { width: 100%; padding: 0; }
+        .overview, .reference, .spoken, .discussion, .takeaway, .vocab li { box-shadow: none; break-inside: avoid; }
+        article { break-inside: avoid; }
+        a { color: #000; }
+      }
+
+
+      .masthead { padding-top: 24px; }
+      .sections { margin: 24px 0 6px; }
+      .sections-label { margin: 0 0 10px; color: var(--muted); font-size: 0.78rem; font-weight: 850; letter-spacing: 0.08em; text-transform: uppercase; }
+      .section-grid { display: grid; grid-template-columns: 1fr; gap: 10px; }
+      .section-card { display: block; min-height: 122px; padding: 16px; border: 1px solid var(--line); border-radius: 14px; background: rgba(255,255,255,0.78); color: var(--ink); text-decoration: none; }
+      .section-card.current { border-color: #cfe0ed; background: var(--soft-blue); }
+      .section-card.breaking { border-color: #ead9ad; background: var(--soft-gold); }
+      .section-card.archive { border-color: #c8e2d6; background: var(--soft-green); }
+      .section-card strong { display: block; margin-bottom: 5px; color: var(--blue); font-size: 1.05rem; }
+      .section-card span { display: block; color: #485463; font-size: 0.91rem; line-height: 1.42; }
+      .reading-note { color: var(--muted); font-size: 0.9rem; }
+      .overview { box-shadow: none; }
+      .story-number { margin: 0 0 7px; color: var(--green); font-size: 0.78rem; font-weight: 850; text-transform: uppercase; }
+      .source-line { margin: 0 0 3px; color: var(--muted); font-size: 0.88rem; font-weight: 750; }
+      .source-title { margin: 0 0 17px; color: #46515e; font-size: 0.88rem; line-height: 1.42; }
+      .source-title a { color: #46515e; }
+      .watch-list { margin: 7px 0 0; padding-left: 1.2rem; }
+      .watch-list li { margin: 0 0 7px; padding-left: 2px; }
+      .terms { margin-top: 30px; padding-top: 1px; }
+      .terms h2 { font-size: 1.45rem; }
+      .term-note { margin-top: -5px; color: var(--muted); font-size: 0.92rem; }
+      @media (max-width: 430px) {
+        body { font-size: 16.5px; line-height: 1.58; }
+        .page { padding-left: 15px; padding-right: 15px; }
+        h1 { font-size: 2.15rem; }
+        .headline { font-size: 1.35rem; }
+        h2 { font-size: 1.55rem; }
+        .overview { padding: 15px; }
+      }
+      @media (min-width: 720px) { .section-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="./">AI, Crypto &amp; Tech Power Briefing</a>
+        <div class="site-nav-links">
+          <a href="./">Latest</a>
+          <a href="archive.html">Archive</a>
+        </div>
+      </nav>
+
+      <header class="masthead">
+        <p class="kicker">AI · Crypto · Tech Power · Policy · Business</p>
+        <h1>November 27, 2026</h1>
+        <p class="headline">AI Compute Meets a New Export-Control Test, While Token Offers and Bitcoin Funds Put Market Infrastructure Under the Microscope</p>
+        <div class="meta-row">
+          <a class="pill" href="pdf/daily_ai_blockchain_briefing_2026-11-27.pdf">PDF</a>
+        </div>
+      </header>
+
+      <section class="sections" aria-label="Sections">
+        <p class="sections-label">Explore sections</p>
+        <div class="section-grid">
+          <a class="section-card current" href="./"><strong>Daily Briefing</strong><span>Today's reader-first AI, crypto and technology stories.</span></a>
+          <a class="section-card breaking" href="breaking-news.html"><strong>Breaking News</strong><span>Major AI, crypto, conflict and US / UK policy updates.</span></a>
+          <a class="section-card archive" href="archive.html"><strong>News Archive</strong><span>Browse previous briefings and PDFs by date.</span></a>
+        </div>
+      </section>
+
+      <section class="overview" aria-label="Executive overview">
+        <h3>Executive overview</h3>
+        <p>The latest AI infrastructure story is about compliance as much as capacity. Nvidia has reportedly told partners to halt some server shipments to Southeast Asia as new U.S. controls take effect, showing how rules on end users and remote access can quickly become a commercial constraint.</p>
+        <p>In digital assets, an SEC no-action letter for a research-token structure offers a narrow example of how product design and transfer limits can matter. At the same time, bitcoin fund outflows remain a reminder that listed access improves distribution but does not remove liquidity risk.</p>
+      </section>
+
+      <ol class="toc" aria-label="Today's stories">
+        <li><a href="#nvidia-southeast-asia-shipments">1. Nvidia&#x27;s reported Southeast Asia shipment halt shows export controls reaching the data-center supply chain</a></li>
+        <li><a href="#bis-advanced-computing-controls">2. New U.S. advanced-computing rules make customer screening part of AI infrastructure planning</a></li>
+        <li><a href="#sec-molecule-no-action">3. SEC no-action letter for Molecule puts token design and transfer restrictions ahead of labels</a></li>
+        <li><a href="#bitcoin-etf-flow-liquidity-test">4. Bitcoin&#x27;s rebound does not remove the liquidity lesson from persistent ETF redemptions</a></li>
+      </ol>
+
+      <article id="nvidia-southeast-asia-shipments">
+        <p class="story-number">Story 1</p>
+        <h2>Nvidia&#x27;s reported Southeast Asia shipment halt shows export controls reaching the data-center supply chain</h2>
+        <p class="source-line">Reuters, citing the Financial Times &middot; November 26, 2026 &middot; <a href="https://www.streetinsider.com/Reuters/Nvidia%2Bhalts%2Bserver%2Bshipments%2Bto%2Bfour%2BSoutheast%2BAsian%2Bcountries%2C%2BFT%2Breports/27404244.html" target="_blank" rel="noopener">Read source</a></p>
+        <p class="source-title"><em>Nvidia halts server shipments to four Southeast Asian countries, FT reports</em></p>
+
+        <h3>The story</h3>
+        <p>Reuters reported that Nvidia had told manufacturing partners to stop shipping servers containing its chips to Malaysia, Singapore, Thailand and Indonesia, citing a Financial Times report. The report said the pause was linked to compliance work after new U.S. export controls; Reuters said it could not immediately verify the report independently.</p>
+        <p>The practical point is that advanced-compute controls do not end at a chip sale. Server assemblers, distributors, cloud operators and lenders may all need to assess destination, customer ownership, ultimate use and the possibility that compute is being provided remotely to a restricted party.</p>
+
+        <h3>Why it matters</h3>
+        <p>A shipment pause can delay data-center buildouts even when demand is intact. It turns regulatory diligence into a supply-chain bottleneck, with consequences for delivery dates, financing and commitments made to cloud customers.</p>
+        <p>For operators in the affected markets, the commercial asset is not merely installed hardware. It is the ability to document lawful end use and maintain controls that keep capacity from being diverted or resold to an unauthorized customer.</p>
+
+        <h3>What to watch</h3>
+        <ul class="watch-list">
+          <li>Whether Nvidia or its partners clarify the scope, duration and licensing path for the reported halt.</li>
+          <li>How data-center contracts change their customer screening, audit and termination provisions.</li>
+          <li>Whether other chip suppliers and server makers adopt comparable compliance pauses.</li>
+        </ul>
+      </article>
+      <article id="bis-advanced-computing-controls">
+        <p class="story-number">Story 2</p>
+        <h2>New U.S. advanced-computing rules make customer screening part of AI infrastructure planning</h2>
+        <p class="source-line">U.S. Bureau of Industry and Security &middot; November 19, 2026 &middot; <a href="https://www.govinfo.gov/content/pkg/FR-2026-11-19/pdf/2026-23529.pdf" target="_blank" rel="noopener">Read source</a></p>
+        <p class="source-title"><em>Advanced Computing and Semiconductor Manufacturing Items; End-Use Controls and Entity List Modifications</em></p>
+
+        <h3>The story</h3>
+        <p>A new U.S. Commerce Department rule adds license requirements and end-use controls for advanced computing in several jurisdictions. The rule also addresses overseas data centers that provide significant computing power to companies headquartered in covered destinations, making remote access and beneficial ownership central to compliance analysis.</p>
+        <p>This is not simply a rule about a physical shipment crossing a border. A provider that leases access to GPU capacity may need to understand who ultimately uses that capacity, how it is allocated and whether its monitoring can identify prohibited access.</p>
+
+        <h3>Why it matters</h3>
+        <p>Compute has become a regulated service as well as a hardware product. That expands the compliance perimeter from procurement teams to cloud operations, identity checks, contract administration and incident response.</p>
+        <p>A project with strong technical economics can still face execution risk if a license is delayed or a customer cannot pass screening. Investors should treat regulatory lead time and control design as part of the capital-expenditure schedule.</p>
+
+        <h3>What to watch</h3>
+        <ul class="watch-list">
+          <li>Licensing guidance and enforcement signals from the Commerce Department.</li>
+          <li>How cloud providers distinguish ordinary regional customers from restricted end users.</li>
+          <li>Whether compliance costs change the relative attractiveness of regional data-center locations.</li>
+        </ul>
+      </article>
+      <article id="sec-molecule-no-action">
+        <p class="story-number">Story 3</p>
+        <h2>SEC no-action letter for Molecule puts token design and transfer restrictions ahead of labels</h2>
+        <p class="source-line">U.S. Securities and Exchange Commission &middot; November 24, 2026 &middot; <a href="https://www.sec.gov/rules-regulations/no-action-interpretive-exemptive-letters/division-corporation-finance-no-action/molecule-ag-112426" target="_blank" rel="noopener">Read source</a></p>
+        <p class="source-title"><em>Molecule AG no-action letter</em></p>
+
+        <h3>The story</h3>
+        <p>The SEC&#x27;s Division of Corporation Finance said it would not recommend enforcement action if LabsCo offered and sold Project Tokens in the manner described by Molecule AG&#x27;s counsel, without registration under specified provisions of the securities laws. The letter is fact-specific and depends on the representations and conditions in the request.</p>
+        <p>The significance is structural rather than universal. A no-action letter is not a blanket approval for token issuance, and it does not erase obligations that can arise under other laws, platforms or jurisdictions. It shows that rights, marketing, transferability and the surrounding operating model can matter more than the word token.</p>
+
+        <h3>Why it matters</h3>
+        <p>For founders, the key question is whether a product&#x27;s legal and economic design matches the actual distribution plan. Building compliance late into a token launch can create expensive rework if access, secondary trading or buyer expectations differ from the original structure.</p>
+        <p>For buyers and service providers, a fact-specific staff position is a due-diligence input, not a substitute for checking custody, disclosures, anti-money-laundering controls and the redemption or transfer mechanism.</p>
+
+        <h3>What to watch</h3>
+        <ul class="watch-list">
+          <li>Whether the SEC publishes further staff positions or rulemaking on tokenized assets.</li>
+          <li>How issuers describe purchaser rights, restrictions and governance in offering materials.</li>
+          <li>Whether secondary-market venues apply tighter controls to tokens with specialized use cases.</li>
+        </ul>
+      </article>
+      <article id="bitcoin-etf-flow-liquidity-test">
+        <p class="story-number">Story 4</p>
+        <h2>Bitcoin&#x27;s rebound does not remove the liquidity lesson from persistent ETF redemptions</h2>
+        <p class="source-line">Reuters via Investing.com &middot; November 26, 2026 &middot; <a href="https://au.investing.com/news/cryptocurrency-news/bitcoin-extends-losses-below-59000-as-etf-outflows-weigh-4794947" target="_blank" rel="noopener">Read source</a></p>
+        <p class="source-title"><em>Bitcoin recovers after hit from ETF outflows, AI rout, and hot U.S. economic data</em></p>
+
+        <h3>The story</h3>
+        <p>Reuters reported that bitcoin recovered after a sharp fall, while spot bitcoin exchange-traded funds continued to see significant November outflows. The report cited Nansen research contrasting bitcoin moving into long-term wallets with sales through ETFs, underscoring that a single market price can reflect several different channels of demand and supply.</p>
+        <p>The useful lesson is not a directional price call. Exchange-traded funds make access easier for institutions and advisers, but fund redemptions can become an important liquidity signal when risk appetite falls and leveraged traders reduce exposure at the same time.</p>
+
+        <h3>Why it matters</h3>
+        <p>Institutional distribution can deepen a market, yet it also creates visible flow cycles. Managers need to distinguish long-term allocation demand from short-term positioning, because the two can produce very different behavior during a volatile week.</p>
+        <p>For treasury and risk teams, liquidity planning should assume that correlation rises under stress. A crypto allocation, an AI-linked equity position and a leveraged derivative can all be sold at once when macro conditions change.</p>
+
+        <h3>What to watch</h3>
+        <ul class="watch-list">
+          <li>Daily and weekly ETF flow data after U.S. markets reopen.</li>
+          <li>Whether open interest rebuilds alongside spot demand or ahead of it.</li>
+          <li>Changes in stablecoin liquidity and exchange order-book depth during the next risk move.</li>
+        </ul>
+      </article>
+
+      <section class="terms">
+        <h2>Professional terms</h2>
+        <p class="term-note">Important business, policy, AI and crypto terms. Abbreviations should include the full form.</p>
+        <ul class="vocab">
+        <li><span class="term">export control</span> - 出口管制</li>
+        <li><span class="term">end-use control</span> - 最终用途管制</li>
+        <li><span class="term">ultimate beneficial owner (UBO)</span> - 最终受益所有人</li>
+        <li><span class="term">know your customer (KYC)</span> - 了解你的客户</li>
+        <li><span class="term">customer screening</span> - 客户筛查</li>
+        <li><span class="term">licensing requirement</span> - 许可要求</li>
+        <li><span class="term">supply-chain bottleneck</span> - 供应链瓶颈</li>
+        <li><span class="term">graphics processing unit (GPU)</span> - 图形处理器</li>
+        <li><span class="term">remote compute access</span> - 远程算力访问</li>
+        <li><span class="term">capital expenditure</span> - 资本支出</li>
+        <li><span class="term">regulatory arbitrage</span> - 监管套利</li>
+        <li><span class="term">no-action letter</span> - 不采取执法行动函</li>
+        <li><span class="term">tokenized assets</span> - 代币化资产</li>
+        <li><span class="term">transfer restriction</span> - 转让限制</li>
+        <li><span class="term">custody risk</span> - 托管风险</li>
+        <li><span class="term">anti-money laundering (AML)</span> - 反洗钱</li>
+        <li><span class="term">exchange-traded fund (ETF)</span> - 交易所交易基金</li>
+        <li><span class="term">institutional distribution</span> - 机构分销渠道</li>
+        <li><span class="term">liquidity premium</span> - 流动性溢价</li>
+        <li><span class="term">open interest</span> - 未平仓合约</li>
+        </ul>
+      </section>
+
+      <section class="takeaway">
+        <h3>Today's big picture</h3>
+        <p>AI infrastructure is becoming a compliance-intensive service business. A useful chip, data center or cloud contract must now be matched with credible end-user controls, records and operational monitoring before it can become dependable revenue.</p>
+        <p>Crypto markets are facing a related maturity test. Token design, custody and fund-flow mechanics may look secondary during a rally, but they become decisive when a buyer needs legal clarity or liquidity at the same moment as everyone else.</p>
+      </section>
+
+      <footer class="footer">
+        <p>Daily AI, Crypto &amp; Tech Power News Study Briefing &middot; <a href="archive.html">Browse the archive</a></p>
+      </footer>
+    </main>
+  </body>
+</html>
