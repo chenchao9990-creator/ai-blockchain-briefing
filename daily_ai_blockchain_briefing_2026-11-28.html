@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="OpenAI&#x27;s counterclaim against Apple and a tighter U.S. compliance perimeter for advanced compute put AI operations under pressure, while record bitcoin ETF withdrawals focus attention on institutional distribution and liquidity." />
+    <title>November 28, 2026 | Daily AI, Crypto &amp; Tech Power Briefing</title>
+    <style>
+
+      :root {
+        color-scheme: light;
+        --bg: #f6f4ef;
+        --ink: #17202a;
+        --muted: #667085;
+        --line: #ded8cc;
+        --blue: #164a7c;
+        --green: #24765d;
+        --soft-blue: #eaf3fb;
+        --soft-green: #edf7f2;
+        --soft-gold: #fff7e3;
+        --shadow: 0 16px 45px rgba(38, 52, 65, 0.08);
+      }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0;
+        background: linear-gradient(180deg, rgba(255, 253, 248, 0.9), rgba(246, 244, 239, 0.92)), var(--bg);
+        color: var(--ink);
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+        font-size: 17px;
+        line-height: 1.62;
+      }
+      a { color: var(--blue); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+      .page { width: min(100%, 860px); margin: 0 auto; padding: 18px 16px 44px; }
+      .site-nav {
+        display: flex; align-items: center; justify-content: space-between; gap: 12px;
+        padding: 6px 0 14px; color: var(--muted); font-size: 0.88rem; font-weight: 750;
+      }
+      .site-nav a { color: var(--muted); text-decoration: none; }
+      .site-nav-links { display: flex; gap: 12px; white-space: nowrap; }
+      .masthead { padding: 28px 0 18px; border-bottom: 1px solid var(--line); }
+      .kicker { margin: 0 0 12px; color: var(--muted); font-size: 0.82rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+      h1 { margin: 0 0 8px; color: var(--blue); font-family: Georgia, "Times New Roman", serif; font-size: clamp(2.05rem, 9vw, 4.5rem); line-height: 0.98; letter-spacing: 0; }
+      .headline { margin: 14px 0 0; font-size: clamp(1.24rem, 4.8vw, 2.1rem); line-height: 1.15; font-weight: 800; color: #151d27; }
+      .meta-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+      .pill { display: inline-flex; align-items: center; min-height: 34px; padding: 6px 11px; border: 1px solid var(--line); border-radius: 999px; background: rgba(255,255,255,0.72); color: #3f4a57; font-size: 0.86rem; font-weight: 700; text-decoration: none; }
+      .overview { margin: 22px 0 18px; padding: 17px 17px 15px; border: 1px solid #cfe0ed; border-radius: 14px; background: var(--soft-blue); box-shadow: var(--shadow); }
+      .overview p, .takeaway p { margin: 0 0 12px; }
+      .overview p:last-child, .takeaway p:last-child { margin-bottom: 0; }
+      .toc { margin: 22px 0 22px; padding: 0; list-style: none; border-top: 1px solid var(--line); }
+      .toc li { border-bottom: 1px solid var(--line); }
+      .toc a { display: block; padding: 12px 0; color: var(--ink); font-size: 1rem; font-weight: 750; text-decoration: none; }
+      article { margin: 28px 0 0; padding: 0 0 26px; border-bottom: 1px solid var(--line); }
+      h2 { margin: 0 0 14px; color: var(--blue); font-size: clamp(1.55rem, 6vw, 2.4rem); line-height: 1.12; letter-spacing: 0; }
+      h3 { margin: 23px 0 7px; color: var(--green); font-size: 0.94rem; line-height: 1.28; letter-spacing: 0; text-transform: none; }
+      p { margin: 0 0 13px; }
+      .reference { margin: 0 0 18px; padding: 13px 14px; border: 1px solid var(--line); border-radius: 12px; background: rgba(255,255,255,0.76); font-size: 0.94rem; line-height: 1.46; overflow-wrap: anywhere; }
+      .reference div + div { margin-top: 4px; }
+      .label { font-weight: 800; }
+      .spoken, .discussion, .takeaway { border-radius: 14px; padding: 15px 16px; }
+      .spoken { background: var(--soft-gold); border: 1px solid #ead9ad; font-style: italic; }
+      .discussion { background: var(--soft-blue); border: 1px solid #cfe0ed; font-weight: 780; font-style: italic; }
+      .vocab { display: grid; grid-template-columns: 1fr; gap: 8px; margin: 0; padding: 0; list-style: none; }
+      .vocab li { padding: 9px 10px; border: 1px solid rgba(222,216,204,0.85); border-radius: 10px; background: rgba(255,255,255,0.62); font-size: 0.96rem; line-height: 1.35; }
+      .term { font-weight: 800; }
+      .takeaway { margin: 32px 0 0; background: var(--soft-green); border: 1px solid #c8e2d6; }
+      .footer { margin-top: 28px; color: var(--muted); font-size: 0.88rem; text-align: center; }
+      .footer a { color: var(--muted); }
+      @media (min-width: 720px) {
+        body { font-size: 18px; }
+        .page { padding: 30px 32px 58px; }
+        .masthead { padding-top: 42px; }
+        .overview, .reference, .spoken, .discussion, .takeaway { border-radius: 16px; }
+        .vocab { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      }
+      @media print {
+        body { background: #fff; font-size: 11pt; }
+        .page { width: 100%; padding: 0; }
+        .overview, .reference, .spoken, .discussion, .takeaway, .vocab li { box-shadow: none; break-inside: avoid; }
+        article { break-inside: avoid; }
+        a { color: #000; }
+      }
+
+
+      .masthead { padding-top: 24px; }
+      .sections { margin: 24px 0 6px; }
+      .sections-label { margin: 0 0 10px; color: var(--muted); font-size: 0.78rem; font-weight: 850; letter-spacing: 0.08em; text-transform: uppercase; }
+      .section-grid { display: grid; grid-template-columns: 1fr; gap: 10px; }
+      .section-card { display: block; min-height: 122px; padding: 16px; border: 1px solid var(--line); border-radius: 14px; background: rgba(255,255,255,0.78); color: var(--ink); text-decoration: none; }
+      .section-card.current { border-color: #cfe0ed; background: var(--soft-blue); }
+      .section-card.breaking { border-color: #ead9ad; background: var(--soft-gold); }
+      .section-card.archive { border-color: #c8e2d6; background: var(--soft-green); }
+      .section-card strong { display: block; margin-bottom: 5px; color: var(--blue); font-size: 1.05rem; }
+      .section-card span { display: block; color: #485463; font-size: 0.91rem; line-height: 1.42; }
+      .reading-note { color: var(--muted); font-size: 0.9rem; }
+      .overview { box-shadow: none; }
+      .story-number { margin: 0 0 7px; color: var(--green); font-size: 0.78rem; font-weight: 850; text-transform: uppercase; }
+      .source-line { margin: 0 0 3px; color: var(--muted); font-size: 0.88rem; font-weight: 750; }
+      .source-title { margin: 0 0 17px; color: #46515e; font-size: 0.88rem; line-height: 1.42; }
+      .source-title a { color: #46515e; }
+      .watch-list { margin: 7px 0 0; padding-left: 1.2rem; }
+      .watch-list li { margin: 0 0 7px; padding-left: 2px; }
+      .terms { margin-top: 30px; padding-top: 1px; }
+      .terms h2 { font-size: 1.45rem; }
+      .term-note { margin-top: -5px; color: var(--muted); font-size: 0.92rem; }
+      @media (max-width: 430px) {
+        body { font-size: 16.5px; line-height: 1.58; }
+        .page { padding-left: 15px; padding-right: 15px; }
+        h1 { font-size: 2.15rem; }
+        .headline { font-size: 1.35rem; }
+        h2 { font-size: 1.55rem; }
+        .overview { padding: 15px; }
+      }
+      @media (min-width: 720px) { .section-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="./">AI, Crypto &amp; Tech Power Briefing</a>
+        <div class="site-nav-links">
+          <a href="./">Latest</a>
+          <a href="archive.html">Archive</a>
+        </div>
+      </nav>
+
+      <header class="masthead">
+        <p class="kicker">AI · Crypto · Tech Power · Policy · Business</p>
+        <h1>November 28, 2026</h1>
+        <p class="headline">AI Hardware Faces a Tighter Compliance Perimeter, While Legal Ownership and Bitcoin Fund Flows Test Market Infrastructure</p>
+        <div class="meta-row">
+          <a class="pill" href="pdf/daily_ai_blockchain_briefing_2026-11-28.pdf">PDF</a>
+        </div>
+      </header>
+
+      <section class="sections" aria-label="Sections">
+        <p class="sections-label">Explore sections</p>
+        <div class="section-grid">
+          <a class="section-card current" href="./"><strong>Daily Briefing</strong><span>Today's reader-first AI, crypto and technology stories.</span></a>
+          <a class="section-card breaking" href="breaking-news.html"><strong>Breaking News</strong><span>Major AI, crypto, conflict and US / UK policy updates.</span></a>
+          <a class="section-card archive" href="archive.html"><strong>News Archive</strong><span>Browse previous briefings and PDFs by date.</span></a>
+        </div>
+      </section>
+
+      <section class="overview" aria-label="Executive overview">
+        <h3>Executive overview</h3>
+        <p>AI is moving from a race to build hardware into a test of who may use it, where it sits and how its intellectual property is protected. A new U.S. remote-compute rule, a reported Nvidia shipment response and OpenAI&#x27;s counterclaim against Apple all make operations and legal controls commercially material.</p>
+        <p>Crypto&#x27;s latest signal is about distribution rather than a single price move. Record monthly U.S. spot bitcoin ETF withdrawals show that listed products can broaden access while making institutional rebalancing more visible.</p>
+      </section>
+
+      <ol class="toc" aria-label="Today's stories">
+        <li><a href="#openai-apple-counterclaim">1. OpenAI&#x27;s counterclaim against Apple makes AI hardware talent and supplier access a legal risk</a></li>
+        <li><a href="#remote-compute-controls">2. The U.S. remote-compute rule turns cloud capacity into an export-control service</a></li>
+        <li><a href="#nvidia-southeast-asia-pause">3. A reported Nvidia shipment pause shows how compliance can become a supply-chain bottleneck</a></li>
+        <li><a href="#bitcoin-etf-outflows">4. Record monthly bitcoin ETF withdrawals make institutional distribution a two-way channel</a></li>
+      </ol>
+
+      <article id="openai-apple-counterclaim">
+        <p class="story-number">Story 1</p>
+        <h2>OpenAI&#x27;s counterclaim against Apple makes AI hardware talent and supplier access a legal risk</h2>
+        <p class="source-line">Reuters, citing the Financial Times &middot; November 27, 2026 &middot; <a href="https://www.investing.com/news/stock-market-news/openai-countersues-apple-for-stealing-trade-secrets-ft-reports-5053798" target="_blank" rel="noopener">Read source</a></p>
+        <p class="source-title"><em>OpenAI countersues Apple for stealing trade secrets, FT reports</em></p>
+
+        <h3>The story</h3>
+        <p>Reuters reported that OpenAI brought a legal action against Apple, alleging that Apple stole its trade secrets and blocked its access to hardware suppliers. The report said the action is part of a dispute that began with Apple&#x27;s earlier allegations concerning former employees and consumer AI hardware.</p>
+        <p>The immediate facts will be tested in court. The business lesson is clearer: an AI hardware program depends on far more than a model roadmap. Employee mobility, supplier relationships, device architecture and documentation can all become part of the competitive perimeter.</p>
+
+        <h3>Why it matters</h3>
+        <p>A lawsuit can affect a product schedule even before a judgment. Discovery, injunction requests and supplier uncertainty can make partners cautious about sharing designs, reserving production capacity or hiring from a rival.</p>
+        <p>Boards funding AI devices should treat trade-secret hygiene as an operating control. Clear access logs, exit procedures and rules for personal accounts matter because they can shape both litigation risk and bargaining power.</p>
+
+        <h3>What to watch</h3>
+        <ul class="watch-list">
+          <li>Whether either party seeks emergency limits on hiring, supplier contact or use of disputed material.</li>
+          <li>How Apple, OpenAI and their hardware partners describe the case in future filings.</li>
+          <li>Whether the dispute changes the timing or manufacturing plan for either company&#x27;s AI devices.</li>
+        </ul>
+      </article>
+      <article id="remote-compute-controls">
+        <p class="story-number">Story 2</p>
+        <h2>The U.S. remote-compute rule turns cloud capacity into an export-control service</h2>
+        <p class="source-line">U.S. Bureau of Industry and Security &middot; Effective November 19, 2026 &middot; <a href="https://www.govinfo.gov/content/pkg/FR-2026-11-19/pdf/2026-23529.pdf" target="_blank" rel="noopener">Read source</a></p>
+        <p class="source-title"><em>Addressing Remote Access to Advanced Semiconductors</em></p>
+
+        <h3>The story</h3>
+        <p>A new U.S. rule restricts certain overseas data centers that remotely provide significant volumes of advanced compute to companies headquartered in Country Group D:5 or Macau. It is designed to address access to advanced semiconductors through remote arrangements, rather than only physical delivery of servers.</p>
+        <p>That shifts the core question for a cloud operator from where a chip was shipped to who ultimately receives the compute and how that access is measured. Customer onboarding, allocation records, linked facilities and contract terms can therefore become part of export-control compliance.</p>
+
+        <h3>Why it matters</h3>
+        <p>For investors and lenders, compliance capability is now part of a data center&#x27;s revenue quality. A project may have power and chips, but still face a licensing delay if its end-user controls are weak.</p>
+        <p>For enterprise buyers, verifiable controls can become a procurement advantage. Capacity with a credible audit trail is less exposed to a sudden disruption than capacity whose customer use cannot be explained.</p>
+
+        <h3>What to watch</h3>
+        <ul class="watch-list">
+          <li>BIS guidance on licensing thresholds, reporting and enforcement.</li>
+          <li>Changes to cloud contracts covering customer identity, audit rights and termination.</li>
+          <li>Whether operators redesign capacity allocation to separate higher-risk demand.</li>
+        </ul>
+      </article>
+      <article id="nvidia-southeast-asia-pause">
+        <p class="story-number">Story 3</p>
+        <h2>A reported Nvidia shipment pause shows how compliance can become a supply-chain bottleneck</h2>
+        <p class="source-line">Reuters, citing the Financial Times &middot; November 26, 2026 &middot; <a href="https://www.investing.com/news/stock-market-news/nvidia-halts-server-shipments-to-four-southeast-asian-countries-ft-reports-5052112" target="_blank" rel="noopener">Read source</a></p>
+        <p class="source-title"><em>Nvidia halts server shipments to four Southeast Asian countries, FT reports</em></p>
+
+        <h3>The story</h3>
+        <p>Reuters reported that Nvidia had told manufacturing partners to stop shipping servers containing its chips to Malaysia, Singapore, Thailand and Indonesia, citing the Financial Times. Reuters said it could not independently verify the report. The reported pause followed new U.S. licensing requirements for advanced chips in several jurisdictions.</p>
+        <p>Even a temporary compliance review can reach beyond the chip maker. Server builders, distributors, data-center developers and lenders can have delivery dates, working capital and revenue recognition tied to one customer-screening decision.</p>
+
+        <h3>Why it matters</h3>
+        <p>This is the operational face of export policy. Demand may remain strong, but a supply-chain bottleneck can emerge when documentation, licensing and end-use checks do not move at the same speed as hardware assembly.</p>
+        <p>Regional operators with traceable ownership, end-use and access controls may be better placed to secure supply and financing than operators that treat compliance as a post-sale task.</p>
+
+        <h3>What to watch</h3>
+        <ul class="watch-list">
+          <li>Any clarification from Nvidia or its partners on the reported scope and duration.</li>
+          <li>Whether financing documents add delivery or export-compliance conditions.</li>
+          <li>How other chip and server suppliers adjust screening in Southeast Asia.</li>
+        </ul>
+      </article>
+      <article id="bitcoin-etf-outflows">
+        <p class="story-number">Story 4</p>
+        <h2>Record monthly bitcoin ETF withdrawals make institutional distribution a two-way channel</h2>
+        <p class="source-line">CoinDesk, citing SoSoValue data &middot; November 26, 2026 &middot; <a href="https://www.coindesk.com/daybook-us/2026/11/26/bitcoin-etfs-are-bleeding-cash-and-the-fed-is-unlikely-to-help" target="_blank" rel="noopener">Read source</a></p>
+        <p class="source-title"><em>Bitcoin ETFs are bleeding cash and the Fed is unlikely to help</em></p>
+
+        <h3>The story</h3>
+        <p>CoinDesk reported that U.S. spot bitcoin exchange-traded funds had recorded $5.39 billion of net outflows for November through November 25, the largest monthly withdrawal since the products began trading in January 2024, according to SoSoValue data. The total could still change before month-end.</p>
+        <p>ETF flows are not a price forecast. They are a visible record of allocation decisions by advisers, institutions and other investors who can use listed products to add or reduce exposure quickly.</p>
+
+        <h3>Why it matters</h3>
+        <p>Institutional distribution can deepen a market, but it also makes de-risking easier. Risk teams should distinguish strategic ownership from short-term positioning, especially when macro conditions make several asset classes move together.</p>
+        <p>For issuers and market makers, persistent redemptions test the redemption mechanism, underlying liquidity and the cost of transferring risk between fund shares and spot markets.</p>
+
+        <h3>What to watch</h3>
+        <ul class="watch-list">
+          <li>Daily ETF flow data after the U.S. holiday session.</li>
+          <li>Whether derivatives open interest rebuilds with spot demand or leads it.</li>
+          <li>Stablecoin liquidity and exchange order-book depth during the next large market move.</li>
+        </ul>
+      </article>
+
+      <section class="terms">
+        <h2>Professional terms</h2>
+        <p class="term-note">Important business, policy, AI and crypto terms. Abbreviations should include the full form.</p>
+        <ul class="vocab">
+        <li><span class="term">trade-secret hygiene</span> - 商业秘密管理规范</li>
+        <li><span class="term">injunction</span> - 禁令救济</li>
+        <li><span class="term">discovery</span> - 诉讼证据开示</li>
+        <li><span class="term">intellectual property (IP)</span> - 知识产权</li>
+        <li><span class="term">supply-chain bottleneck</span> - 供应链瓶颈</li>
+        <li><span class="term">export control</span> - 出口管制</li>
+        <li><span class="term">interim final rule (IFR)</span> - 临时最终规则</li>
+        <li><span class="term">end-use control</span> - 最终用途管制</li>
+        <li><span class="term">remote compute access</span> - 远程算力访问</li>
+        <li><span class="term">customer screening</span> - 客户筛查</li>
+        <li><span class="term">ultimate beneficial owner (UBO)</span> - 最终受益所有人</li>
+        <li><span class="term">capital expenditure</span> - 资本支出</li>
+        <li><span class="term">regulatory arbitrage</span> - 监管套利</li>
+        <li><span class="term">graphics processing unit (GPU)</span> - 图形处理器</li>
+        <li><span class="term">exchange-traded fund (ETF)</span> - 交易所交易基金</li>
+        <li><span class="term">institutional distribution</span> - 机构分销渠道</li>
+        <li><span class="term">redemption mechanism</span> - 赎回机制</li>
+        <li><span class="term">liquidity premium</span> - 流动性溢价</li>
+        <li><span class="term">open interest</span> - 未平仓合约</li>
+        </ul>
+      </section>
+
+      <section class="takeaway">
+        <h3>Today's big picture</h3>
+        <p>AI infrastructure is becoming a compliance-intensive service business. The commercial value of a chip or data center now depends partly on documented end users, supplier controls and a defensible record of how valuable information is handled.</p>
+        <p>Crypto is seeing the same institutionalization trade-off. ETF access can broaden distribution, but fund flows expose how quickly allocation decisions can test liquidity, redemptions and market structure.</p>
+      </section>
+
+      <footer class="footer">
+        <p>Daily AI, Crypto &amp; Tech Power News Study Briefing &middot; <a href="archive.html">Browse the archive</a></p>
+      </footer>
+    </main>
+  </body>
+</html>
